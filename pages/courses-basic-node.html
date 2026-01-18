@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/node</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="basic_utility_level_1_navbar" aria-expanded="false">
+    ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+
+
+    <!-- Hamburger icon (only visible on small screens) -->
+
+    <nav class="guide-navbar" id="basic_utility_level_1_navbar">
+
+        <div class="logo-text-container">
+
+            <a href="../index.html"><span class="btc-symbol">₿</span>TCguides
+
+                <img src="/images/guido-no-bg-4.png" alt="Guido Mascot" class="mascot">
+
+
+            </a>
+
+
+
+
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+        <ul class="guide-nav-ul">
+
+            <li><a class="guide-nav-link" href="#overview">Overview</a></li>
+
+            <li><a class="guide-nav-link" href="#stage_1">Stage 1:
+                    Preparation</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stage 1.1: Terminology</a></li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stage 1.2: Required Hardware</a></li>
+
+
+                </ul>
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_2">Stage 2:
+                    Download, verification and installation of MyNodeBTC</a>
+
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stage 2.1: Download</a></li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stage 2.2: Installation</a></li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.3">Stage 2.3: Hardware Assembly</a></li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.4">Stage 2.4: Activating the node</a></li>
+
+
+
+
+
+
+
+                </ul>
+
+
+
+
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_3">Stage 3:
+                    Final Thoughts</a>
+
+
+
+
+
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link  sub-link" href="#stage_3.1">Stage 3.1: Privacy Considerations</a></li>
+
+
+
+
+                </ul>
+
+
+            </li>
+
+
+
+        </ul>
+
+
+
+
+    </nav>
+
+    <main class="basic-utility-guide-main" id="basic_utility_node_main_doc">
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="overview">Basic Course 1: Full Node</h1>
+            <h2>Run a Full Node for improved transaction privacy and independent verification</h2>
+            <h1>Overview</h1>
+            <article class="basic-utility-guide-article">
+                <h4>What this guide teaches:</h4>
+                <p>In this guide you learn how to set up a Bitcoin full node to connect hot- and cold wallets to.</p>
+
+
+                <h4>Reasons for running a node:</h4>
+                <p>If the reasons below are not important to you yet, you may choose to skip to the next guide <a
+                        href="courses-basic-hot-wallets.html" target="_blank" title="internal link to guide page">Basic
+                        Course 2: Hot Wallets</a></p>
+                <ul>
+                    <li><strong>Verify independently:</strong> You confirm every transaction and block yourself; no need
+                        to trust others.</li>
+                    <li><strong>Protect your privacy:</strong> Your wallet queries your own node, not external servers
+                        that track your activity.</li>
+                    <li><strong>Enforce the rules:</strong> Your node ensures only valid Bitcoin transactions and blocks
+                        are accepted.</li>
+                    <li><strong>Prevent manipulation:</strong> No miner, exchange, or developer can trick your node into
+                        false data.</li>
+                    <li><strong>Support the network:</strong> You help relay verified transactions, strengthening
+                        Bitcoin's decentralization.</li>
+                    <li><strong>Gain sovereignty:</strong> You use Bitcoin on your own terms, without intermediaries.
+                    </li>
+                    <li><strong>Learn deeply:</strong> Running a node will give more insight into how the Bitcoin Eco
+                        System functions.
+                    </li>
+                </ul>
+
+                <h4>Material Requirements:</h4>
+                <p> If you
+                    do not already own a computer that fullfils the minimum requirements, or you want a dedicated
+                    machine for the sole purpose of being a node, there will be material cost of
+                    around 150€ (current year 2025) to buy the components.</p>
+                <p>Keep in mind this is money spent on your infrastructure. BTCguides does not sell hardware.</p>
+
+                <div class="two-column-container-div donation-div">
+
+
+                    <div class="text-two-column-div">
+                        <p>If you have questions feel free to contact us at: <b>contact@btcguides.de</b></p>
+                        <p>To support the website scan the QR code to send Sats via ⚡ lightning network:
+                            <b>ruddywall05@walletofsatoshi.com</b>
+                        </p>
+                    </div>
+
+
+                    <div class="two-column-image-container">
+                        <img src="../images/donation-address/lightning-donation-address-1.jpg" alt="QR code for lightning donation">
+
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_1">Stage 1: Preparation</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_1.1">Stage 1.1: Terminology</h2>
+                <h3>Stage 1.1.1: Bootable OS</h3>
+
+                <p>A bootable OS is a pre-configured operating system designed to launch MyNodeBTC software directly
+                    from an SD card or USB drive. It includes all necessary components to operate a fully functional
+                    Bitcoin and Lightning Network node without any additional configuration.</p>
+
+                <h3>Stage 1.1.2: SSD</h3>
+
+                <p>An SSD (Solid State Drive) is a storage device that uses <a class="glossary-link"
+                        title="Glossary entry" href="glossary.html#glossary_dt_flash_memory" target="_blank">flash
+                        memory</a> to store data,
+                    offering faster read and write speeds compared to traditional hard drives.
+                    Unlike hard drives, SSDs have no moving parts, which makes them more durable and
+                    efficient in accessing data.</p>
+
+
+
+
+                <h3>Stage 1.1.3: RAM</h3>
+                <p>RAM (Random Access Memory) is a piece of hardware inside your computer that acts like short-term
+                    memory. It helps your computer think quickly and handle many tasks at once. The more RAM you have,
+                    the smoother things run but it forgets everything when the computer turns off.</p>
+
+                <h3>Stage 1.1.4: CPU/GPU</h3>
+                <p>CPU (Central Processing Unit) is a piece of hardware inside your computer that acts like its brain —
+                    it does the thinking and runs the instructions behind everything you do. The faster the CPU, the
+                    quicker your computer can process tasks like opening programs or loading websites.
+
+                </p>
+
+                <p>GPU (Graphics Processing Unit) is another piece of hardware, like a specialized helper for the CPU,
+                    mainly focused on handling images and videos. In our case it will handle the graphic interface we
+                    will use to control the node.</p>
+
+
+
+
+                <h2 id="stage_1.2">Stage 1.2: Required Hardware</h2>
+
+
+
+                <p>To run a node you will need a computer. This means a CPU, RAM, Storage (SSD), power supply,
+                    potentially
+                    a GPU and cooling.
+                    The good news is that you could run a node on an old Laptop if you had one lying around that
+                    fulfills the minimum requirements.
+                </p>
+
+                <p>Best practice is to use a dedicated machine to be your node and have it connected
+                    via cable instead of WiFi, especially so if you will run a lightning node on which you might hold
+                    funds directly. If, for financial reasons, you choose to use a machine that is not
+                    dedicated, be aware of the additional attack vectors such as other users,
+                    other operating systems and programs you can't control.</p>
+
+
+
+
+                <p>Unless you already own a pc that meets minimum requirements or you want to buy the components on the
+                    used
+                    market, the cheapest setup will be built around a
+                    Raspberry Pi 4. It has a CPU, a GPU and RAM.</p>
+
+                <h4>Components for a Raspi 4 node setup</h4>
+
+
+
+
+
+
+                <div class="paper">
+                    <div class="lines">
+                        <div>
+
+                            <ul>
+
+                                <li>Raspberry Pi 4</li>
+                                <li>Power Supply</li>
+                                <li>Micro SD Card</li>
+                                <li>Cooling</li>
+                                <li>Case (recommended)</li>
+                                <li>USB stick/SD Card (minimum 32gb)</li>
+
+
+
+                                <li>Ethernet Cable</li>
+                                <li>SSD 2TB</li>
+                                <li>Display (minimum 800x480 HDMI)</li>
+                                <li>USB Mouse</li>
+                                <li>Keyboard</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="holes">
+                        <div class="hole"></div>
+                        <div class="hole"></div>
+
+                    </div>
+                </div>
+
+
+                <!-- -->
+
+
+
+
+
+
+
+
+
+
+
+
+                <p>All the components besides the ethernet cable, the SSD and the display are often sold in bundles.</p>
+
+
+                <h4>Minimum requirements</h4>
+                <p>The minimum recommended requirements for a computer you might already own are:</p>
+
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Component</th>
+                            <th>Minimum Recommended (Standalone Setup)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CPU</td>
+                            <td>Quad-core (Intel i5, Ryzen 3+, or Pi 4/5)</td>
+                        </tr>
+                        <tr>
+                            <td>RAM</td>
+                            <td>4-8 GB</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>2 TB+ SSD (full node)</td>
+                        </tr>
+                        <tr>
+                            <td>GPU / Display Output</td>
+                            <td>Integrated Graphics (Intel UHD, AMD Vega, etc.) or basic GPU with HDMI output</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+
+
+
+
+
+            </article>
+
+
+
+
+
+        </section>
+
+
+
+
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_2">Stage 2: Downloading, Installing and setting up MyNodeBTC</h1>
+
+
+            <article class="basic-utility-guide-article">
+
+                <h2 id="stage_2.1">Stage 2.1: Download</h2>
+
+
+
+
+                <p>For this guide we will use MyNodeBTC.</p>
+
+
+                <h4>Step 1:</h4>
+                <p>Go to <a target="_blank" title="link to external website" class="external-link"
+                        href="https://mynodebtc.com/download">https://mynodebtc.com/download</a> and
+                    scroll to the download section to download the software for the device you chose.</p>
+
+                <div class="guide-div-image-container--desktop">
+
+                    <img src="../images/basic-utility-node/basic-utility-node-stage-2-download-marked.JPG"
+                        alt="image of mynodebtc download page">
+
+
+
+
+                </div>
+
+
+
+
+
+
+                <details>
+                    <summary>Click here to open the Windows guide</summary>
+
+                    <h4>On Windows</h4>
+
+                    <h4>Step 1:</h4>
+                    <p>In Powershell type: </p>
+                    <code>wsl.exe --install</code>
+
+                    <p>This allows you to run certain commands that are not native to Windows.</p>
+
+                    <h4>Step 2:</h4>
+                    <p>Let the install finish. Then type the Username you want.
+                    <p>Then type in the password you want to use and repeat it one more time.</p>
+
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/installing-wsl.JPG" alt="image of app store emblem">
+
+
+
+
+                    </div>
+
+                    <h4>Step 3: Go to root directory by typing:</h4>
+
+                    <code>cd ~</code>
+
+
+
+                    <h4>Step 4:</h4>
+
+                    <p>Next we will verify the software we downloaded is actually the file uploaded by the company that
+                        makes MyNodeBTC.</p>
+
+                    <code>    wget https://raw.githubusercontent.com/mynodebtc/pubkey/master/mynode_release.pub<br>
+    wget https://mynodebtc.com/device/mynode_images/mynode_raspi45_0-3-34.img.gz.sha256 </code>
+
+
+                    <p>For this to work <i>"mynode_raspi45_0-3-34.img.gz"</i> has to be in the directory you are running
+                        the command in. Go to the folder you downloaded it to so you can
+                        drag and drop from your downloads folder over to <i>"Linux/Ubuntu/home/YOURUSERNAME"</i></p>
+
+
+                    <h4>Step 5: Input to PowerShell:</h4>
+                    <code>openssl dgst -sha256 -verify mynode_release.pub -signature mynode_raspi45_0-3-34.img.gz.sha256 mynode_raspi45_0-3-34.img.gz</code>
+
+                    <p>It should say "Verified OK" like in the picture below.</p>
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/installing-wsl-2.JPG" alt="image of app store emblem">
+
+
+
+
+                    </div>
+
+
+
+                    <h4>Step 6:</h4>
+
+                    <p>Download WinRAR directly from <a title="link to external website" class="external-link"
+                            href="https://www.win-rar.com/predownload.html?&L=0" target="_blank">Win-rar.com</a></p>
+                    <p>Install it.</p>
+                    <p>Use WinRAR or a similar program to unpack <i>"mynode_raspi45_0-3-34.img.gz"</i></p>
+
+
+
+
+                </details>
+
+                <details>
+                    <summary>Click here to open the Apple/Mac guide</summary>
+
+                    <h4>On Mac</h4>
+
+                    <h4>Step 1:</h4>
+                    <p>Open Terminal by going to finder and typing in "terminal" in the search bar.</p>
+
+                    <h4>Step 2: Navigate to the Downloads folder by typing</h4>
+                    <code>cd ~/Downloads</code>
+
+                    <p>Typing:</p>
+                    <code>pwd</code>
+                    <p>will then show you where you are.</p>
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/mac-mynodebtc-verify/mac-mynodebtc-verify-1.png"
+                            alt="image of app store emblem">
+
+
+
+
+                    </div>
+
+                    <h4>Step 3: Download MyNodeBTC public key by typing:</h4>
+                    <code>curl -O https://raw.githubusercontent.com/mynodebtc/pubkey/master/mynode_release.pub</code>
+                    <br>
+                    <br>
+
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/mac-mynodebtc-verify/mac-mynodebtc-verify-2.png"
+                            alt="image of app store emblem">
+
+
+                    </div>
+
+                    <h4>Step 4: Next we download the SHA256 hash for the file we got from the MyNodeBTC download page by
+                        typing:</h4>
+                    <code>curl -O https://mynodebtc.com/device/mynode_images/mynode_raspi45_0-3-34.img.gz.sha256</code>
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/mac-mynodebtc-verify/mac-mynodebtc-verify-3.png"
+                            alt="image of app store emblem">
+
+
+                    </div>
+
+
+                    <h4>Step 5: Now we verify the athenticity of the file we downloaded from MyNodeBTC.</h4>
+                    <p>In the terminal type:</p>
+                    <code>openssl dgst -sha256 -verify mynode_release.pub -signature mynode_raspi45_0-3-34.img.gz.sha256 mynode_raspi45_0-3-34.img.gz</code>
+
+                    <p>The result should say:</p>
+                    <code>Verified OK</code>
+
+                    <br>
+                    <br>
+
+
+
+
+
+                    <div class="guide-div-image-container--desktop">
+
+                        <img src="../images/basic-utility-node/mac-mynodebtc-verify/mac-mynodebtc-verify-4.png"
+                            alt="image of app store emblem">
+
+
+
+
+                    </div>
+
+
+                </details>
+
+                <h2 id="stage_2.2">Stage 2.2: Installation
+                </h2>
+
+
+                <h4>Step 1:</h4>
+                <p>Download Balena Etcher directly from <a title="link to external website" class="external-link"
+                        href="https://etcher.balena.io/" target="_blank">etcher.balena.io/</a></p>
+
+                <h4>Step 2:</h4>
+                <p>Install it.</p>
+                <h4>Step 3:</h4>
+
+
+
+
+                <p>Open Balena Etcher, click "flash from file" and choose the <i>"mynode_raspi45_0-3-34.img"</i>
+                    image file
+                    or the newer version. (current date 26.07.2025)</p>
+
+                <div class="guide-div-image-container--desktop">
+
+                    <img src="../images/basic-utility-level-3-images/balena-etcher/basic-utility-level-3-windows-balena-etcher.JPG"
+                        alt="click here to see content as text">
+
+                </div>
+
+                <h4>Step 4:</h4>
+                <p>Select the target USB device and make sure it is the correct one! This process will delete all
+                    data stored on the SD card.</p>
+
+
+                <div class="guide-div-image-container--desktop">
+                    <img src="../images/basic-utility-level-3-images/balena-etcher/basic-utility-level-3-windows-balena-etcher-2.JPG"
+                        alt="click here to see content as text">
+                </div>
+
+                <h4>Step 5:</h4>
+                <p>Click on the "flash" button.</p>
+
+                <div class="guide-div-image-container--desktop">
+
+                    <img src="../images/basic-utility-level-3-images/balena-etcher/basic-utility-level-3-windows-balena-etcher-3.JPG"
+                        alt="click here to see content as text">
+
+                </div>
+
+                <p>The SD card is now ready.</p>
+
+
+
+
+
+                <h2 id="stage_2.3">Stage 2.3: Putting
+                    together the hardware</h2>
+
+                <p>Follow this video guide for instruction on how to put the hardware pieces together.</p>
+                <a class="external-link" title="link to external website"
+                    href="https://www.youtube.com/watch?v=GMovZg_3ERs&t=151s" target="_blank">BTC Sessions Video Guide
+                    for
+                    MyNodeBTC with a Raspberry Pi.</a>
+
+
+                <h2 id="stage_2.4">Stage 2.4: Activating the
+                    node</h2>
+
+                <p>Make sure the node is assembled.</p>
+
+                <p>You should connect/insert the:</p>
+
+                <ul>
+
+                    <ul class="content-ul">
+                        <li>SD Card</li>
+                        <li>Ethernet Cable</li>
+                        <li>HDMI Cable to your display</li>
+                        <li>SSD</li>
+                        <li>USB Mouse</li>
+                        <li>USB Keyboard</li>
+                    </ul>
+                </ul>
+
+            </article>
+
+
+            <h4>Step 1:</h4>
+            <p>Start up the node. You will see the following screen. Click on "format drive".</p>
+
+            <div class="guide-div-image-container--desktop">
+                <img src="../images/basic-utility-node/mynodebtc-disk-format-screen-1.JPG"
+                    alt="click here to see content as text">
+            </div>
+
+
+
+            <h4>Step 2: Start the download process</h4>
+            <p>You will be asked to decide whether to use clearnet or TOR browser. While clearnet is faster, TOR offers
+                more privacy. Best practice is to use TOR for privacy.</p>
+
+
+            <div class="guide-div-image-container--desktop">
+                <img src="../images/basic-utility-node/mynodebtc-tor-vs-clearnet.JPG"
+                    alt="click here to see content as text">
+            </div>
+
+
+            <p>The node will now download the complete Bitcoin Blockchain. This means you will have the entire history
+                of transactions within the BTC network at your disposal for verification. The initial download can take
+                very long, depending on your internet connection and the method you choose.</p>
+
+            <p>Once the process is complete you can log in.</p>
+
+            <p>The default login details are:</p>
+            <p>Username:<i> admin </i><br>Password: <i>bolt</i></p>
+
+
+            <h4>Step 3: Activate Electrum Server</h4>
+
+            <p>Now we can get to activating electrum server. This again can take quite some time. Click on "enable" as
+                shown in the picture below.</p>
+
+            <div class="guide-div-image-container--desktop">
+                <img src="../images/basic-utility-node/mynodebtc-activate-electrum-server.JPG"
+                    alt="click here to see content as text">
+            </div>
+
+            <p>Once this process is complete the node is ready for you to connect your cold wallet to.</p>
+
+
+
+        </section>
+
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_3">Stage 3: Final Thoughts </h1>
+
+
+            <article class="basic-utility-guide-article">
+
+                <h2 id="stage_3.1">Stage 3.1: Privacy Considerations</h2>
+
+                <!-- 
+                 <p>To use our node as a lightning node for our hot wallet it will have to have at least one open channel
+                    to another public lightning node. This is recommended for privacy but not necessary for transacting
+                    as the hot wallet we will use offers the option to connect to their node.</p>
+                    -->
+
+                <p>In this guide you set up a Bitcoin full node to verify transactions on the baselayer network in
+                    reference to the block chain.</p>
+
+                <p>In the next guide you will set up a hot wallet that enables you to send and receive BTC and use the
+                    lightning network for fast and cheap micro transactions similar to VISA.
+
+                </p>
+
+
+                <p>See the table below to
+                    understand what information will be available to the public node used and could be kept private if
+                    you set up your own lightning node.</p>
+
+                <p>We will use Phoenix Wallet and connect to an <a class="glossary-link" title="glossary entry"
+                        href="glossary.html#glossary_dt_acinq" target="_blank">ACINQ</a>lightning node as an example.
+                </p>
+
+                <!--ADD SECTION: If you want to run your own lightning node right away, click here to go the guide. This will require initial funding and opening at least 1 channel to a public node. You will also have to get good up time, meaning your node will have to run the node for 99% of the day. A downtime of 1.5 minutes a day is considered excellent, up to 14min daily downtime will be tolerated in many cases.-->
+
+                <div class="basic-utility-node-routing-privacy-div--desktop">
+
+
+                    <table class="basic-utility-node-stage-3-1-routing-table--desktop table-desktop">
+                        <thead class="basic-utility-node-stage-3-1-routing-table-header--desktop">
+                            <tr>
+                                <th class="routing-cell">Information</th>
+                                <th class="routing-cell">Visible to ACINQ?</th>
+                                <th class="routing-cell">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody class="routing-body">
+                            <tr class="routing-row">
+                                <td class="routing-cell">Your private keys</td>
+                                <td class="routing-cell no">❌ No</td>
+                                <td class="routing-cell">Non-custodial wallet</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment recipient (node ID)</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+                                <td class="routing-cell">Required for routing</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment amount</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+                                <td class="routing-cell">Needed for route computation</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Invoice metadata (e.g., memo)</td>
+                                <td class="routing-cell yes">✅ Possibly</td>
+                                <td class="routing-cell">If included in invoice</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment frequency/timing</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+                                <td class="routing-cell">Based on your payment activity</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Your IP or onion address</td>
+                                <td class="routing-cell yes">✅ Yes/Partially</td>
+                                <td class="routing-cell">Depends on connection method</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">On-chain UTXOs / balances</td>
+                                <td class="routing-cell no">❌ No</td>
+                                <td class="routing-cell">Locally stored</td>
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Who pays you (inbound payments)</td>
+                                <td class="routing-cell no">❌ No</td>
+                                <td class="routing-cell">ACINQ is not involved in your receiving path</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+                <div class="basic-utility-node-routing-privacy-div--mobile table-mobile">
+
+
+                    <table class="basic-utility-node-stage-3-1-routing-table--desktop">
+                        <thead class="basic-utility-node-stage-3-1-routing-table-header--mobile">
+                            <tr>
+                                <th class="routing-cell">Information</th>
+                                <th class="routing-cell">Visible to ACINQ?</th>
+
+                            </tr>
+                        </thead>
+                        <tbody class="routing-body">
+                            <tr class="routing-row">
+                                <td class="routing-cell">Your private keys</td>
+                                <td class="routing-cell no">❌ No</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment recipient (node ID)</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment amount</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Invoice metadata (e.g., memo)</td>
+                                <td class="routing-cell yes">✅ Possibly</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Payment frequency/timing</td>
+                                <td class="routing-cell yes">✅ Yes</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Your IP or onion address</td>
+                                <td class="routing-cell yes">✅ Yes/Partially</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">On-chain UTXOs / balances</td>
+                                <td class="routing-cell no">❌ No</td>
+
+                            </tr>
+                            <tr class="routing-row">
+                                <td class="routing-cell">Who pays you (inbound payments)</td>
+                                <td class="routing-cell no">❌ No</td>
+
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </article>
+
+
+            <article class="basic-utility-guide-article">
+
+
+
+                <h2 id="basic_utility_node_stage_3_next_guide">Click here to go to the next guide: <a
+                        class="external-link" title="link to external website" href="courses-basic-hot-wallets.html"
+                        target="_blank">2. Hot Wallets</a></h2>
+            </article>
+
+        </section>
+
+
+
+
+
+
+
+    </main>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggles = document.querySelectorAll(".menu-toggle");
+            const navs = document.querySelectorAll(".basic-utility-guide-navbar");
+
+            toggles.forEach((toggle, index) => {
+                toggle.addEventListener("click", () => {
+                    navs[index]?.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+
+
+
+</body>

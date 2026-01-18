@@ -1,0 +1,203 @@
+
+
+
+
+To Do List:
+
+
+primary tasks:
+
+- finish responsive layout
+
+- cold wallet basic fix the table in stage 4.1.3 on medium sized screens (laptops) TASK ID 1035
+- hot wallets stage 2.3 make table fit on mobile phones as well TASK ID 1036
+
+
+
+
+
+
+secondary tasks:
+
+- GLOSSARY back to the top button, there should be an icon above it that is a rising arrow representing the price chart TASK ID: 1031
+- back to top button position  TASK ID: 1032
+- make the letters at the top like a terminal of buttons so people understand they are pressable TASK ID: 1033
+- make the S button a Satoshi sign TASK ID: 1034
+
+
+
+- Upscale all small images Task ID: 1005
+
+
+- add a slight hintergrund to whatever stage you are at, as you scroll this should move and always let the user now where they are TASK ID: 1022
+
+
+
+- add video tuts and timestamps Task ID: 1007 (WHERE?)
+
+- Index page add responsive breakpoints according to chat gpt task ID: 1011 (see below)
+
+- adjust desktop inhaltsverzeichnis size TASK ID: 1021
+- BU3 fix inhaltsverzeichnis TASK ID: 1023
+
+- add affiliate links to all hardware components TASK ID: 1024
+
+
+- add a link to a video or article discussing how large the BTC number space actually is to BU1 Stage 1.1.5 Proof of work part TASK ID: 1025
+
+
+- BU1 Stage 3 add a link to the seed storage page once it exists
+
+
+
+
+Done: 
+ 
+
+
+
+
+- BU Level 1 fix pictures task ID: 1001
+- BU Level 3 fix table 1 task ID: 1002
+- BU Level 3 create portrait table layout for mobile task ID: 1003
+- BU Acquiring Bitcoin add pics starting Stage 3.3 Step 9 (buy robosats) Task ID: 1004
+- BU Level 3 Stage 3 add Mac guide ID: 1006
+- BU Acquiring Bitcoin Stage 6 fix overflow Task ID: 1008 and delete PORTAL
+- index page fix header spacing links Task ID: 1009
+- BU Node fix last table overflow right task ID: 1010
+- clean up CSS styles sheet task ID: 1012
+- fix logo size all pages task ID: 1013
+
+- basic utility level 1 fix figure, picture of guy in restaurant stage 1.1.5 task ID: 1014
+- BU3 fix overflow x on <details> for mac and windows guide. task ID: 1015
+
+- BU1 add stages to inhaltsverzeichnis Task ID: 1016
+- BU1   fix inhaltsverzeichnis links to ID Task ID: 1018
+-  BU Acquire Bitcoin fix inhaltsverzeichnis links to ID Task ID: 1019
+- BU Acquiring Bitcoin add mac guide for TOR Browser verification TASK ID: 1020
+- in GLossary under Deflation add a glossary entry for the term "difficulty adjustment" and link TASK ID: 1026
+- BU1 phoenix make TOR not a mandatory step but mention as a side note TASK ID: 1027
+- BU1 Stage 3 clean up TASK ID: 1028
+
+- finish text BU3 Stage 3.1 and 3.2 TASK ID: 1030
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Recommended Responsive Design Breakpoints (Mobile-First, min-width):
+
+0 px (base)
+- Typical Devices / Use Case: Smallest smartphones (e.g., Galaxy S25 portrait ~360px)
+- Notes: Base styles apply here, for smallest screens
+
+480 px
+- Typical Devices / Use Case: Large phones / small tablets in landscape (e.g., Galaxy S25 landscape)
+- Notes: Small tweaks before tablets
+
+768 px
+- Typical Devices / Use Case: Tablets in portrait (e.g., iPad Mini portrait)
+- Notes: Tablet layout changes
+
+1024 px
+- Typical Devices / Use Case: Tablets in landscape / small laptops (e.g., iPad landscape, 11" laptops)
+- Notes: Grid expansions, multiple columns
+
+1280 px
+- Typical Devices / Use Case: Standard desktop monitors
+- Notes: Desktop layouts and spacing adjustments
+
+1440 px
+- Typical Devices / Use Case: Large desktop / ultrawide monitors
+- Notes: Max-width constraints, widescreens
+
+
+
+4. NOSTR
+
+
+
+Design and code:
+
+1. 
+2. Skilltree design:
+
+3. Glossar Farben anpassen
+4. Dark Mode anbieten
+5. Im Glossar Synonyme zu CLI anbieten
+6. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+Considerations for networking: 
+
+Accounts will offer options, giving the name is optional, any form of contact is possible, preferably via E-Mail or Nostr newsletter.
+
+The value propsition will be early access to content as well as exclusive content and mostly tracking progress on the site. 
+
+joke site has engagement value as easter egg.
+
+Revenue Streams:
+
+Advertisements
+Merchandise
+paywall for exclusive content
+
+
+Content goes to: 
+
+NOSTR
+Rumble
+Youtube
+Instagram
+TikTok
+Facebook
+
+
+Content forms:
+
+Long form:
+
+Podcast
+Guides
+VLOG on travel using Bitcoin or such
+
+Short Form:
+
+clips from the long form videos
+high speed videos where guides are condensed
+memes
+
+
+
+
+
+
