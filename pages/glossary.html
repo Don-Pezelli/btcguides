@@ -29,7 +29,7 @@
     <div class="logo-text-container">
       <a href="../index.html">
         <span class="btc-symbol">₿</span>TCguides
-        <img src="/images/guido-no-bg-4.png" alt="Guido Mascot" class="mascot">
+        <img src="/images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
       </a>
     </div>
 
@@ -141,7 +141,7 @@
                                         usability for Bitcoin payments.</p>
 
                                     <!--<figure>
-                                        <img src="../images/airgap-diagram.JPG"
+                                        <img src="../images/glossary/airgap-diagram.JPG"
                                             alt="diagram showing what airgapping means">
                                     </figure>-->
 
@@ -169,7 +169,7 @@
                                             href="glossary.html#glossary_dt_internet" target="_blank">internet</a>.
 
                                     <figure>
-                                        <img src="../images/airgap-diagram.JPG"
+                                        <img src="../images/glossary/airgap-diagram.JPG"
                                             alt="diagram showing what airgapping means">
                                     </figure>
 
@@ -199,7 +199,7 @@
                                 <dd class="glossary-dd">
                                     <p>Step-by-step procedure for solving a problem or accomplishing some end.</p>
                                     <figure>
-                                        <img src="../images/algorithm-diagram.JPG"
+                                        <img src="../images/glossary/algorithm-diagram.JPG"
                                             alt="diagram showing what algorithm means">
                                         <figcaption>Diagram showing what an algorithm means</figcaption>
                                     </figure>
@@ -495,6 +495,28 @@
 
                         </div>
                         <!--HERE-->
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_bip39_pbkdf2"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_bip39_pbkdf2"
+                                class="glossary-accordion-label">BIP39 PBKDF2</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_bip39_pbkdf2" class="glossary-dt-term">BIP39 PBKDF2</dt>
+                                <dd class="glossary-dd">
+                                    <p>BIP39 uses PBKDF2 (a key-derivation function) to turn a seed phrase and optional
+                                        passphrase into a master seed. It repeatedly hashes the inputs to slow down
+                                        guessing attacks and to make small changes (like a different passphrase)
+                                        produce a completely different master seed.</p>
+                                </dd>
+
+                            </div>
+
+                        </div>
 
                         <div class="glossary-div-accordion">
 
@@ -1684,6 +1706,28 @@
                     <h1 class="glossary-h1-letter">D</h1>
                     <dl>
 
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_salt"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_salt"
+                                class="glossary-accordion-label">Salt</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_salt" class="glossary-dt-term">Salt</dt>
+                                <dd class="glossary-dd">
+                                    <p>In cryptography, a salt is extra data mixed into a password or seed derivation
+                                        process so the resulting output is unique even if the original words are the
+                                        same. It helps prevent precomputed attacks and makes guessing much harder. In
+                                        Bitcoin wallet recovery, a salt can also refer to an added secret value that
+                                        changes the derived seed, which must be preserved for recovery.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
 

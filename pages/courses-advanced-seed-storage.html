@@ -14,18 +14,20 @@
         rel="stylesheet">
 
     <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
 </head>
 
 <body class="basic-utility-guide-body">
-
-    <div class="guide-layout">
-
-        <!-- Hamburger icon (only visible on small screens) 
-    <button id="menu_toggle" class="menu-toggle" aria-label="Toggle menu">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_seed_storage_navbar"
+        aria-expanded="false">
         ☰
-    </button>-->
+    </button>
 
-        <nav class="guide-navbar">
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_seed_storage_navbar">
 
 
 
@@ -34,7 +36,7 @@
 
                 <a href="../index.html"><span class="btc-symbol">₿</span>TCguides
 
-                   <img src="../images/guido-no-bg-4.png" alt="Guido Mascot" class="mascot">
+                   <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
 
 
                 </a>
@@ -44,7 +46,7 @@
 
             </div>
 
-            <header class="guide-header"></header>
+            <header class="basic-utility-guide-header"></header>
 
             <ul class="guide-nav-ul">
 
@@ -320,7 +322,7 @@
 
                         <h3 id="stage_1.1.2">Stage 1.1.2: Single Signature (Single Sig)</h3>
 
-                        <p>A single-sig (single signature) wallet is a Bitcoin wallet secured by one private key.<br>
+                        <p>A single-sig wallet is a Bitcoin wallet secured by one private key.<br>
                             Only the person who controls that key — or its seed phrase — can access and spend the funds.
                         </p>
                         <p>It’s simple and common for personal wallets but creates a single point of failure.
@@ -346,16 +348,19 @@
                         <p>
                             A public key is the cryptographic value derived from your private key that others use to
                             verify ownership and send Bitcoin.<br>
-                            An xpub (extended public key) can generate all public addresses for a wallet without
-                            exposing the private key, so it’s useful for watch-only wallets and address generation.
-                        </p>
+                             </p>
+
+                             <p>An xpub (extended public key) can generate all public addresses for a wallet without
+                            exposing the private key, so it's useful for <a class="glossary-link" href="glossary.html#glossary_dt_watch_only_wallet" target="_blank" title="internal glossary link">watch-only wallets</a>  and address generation.
+                       </p>
 
                         <p>
                             Although an xpub cannot spend funds, sharing it reveals your full transaction history and
                             future addresses, reducing privacy.<br>
-                            <strong>Use xpubs only for view-only purposes</strong> (accounting, backups, or watch
-                            wallets) and avoid publishing them if you want to keep activity private.
+                            
                         </p>
+                        <p><strong>Use xpubs only for view-only purposes</strong> (accounting, backups, or watch-only
+                            wallets) and avoid publishing them if you want to keep activity private.</p>
 
 
                         <h3 id="stage_1.1.5">Stage 1.1.5: Materialized Seed</h3>
@@ -599,7 +604,7 @@
                                             or
                                             microphones.
                                             There
-                                            should be either no windwos, or windows with blinds. Best practice is also
+                                            should be either no windows, or windows with blinds. Best practice is also
                                             to not
                                             have any
                                             individuals in the room that are not seed phrase protectors.</p>
@@ -648,50 +653,50 @@
                                             <img src="../images/icons/fishing-icon.png" alt="" class="icon">
                                         </summary>
 
-                                        <p>While other threats might seem more frightening social engineering is one of
+                                        <p>While other threats might seem more frightening, social engineering is one of
                                             the most
                                             likely causes for loss of funds.</p>
 
 
 
                                         <ul class="summary-ul">
-                                            <li>Pretexting / impersonation — attacker pretends to be a trusted
+                                            <li><strong>Pretexting / impersonation</strong> — attacker pretends to be a trusted
                                                 person/service to
                                                 ask for
                                                 the
                                                 seed.</li>
-                                            <li>Grooming / rapport-building — slowly gains trust over time until you
+                                            <li><strong>Grooming / rapport-building</strong> — slowly gains trust over time until you
                                                 reveal
                                                 secrets.
                                             </li>
-                                            <li>Elicitation in casual conversation — asking seemingly innocent questions
+                                            <li><strong>Elicitation in casual conversation</strong> — asking seemingly innocent questions
                                                 that
                                                 extract
                                                 words,
                                                 order, or hints.</li>
-                                            <li>Phishing via accounts/contacts — compromises friends or services to
+                                            <li><strong>Phishing via accounts/contacts</strong> — compromises friends or services to
                                                 trick you
                                                 into
                                                 revealing
                                                 the
                                                 seed.</li>
-                                            <li>Authority/urgency pressure — fake emergencies or official-sounding
+                                            <li><strong>Authority/urgency pressure</strong> — fake emergencies or official-sounding
                                                 demands to
                                                 force
                                                 disclosure.
                                             </li>
-                                            <li>Emotional manipulation — exploiting fear, sympathy, romance, or guilt to
+                                            <li><strong>Emotional manipulation</strong> — exploiting fear, sympathy, romance, or guilt to
                                                 get you
                                                 to hand
                                                 it
                                                 over.</li>
-                                            <li>Insider betrayal — trusted people (friends, family, coworkers) who learn
+                                            <li><strong>Insider betrayal</strong> — trusted people (friends, family, coworkers) who learn
                                                 and
                                                 later
                                                 misuse
                                                 the
                                                 seed.</li>
-                                            <li>Information piecing — collecting small bits from different interactions
+                                            <li><strong>Information piecing</strong> — collecting small bits from different interactions
                                                 until
                                                 the full
                                                 seed
@@ -709,7 +714,7 @@
                                                 Bitcoin.</li>
                                             <li>Verify all URLs, updates, and software sources manually.</li>
                                             <li>Keep wallet recovery and backup procedures completely offline.</li>
-                                            <li>Use multisig setups to prevent a single point of failure or coercion.
+                                            <li>Potentially use multisig setups to prevent a single point of failure or coercion.
                                             </li>
                                             <li>Store backups securely in multiple, trusted, and private locations.</li>
                                             <li>Prepare a plan for death or incapacity without exposing the full seed.
@@ -831,8 +836,487 @@
 
 
 
+                        
+
+
+
+                        <p>This stage will introduce the types of defensive components a bitcoiner can work with. There
+                            are Seed Modifiers, Backup Architecture, Power and Stealth Defense Tools.</p>
+
+
+
+                        <h2 id="stage_2.1">Stage 2.1: Seed Modifiers, the Passphrase</h2>
+
+                        <p>There are different seed modifiers available to Bitcoiners. This chapter will focus on the
+                            passphrase.</p>
+
+
+                            
+                        <div>
+                            <img src="../images/icons/passphrase-icon.png"
+                               title="icon for a Bitcoin passphrase" alt="backup architecure diagram">
+                            <figcaption>icon for a Bitcoin passphrase</figcaption>
+                        </div>
+
+
+
+                        <p>If you want to learn about the other modifiers click on the details below. 
+                            <br>They are not necessary for this course.</p>
+
+
+
+
+                        <details>
+                            <summary><strong>Click to see a list of all Seed Modifiers</strong></summary>
+
+                            <h3>1. BIP39 Passphrase (the “25th word”)</h3>
+                            <p>A user-defined string added during seed derivation. Creates an entirely new wallet based
+                                on the same 24 words.</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Same seed + different passphrase = unrelated wallets.</li>
+                                <li><strong>Use case:</strong> Hidden or secondary wallets (plausible deniability).</li>
+                                <li><strong>Risk:</strong> Forgetting it means permanent loss of access.</li>
+                                <li><strong>Tip:</strong> Should be long, memorable, and unique.</li>
+                            </ul>
+
+                            <h3>2. Derivation Path Variants</h3>
+                            <p>Changing the derivation path (e.g., <code>m/44'/0'/0'</code> → <code>m/84'/0'/0'</code>)
+                                produces different address types or parallel wallets.</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Generates new sets of addresses from the same seed.</li>
+                                <li><strong>Use case:</strong> Separate wallets for savings, spending, or inheritance.
+                                </li>
+                                <li><strong>Risk:</strong> Must document which paths were used for recovery.</li>
+                            </ul>
+
+                            <h3>3. Custom Salt / Double-PBKDF2 Layer</h3>
+                            <p>Adding an extra private <a class="glossary-link" href="glossary.html#glossary_dt_salt"
+                                    target="_blank" title="internal glossary link">salt</a> to the seed derivation
+                                process, creating a unique seed even if the words are known.</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Increases cryptographic uniqueness.</li>
+                                <li><strong>Use case:</strong> Advanced users seeking hardware-bound security.</li>
+                                <li><strong>Risk:</strong> Not standardized; recovery tools may not support it.</li>
+                            </ul>
+
+                            <h3>4. External Encryption Layer</h3>
+                            <p>Encrypting the seed or parts of it using a separate key or password (e.g., AES
+                                encryption).</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Protects seed if found in digital or physical form.</li>
+                                <li><strong>Use case:</strong> Suitable for environments where physical security is
+                                    uncertain.</li>
+                                <li><strong>Risk:</strong> Incompatible with air-gapped recovery unless documented.</li>
+                            </ul>
+
+                            <h3>5. Encoding or Transformation Schemes</h3>
+                            <p>Obscuring the seed or passphrase using book codes, patterns, or numeric encoding.</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Makes the backup look meaningless without knowing the key.
+                                </li>
+                                <li><strong>Use case:</strong> Stealth defense and low recognizability.</li>
+                                <li><strong>Risk:</strong> Decoding rules must be preserved securely.</li>
+                            </ul>
+
+                            <h3>6. Wallet-Specific Modifiers</h3>
+                            <p>Advanced options like BIP85 child seeds, Miniscript parameters, or inheritance
+                                conditions.</p>
+                            <ul>
+                                <li><strong>Effect:</strong> Enables hierarchical or time-based wallet logic.</li>
+                                <li><strong>Use case:</strong> Long-term setups, company or family systems.</li>
+                                <li><strong>Risk:</strong> Requires wallet-specific understanding and documentation.
+                                </li>
+                            </ul>
+
+                            <h3>Summary</h3>
+                            <p>The BIP39 passphrase is the only widely supported and standardized seed modifier. Others
+                                offer more secrecy but trade off portability and simplicity, and are best for advanced
+                                users.</p>
+                        </details>
+
+
+
+                        <p>A passphrase is a <strong>seed modifier</strong> because it is an additional input that
+                             changes the cryptographic result
+                            of your seed phrase words without altering those words themselves.</p>
+
+                      
+                        <p>The seed phrase alone generates a <em>master seed</em>, which is the root for all private
+                            keys and addresses. When you add a passphrase, it’s combined with the seed through the <a class="glossary-link" href="glossary.html#glossary_dt_bip39_pbkdf2" target="_blank" title="internal glossary link">BIP39
+                            PBKDF2</a> process to create a completely different master seed.</p>
+
+                            <p>This allows us to effectively create a hidden wallet behind the initial seed phrase.</p>
+
+                        <h4>Key Points</h4>
+                        <ul>
+                            <li>Same recovery words + different passphrase = different wallet.</li>
+                            <li>A missing or incorrect passphrase means the wallet cannot be recovered.</li>
+                            <li>The passphrase is never stored by the wallet software.</li>
+                            
+                        </ul>
+
+
+
+
+
+
+                        <div>
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                                alt="backup architecure diagram">
+                            <figcaption>Figure 1: Seed Modifier Passphrase Diagram</figcaption>
+                        </div>
+
+
+
+                        <h2 id="stage_2.2">Stage 2.2: Backup Architecture / Redundancy & Distribution</h2>
+
+                        <p>
+                            While Seed Modifiers change the seed itself,<br>
+                            Redundancy & Distribution change the architecture of the defense model.<br><br>
+                            This happens because the number of instances of the key is increased through copies
+                            (redundancy).<br>
+                            Sensible distribution places the copies in different locations (distribution) to avoid loss
+                            of funds in case of the destruction of one site and/or copy.
+                        </p>
+
+
+
+
+
+                        <div>
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                                alt="backup architecure diagram">
+                            <figcaption>Figure 2: Redundancy and Distribution Diagram</figcaption>
+                        </div>
+
+
+
+
+
+
+                        <h2 id="stage_2.2.1">Stage 2.2.1: Redundancy</h2>
+
+
+
+                        <p>Redundancy means creating multiple copies of critical data or systems to ensure availability
+                            and durability in case of loss or failure.</p>
+
+                        <h4>What it does</h4>
+                        <p>It provides backup layers so that if one copy is lost, damaged, or inaccessible, another can
+                            take its place without data loss.</p>
+
+
+
+                        <div class="two-column-container-div">
+
+
+                            <div class="text-two-column-div">
+
+                                <h4>Advantages</h4>
+                                <ul>
+                                    <li>Increases reliability and fault tolerance.</li>
+                                    <li>Protects against accidental deletion or hardware failure.</li>
+                                    <li>Improves long-term data durability.</li>
+                                </ul>
+
+
+                            </div>
+
+                            <div class="text-two-column-div">
+
+
+                                <h4>Disadvantages</h4>
+                                <ul>
+                                    <li>Requires more storage space and maintenance.</li>
+                                    <li>Can increase complexity and potential exposure if copies are not well secured.
+                                    </li>
+                                    <li>Higher cost for storage and management.</li>
+                                </ul>
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <h2 id="stage_2.2.2">Stage 2.2.2: Distribution</h2>
+
+
+
+
                         <!--
-<table>
+HOUSE LOCATION ICONS
+
+                        <img src="../images/icons/backup-key-location-1.png" alt="icon of immaterialzed seed / key">
+                        <img src="../images/icons/backup-key-location-2.png" alt="icon of immaterialzed seed / key">
+                         <img src="../images/icons/backup-location-3.png" alt="icon of immaterialzed seed / key">
+-->
+
+
+
+
+
+
+                        <p>
+                            Distribution means spreading your backup copies across multiple locations
+                            or entities.<br><br>
+                            It focuses on separation and independence to eliminate as many single points of failures
+                            (SPOF) as possible.
+                        </p>
+
+                        <p>
+                            This defensive system will focus on geographical dispersion.<br>
+                            The user must decide the desired scope of separation — ranging from the same house, to the
+                            neighbourhood, city, region, country, or even continent and potentially space.
+                        </p>
+                        <p>
+                            In regions prone to natural disasters, it is advised to place backups far enough apart that
+                            the destruction of both locations becomes highly unlikely.
+                        </p>
+
+
+
+
+                        <div class="two-column-container-div">
+
+
+                            <div class="text-two-column-div">
+
+                                <h4>Advantages</h4>
+                                <ul>
+                                    <li>Reduces single-point-of-failure risk.</li>
+                                    <li>Improves resilience to physical disasters or theft.</li>
+                                    <li>Can combine with redundancy for strong, layered security.</li>
+                                </ul>
+
+
+                            </div>
+
+                            <div class="text-two-column-div">
+
+
+                                <h4>Disadvantages</h4>
+                                <ul>
+                                    <li>Increases logistical complexity and coordination.</li>
+                                    <li>Harder to retrieve all pieces quickly when needed.</li>
+                                    <li>Requires careful record-keeping to avoid losing track of locations or shares.
+                                    </li>
+                                </ul>
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <h2 id="stage_2.3">Stage 2.3: The defensive tools</h2>
+
+
+                        <p>Defensive tools are measures that strengthen the backup's resistance to loss, theft, or
+                            damage without altering the seed, its quantity, or its storage locations.</p>
+
+                        <h2 id="stage_2.3.1">Stage 2.3.1: Power Defense</h2>
+
+
+                        <h3 id="stage_2.3.1.1">Stage 2.3.1.1: The power defense tools</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="two-column-container-div">
+
+
+                            <div class="text-two-column-div">
+
+                                <p>
+                                    Power defense tools are physical or mechanical measures designed to make accessing a
+                                    backup or seed significantly more difficult for attackers.<br><br>
+                                    They provide strong protection against theft, destruction, or tampering.
+                                </p>
+
+
+                            </div>
+
+
+                            <div class="two-column-image-container">
+                                <img src="../images/icons/weightlifting-icon.png"
+                                    alt="icon of immaterialzed seed / key">
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="two-column-container-div">
+
+
+
+
+                            <div class="text-two-column-div">
+
+                                <img class="responsive-figure-img"
+                                    src="../images/advanced-courses/stage_2.3.1/power-defense-tools-1.png"
+                                    alt="backup architecure diagram">
+                                <figcaption>Figure 3: Defensive Power Tools</figcaption>
+
+                            </div>
+
+
+
+                            <div class="text-two-column-div">
+
+
+                              
+
+
+                                <ul>
+                                    <li>
+                                        <details class="threat">
+                                            <summary>
+                                                <span class="threat-title">Reinforced Backup Media:</span>
+                                               
+                                            </summary>
+                                            <p>Hardened metal plates (stainless steel, titanium, Inconel) protect the engraved seed against fire, water, and physical damage.</p>
+                                    </li>
+
+                                    <li>
+                                        <details class="threat">
+                                            <summary>
+                                                <span class="threat-title">Secure Storage Units:</span>
+                                               
+                                            </summary>
+                                            <p>Fireproof, water-resistant safes or vaults — ideally reinforced steel or deposit boxes that require significant time, tools, or authorization to access.</p>
+                                    </li>
+
+                                    <li>
+                                        <details class="threat">
+                                            <summary>
+                                                <span class="threat-title">Access Control & Detection:</span>
+                                               
+                                            </summary>
+                                            <p> Physical locks, security cages, guards, alarm systems, and surveillance restrict access and deter tampering.</p>
+                                    </li>
+
+
+
+                                </ul>
+
+
+                            </div>
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        <div class="two-column-container-div">
+
+
+                            <div class="text-two-column-div">
+
+
+                                <h4>Advantages</h4>
+                                <ul>
+                                    <li>protect against theft or destruction</li>
+                                    <li>deters attackers as it increases time and effort to breach</li>
+
+                                </ul>
+
+
+                            </div>
+
+                            <div class="text-two-column-div">
+
+
+
+                                <h4>Disadvantages</h4>
+                                <ul>
+                                    <li>cost increases as more physical defenses are added</li>
+                                    <li>without stealth, visible defenses signal a valuable target
+                                    </li>
+                                </ul>
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <h3 id="stage_2.3.1.2">Stage 2.3.1.2: Backup Materials
+                            and their properties</h3>
+
+
+
+                        <p>In this stage you will take a look at possible materials that can be used to store
+                            your
+                            seedphrase
+                            with.</p>
+
+                        <p>The following list will give you the concentrated choice of only the best possible
+                            materials
+                            ignoring
+                            things such as paper and other very weak materials.</p>
+
+
+                        <p>Click here if you want to look at a comprehensive ranked list of materials with their
+                            respective
+                            properties, including water and heat resistance as well as hardness.</p>
+
+
+                            <table class="guide-table">
   <caption>BTC Seed Storage Materials</caption>
   <thead>
     <tr>
@@ -966,479 +1450,7 @@
       <td>Moderate–high</td>
     </tr>
   </tbody>
-</table>-->
-
-
-                        <p>This stage will introduce the types of defensive components a bitcoiner can work with. There
-                            are Seed Modifiers, Backup Architecture, Power and Stealth Defense Tools.</p>
-
-
-
-                        <h2 id="stage_2.1">Stage 2.1: Seed Modifiers, the Passphrase</h2>
-
-                        <p>There are different seed modifiers available to Bitcoiners. This chapter will focus on the
-                            passphrase.</p>
-
-
-                            
-                        <div>
-                            <img src="../images/icons/passphrase-icon.png"
-                               title="icon for a Bitcoin passphrase" alt="backup architecure diagram">
-                            <figcaption>icon for a Bitcoin passphrase</figcaption>
-                        </div>
-
-
-
-                        <p>If you want to learn about the other modifiers click on the details below. 
-                            <br>They are not necessary for this course.</p>
-
-
-
-
-                        <details>
-                            <summary><strong>Click to see a list of all Seed Modifiers</strong></summary>
-
-                            <h3>1. BIP39 Passphrase (the “25th word”)</h3>
-                            <p>A user-defined string added during seed derivation. Creates an entirely new wallet based
-                                on the same 24 words.</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Same seed + different passphrase = unrelated wallets.</li>
-                                <li><strong>Use case:</strong> Hidden or secondary wallets (plausible deniability).</li>
-                                <li><strong>Risk:</strong> Forgetting it means permanent loss of access.</li>
-                                <li><strong>Tip:</strong> Should be long, memorable, and unique.</li>
-                            </ul>
-
-                            <h3>2. Derivation Path Variants</h3>
-                            <p>Changing the derivation path (e.g., <code>m/44'/0'/0'</code> → <code>m/84'/0'/0'</code>)
-                                produces different address types or parallel wallets.</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Generates new sets of addresses from the same seed.</li>
-                                <li><strong>Use case:</strong> Separate wallets for savings, spending, or inheritance.
-                                </li>
-                                <li><strong>Risk:</strong> Must document which paths were used for recovery.</li>
-                            </ul>
-
-                            <h3>3. Custom Salt / Double-PBKDF2 Layer</h3>
-                            <p>Adding an extra private salt to the seed derivation process, creating a unique seed even
-                                if the words are known.</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Increases cryptographic uniqueness.</li>
-                                <li><strong>Use case:</strong> Advanced users seeking hardware-bound security.</li>
-                                <li><strong>Risk:</strong> Not standardized; recovery tools may not support it.</li>
-                            </ul>
-
-                            <h3>4. External Encryption Layer</h3>
-                            <p>Encrypting the seed or parts of it using a separate key or password (e.g., AES
-                                encryption).</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Protects seed if found in digital or physical form.</li>
-                                <li><strong>Use case:</strong> Suitable for environments where physical security is
-                                    uncertain.</li>
-                                <li><strong>Risk:</strong> Incompatible with air-gapped recovery unless documented.</li>
-                            </ul>
-
-                            <h3>5. Encoding or Transformation Schemes</h3>
-                            <p>Obscuring the seed or passphrase using book codes, patterns, or numeric encoding.</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Makes the backup look meaningless without knowing the key.
-                                </li>
-                                <li><strong>Use case:</strong> Stealth defense and low recognizability.</li>
-                                <li><strong>Risk:</strong> Decoding rules must be preserved securely.</li>
-                            </ul>
-
-                            <h3>6. Wallet-Specific Modifiers</h3>
-                            <p>Advanced options like BIP85 child seeds, Miniscript parameters, or inheritance
-                                conditions.</p>
-                            <ul>
-                                <li><strong>Effect:</strong> Enables hierarchical or time-based wallet logic.</li>
-                                <li><strong>Use case:</strong> Long-term setups, company or family systems.</li>
-                                <li><strong>Risk:</strong> Requires wallet-specific understanding and documentation.
-                                </li>
-                            </ul>
-
-                            <h3>Summary</h3>
-                            <p>The BIP39 passphrase is the only widely supported and standardized seed modifier. Others
-                                offer more secrecy but trade off portability and simplicity, and are best for advanced
-                                users.</p>
-                        </details>
-
-
-
-                        <p>A passphrase is a <strong>seed modifier</strong> because it is an additional input that
-                             changes the cryptographic result
-                            of your seed phrase words without altering those words themselves.</p>
-
-                      
-                        <p>The seed phrase alone generates a <em>master seed</em>, which is the root for all private
-                            keys and addresses. When you add a passphrase, it’s combined with the seed through the <a class="glossary-link" href="glossary.html#bip39_pbkdf2" target="_blank" title="internal glossary link">BIP39
-                            PBKDF2</a> process to create a completely different master seed.</p>
-
-                            <p>This allows us to effectively create a hidden wallet behind the initial seed phrase.</p>
-
-                        <h4>Key Points</h4>
-                        <ul>
-                            <li>Same recovery words + different passphrase = different wallet.</li>
-                            <li>A missing or incorrect passphrase means the wallet cannot be recovered.</li>
-                            <li>The passphrase is never stored by the wallet software.</li>
-                            
-                        </ul>
-
-
-
-
-
-
-                        <div>
-                            <img src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
-                                alt="backup architecure diagram">
-                            <figcaption>Figure 1: Seed Modifier Passphrase Diagram</figcaption>
-                        </div>
-
-
-
-                        <h2 id="stage_2.2">Stage 2.2: Backup Architecture / Redundancy & Distribution</h2>
-
-                        <p>
-                            While Seed Modifiers change the seed itself,<br>
-                            Redundancy & Distribution change the architecture of the defense model.<br><br>
-                            This happens because the number of instances of the key is increased through copies
-                            (redundancy).<br>
-                            Sensible distribution places the copies in different locations (distribution) to avoid loss
-                            of funds in case of the destruction of one site and/or copy.
-                        </p>
-
-
-
-
-
-                        <div>
-                            <img src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
-                                alt="backup architecure diagram">
-                            <figcaption>Figure 2: Redundancy and Distribution Diagram</figcaption>
-                        </div>
-
-
-
-
-
-
-                        <h2 id="stage_2.2.1">Stage 2.2.1: Redundancy</h2>
-
-
-
-                        <p>Redundancy means creating multiple copies of critical data or systems to ensure availability
-                            and durability in case of loss or failure.</p>
-
-                        <h4>What it does</h4>
-                        <p>It provides backup layers so that if one copy is lost, damaged, or inaccessible, another can
-                            take its place without data loss.</p>
-
-
-
-                        <div class="two-column-container-div">
-
-
-                            <div class="text-two-column-div">
-
-                                <h4>Advantages</h4>
-                                <ul>
-                                    <li>Increases reliability and fault tolerance.</li>
-                                    <li>Protects against accidental deletion or hardware failure.</li>
-                                    <li>Improves long-term data durability.</li>
-                                </ul>
-
-
-                            </div>
-
-                            <div class="text-two-column-div">
-
-
-                                <h4>Disadvantages</h4>
-                                <ul>
-                                    <li>Requires more storage space and maintenance.</li>
-                                    <li>Can increase complexity and potential exposure if copies are not well secured.
-                                    </li>
-                                    <li>Higher cost for storage and management.</li>
-                                </ul>
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-
-
-
-
-
-                        <h2 id="stage_2.2.2">Stage 2.2.2: Distribution</h2>
-
-
-
-
-                        <!--
-HOUSE LOCATION ICONS
-
-                        <img src="../images/icons/backup-key-location-1.png" alt="icon of immaterialzed seed / key">
-                        <img src="../images/icons/backup-key-location-2.png" alt="icon of immaterialzed seed / key">
-                         <img src="../images/icons/backup-location-3.png" alt="icon of immaterialzed seed / key">
--->
-
-
-
-
-
-
-                        <p>
-                            Distribution means spreading your backup copies across multiple locations
-                            or entities.<br><br>
-                            It focuses on separation and independence to eliminate as many single points of failures
-                            (SPOF) as possible.
-                        </p>
-
-                        <p>
-                            This defensive system will focus on geographical dispersion.<br>
-                            The user must decide the desired scope of separation — ranging from the same house, to the
-                            neighbourhood, city, region, country, or even continent.
-                        </p>
-                        <p>
-                            In regions prone to natural disasters, it is advised to place backups far enough apart that
-                            the destruction of both locations becomes highly unlikely.
-                        </p>
-
-
-
-
-                        <div class="two-column-container-div">
-
-
-                            <div class="text-two-column-div">
-
-                                <h4>Advantages</h4>
-                                <ul>
-                                    <li>Reduces single-point-of-failure risk.</li>
-                                    <li>Improves resilience to physical disasters or theft.</li>
-                                    <li>Can combine with redundancy for strong, layered security.</li>
-                                </ul>
-
-
-                            </div>
-
-                            <div class="text-two-column-div">
-
-
-                                <h4>Disadvantages</h4>
-                                <ul>
-                                    <li>Increases logistical complexity and coordination.</li>
-                                    <li>Harder to retrieve all pieces quickly when needed.</li>
-                                    <li>Requires careful record-keeping to avoid losing track of locations or shares.
-                                    </li>
-                                </ul>
-
-
-
-
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-
-
-
-
-
-                        <h2 id="stage_2.3">Stage 2.3: The defensive tools</h2>
-
-
-                        <p>Defensive tools are measures that strengthen the backup's resistance to loss, theft, or
-                            damage without altering the seed, its quantity, or its storage locations.</p>
-
-                        <h2 id="stage_2.3.1">Stage 2.3.1: Power Defense</h2>
-
-
-                        <h3 id="stage_2.3.1.1">Stage 2.3.1.1: The power defense tools</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div class="two-column-container-div">
-
-
-                            <div class="text-two-column-div">
-
-                                <p>
-                                    Power defense tools are physical or mechanical measures designed to make accessing a
-                                    backup or seed significantly more difficult for attackers.<br><br>
-                                    They provide strong protection against theft, destruction, or tampering.
-                                </p>
-
-
-                            </div>
-
-
-                            <div class="two-column-image-container">
-                                <img src="../images/icons/weightlifting-icon.png"
-                                    alt="icon of immaterialzed seed / key">
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="two-column-container-div">
-
-
-
-
-                            <div class="text-two-column-div">
-
-                                <img src="../images/advanced-courses/stage_2.3.1/power-defense-tools-1.png"
-                                    alt="backup architecure diagram">
-                                <figcaption>Figure 3: Defensive Power Tools</figcaption>
-
-                            </div>
-
-
-
-                            <div class="text-two-column-div">
-
-
-                              
-
-
-                                <ul>
-                                    <li>
-                                        <details class="threat">
-                                            <summary>
-                                                <span class="threat-title">Reinforced Backup Media:</span>
-                                               
-                                            </summary>
-                                            <p>Hardened metal plates (stainless steel, titanium, Inconel) protect the engraved seed against fire, water, and physical damage.</p>
-                                    </li>
-
-                                    <li>
-                                        <details class="threat">
-                                            <summary>
-                                                <span class="threat-title">Secure Storage Units:</span>
-                                               
-                                            </summary>
-                                            <p>Fireproof, water-resistant safes or vaults — ideally reinforced steel or deposit boxes that require significant time, tools, or authorization to access.</p>
-                                    </li>
-
-                                    <li>
-                                        <details class="threat">
-                                            <summary>
-                                                <span class="threat-title">Access Control & Detection:</span>
-                                               
-                                            </summary>
-                                            <p> Physical locks, security cages, guards, alarm systems, and surveillance restrict access and deter tampering.</p>
-                                    </li>
-
-
-
-                                </ul>
-
-
-                            </div>
-
-
-
-
-                        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                        <div class="two-column-container-div">
-
-
-                            <div class="text-two-column-div">
-
-
-                                <h4>Advantages</h4>
-                                <ul>
-                                    <li>protect against theft or destruction</li>
-                                    <li>deters attackers as it increases time and effort to breach</li>
-
-                                </ul>
-
-
-                            </div>
-
-                            <div class="text-two-column-div">
-
-
-
-                                <h4>Disadvantages</h4>
-                                <ul>
-                                    <li>cost increases as more physical defenses are added</li>
-                                    <li>without stealth, visible defenses signal a valuable target
-                                    </li>
-                                </ul>
-
-
-
-
-
-
-                            </div>
-
-
-
-                        </div>
-
-
-
-
-
-
-
-
-                        <h3 id="stage_2.3.1.2">Stage 2.3.1.2: Backup Materials
-                            and their properties</h3>
-
-
-
-                        <p>In this stage you will take a look at possible materials that can be used to store
-                            your
-                            seedphrase
-                            with.</p>
-
-                        <p>The following list will give you the concentrated choice of only the best possible
-                            materials
-                            ignoring
-                            things such as paper and other very weak materials.</p>
-
-
-                        <p>Click here if you want to look at a comprehensive ranked list of materials with their
-                            respective
-                            properties, including water and heat resistance as well as hardness.</p>
+</table>
 
 
                         <p>The material which this guide will suggest is stainless steel for its durability and
@@ -1510,7 +1522,8 @@ HOUSE LOCATION ICONS
 
 
                         <div>
-                            <img src="../images/advanced-courses/stage_2.3.2/stealth-tools-diagram.drawio.png"
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.3.2/stealth-tools-diagram.drawio.png"
                                 alt="backup architecure diagram">
                             <figcaption>Figure 4: Defensive Stealth Tools</figcaption>
                         </div>
@@ -2053,14 +2066,16 @@ HOUSE LOCATION ICONS
 
 
                             <div class="diagram-div">
-                                <img src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                                <img class="responsive-figure-img"
+                                    src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
                                     alt="backup architecure diagram">
                                 <figcaption>Figure 2: Redundancy and Distribution Diagram</figcaption>
                             </div>
 
 
                             <div class="diagram-div">
-                                <img src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                                <img class="responsive-figure-img"
+                                    src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
                                     alt="backup architecure diagram">
                                 <figcaption>memory loss, fire, water, lightning, crushing</figcaption>
 
@@ -2086,7 +2101,8 @@ HOUSE LOCATION ICONS
 
 
                         <div>
-                            <img src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
                                 alt="backup architecure diagram">
                             <figcaption>Figure 1: Seed Modifier Passphrase Diagram</figcaption>
                         </div>
@@ -2102,7 +2118,8 @@ HOUSE LOCATION ICONS
 
 
                         <div>
-                            <img src="../images/advanced-courses/stage_4.2/passphrase-original-key-stage_4.2-figure-5.png"
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_4.2/passphrase-original-key-stage_4.2-figure-5.png"
                                 alt="backup architecure diagram">
                             <figcaption>Figure 5: Crucial Information Original Key + Passphrase</figcaption>
                         </div>
@@ -2123,14 +2140,16 @@ HOUSE LOCATION ICONS
 
 
                             <div class="diagram-div">
-                                <img src="../images/advanced-courses/stage_4.2/defense-model-architecture-passphrase-redundandy-distribution-figure-6.png"
+                                <img class="responsive-figure-img"
+                                    src="../images/advanced-courses/stage_4.2/defense-model-architecture-passphrase-redundandy-distribution-figure-6.png"
                                     alt="backup architecure diagram figure 6">
                                 <figcaption>Figure 6: Passphrase, Redundancy and Distribution Diagram</figcaption>
                             </div>
 
 
                             <div class="diagram-div">
-                                <img src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                                <img class="responsive-figure-img"
+                                    src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
                                     alt="backup architecure diagram">
                                 <figcaption>memory loss, fire, water, lightning, crushing</figcaption>
 
@@ -2309,23 +2328,6 @@ HOUSE LOCATION ICONS
 
 
         </main>
-
-
-    </div>
-
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const toggles = document.querySelectorAll(".menu-toggle");
-            const navs = document.querySelectorAll(".guide-navbar");
-
-            toggles.forEach((toggle, index) => {
-                toggle.addEventListener("click", () => {
-                    navs[index]?.classList.toggle("open");
-                });
-            });
-        });
-    </script>
 
 
 
