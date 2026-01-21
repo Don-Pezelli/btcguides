@@ -251,7 +251,7 @@ table.guide-table {
   border-collapse: collapse;
   border: 1px solid #c7c7c7;
   background-color: #fff;
-  font-size: 0.95rem;
+  font-size: calc(0.95rem + 2px);
 }
 
 table.guide-table caption {
@@ -520,6 +520,25 @@ body.region-eu.season-winter .basic-utility-navigation-body-header-section {
   opacity: 1;
 }
 
+.language-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding-left: 0.6rem;
+}
+
+.language-flag {
+  display: inline-block;
+  font-size: 1.2rem;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.language-flag:focus,
+.language-flag:hover {
+  transform: translateY(-1px);
+}
+
 /* Mobile: make top nav links wrap instead of overflowing */
 .index-nav-links ul {
   margin: 0;
@@ -559,6 +578,17 @@ body.region-eu.season-winter .basic-utility-navigation-body-header-section {
    Index hero / portal
    ========================================================= */
 .body-course-navigation { min-height: 100vh; }
+.body-course-navigation-no-scroll {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-course-navigation-no-scroll .index-type-hero-section {
+  min-height: 0;
+  flex: 1;
+}
 
 .index-type-hero-section {
   background-image:
@@ -697,10 +727,8 @@ body.region-eu.season-winter .basic-utility-navigation-body-header-section {
 }
 
 .index-section-background {
-  background-image: url(images/index/section-background/black-screen.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  background-color: #000;
+  background-image: none;
   min-height: 100vh;
 }
 
@@ -944,7 +972,7 @@ a.glossary-back-to-top-link::before {
   overflow: hidden;
   font-family: "Quicksand", sans-serif; /* fixed quotes */
   background: #009578;
-  margin: 0 0 0.2em 0;
+  margin: 0 0 0.8em 0;
   font-size: 2rem;
 }
 

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/kurse/grundlagen/hot-wallets</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="basic_utility_level_1_navbar" aria-expanded="false">
+    ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+
+    <nav class="guide-navbar" id="basic_utility_level_1_navbar">
+
+
+
+
+
+        <div class="logo-text-container">
+
+            <a href="../index.de.html"><span class="btc-symbol">₿</span>TCguides
+
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+
+            </a>
+
+
+
+
+        </div>
+        <header class="basic-utility-guide-header"></header>
+        <ul class="guide-nav-ul">
+
+            <li><a class="guide-nav-link" href="#overview">Überblick</a></li>
+
+            <li><a class="guide-nav-link" href="#stage_1">Stufe 1:
+                    Vorbereitung
+                </a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stufe 1.1: Terminologie</a>
+
+
+                        <ul class="guide-nav-ul">
+
+
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.1">
+                                    Stufe 1.1.1: Hot Wallet
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.2">
+                                    Stufe 1.1.2: Privater Schlüssel
+                                </a>
+                            </li>
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.3">
+                                    Stufe 1.1.3: Custodial Wallet
+                                </a>
+                            </li>
+
+
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.4">
+                                    Stufe 1.1.4: Selbstverwahrung / Non-custodial Wallets
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.5">
+                                    Stufe 1.1.5: Baselayer / Bitcoin-Netzwerk
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="guide-nav-link sub-link" href="#stage_1.1.6">
+                                    Stufe 1.1.6: Lightning-Netzwerk
+                                </a>
+                            </li>
+
+
+                        </ul>
+
+
+
+
+
+                    </li>
+
+
+
+
+
+
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stufe 1.2:
+                            Voraussetzungen</a>
+                    </li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.3">Stufe 1.3:
+                            Fragen
+                            zur
+                            Selbstprüfung</a></li>
+
+
+                </ul>
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_2">Stufe 2: Einstieg</a>
+
+                <ul class="guide-nav-ul">
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stufe 2.1:
+                            Download und
+                            Installation</a></li>
+
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stufe 2.2:
+                            TOR
+                            aktivieren</a></li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.3">Stufe 2.3:
+                            Electrum-Server
+                            verbinden</a></li>
+
+
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.4">Stufe 2.4:
+                            Wallet-Wiederherstellung
+                            testen</a></li>
+
+
+
+                </ul>
+
+
+            </li>
+
+
+            <li> <a class="guide-nav-link" href="#stage_3">Stufe 3: Einführung in
+                    Seed-Storage</a>
+
+            <li> <a class="guide-nav-link" href="#final_thoughts">Abschlussgedanken</a>
+
+
+            </li>
+        </ul>
+
+
+
+
+    </nav>
+
+    <main class="basic-utility-guide-main" id="basic_utility_level_1_main_doc">
+
+        <section class="basic-utility-guide-main-section">
+            <h1>Grundkurs 2: Hot Wallets</h1>
+            <h2>Non-custodial Hot Wallets mit öffentlicher Node</h2>
+            <h1 id="overview">Überblick</h1>
+
+            <article class="basic-utility-guide-article">
+
+
+
+
+                <p>In Grundkurs 2: Hot Wallets lernst du, wie du eine Hot Wallet für den Alltag einrichtest, sowohl für
+                    Baselayer als auch für das Lightning-Netzwerk. Du lernst außerdem die Risiken einer Hot Wallet und
+                    welche Best Practice für den Umgang damit gilt.</p>
+
+
+                <div class="two-column-container-div donation-div">
+
+
+                    <div class="text-two-column-div">
+                        <p>Bei Fragen erreichst du uns unter: <b>contact@btcguides.de</b></p>
+                        <p>Um die Website zu unterstützen, scanne den QR-Code und sende Sats über das ⚡ Lightning-Netzwerk:
+                            <b>ruddywall05@walletofsatoshi.com</b>
+                        </p>
+                    </div>
+
+
+                    <div class="two-column-image-container">
+                        <img src="../images/donation-address/lightning-donation-address-1.jpg" alt="QR-Code für Lightning-Spende">
+
+
+                    </div>
+
+                </div>
+
+
+                <!--  <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+                    Blue square 
+                    <rect x="10" y="10" width="180" height="180" fill="blue" />
+-->
+                <!-- Text inside the square 
+                    <text x="100" y="100" fill="white" font-size="20" text-anchor="middle" alignment-baseline="middle">
+                        building a node
+                    </text>-->
+                </svg>
+            </article>
+
+
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_1">Stufe 1: Vorbereitung</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_1.1">Stufe 1.1: Terminologie</h2>
+
+                <p>Unten findest du die sechs Begriffe, die du für diesen Guide brauchst.</p>
+
+
+
+
+
+
+
+                <h3 id="stage_1.1.1">Stufe 1.1.1: Hot Wallet</h3>
+
+                <p>Eine Hot Wallet ist eine Wallet, bei der der private Schlüssel auf einem Gerät gespeichert oder
+                    dorthin übertragen wird, das mit dem Internet verbunden ist.</p>
+
+
+                <h3 id="stage_1.1.2">Stufe 1.1.2: Privater Schlüssel</h3>
+                <p>Um Bitcoin zu besitzen, musst du ein Geheimnis bewahren können. Dieses Geheimnis heißt privater
+                    Schlüssel. Der private Schlüssel ist eine Zahl, die als Liste von Wörtern kodiert werden kann.
+                    Den privaten Schlüssel zu kennen bedeutet, die gesperrten Coins zu besitzen.
+                    Den privaten Schlüssel geheim zu halten ist die Verantwortung jedes Eigentümers. Wer das Geheimnis
+                    kennt, kann die Coins entsperren und übertragen. Es gibt mehrere Methoden, private Schlüssel zu
+                    speichern und zu schützen.
+                </p>
+                <ul class="content-ul">
+                    <li>Der private Schlüssel ist eine sehr große Zahl</li>
+                    <li>Er muss geheim bleiben, weil er deine Coins freischaltet</li>
+                    <li>Er kann als Zahl, als (Seed-)Phrase oder als QR-Code dargestellt werden</li>
+                </ul>
+
+
+                <h3 id="stage_1.1.3">Stufe 1.1.3: Custodial Wallet</h3>
+                <p>Custodial Wallets sind im Grunde Bankkonten: Sie übertragen die Aufgabe, den privaten Schlüssel
+                    geheim zu halten, an ein zentrales Unternehmen. Die Verwahrung deines Geldes liegt bei einem
+                    Unternehmen, also einer Bank.</p>
+                <p>Das löst Probleme wie den Verlust des privaten Schlüssels durch Diebstahl oder Nachlässigkeit sehr
+                    schnell und einfach, bringt aber einen <a class="glossary-link" title="Glossareintrag"
+                        target="_blank" href="glossary.de.html#glossary__dt_attack_vector">Angriffsvektor</a>
+                    mit sich, weil man der Bank vertrauen muss, den privaten Schlüssel nicht zu verlieren oder
+                    zu missbrauchen.</p>
+
+
+                <h3 id="stage_1.1.4">Stufe 1.1.4: Selbstverwahrung / Non-custodial Wallets </h3>
+                <p>Selbstverwahrung bedeutet, selbst die Verantwortung für den Schutz des privaten Schlüssels zu
+                    übernehmen und die Abhängigkeit von Dritten zu minimieren. Das kann in unterschiedlichem Maß
+                    erfolgen. Eine Non-custodial Wallet ist ein guter erster Schritt, um mit so einem System zu
+                    interagieren.</p>
+                <p>Eine Non-custodial Hot Wallet bietet viele Vorteile einer Custodial Hot Wallet, reduziert aber einige
+                    – wenn auch wenige – Risiken, die durch die Abhängigkeit von Dritten entstehen.</p>
+
+
+
+                <h3 id="stage_1.1.5">Stufe 1.1.5: Bitcoin Baselayer / Bitcoin-Netzwerk</h3>
+
+
+                <!--12082025-->
+                <div class="guide-div-image-container--desktop--double">
+
+                    <img src="../images/basic-utility-level-1-images/decentralization-visualisation-mold.jpg"
+                        alt="Bild einer Dezentralisierungs-Visualisierung">
+
+
+                    <img src="../images/basic-utility-level-1-images/decentralization-visualisation-starry-sky.jpg"
+                        alt="Bild einer Dezentralisierungs-Visualisierung">
+
+
+                </div>
+
+
+
+
+                <p>Das "Bitcoin-Netzwerk" ist ein dezentrales System, das Nutzern sichere Übertragung, Verifizierung
+                    und Transaktion von Informationen über seine <a class="glossary-link" title="Glossareintrag" target="_blank"
+                        href="glossary.de.html#glossary_dt_blockchain">Blockchain</a> ermöglicht.
+                    Es ist absichtlich energieintensiv, weil sein Proof-of-Work-Konsens hohe Sicherheit und
+                    Unveränderlichkeit gewährleistet, wodurch Betrug und Manipulation erschwert werden.
+                    Das Bitcoin-Netzwerk ist auf Robustheit statt Geschwindigkeit ausgelegt und daher nicht für
+                    tägliche Mikrotransaktionen gedacht, sondern für zuverlässige, langsame und stabile Übertragung
+                    größerer Werte und Informationen.</p>
+
+                <p><strong>Dezentralisierung:</strong> Das Bitcoin-Netzwerk ist dezentral, ohne zentrale Instanz, und
+                    besteht aus tausenden Nodes weltweit, die Transaktionen validieren und weiterleiten.</p>
+
+                <p><strong>Blockchain-Technologie:</strong> Es basiert auf einer öffentlichen, unveränderlichen Blockchain,
+                    in der alle Transaktionen in einer Abfolge von Blöcken gespeichert werden.</p>
+
+                <!--12082025 PORTAL-->
+                <div class="guide-div-image-container--desktop--double">
+
+                    <img src="../images/basic-utility-level-1-images/renewable-energy-small.jpg"
+                        alt="Bild erneuerbarer Energie">
+
+
+                    <img src="../images/basic-utility-level-1-images/nuclear-small.jpg"
+                        alt="Bild Kernenergie">
+
+
+
+                </div>
+
+                <p><strong>Proof-of-Work (PoW):</strong> Um einen neuen Block hinzuzufügen, müssen Teilnehmer eine Zahl in
+                    einem extrem großen Bereich korrekt erraten. Das erfordert erhebliche Rechenleistung, verbraucht
+                    reale Energie und sichert so das Netzwerk und seine Integrität.</p>
+
+                <p><strong>Energieintensiv:</strong> PoW ist absichtlich energieintensiv, um Sicherheit zu gewährleisten
+                    und Angriffe zu verhindern. Wer falsche Informationen veröffentlichen will, müsste mehr Energie als
+                    die anderen Teilnehmer aufbringen und dies dauerhaft tun, um die Lüge aufrechtzuerhalten. <!-- To learn more head over to the <a target="_blank" class="external-link"
+                        title="link to internal page" href="why-bitcoin-navigation.html">why bitcoin section</a> and
+                    learn about <a class="glossary-link" title="glossary entry" target="_blank"
+                        href="glossary.html#glossary_dt_hashrate">hashrate</a>.--></p>
+
+                <p><strong>Transaktionsvalidierung:</strong> Nodes prüfen Transaktionen gegen die Konsensregeln von
+                    Bitcoin und verhindern <a
+                        href="glossary.de.html#glossary_dt_double_spending" class="glossary-link" target="_blank"
+                        title="Glossareintrag">Double-Spending</a>.</p>
+
+                <p><strong>Transparenz und Pseudonymität:</strong> Alle Transaktionen sind öffentlich sichtbar, aber
+                    Identitäten sind <a href="glossary.de.html#glossary_dt_pseudonymity" class="glossary-link"
+                        title="Glossareintrag" target="_blank">pseudonym</a> und werden über Bitcoin-Adressen dargestellt.
+                </p>
+
+                <p><strong>Begrenztes Angebot:</strong> Bitcoin ist auf 21 Millionen Coins begrenzt, ist damit
+                    <a href="glossary.de.html#glossary_dt_deflation" class="glossary-link" title="Glossareintrag"
+                        target="_blank">deflationär</a> und besitzt Store-of-Value-Eigenschaften.
+                </p>
+
+                <p><strong>Sicherheit und Unveränderlichkeit:</strong> Einmal bestätigte Transaktionen sind irreversibel
+                    und bieten ein hohes Maß an Sicherheit und Vertrauen.</p>
+
+                <p><strong>Skalierbarkeit und Geschwindigkeit:</strong> Das Bitcoin-Netzwerk ist sicher, aber relativ
+                    langsam und nicht für hochfrequente Mikrotransaktionen gedacht. Für Mikrotransaktionen nutzen
+                    Bitcoin-Nutzer das <a href="glossary.de.html#glossary_dt_lightning_network" target="_blank"
+                        title="Glossareintrag" class="glossary-link">Lightning-Netzwerk</a>.</p>
+
+                <p><strong>Baselayer für Layer-2-Lösungen:</strong> Das Bitcoin-Netzwerk ist die Basis für Layer-2-Lösungen
+                    wie das Lightning-Netzwerk, das Transaktionen schneller und günstiger macht.</p>
+
+
+
+
+                <h3 id="stage_1.1.6">Stufe 1.1.6: Lightning-Netzwerk</h3>
+                <!--12082025 PORTAL -->
+
+
+
+                <div class="guide-div-image-container--desktop">
+
+                    <figure class="figure-no-indent">
+
+
+                        <img src="../images/basic-utility-level-1-images/bitcoin-cafe-payment.jpg"
+                            alt="Bild einer Lightning-Zahlung im Café">
+
+
+
+                        <!-- FIX THIS -->
+                        <figcaption>
+                            Foto von <a
+                                href="https://www.heute.at/i/bei-paul-kann-man-kaffee-und-burger-mit-bitcoins-zahlen-120069518/doc-1ib9ka13l4"
+                                target="_blank">Sabine Hertel</a>.
+                            Restaurant: <a href="https://cafesite.com" target="_blank">Delicious</a>.
+
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+
+
+
+                <p>Das Lightning-Netzwerk ist eine Layer-2-Lösung auf dem Bitcoin-Netzwerk für schnelle und günstige
+                    Mikrotransaktionen. Es nutzt Off-Chain-Zahlungskanäle zwischen Nutzern, sodass viele Transaktionen
+                    ohne Eintrag in die Blockchain stattfinden. Das bringt Geschwindigkeit und Effizienz, hat aber
+                    einen Trade-off: Ein Teil der Sicherheit und Dezentralisierung des Baselayers wird aufgegeben.
+                    Trotzdem können Streitfälle letztlich im Bitcoin-Netzwerk gelöst werden, wodurch die grundlegende
+                    Sicherheit erhalten bleibt.</p>
+
+                <p><strong>Layer-2-Lösung:</strong> Das Lightning-Netzwerk baut auf dem Bitcoin-Netzwerk auf und macht
+                    Transaktionen schneller und günstiger.</p>
+
+                <p><strong>Mikrotransaktionen:</strong> Es ist speziell für häufige und kleine Zahlungen ausgelegt.</p>
+
+                <p><strong>Off-Chain-Zahlungskanäle:</strong> Transaktionen laufen Off-Chain in Zahlungskanälen zwischen
+                    Nutzern, was die Haupt-Blockchain entlastet.</p>
+
+                <p><strong>Geschwindigkeit und Kosten:</strong> Lightning ermöglicht nahezu sofortige Transaktionen mit
+                    minimalen Gebühren.</p>
+
+                <p><strong>Sicherheits-Trade-off:</strong> Für Geschwindigkeit wird ein Teil der Sicherheit und
+                    Dezentralisierung des Baselayers geopfert.</p>
+
+                <p><strong>Abschluss auf dem Bitcoin-Netzwerk:</strong> Streitfälle und endgültige Abrechnungen können
+                    auf die Bitcoin-Blockchain zurückgeführt werden.</p>
+
+
+
+
+
+
+                <h2 id="stage_1.2">Stufe 1.2: Voraussetzungen</h2>
+
+
+                <ul class="content-ul">
+                    <li>Smartphone</li>
+                    <li>Internetverbindung</li>
+
+                </ul>
+
+
+
+
+
+
+
+
+
+                <h2 id="stage_1.3"> Stufe 1.3: Fragen zur
+                    Selbstprüfung</h2>
+
+
+                <ul class="content-ul">
+                    <li>Habe ich meinen privaten Schlüssel gesichert?</li>
+                    <li>Welche Sicherungen verhindern, dass das Backup verloren geht?</li>
+                    <li>Was könnte dazu führen, dass ich mein Guthaben verliere?</li>
+
+                </ul>
+
+
+            </article>
+
+
+
+
+
+
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_2">Stufe 2: Einstieg</h1>
+
+            <article class="basic-utility-guide-article">
+
+                <h2 id="stage_2.1">Stufe 2.1: Download und
+                    Installation</h2>
+
+
+
+
+                <p>In diesem Guide nutzen wir Phoenix Wallet. Guides für Green Wallet und Blue Wallet folgen später.</p>
+
+                <p>Wenn du weißt, wie man eine App auf iPhone, Android oder einem anderen Smartphone installiert, kannst
+                    du zu <a href="basic-utility-level-1.html#skip_to_step_4">Schritt 4</a> springen.</p>
+                <h4>Schritt 1:</h4>
+                <p>Gehe in den App-Store / Play-Store</p>
+                <!--12082025-->
+                <div class="guide-div-image-container--portrait--multi">
+
+                    <img src="../images/basic-utility-level-1-images/apple-app-store-emblem.png"
+                        alt="App-Store-Emblem">
+
+
+                    <img src="../images/basic-utility-level-1-images/play-store-icon.png"
+                        alt="Play-Store-Emblem">
+
+                </div>
+
+                <h4>Schritt 2:</h4>
+                <p>Tippe "phoenix wallet" in die Suche und drücke auf "Suchen"</p>
+
+
+
+
+
+
+                <!--12082025-->
+
+                <div class="guide-div-image-container--portrait--multi">
+
+                    <img src="../images/basic-utility-level-1-images/app-store-search-bar.jpg"
+                        alt="App-Store-Suche">
+
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-emblem.png"
+                        alt="Phoenix-Wallet-Emblem">
+
+
+                </div>
+
+
+
+                <h4>Schritt 3:</h4>
+                <p>Drücke "Download" und danach "Öffnen"</p>
+                <!--12082025-->
+                <div class="guide-div-image-container--portrait--multi">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-app-store.PNG"
+                        alt="Phoenix Wallet im App Store">
+
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-app-store-detail.PNG"
+                        alt="Phoenix Wallet Detailansicht">
+
+                </div>
+
+
+                <h4 id="skip_to_step_4">Schritt 4: Orbot-App installieren</h4>
+                <p>Die Orbot-App erlaubt dir, das Tor-Netzwerk zu nutzen und später in diesem Guide deinen Electrum-
+                    Server zu verbinden.</p>
+                <p>Das ist nicht zwingend für Transaktionen nötig, verbessert aber die Privatsphäre. Es kann allerdings
+                    auch zu Verbindungsproblemen führen, wenn das TOR-Netzwerk nicht erreichbar ist.</p>
+
+                <p>Installiere die App genauso wie oben, suche diesmal nach "orbot".</p>
+
+
+                <h2 id="stage_2.2">Stufe 2.2: TOR aktivieren
+                </h2>
+
+
+                <p>TOR sollte aktiviert sein, um deine IP-Adresse vor deinem <a
+                        href="glossary.de.html#glossary_dt_isp" target="_blank" class="glossary-link"
+                        title="Glossareintrag zu ISP">ISP (Internet Service Provider)</a> sowie
+                    anderen Beobachtern zu schützen. Wenn während einer Zahlung Verbindungsprobleme auftreten, kann man
+                    TOR deaktivieren und die IP-Adresse gegenüber dem Phoenix-Node (ACINQ) sowie weiteren Dritten
+                    offenlegen.</p>
+                <p>Eine einmalige Deaktivierung von TOR kann eine IP-Leak verursachen, die die Wallet dauerhaft einer
+                    Person zuordnen kann.</p>
+
+                <!-- <p>If you did our node section. You can connect your wallet to your own electrum server for more privacy.</p>
+
+                <p>To do so follow</p>-->
+
+
+                <h4>Schritt 1:</h4>
+                <p>Überspringe oder lies die Einführung, bis du die ersten Buttons siehst.
+                </p>
+
+                <h4>Schritt 2:</h4>
+                <p>Drücke das kleine Zahnrad oben rechts</p>
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-1.PNG"
+                        alt="Phoenix Wallet Homescreen">
+
+
+                </div>
+
+
+                <h4>Schritt 4:</h4>
+                <p>Gehe zu "Tor"</p>
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/bu1-stage-2-2-img-1-phoenix-wallet-tor.PNG"
+                        alt="Phoenix Wallet Tor-Menü">
+
+
+                </div>
+
+
+                <p>Aktiviere den Schalter für Tor.</p>
+
+
+                <h2 id="stage_2.3">Stufe 2.3: Electrum-Server
+                    verbinden</h2>
+
+                <p>Wenn du unseren Node-Guide abgeschlossen hast (stark empfohlen), hast du Zugriff auf deinen eigenen
+                    Electrum-Server. Wenn du das nicht getan hast, kannst du zu <a
+                        href="courses-basic-hot-wallets.de.html#basic_utility_level_1_stage_2.4"
+                        title="Link zur Stufe 2.4">Stufe 2.4</a> springen, um den Wallet-Recovery-Prozess zu testen.</p>
+
+                <p>Wenn du keinen eigenen Electrum-Server verwendest, lernt der öffentliche Server deine aktuellen und
+                    zukünftigen Adressen sowie deine Transaktionshistorie. Das gefährdet nicht deinen privaten Schlüssel,
+                    reduziert aber deine Privatsphäre.</p>
+
+                <table id="bu1_privacy_table">
+                    <caption>Bitcoin-Wallet-Privatsphäre (Best → Worst)</caption>
+                    <thead>
+                        <tr>
+                            <th>Setup</th>
+                            <th>Tor?</th>
+                            <th>Eigener Electrum-Server?</th>
+                            <th>IP-Privatsphäre</th>
+                            <th>Wallet/Blockchain-Privatsphäre</th>
+                            <th>Hinweise / Risiken</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tor + eigener Electrum</td>
+                            <td>✅</td>
+                            <td>✅</td>
+                            <td>✅ IP verborgen</td>
+                            <td>✅ Volle Wallet-Privatsphäre</td>
+                            <td>Beste Privatsphäre: Netzwerk und Wallet geschützt</td>
+                        </tr>
+                        <tr>
+                            <td>Tor + öffentlicher Electrum</td>
+                            <td>✅</td>
+                            <td>❌</td>
+                            <td>✅ IP verborgen</td>
+                            <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
+                            <td>Teilweise Privatsphäre: Wallet sichtbar, Netzwerk verborgen</td>
+                        </tr>
+                        <tr>
+                            <td>Kein Tor + eigener Electrum</td>
+                            <td>❌</td>
+                            <td>✅</td>
+                            <td>❌ IP sichtbar für Server/ISP</td>
+                            <td>✅ Volle Wallet-Privatsphäre</td>
+                            <td>Wallet privat, aber Netzwerkmetadaten offen</td>
+                        </tr>
+                        <tr>
+                            <td>Kein Tor + öffentlicher Electrum</td>
+                            <td>❌</td>
+                            <td>❌</td>
+                            <td>❌ IP sichtbar für Server/ISP</td>
+                            <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
+                            <td>Schlechteste Privatsphäre: alles offen</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Schritt 1:</h4>
+                <p>Gehe zu Electrum Server</p>
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-2.PNG"
+                        alt="Phoenix Wallet Homescreen">
+
+
+                </div>
+
+
+
+
+
+                <h4>Schritt 2:</h4>
+                <p>Gehe zu "Modify"</p>
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-3.PNG"
+                        alt="Phoenix Wallet Modify">
+
+
+                </div>
+
+
+
+
+                <h4>Schritt 3: Electrum-Server-Adresse holen</h4>
+                <p>Gehe in deine MyNodeBTC-Oberfläche und klicke auf Electrum Server</p>
+
+
+
+                <div class="guide-div-image-container--desktop">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/mynodebtc-interface-1-copy.png"
+                        alt="MyNodeBTC Interface">
+
+
+                </div>
+
+
+
+
+                <h4>Schritt 4:</h4>
+                <p>Kopiere die Adresse aus "Hostname" oder "CLI Command". Sie muss auf ".onion" enden.</p>
+
+
+                <div class="guide-div-image-container--desktop">
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/mynodebtc-interface-2-electrum.jpg"
+                        alt="MyNodeBTC Electrum">
+                </div>
+
+
+                <h4>Schritt 5:</h4>
+                <p>Trage die Onion-Adresse in das Server-Feld ein ("example.com") und nutze Port 50002. Dann auf
+                    "save" drücken.</p>
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-4.PNG"
+                        alt="Phoenix Wallet Electrum Server">
+
+                </div>
+
+
+
+                <h4>Schritt 6:</h4>
+                <p>Zurück zur Wallet-Erstellung und den Anweisungen folgen.</p>
+
+                <h2 id="stage_2.4">Stufe 2.4: Wallet-Wiederherstellung
+                    testen</h2>
+
+                <p>Nachdem du die Wallet erstellt hast, testen wir die Wiederherstellung.</p>
+
+                <h4>Schritt 1:</h4>
+                <p>Oben links das Zahnrad drücken, um in die Einstellungen zu kommen.</p>
+
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-home-screen.PNG"
+                        alt="Phoenix Wallet Homescreen">
+
+                </div>
+
+                <h4>Schritt 2:</h4>
+                <p>Klicke auf "recovery phrase" und lies den angezeigten Text.</p>
+
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-settings-screen.PNG"
+                        alt="Phoenix Wallet Einstellungen">
+
+
+                </div>
+
+                <h4>Schritt 3:</h4>
+                <p>Um sicherzugehen, dass du den privaten Schlüssel korrekt notiert hast, klicke auf
+                    "Show seedphrase / recovery phrase" und notiere die Wörter an einem sicheren Ort.</p>
+                <p>Du musst sie behalten, sonst ist dein Guthaben verloren.</p>
+                <p>
+                    Dann setze die Häkchen unter "legal", dass du den privaten Schlüssel gesichert hast und
+                    dir bewusst bist, dass das Guthaben verloren ist, wenn du das Handy verlierst. (Merke: private key =
+                    seedphrase = recovery phrase = seed = secret)</p>
+
+
+
+                <div class="guide-div-image-container--portrait">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-seedphrase-screen.PNG"
+                        alt="Phoenix Wallet Seedphrase">
+
+                </div>
+
+
+
+                <!--
+                    <p>For more information on private-key backup strategies click <a target="_blank"
+                        href="LINK_TO_BACKUP_STRATEGY_SECTION">here</a>.</p>
+                        -->
+
+
+
+
+                <p>Diese Wallet ist wie dein tägliches Portemonnaie. Du legst nur so viel Geld hinein, wie du im
+                    schlimmsten Fall verlieren würdest, wenn etwas passiert.</p>
+
+                <h4>Schritt 4: Bitcoin empfangen</h4>
+
+
+                <p>Jetzt legen wir ein wenig Bitcoin in die neue Hot Wallet. Der erste Betrag sollte klein sein.</p>
+                <p>Dafür brauchst du Bitcoin, die du kaufst, gekauft hast oder die dir jemand sendet.</p>
+
+                <p>Drücke "receive", wische nach rechts, um die On-Chain-Adresse zu erhalten, und scanne den QR-Code.
+                    Der Sender legt dann fest, wie viele Sats gesendet werden. Wenn du den QR-Code nicht scannen kannst,
+                    kopiere die Bitcoin-Adresse, wie durch den roten Pfeil markiert.</p>
+
+
+
+
+                <div class="guide-div-image-container--portrait--multi">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-home-screen-2.PNG"
+                        alt="Phoenix Wallet Homescreen">
+
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-receive-screen.jpg"
+                        alt="Phoenix Wallet Empfang">
+
+
+
+                </div>
+
+                <h4>Schritt 5:</h4>
+                <p>Teste die Wiederherstellung, indem du die App löschst und dann neu installierst, um die Wallet
+                    wiederherzustellen.</p>
+                <p>Der kleine Betrag sollte dann in deiner Balance sichtbar sein.</p>
+
+                <p>HINWEIS: Das Seed-Wort wird eingetragen, wenn du die Leertaste drückst. Achte darauf, dass keine
+                    Rechtschreibfehler vorhanden sind.</p>
+                <p>Die App schlägt außerdem Wörter aus der Wortliste vor.</p>
+
+
+                <div class="guide-div-image-container--portrait--multi">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-recovery-screen-1.PNG"
+                        alt="Phoenix Wallet Wiederherstellung">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-recovery-screen-2.PNG"
+                        alt="Phoenix Wallet Wiederherstellung">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-recovery-screen-3.PNG"
+                        alt="Phoenix Wallet Wiederherstellung">
+
+                    <img src="../images/basic-utility-level-1-images/phoenix-wallet-recovery-screen-4.PNG"
+                        alt="Phoenix Wallet Wiederherstellung">
+
+
+
+                </div>
+
+
+
+                <p>Wenn die Sats erscheinen, bedeutet das, dass du die Wallet wiederherstellen kannst, falls du das
+                    Handy verlierst oder die Wallet in eine andere App importieren willst.</p>
+
+                <p>Optional kannst du jetzt BTC an eine andere Wallet von dir oder an uns senden, um die Website zu
+                    unterstützen.</p>
+
+                <p>⚡ Lightning: Nutze die Textadresse <b>ruddywall05@walletofsatoshi.com</b> oder den QR-Code.</p>
+
+                <div class="guide-div-image-container--portrait">
+                    <img src="../images/donation-address/donation-1.jpg" alt="QR-Code für Lightning-Spende">
+
+
+
+
+
+
+                    <h1 id="stage_3">Stufe 3: Einführung in Seed-Storage</h1>
+
+                    <h4>Terminologie</h4>
+
+                    <p>Im Bitcoin-Kontext gibt es viele Begriffe für den privaten Schlüssel selbst und für die Systeme,
+                        die ihn vor Verlust schützen sollen.</p>
+
+                    <p>Die Strategie, mit der du den privaten Schlüssel schützt, nennt man Backup- oder Seed-Storage-
+                        Strategie.</p>
+
+                    <p>Jetzt machen wir ein Gedankenexperiment zur Backup-Strategie.</p>
+
+
+                    <h4>Die Aufgabe</h4>
+
+                    <p>Wir haben eine Information, die wir nicht verlieren wollen. Wir müssen ein System entwickeln, das
+                        das Backup möglichst resilient macht und vor Außenstehenden sowie natürlichen Einflüssen
+                        schützt.
+                    </p>
+
+                    <h4>Die Situation</h4>
+
+                    <p>Aktuell ist unser Backup
+                        ein Stück Papier offen auf dem Schreibtisch.</p>
+
+                    <h4>Die Angriffsvektoren</h4>
+
+
+
+                    <ul class="content-ul">
+                        <li>Wir werfen das Papier versehentlich weg (Nachlässigkeit)</li>
+                        <li>Jemand kommt ins Zimmer und entsorgt das Papier (Nachlässigkeit) oder stiehlt den
+                            privaten Schlüssel (Diebstahl)</li>
+                        <li>Je nach Tinte kann Wasser den Text unlesbar machen</li>
+                    </ul>
+
+
+
+                    <p>Gewöhne dir an, Schwächen im System zu erkennen und Lösungen zu finden.</p>
+
+
+                    <p>Gehen wir die Liste der Angriffsvektoren durch.</p>
+
+                    <h4>Die Abwehr</h4>
+                    <p><strong>Szenario 1</strong> lässt sich leicht lösen: Wir legen das Papier in einen Ordner und
+                        geben ihm einen Platz im Regal. Zusätzlich macht es Sinn, eine zweite Kopie des Backups zu
+                        erstellen und an einem anderen Ort zu lagern.</p>
+                    <p>Du entscheidest, wie viele Backups es gibt und wie weit diese voneinander entfernt lagern. Das
+                        kann von einer zweiten Kopie im gleichen Ordner bis zu einem anderen Ort reichen.</p>
+
+
+
+                    <p><strong>Szenario 2</strong> führt eine weitere Person ein. Das kann ein Familienmitglied sein oder
+                        ein Eindringling. Für die Einfachheit nehmen wir an, dass diese Person den privaten Schlüssel
+                        nicht kennen soll.</p>
+                    <p>Natürlich solltest du Türen und Fenster schließen. Trotzdem könnte jemand in dein Zuhause
+                        eindringen. Je nach Gesetzgebung bist du in der Verteidigung eingeschränkt. Statt physischer
+                        Abwehr durch <a target="_blank" class="glossary-link" title="Glossareintrag"
+                            href="glossary.de.html#glossary_dt_power_projection">Machtprojektion</a> könnte die
+                        Information versteckt oder verschlüsselt werden, sodass sie wie ein gewöhnlicher Hinweis
+                        aussieht.</p>
+
+                    <p>Das wirkt vielleicht übertrieben für eine tägliche Wallet mit wenigen Sats, aber solche Übungen
+                        ohne große Summen führen zu besserer Ausführung und weniger Kopfschmerzen, wenn du dein
+                        persönliches System entwickelst.</p>
+
+                    <p><strong>Szenario 3</strong> Nutze wasserfeste Tinte, eine Folie oder ein anderes Material, um die
+                        Information vor Wasser, Feuer und anderen Elementen zu schützen.
+                    </p>
+
+                    <!--
+                    
+                    Click
+                    here to
+                    see different methods of storing your seed that vary in resilience against corruption.
+
+                    -->
+
+
+
+                    <h1 id="final_thoughts">Abschlussgedanken</h1>
+                    <p>Die Aufbewahrung des privaten Schlüssels ist ein großes Thema, das wir gemeinsam vertiefen
+                        werden, während du dich durch die Sicherheitsstufen arbeitest.<br>Für jetzt solltest du dir
+                        angewöhnen, Angriffsvektoren zu erkennen, die dich deinen privaten Schlüssel kosten könnten,
+                        und Gegenmaßnahmen zu entwickeln.</p>
+
+
+                    <p>Im nächsten Guide lernst du, wie du eine Cold Wallet erstellst und größere Beträge sicher
+                        verwahrst.</p>
+
+
+
+            </article>
+
+            <article class="basic-utility-guide-article">
+
+
+
+                <h2 id="basic_utility_node_stage_3_next_guide">Klicke hier für den nächsten Guide: <a
+                        class="external-link" title="link zum nächsten Kurs"
+                        href="courses-basic-cold-wallets.de.html" target="_blank">3. Cold Wallets</a></h2>
+            </article>
+
+
+
+        </section>
+
+
+
+
+
+
+
+
+    </main>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggles = document.querySelectorAll(".menu-toggle");
+            const navs = document.querySelectorAll(".basic-utility-guide-navbar");
+
+            toggles.forEach((toggle, index) => {
+                toggle.addEventListener("click", () => {
+                    navs[index]?.classList.toggle("open");
+                });
+            });
+        });
+    </script>
+
+</body>
+
+</html>

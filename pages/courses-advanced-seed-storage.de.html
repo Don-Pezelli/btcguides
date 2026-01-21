@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/fortgeschritten-kurs-seed-storage</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_seed_storage_navbar"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_seed_storage_navbar">
+
+
+
+
+        <div class="logo-text-container">
+
+            <a href="../index.html"><span class="btc-symbol">₿</span>TCguides
+
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+
+
+            </a>
+
+
+
+
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+
+        <ul class="guide-nav-ul">
+
+            <li><a class="guide-nav-link" href="#overview">Überblick</a></li>
+
+            <li><a class="guide-nav-link" href="#stage_1">Stufe 1: Vorbereitung
+                </a>
+
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stufe 1.1: Terminologie</a>
+
+
+
+                    </li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stufe 1.2: Angriffsvektor /
+                            Bedrohungsmodell-Analyse</a>
+
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#stage_1.2.1">Stufe 1.2.1: Bedrohungen einer
+                                    immaterialisierten
+                                    Seed-Phrase</a></li>
+
+                            <li><a class="guide-nav-link sub-link" href="#stage_1.2.2">Stufe 1.2.2: Bedrohungen einer
+                                    materialisierten
+                                    Seed-Phrase</a></li>
+                        </ul>
+
+
+                    </li>
+
+
+
+
+
+
+
+
+                </ul>
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_2">Stufe 2: Die Bausteine der Verteidigung</a>
+
+
+
+
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stufe 2.1: Seed-Modifikatoren</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stufe 2.2: Backup-Architektur /
+                            Redundanz & Verteilung</a>
+
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#stage_2.2.1">Stufe 2.2.1: Redundanz</a>
+                            </li>
+                            <li><a class="guide-nav-link sub-link" href="#stage_2.2.2">Stufe 2.2.2: Verteilung</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.3">Stufe 2.3: Die Verteidigungswerkzeuge</a>
+
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#stage_2.3.1">Stufe 2.3.1: Power
+                                    Defense</a>
+
+                                <ul class="guide-nav-ul">
+
+                                    <li><a class="guide-nav-link sub-link" href="#stage_2.3.1.1">Stufe 2.3.1.1: Die
+                                            Power-Defense-Tools</a></li>
+                                    <li><a class="guide-nav-link sub-link" href="#stage_2.3.1.2">Stufe 2.3.1.2:
+                                            Backup-Materialien und ihre Eigenschaften</a></li>
+
+                                </ul>
+                            </li>
+
+                            <li><a class="guide-nav-link sub-link" href="#stage_2.3.2">Stufe 2.3.2: Die Stealth
+                                    Defense
+                                    Tools</a></li>
+                        </ul>
+
+
+
+
+
+
+
+                    </li>
+
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.4">Stufe 2.4: OPSEC – Operational
+                            Security</a> </li>
+
+
+
+
+
+
+
+                </ul>
+
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_3">Stufe 3: Verteidigungsparameter festlegen</a>
+
+
+
+
+
+
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_4">Stufe 4: Das Verteidigungsmodell entwerfen</a>
+
+                <ul class="guide-nav-ul">
+                    <li> <a class="guide-nav-link sub-link" href="#stage_4.1">Stufe 4.1: Die drei grundlegenden
+                            Single-Signature-Backup-Modelle</a>
+
+                        <ul class="guide-nav-ul">
+
+                                <li> <a class="guide-nav-link sub-link" href="#stage_4.1.1">Stufe 4.1.1: Vollständiges
+                                        24‑Wort-Backup</a></li>
+
+                                <li> <a class="guide-nav-link sub-link" href="#stage_4.1.2">Stufe 4.1.2: Shamir’s
+                                        Secret Sharing (SSS)</a></li>
+
+                                <li> <a class="guide-nav-link sub-link" href="#stage_4.1.3">Stufe 4.1.3: Geteiltes
+                                        24‑Wort-Backup (2×12 Wörter)</a></li>
+
+
+                        </ul>
+
+
+                    </li>
+
+                    <li> <a class="guide-nav-link sub-link" href="#stage_4.2">Stufe 4.2: Das empfohlene Modell und
+                            seine Anpassungen</a></li>
+
+
+                </ul>
+
+
+
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_5">Stufe 5: Testen und regelmäßige Wartung</a>
+
+                <ul class="guide-nav-ul">
+                    <li></li>
+                </ul>
+
+            </li>
+
+            <li> <a class="guide-nav-link" href="#stage_6">Stufe 6: Schlussgedanken</a>
+
+
+
+        </ul>
+
+
+
+
+    </nav>
+
+    <main class="basic-utility-guide-main guide-main-content" id="basic_utility_node_main_doc">
+
+        <div class="guide-content">
+
+            <h1>Fortgeschrittener Kurs: Backup-Strategien für Single-Signature-Seed-Speicherung</h1>
+
+            <h3>Bewerten Sie das Bedrohungsmodell und bauen Sie Ihr Abwehrsystem</h3>
+
+            <section id="basic_utility_node_overview" class="basic-utility-guide-main-section">
+
+                <h1 id="overview">Überblick</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h4>Was dieser Leitfaden vermittelt:</h4>
+                    <p>In diesem Leitfaden lernen Sie Strategien zur Seed-Aufbewahrung für Setups mit einer einzelnen
+                        Seed-Phrase /
+                        einem privaten Schlüssel, um den Verlust von Guthaben zu vermeiden.</p>
+
+                    <p>Wenn Sie diesen Leitfaden als Unternehmen, Family Office oder Händler lesen, springen Sie bitte
+                        zum kommenden
+                        <a href="courses-advanced-seed-storage-multi-sig.html" target="_blank"
+                            title="internal link to multi sig seed storage guide">Multi-Signature-Kurs</a> für ein
+                        geeignetes Modell. Dieses Kapitel fokussiert Single-Signature-Setups zur individuellen Kontrolle.
+                    </p>
+
+                    <p>Zuerst wird die Terminologie rund um dieses Thema erklärt.</p>
+
+
+                    <p>Anschließend hilft der Leitfaden, die Bedrohungen für Ihr Setup zu beurteilen und
+                        Verteidigungsmaßnahmen aufzulisten.</p>
+
+
+
+                    <div class="two-column-container-div donation-div">
+
+
+                        <div class="text-two-column-div">
+                            <p>Bei Fragen erreichen Sie uns unter: <b>contact@btcguides.de</b></p>
+                            <p>Um die Website zu unterstützen, scannen Sie den QR-Code, um Sats über das ⚡ Lightning-Netzwerk zu senden:
+                                <b>ruddywall05@walletofsatoshi.com</b>
+                            </p>
+                        </div>
+
+
+                        <div class="two-column-image-container">
+                            <img src="../images/donation-address/lightning-donation-address-1.jpg"
+                                alt="QR code for lightning donation">
+
+
+                        </div>
+
+                        <div id="donation_text_2" class="text-two-column-div">
+                            <p>You can also send donations on-chain, but keep in mind that those transactions are
+                                slower and cost more in transaction fees.</b></p>
+
+                        </div>
+
+
+                        <div class="two-column-image-container">
+                            <img src="../images/donation-address/on-chain-donation-address-1.jpg"
+                                alt="QR code for lightning donation">
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+                </article>
+
+
+            </section>
+
+            <section id="basic_utility_node_stage_1_preparation" class="basic-utility-guide-main-section">
+                <h1 id="stage_1">Stufe 1: Vorbereitung</h1>
+
+
+
+                <article class="basic-utility-guide-article">
+
+                    <h2 id="stage_1.1">Stufe 1.1: Terminologie</h2>
+
+
+
+                    <h3 id="stage_1.1.1">Stufe 1.1.1: Seed-Phrase / privater Schlüssel</h3>
+
+
+                    <p>Eine Seed-Phrase ist eine Liste aus 12 oder 24 Wörtern, die den privaten Schlüssel Ihrer
+                        Bitcoin-Wallet repräsentiert.<br>Sie gewährt vollen Zugriff auf Ihre Bestände — wer sie kennt,
+                        kann Ihre Bitcoin ausgeben.
+                    </p>
+
+                    <p>Mit der Seed-Phrase können Sie Ihre Wallet auf jedem Gerät wiederherstellen, selbst wenn Ihre
+                        Hardware oder Software verloren geht.
+                    </p>
+                    <p>Bewahren Sie sie sorgfältig auf und teilen Sie sie niemals online oder mit Personen, denen Sie
+                        nicht vollständig vertrauen.</p>
+
+
+
+
+                    <h3 id="stage_1.1.2">Stufe 1.1.2: Einzelsignatur (Single Sig)</h3>
+
+                    <p>Eine Single-Sig-Wallet ist eine Bitcoin-Wallet, die durch einen privaten Schlüssel gesichert
+                        ist.<br>
+                        Nur die Person, die diesen Schlüssel — oder die Seed-Phrase — kontrolliert, kann auf die Mittel
+                        zugreifen und sie ausgeben.
+                    </p>
+                    <p>Sie ist einfach und für persönliche Wallets üblich, erzeugt aber einen Single Point of Failure.
+                        Geht der Schlüssel oder die Seed-Phrase verloren oder wird sie gestohlen, sind die Bitcoin
+                        dauerhaft verloren.</p>
+
+                    <h3 id="stage_1.1.3">Stufe 1.1.3: Angriffsvektor (AV)</h3>
+
+                    <p>
+                        Ein Angriffsvektor ist jede Methode oder jeder Weg, den ein Angreifer nutzt, um Ihre Bitcoin
+                        oder die Schlüssel zu stehlen, die sie kontrollieren.<br>
+                        Häufige Vektoren sind Phishing-Links, Malware auf Geräten, kompromittierte Hardware-Wallets,
+                        schwache Backups und Social-Engineering-Betrug.
+                    </p>
+                    <p>
+                        Das Verständnis wahrscheinlicher Vektoren hilft Ihnen, Schutzmaßnahmen wie Hardware-Wallets,
+                        air-gapped Backups und eine strikte Prüfung von Links und Geräten zu wählen.<br>
+                        <strong>Bleiben Sie wachsam:</strong> Die Reduktion von Angriffsvektoren ist der beste Weg, um
+                        Guthaben zu schützen.
+                    </p>
+
+
+                    <h3 id="stage_1.1.4">Stufe 1.1.4: Öffentlicher Schlüssel (xPub)</h3>
+                    <p>
+                        Ein öffentlicher Schlüssel ist der kryptografische Wert, der aus Ihrem privaten Schlüssel
+                        abgeleitet wird und den andere nutzen, um Eigentum zu prüfen und Bitcoin zu senden.<br>
+                    </p>
+
+                    <p>Ein xpub (Extended Public Key) kann alle öffentlichen Adressen einer Wallet erzeugen, ohne den
+                        privaten Schlüssel preiszugeben, und ist daher nützlich für <a class="glossary-link"
+                            href="glossary.de.html#glossary_dt_watch_only_wallet" target="_blank"
+                            title="internal glossary link">Watch-Only-Wallets</a> und die Adressgenerierung.
+                    </p>
+
+                    <p>
+                        Obwohl ein xpub keine Ausgaben erlaubt, legt das Teilen die komplette Transaktionshistorie und
+                        zukünftige Adressen offen, was die Privatsphäre reduziert.<br>
+
+                    </p>
+                    <p><strong>Verwenden Sie xpubs nur für reine Anzeigezwecke</strong> (Buchhaltung, Backups oder
+                        Watch-Only-Wallets) und vermeiden Sie die Veröffentlichung, wenn Sie Aktivitäten privat halten
+                        möchten.</p>
+
+
+                    <h3 id="stage_1.1.5">Stufe 1.1.5: Materialisierte Seed-Phrase</h3>
+                    <p>
+                        Eine materialisierte Seed-Phrase ist eine Seed-Phrase, die zuvor nur auswendig gelernt
+                        (immateriell) war und nun in der physischen Welt festgehalten wurde — aufgeschrieben,
+                        in Metall graviert oder anderweitig offline gespeichert.<br>
+                        Dadurch entfällt die Last perfekter Erinnerung und die Wiederherstellung wird einfacher, aber
+                        es entsteht eine physische Angriffsfläche: Wer die materialisierte Seed-Phrase findet oder
+                        kopiert, kann die Guthaben ausgeben.
+                    </p>
+
+                    <p>
+                        Behandeln Sie physische Kopien wie Bargeld:<br>
+                        Bewahren Sie sie sicher und redundant auf (z. B. feuersicherer Safe, mehrere vertrauenswürdige
+                        Orte) und vermeiden Sie vorhersehbare Beschriftungen oder offensichtliche Ablageorte.
+                    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <h2 id="stage_1.2">Stufe 1.2: Angriffsvektor- /
+                        Bedrohungsmodell-Analyse</h2>
+
+
+
+
+                    <h3 id="stage_1.2.1">Stufe 1.2.1: Bedrohungen einer immaterialisierten Seed-Phrase</h3>
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+                            <p>
+                                Der Seed oder private Schlüssel ist immaterialisiert, wenn er nicht aufgeschrieben
+                                wurde.<br>
+                                Das bedeutet, nur der Besitzer des Schlüssels kennt ihn.
+                            </p>
+
+                            <p>
+                                Um ihn zu verwenden, muss er beim Signieren von Transaktionen mit dem Seedsigner
+                                zumindest vorübergehend materialisiert werden.<br>
+                                Da der Seedsigner zustandslos ist, dematerialisiert er den Seed / privaten Schlüssel,
+                                sobald die Stromversorgung beendet wird.
+                            </p>
+
+                        </div>
+
+
+                        <div class="two-column-image-container">
+                            <img src="../images/icons/immaterialized-key.png" alt="Symbol für immaterialisierten Seed/Schlüssel">
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <p>Hier sind die wichtigsten Bedrohungskategorien für einen immaterialisierten Seed / privaten
+                        Schlüssel:</p>
+
+                    <div class="threats-container">
+
+                        <ul>
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Gedächtnisversagen: Seed-Phrase vergessen</span>
+                                        <img src="../images/icons/brain-damage-icon.png" alt="" class="icon">
+                                    </summary>
+                                    <p>Eine sehr einfache Art, seine Bitcoin zu verlieren, ist das Vergessen der
+                                        Seed-Phrase. Das
+                                        kann passieren, wenn die Wortreihenfolge der mnemonischen Seed-Phrase
+                                        vertauscht wird oder die Seed-Phrase von Anfang an falsch gelesen wurde.
+                                    </p>
+
+                                    <p>Kognitiver Abbau ist ein weiterer Faktor, der zum Verlust wichtiger
+                                        Informationen beitragen kann.</p>
+
+                                    <p>Während das erste Problem vermeidbar ist, lässt sich kognitiver Abbau nicht
+                                        vollständig kontrollieren und muss im Abwehrsystem berücksichtigt werden.</p>
+
+                                    <h5>Lösung:</h5>
+                                    <p>In den meisten Szenarien sollte eine Seed-Phrase materialisiert und sicher
+                                        verwahrt werden, um zu verhindern, dass diese Bedrohung letztlich zu
+                                        Guthabenverlust führt.</p>
+                                    <p>Ausnahmen sind der Transport von Guthaben über eine Grenze, wenn es entscheidend
+                                        ist, dass Dritte bei einer Durchsuchung keine materialisierte Seed-Phrase
+                                        finden. Nach Abschluss des Transports sollte der Seed entweder materialisiert
+                                        werden oder die Mittel auf eine andere Seed-Phrase übertragen werden.
+                                    </p>
+
+
+                                </details>
+                            </li>
+
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Zwang</span>
+                                        <img src="../images/icons/gun-icon.png" alt="" class="icon">
+                                    </summary>
+                                    <p>Erpressung, Nötigung und Zwang
+                                    </p>
+
+                                    <p>Nötigung — Jemand kann körperliche Gewalt, Drohungen oder anhaltenden Druck
+                                        einsetzen, um Sie zur Preisgabe des auswendig gelernten Seeds oder zur Eingabe
+                                        in ein Gerät zu zwingen; auswendig gelernte Geheimnisse sind besonders
+                                        verletzlich, weil Sie vor Ort zur Offenlegung gezwungen werden können.</p>
+
+
+
+
+
+
+
+
+
+
+                                    <p>Erpressung — Ein Angreifer könnte Ihnen, Ihrer Familie oder Ihrem Eigentum
+                                        schaden, wenn Sie den Seed nicht herausgeben oder Gelder transferieren; weil
+                                        der Seed in Ihrem Kopf ist, können Sie ihn vor einem entschlossenen Erpresser
+                                        nicht „verstecken“.</p>
+
+                                    <p>Erpressung mit Drohung — Ein Angreifer könnte drohen, sensible persönliche
+                                        Informationen (echt oder erfunden) zu veröffentlichen, falls Sie den Seed
+                                        preisgeben oder Forderungen nachkommen; der psychologische Druck kann
+                                        ausreichen, um auswendig gelerntes Geheimwissen zu brechen.</p>
+
+
+                                    <h5>Lösungen:</h5>
+                                    <p>Die Abwehr dieser Bedrohungskategorie ist komplexer und mehrschichtig, und jeder
+                                        Bitcoiner muss für sich entscheiden, wie umfassend die Verteidigungsstrategie
+                                        sein soll.
+                                    </p>
+
+                                    <p>Hier kommen Täuschungs-Wallets und der fehlende Sofortzugriff auf den Großteil
+                                        der eigenen
+                                        Bestände ins Spiel. Der Bitcoiner kann sich dafür entscheiden, sich unter
+                                        Zwang nicht vollständig zur Preisgabe der Seed-Phrase befähigen zu können,
+                                        indem nicht alle notwendigen Informationsstücke bekannt sind.</p>
+
+                                    <p>Grundlegende Operational Security, etwa die eigenen Bestände nicht offenzulegen,
+                                        möglicherweise nicht zu nennen, wann Bitcoin erstmals gekauft wurden und wie
+                                        sie gespeichert sind, sollte verinnerlicht werden. Mehr dazu im OPSEC-Abschnitt
+                                        später im Leitfaden.</p>
+
+
+                                </details>
+                            </li>
+
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Beobachtung</span>
+                                        <img src="../images/icons/surveillance-icon.png" alt="" class="icon">
+                                    </summary>
+                                    <p>Überwachung bei der Seed-Eingabe</p>
+
+                                    <p>Versteckte Kameras, kompromittierte Bildschirme oder Aufnahmegeräte können Ihre
+                                        Seed-Phrase erfassen, während Sie sie tippen oder in eine Wallet eingeben. Selbst
+                                        ein immaterialisierter Seed ist in dem Moment exponiert, in dem er auf einem
+                                        überwachten Gerät eingegeben wird.</p>
+
+                                    <h5>Lösungen:</h5>
+
+                                    <p>Best Practice ist, die Seed-Phrase niemals in einem Raum mit Kameras oder
+                                        Mikrofonen zu verwenden. Es sollte entweder keine Fenster geben oder Fenster
+                                        mit Jalousien. Außerdem sollten sich keine Personen im Raum befinden, die
+                                        nicht zu den Seed-Phrase-Bewahrern gehören.</p>
+
+                                    <p>Achten Sie außerdem darauf, die Wörter der mnemonischen Seed-Phrase beim Eingeben
+                                        in den Seedsigner oder beim Aufschreiben nicht auszusprechen.</p>
+
+                                    <p>Best Practice ist, den Seedsigner oder zumindest ein anderes Gerät zu nutzen, das
+                                        die Seed-Phrase vom Internet getrennt hält (air-gapped).</p>
+
+
+                                </details>
+                            </li>
+
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Nichtverfügbarkeit: Handlungsunfähigkeit oder Tod </span>
+                                        <img src="../images/icons/emergency-rescue-icon.png" alt="" class="icon">
+                                    </summary>
+
+                                    <p>Diese Bedrohung wird im Kurs zur Nachlassplanung im Detail behandelt. Dort lernt
+                                        der Nutzer, ein System zu entwickeln, um Mittel an die nächsten Angehörigen oder
+                                        andere gewählte Erben zu übertragen, sodass sie das Geld bis zum Tod verwalten
+                                        oder es im Todesfall erhalten.</p>
+
+
+                                </details>
+                            </li>
+
+                            <li>
+
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Social Engineering</span>
+                                        <img src="../images/icons/fishing-icon.png" alt="" class="icon">
+                                    </summary>
+
+                                    <p>Auch wenn andere Bedrohungen vielleicht bedrohlicher wirken, ist Social
+                                        Engineering eine der wahrscheinlichsten Ursachen für den Verlust von Guthaben.</p>
+
+
+
+                                    <ul class="summary-ul">
+                                        <li><strong>Vorwand / Identitätsvortäuschung</strong> — Angreifer geben sich als
+                                            vertraute Person/Dienst aus, um nach dem Seed zu fragen.</li>
+                                        <li><strong>Grooming / Vertrauensaufbau</strong> — Baut über Zeit Vertrauen auf,
+                                            bis Sie Geheimnisse preisgeben.</li>
+                                        <li><strong>Informationsgewinnung in beiläufigen Gesprächen</strong> —
+                                            scheinbar harmlose Fragen, die Wörter, Reihenfolge oder Hinweise
+                                            herausziehen.</li>
+                                        <li><strong>Phishing über Accounts/Kontakte</strong> — kompromittiert Freunde
+                                            oder Dienste, um Sie zur Preisgabe des Seeds zu bewegen.</li>
+                                        <li><strong>Druck durch Autorität/Dringlichkeit</strong> — vorgetäuschte
+                                            Notfälle oder offiziell klingende Forderungen erzwingen die Preisgabe.
+                                        </li>
+                                        <li><strong>Emotionale Manipulation</strong> — Ausnutzen von Angst, Mitgefühl,
+                                            Romantik oder Schuld, um Sie zur Herausgabe zu bewegen.</li>
+                                        <li><strong>Verrat durch Insider</strong> — vertraute Personen (Freunde,
+                                            Familie, Kollegen), die den Seed erfahren und später missbrauchen.</li>
+                                        <li><strong>Informations-Puzzeln</strong> — Sammeln kleiner Bruchstücke aus
+                                            verschiedenen Interaktionen, bis der vollständige Seed rekonstruiert werden
+                                            kann.</li>
+                                    </ul>
+
+                                    <h5>Lösungen:</h5>
+
+                                    <ul class="summary-ul">
+                                        <li>Geben Sie Ihre Seed-Phrase niemals auf einem internetverbundenen Gerät ein.
+                                        </li>
+                                        <li>Nutzen Sie eine Hardware-Wallet, damit der Seed isoliert bleibt und nie
+                                            abgetippt wird.</li>
+                                        <li>Teilen Sie nie, dass Sie eine Seed-Phrase besitzen — erwähnen Sie es nicht
+                                            einmal.</li>
+                                        <li>Ignorieren Sie unaufgeforderte Nachrichten, Links oder Anrufe zu Ihrer
+                                            Wallet oder Bitcoin.</li>
+                                        <li>Prüfen Sie alle URLs, Updates und Software-Quellen manuell.</li>
+                                        <li>Halten Sie Wiederherstellung und Backup-Prozesse vollständig offline.</li>
+                                        <li>Nutzen Sie gegebenenfalls Multisig-Setups, um einen Single Point of Failure
+                                            oder Zwang zu verhindern.
+                                        </li>
+                                        <li>Bewahren Sie Backups sicher an mehreren vertrauenswürdigen und privaten
+                                            Orten auf.</li>
+                                        <li>Bereiten Sie einen Plan für Tod oder Handlungsunfähigkeit vor, ohne den
+                                            vollständigen Seed offenzulegen.</li>
+                                        <li>Bleiben Sie privat — zeigen Sie keine Kontostände und sprechen Sie nicht
+                                            öffentlich über Bestände.</li>
+                                    </ul>
+
+
+
+                                </details>
+                            </li>
+
+                        </ul>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h3 id="stage_1.2.2">Stufe 1.2.2: Bedrohungen einer materialisierten Seed-Phrase</h3>
+
+
+
+
+                    <p>Wenn der Seed dauerhaft in Form eines Backups materialisiert wird, entstehen zwei neue
+                        Bedrohungskategorien.</p>
+
+
+
+
+
+
+
+
+
+
+
+                    <div>
+                        <img src="../images/icons/materialized-seed-threats-icon.png"
+                            alt="Symbol für materialisierte Seed/Schlüssel">
+                        <figcaption>Abbildung 7: Bedrohungskategorien der materialisierten Seed-Phrase</figcaption>
+                    </div>
+
+
+
+                    <div class="threats-container">
+
+
+                        <ul>
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Diebstahl </span>
+                                        <img src="../images/icons/thief-icon.png" alt="" class="icon">
+                                    </summary>
+                                    <p>Da der Seed auf einem physischen Objekt gespeichert oder als digitale Kopie
+                                        dauerhaft gemacht wird, kann ein Dieb, der entweder vom Schlüssel weiß oder ihn
+                                        bei einem Einbruch als solchen erkennt, die Guthaben stehlen.</p>
+
+                                </details>
+                            </li>
+
+
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Physische Umweltbedrohungen </span>
+                                        <img src="../images/icons/environmental-threats-icon.png" alt="" class="icon">
+                                    </summary>
+                                    <p>Wenn es nur eine physische Kopie gibt, wird der Schlüssel anfällig für
+                                        Zerstörung durch Umwelteinflüsse wie Wasser, Feuer oder Quetschung. Korrosion
+                                        oder Elektrizität können das Backup ebenfalls beschädigen.</p>
+
+                                </details>
+                            </li>
+                        </ul>
+
+
+
+
+
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h1 id="stage_2">Stufe 2: Die Bausteine der Verteidigung</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+                    <p>Diese Stufe stellt die Verteidigungsbausteine vor, mit denen ein Bitcoiner arbeiten kann. Dazu
+                        zählen Seed-Modifikatoren, Backup-Architektur sowie Power- und Stealth-Defense-Tools.</p>
+
+
+
+                    <h2 id="stage_2.1">Stufe 2.1: Seed-Modifikatoren, die Passphrase</h2>
+
+                    <p>Es gibt verschiedene Seed-Modifikatoren, die Bitcoinern zur Verfügung stehen. Dieses Kapitel
+                        konzentriert sich auf die Passphrase.</p>
+
+
+
+                    <div>
+                        <img src="../images/icons/passphrase-icon.png" title="Symbol für eine Bitcoin-Passphrase"
+                            alt="Symbol für eine Bitcoin-Passphrase">
+                        <figcaption>Symbol für eine Bitcoin-Passphrase</figcaption>
+                    </div>
+
+
+
+                    <p>Wenn Sie mehr über die anderen Modifikatoren erfahren möchten, klicken Sie auf die Details
+                        unten.<br>Sie sind für diesen Kurs nicht erforderlich.
+                    </p>
+
+
+
+
+                    <details>
+                        <summary><strong>Klicken, um eine Liste aller Seed-Modifikatoren zu sehen</strong></summary>
+
+                        <h3>1. BIP39-Passphrase (das „25. Wort“)</h3>
+                        <p>Eine vom Nutzer definierte Zeichenkette, die bei der Seed-Ableitung hinzugefügt wird.
+                            Erzeugt eine vollständig neue Wallet auf Basis derselben 24 Wörter.</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Gleicher Seed + andere Passphrase = nicht verwandte Wallets.
+                            </li>
+                            <li><strong>Einsatz:</strong> Versteckte oder sekundäre Wallets (plausible
+                                Abstreitbarkeit).</li>
+                            <li><strong>Risiko:</strong> Vergessen bedeutet dauerhaft keinen Zugriff.</li>
+                            <li><strong>Tipp:</strong> Sollte lang, einprägsam und einzigartig sein.</li>
+                        </ul>
+
+                        <h3>2. Varianten des Ableitungspfads</h3>
+                        <p>Das Ändern des Ableitungspfads (z. B. <code>m/44'/0'/0'</code> → <code>m/84'/0'/0'</code>)
+                            erzeugt andere Adresstypen oder parallele Wallets.</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Erzeugt neue Adresssätze aus demselben Seed.</li>
+                            <li><strong>Einsatz:</strong> Getrennte Wallets für Sparen, Ausgaben oder Vererbung.
+                            </li>
+                            <li><strong>Risiko:</strong> Es muss dokumentiert werden, welche Pfade zur
+                                Wiederherstellung verwendet wurden.</li>
+                        </ul>
+
+                        <h3>3. Individuelles Salt / Double-PBKDF2-Schicht</h3>
+                        <p>Hinzufügen eines zusätzlichen privaten <a class="glossary-link"
+                                href="glossary.de.html#glossary_dt_salt" target="_blank"
+                                title="internal glossary link">Salts</a> zum Seed-Ableitungsprozess, wodurch ein
+                            einzigartiger Seed entsteht, selbst wenn die Wörter bekannt sind.</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Erhöht die kryptografische Einzigartigkeit.</li>
+                            <li><strong>Einsatz:</strong> Fortgeschrittene Nutzer, die hardwaregebundene Sicherheit
+                                suchen.</li>
+                            <li><strong>Risiko:</strong> Nicht standardisiert; Recovery-Tools unterstützen es
+                                möglicherweise nicht.</li>
+                        </ul>
+
+                        <h3>4. Externe Verschlüsselungsschicht</h3>
+                        <p>Verschlüsselung des Seeds oder von Teilen davon mit einem separaten Schlüssel oder
+                            Passwort (z. B. AES-Verschlüsselung).</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Schützt den Seed, falls er in digitaler oder physischer Form
+                                gefunden wird.</li>
+                            <li><strong>Einsatz:</strong> Geeignet für Umgebungen, in denen die physische Sicherheit
+                                unsicher ist.</li>
+                            <li><strong>Risiko:</strong> Ohne Dokumentation nicht kompatibel mit air-gapped
+                                Wiederherstellung.</li>
+                        </ul>
+
+                        <h3>5. Kodierungs- oder Transformationsschemata</h3>
+                        <p>Verschleiern des Seeds oder der Passphrase mithilfe von Buchcodes, Mustern oder numerischer
+                            Kodierung.</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Lässt das Backup ohne Schlüssel bedeutungslos erscheinen.
+                            </li>
+                            <li><strong>Einsatz:</strong> Stealth Defense und geringe Erkennbarkeit.</li>
+                            <li><strong>Risiko:</strong> Dekodierungsregeln müssen sicher aufbewahrt werden.</li>
+                        </ul>
+
+                        <h3>6. Wallet-spezifische Modifikatoren</h3>
+                        <p>Fortgeschrittene Optionen wie BIP85-Child-Seeds, Miniscript-Parameter oder
+                            Vererbungsbedingungen.</p>
+                        <ul>
+                            <li><strong>Wirkung:</strong> Ermöglicht hierarchische oder zeitbasierte Wallet-Logik.</li>
+                            <li><strong>Einsatz:</strong> Langfristige Setups, Unternehmens- oder Familiensysteme.</li>
+                            <li><strong>Risiko:</strong> Erfordert wallet-spezifisches Verständnis und Dokumentation.
+                            </li>
+                        </ul>
+
+                        <h3>Zusammenfassung</h3>
+                        <p>Die BIP39-Passphrase ist der einzige weit verbreitete und standardisierte
+                            Seed-Modifikator. Andere bieten mehr Geheimhaltung, tauschen jedoch Portabilität und
+                            Einfachheit ein und sind am besten für fortgeschrittene Nutzer geeignet.</p>
+                    </details>
+
+
+
+                    <p>Eine Passphrase ist ein <strong>Seed-Modifikator</strong>, weil sie einen zusätzlichen Input
+                        darstellt, der das kryptografische Ergebnis
+                        der Seed-Wörter verändert, ohne die Wörter selbst zu verändern.</p>
+
+
+                    <p>Die Seed-Phrase allein erzeugt einen <em>Master Seed</em>, der die Wurzel für alle privaten
+                        Schlüssel und Adressen ist. Wenn Sie eine Passphrase hinzufügen, wird sie über den
+                        <a class="glossary-link" href="glossary.de.html#glossary_dt_bip39_pbkdf2" target="_blank"
+                            title="internal glossary link">BIP39
+                            PBKDF2</a>-Prozess mit dem Seed kombiniert, um einen vollständig anderen Master Seed zu
+                        erzeugen.</p>
+
+                    <p>Damit lässt sich effektiv eine versteckte Wallet hinter der ursprünglichen Seed-Phrase
+                        erzeugen.</p>
+
+                    <h4>Kernaussagen</h4>
+                    <ul>
+                        <li>Gleiche Recovery-Wörter + andere Passphrase = andere Wallet.</li>
+                        <li>Eine fehlende oder falsche Passphrase bedeutet, dass die Wallet nicht wiederhergestellt
+                            werden kann.</li>
+                        <li>Die Passphrase wird von der Wallet-Software niemals gespeichert.</li>
+
+                    </ul>
+
+
+
+
+
+
+                    <div>
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                                alt="Diagramm zur Seed-Modifikator-Passphrase">
+                        <figcaption>Abbildung 1: Seed-Modifikator-Passphrase-Diagramm</figcaption>
+                    </div>
+
+
+
+                    <h2 id="stage_2.2">Stufe 2.2: Backup-Architektur / Redundanz & Verteilung</h2>
+
+                    <p>
+                        Während Seed-Modifikatoren den Seed selbst verändern,<br>
+                        verändern Redundanz & Verteilung die Architektur des Verteidigungsmodells.<br><br>
+                        Das geschieht, weil die Anzahl der Schlüssel-Instanzen durch Kopien erhöht wird
+                        (Redundanz).<br>
+                        Sinnvolle Verteilung platziert die Kopien an unterschiedlichen Orten (Verteilung), um einen
+                        Verlust der Mittel zu vermeiden, falls ein Standort und/oder eine Kopie zerstört wird.
+                    </p>
+
+
+
+
+
+                    <div>
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                            alt="Diagramm zu Redundanz und Verteilung">
+                        <figcaption>Abbildung 2: Diagramm zu Redundanz und Verteilung</figcaption>
+                    </div>
+
+
+
+
+
+
+                    <h2 id="stage_2.2.1">Stufe 2.2.1: Redundanz</h2>
+
+
+
+                    <p>Redundanz bedeutet, mehrere Kopien kritischer Daten oder Systeme zu erstellen, um
+                        Verfügbarkeit und Haltbarkeit bei Verlust oder Ausfall sicherzustellen.</p>
+
+                    <h4>Wirkung</h4>
+                    <p>Sie bietet Backup-Ebenen, sodass eine andere Kopie einspringen kann, wenn eine Kopie verloren,
+                        beschädigt oder unzugänglich ist.</p>
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+
+                            <h4>Vorteile</h4>
+                            <ul>
+                                <li>Erhöht Zuverlässigkeit und Fehlertoleranz.</li>
+                                <li>Schützt vor versehentlichem Löschen oder Hardwareausfällen.</li>
+                                <li>Verbessert die langfristige Haltbarkeit von Daten.</li>
+                            </ul>
+
+
+                        </div>
+
+                        <div class="text-two-column-div">
+
+
+                            <h4>Nachteile</h4>
+                            <ul>
+                                <li>Erfordert mehr Speicherplatz und Pflege.</li>
+                                <li>Kann die Komplexität und potenzielle Exponierung erhöhen, wenn Kopien nicht gut
+                                    gesichert sind.</li>
+                                <li>Höhere Kosten für Speicherung und Verwaltung.</li>
+                            </ul>
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h2 id="stage_2.2.2">Stufe 2.2.2: Verteilung</h2>
+
+
+
+
+                    <!--
+HOUSE LOCATION ICONS
+
+                        <img src="../images/icons/backup-key-location-1.png" alt="icon of immaterialzed seed / key">
+                        <img src="../images/icons/backup-key-location-2.png" alt="icon of immaterialzed seed / key">
+                         <img src="../images/icons/backup-location-3.png" alt="icon of immaterialzed seed / key">
+-->
+
+
+
+
+
+
+                    <p>
+                        Verteilung bedeutet, Ihre Backup-Kopien auf mehrere Orte oder Stellen zu verteilen.<br><br>
+                        Der Fokus liegt auf Trennung und Unabhängigkeit, um möglichst viele Single Points of Failure
+                        (SPOF) zu eliminieren.
+                    </p>
+
+                    <p>
+                        Dieses Verteidigungssystem konzentriert sich auf geografische Streuung.<br>
+                        Der Nutzer muss den gewünschten Trennungsgrad festlegen — vom selben Haus über
+                        Nachbarschaft, Stadt, Region, Land bis hin zu Kontinent und potenziell sogar Weltraum.
+                    </p>
+                    <p>
+                        In Regionen mit hohem Risiko für Naturkatastrophen ist es ratsam, Backups so weit auseinander
+                        zu platzieren, dass die Zerstörung beider Standorte äußerst unwahrscheinlich ist.
+                    </p>
+
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+
+                            <h4>Vorteile</h4>
+                            <ul>
+                                <li>Reduziert das Risiko eines Single Point of Failure.</li>
+                                <li>Erhöht die Widerstandsfähigkeit gegen physische Katastrophen oder Diebstahl.</li>
+                                <li>Kann mit Redundanz zu starker, mehrschichtiger Sicherheit kombiniert werden.</li>
+                            </ul>
+
+
+                        </div>
+
+                        <div class="text-two-column-div">
+
+
+                            <h4>Nachteile</h4>
+                            <ul>
+                                <li>Erhöht logistische Komplexität und Koordinationsaufwand.</li>
+                                <li>Erschwert das schnelle Zusammenführen aller Teile bei Bedarf.</li>
+                                <li>Erfordert sorgfältige Dokumentation, um Standorte oder Anteile nicht aus dem Blick
+                                    zu verlieren.</li>
+                            </ul>
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h2 id="stage_2.3">Stufe 2.3: Die Verteidigungswerkzeuge</h2>
+
+
+                    <p>Verteidigungswerkzeuge sind Maßnahmen, die die Widerstandsfähigkeit des Backups gegen Verlust,
+                        Diebstahl oder Schaden erhöhen, ohne den Seed, seine Anzahl oder die Speicherorte zu
+                        verändern.</p>
+
+                    <h2 id="stage_2.3.1">Stufe 2.3.1: Power Defense</h2>
+
+
+                    <h3 id="stage_2.3.1.1">Stufe 2.3.1.1: Die Power-Defense-Tools</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+
+                            <p>
+                                Power-Defense-Tools sind physische oder mechanische Maßnahmen, die Angreifern den
+                                Zugriff auf ein Backup oder den Seed erheblich erschweren.<br><br>
+                                Sie bieten starken Schutz gegen Diebstahl, Zerstörung oder Manipulation.
+                            </p>
+
+
+                        </div>
+
+
+                        <div class="two-column-image-container">
+                            <img src="../images/icons/weightlifting-icon.png" alt="Symbol für physische Abwehr">
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="two-column-container-div">
+
+
+
+
+                        <div class="text-two-column-div">
+
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.3.1/power-defense-tools-1.png"
+                                alt="Diagramm zu Power-Defense-Tools">
+                            <figcaption>Abbildung 3: Power-Defense-Tools</figcaption>
+
+                        </div>
+
+
+
+                        <div class="text-two-column-div">
+
+
+
+
+
+                            <ul>
+                                <li>
+                                    <details class="threat">
+                                        <summary>
+                                                <span class="threat-title">Verstärkte Backup-Medien:</span>
+
+                                        </summary>
+                                        <p>Gehärtete Metallplatten (Edelstahl, Titan, Inconel) schützen den gravierten
+                                            Seed vor Feuer, Wasser und physischer Beschädigung.</p>
+                                </li>
+
+                                <li>
+                                    <details class="threat">
+                                        <summary>
+                                                <span class="threat-title">Sichere Aufbewahrung:</span>
+
+                                        </summary>
+                                        <p>Feuerfeste, wasserbeständige Safes oder Tresore — idealerweise aus
+                                            verstärktem Stahl oder Schließfächer, die erheblichen Zeitaufwand, Werkzeuge
+                                            oder Autorisierung erfordern.</p>
+                                </li>
+
+                                <li>
+                                    <details class="threat">
+                                        <summary>
+                                                <span class="threat-title">Zugangskontrolle & Detektion:</span>
+
+                                        </summary>
+                                        <p>Physische Schlösser, Sicherheitsgitter, Wachpersonal, Alarmsysteme und
+                                            Überwachung schränken den Zugang ein und schrecken Manipulationen ab.</p>
+                                </li>
+
+
+
+                            </ul>
+
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+
+
+                            <h4>Vorteile</h4>
+                            <ul>
+                                <li>Schützt vor Diebstahl oder Zerstörung.</li>
+                                <li>Schreckt Angreifer ab, da Zeit- und Aufwand für einen Zugriff steigen.</li>
+
+                            </ul>
+
+
+                        </div>
+
+                        <div class="text-two-column-div">
+
+
+
+                            <h4>Nachteile</h4>
+                            <ul>
+                                <li>Mit zunehmenden physischen Schutzmaßnahmen steigen die Kosten.</li>
+                                <li>Ohne Stealth signalisieren sichtbare Abwehrmaßnahmen ein wertvolles Ziel.</li>
+                            </ul>
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+
+
+
+
+
+
+
+                    <h3 id="stage_2.3.1.2">Stufe 2.3.1.2: Backup-Materialien
+                        und ihre Eigenschaften</h3>
+
+
+
+                    <p>In dieser Stufe schauen wir uns mögliche Materialien an, mit denen Sie Ihre Seed-Phrase
+                        speichern können.</p>
+
+                    <p>Die folgende Liste bietet eine konzentrierte Auswahl der bestmöglichen Materialien und lässt
+                        Dinge wie Papier und andere sehr schwache Materialien außen vor.</p>
+
+
+                    <p>Wenn Sie eine umfassende Rangliste von Materialien mit ihren jeweiligen Eigenschaften
+                        ansehen möchten, einschließlich Wasser- und Hitzebeständigkeit sowie Härte:</p>
+
+
+
+                    <details>
+                        <summary><strong>Hier klicken</strong></summary>
+
+                        <table class="guide-table">
+                            <caption>BTC-Seed-Speichermaterialien</caption>
+                            <thead>
+                                <tr>
+                                    <th>Rang</th>
+                                    <th>Material</th>
+                                    <th>Haltbarkeit</th>
+                                    <th>Vorteile</th>
+                                    <th>Nachteile</th>
+                                    <th>Typische Nutzung / Kosten</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Papier</td>
+                                    <td>Sehr schlecht / schlecht / schlecht / schlecht</td>
+                                    <td>Günstig, leicht zu beschriften</td>
+                                    <td>Brennt, saugt sich voll, reißt, altert, leicht zu kopieren</td>
+                                    <td>Heimdruck — sehr geringe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Karton / Karteikarte</td>
+                                    <td>Sehr schlecht / schlecht / schlecht / schlecht</td>
+                                    <td>Etwas steifer als Papier</td>
+                                    <td>Gleiche Schwächen wie Papier, sperrig</td>
+                                    <td>Geringe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Fotodruck / Fotos</td>
+                                    <td>Schlecht / schlecht / schlecht / schlecht</td>
+                                    <td>Leicht in Wallets/Umschlägen zu lagern</td>
+                                    <td>Verblasst, Wasserschäden, Feuer</td>
+                                    <td>Geringe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Kunststoff-laminiertes Papier</td>
+                                    <td>Schlecht / mittel / mittel / schlecht</td>
+                                    <td>Verhindert Verschmieren, kurzfristig wasserbeständig</td>
+                                    <td>Schmilzt bei Feuer, Laminat kann sich lösen, nicht archivfest</td>
+                                    <td>Geringe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Holz (graviert oder gebrannt)</td>
+                                    <td>Schlecht / mittel / schlecht / mittel</td>
+                                    <td>Rustikal, leicht zu gravieren</td>
+                                    <td>Brennt, verrottet, Insekten, quillt bei Wasser</td>
+                                    <td>Gering–moderat</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Dünne Aluminiumfolie / -platte</td>
+                                    <td>Schlecht / gut / mittel / schlecht</td>
+                                    <td>Günstig, wasser- und teilweise korrosionsbeständig</td>
+                                    <td>Leicht zu schneiden/reißen, geringe Quetschfestigkeit, schmilzt bei hoher Temperatur</td>
+                                    <td>Geringe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Kupfer- / Messingblech (weiches Metall)</td>
+                                    <td>Mittel / gut / mittel / mittel</td>
+                                    <td>Korrosionsbeständig, leicht zu gravieren</td>
+                                    <td>Relativ weich (kann sich biegen), korrodiert in manchen Umgebungen</td>
+                                    <td>Gering–moderat</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Dicke Aluminiumplatte</td>
+                                    <td>Mittel / gut / mittel / gut</td>
+                                    <td>Leicht, wasserbeständig, bessere Hitzetoleranz</td>
+                                    <td>Niedrigerer Schmelzpunkt als Stahl, kann sich bei intensivem Feuer verformen</td>
+                                    <td>Moderat</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Dünner Edelstahl</td>
+                                    <td>Gut / ausgezeichnet / sehr gut / gut</td>
+                                    <td>Stabil, rostbeständig, weit verbreitet</td>
+                                    <td>Weicher als gehärtete Stähle, kann sich bei extremer Hitze verziehen</td>
+                                    <td>Moderat</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Kommerzielle Edelstahl-Crypto-Platte</td>
+                                    <td>Gut / ausgezeichnet / sehr gut / sehr gut</td>
+                                    <td>Für Seeds entwickelt, langlebig, manipulationssicher</td>
+                                    <td>Stanz-/Gravierwerkzeug nötig; moderate Kosten</td>
+                                    <td>Moderat–hoch</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Reines Nickelblech</td>
+                                    <td>Sehr gut / ausgezeichnet / ausgezeichnet / sehr gut</td>
+                                    <td>Hohe Temperaturtoleranz, korrosionsbeständig</td>
+                                    <td>Weicher als manche Legierungen, teurer als Edelstahl</td>
+                                    <td>Moderat–hoch</td>
+                                </tr>
+                                <tr>
+                                    <td>12</td>
+                                    <td>Inconel / Nickel-Chrom-Legierung</td>
+                                    <td>Ausgezeichnet / ausgezeichnet / ausgezeichnet / ausgezeichnet</td>
+                                    <td>Hervorragende Hochtemperaturbeständigkeit</td>
+                                    <td>Teuer, schwerer zu gravieren</td>
+                                    <td>Hohe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td>
+                                    <td>Titanplatte</td>
+                                    <td>Ausgezeichnet / ausgezeichnet / ausgezeichnet / ausgezeichnet</td>
+                                    <td>Sehr robust, korrosionsfrei, hoher Schmelzpunkt, geringes Gewicht</td>
+                                    <td>Teuer, spezialisierte Gravur nötig</td>
+                                    <td>Hohe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>14</td>
+                                    <td>Gehärtete Werkzeugstahlplatte</td>
+                                    <td>Ausgezeichnet / ausgezeichnet / sehr gut / ausgezeichnet</td>
+                                    <td>Extrem robust, hohe Druck- und Hitzebeständigkeit</td>
+                                    <td>Kann korrodieren, wenn nicht rostfrei; schwer</td>
+                                    <td>Hohe Kosten</td>
+                                </tr>
+                                <tr>
+                                    <td>15</td>
+                                    <td>Keramik / Granitstein</td>
+                                    <td>Ausgezeichnet / ausgezeichnet / ausgezeichnet / gut (spröde)</td>
+                                    <td>Übersteht sehr hohe Hitze, chemisch inert</td>
+                                    <td>Spröde, sperrig, Gravur kann flach sein</td>
+                                    <td>Moderat–hoch</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </details>
+
+                    <p>Das in diesem Leitfaden empfohlene Material ist Edelstahl aufgrund seiner Haltbarkeit und
+                        Kosteneffizienz.
+                        Jedes höherwertige, widerstandsfähigere, aber auch teurere Material ist ebenfalls geeignet,
+                        wenn der Einzelne dies wünscht.</p>
+
+
+
+
+
+
+                    <h2 id="stage_2.3.2">Stufe 2.3.2: Stealth Defense
+                    </h2>
+
+
+
+
+
+                    <div class="two-column-container-div">
+
+
+                        <div class="text-two-column-div">
+
+                            <p>Stealth-Tools sind Methoden und Objekte, die den Ziel-Seed schwerer erkennbar und
+                                auffindbar machen. Sie setzen auf Tarnung, Ablenkung und minimale Sichtbarkeit, damit
+                                ein Angreifer das echte Material übersieht.</p>
+
+                        </div>
+
+
+                        <div class="two-column-image-container">
+                            <img src="../images/icons/hide-private-hidden-icon.png"
+                                alt="Symbol für versteckten Seed">
+
+                            <img src="../images/icons/ninja-icon.png" alt="Symbol für Tarnung">
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+                    <ul>
+                        <li>Versteckt im Offensichtlichen: Seed in einem Alltagsgegenstand notiert oder graviert
+                            (Buch, Tagebuch, hinter einem Bild, in einem Haushaltsgegenstand).</li>
+                        <li>Falsche Beschriftung: Das Backup als unbedeutend oder irreführend kennzeichnen (z. B. „alte
+                            Notizen“, „Garantie“ oder „Belege“).</li>
+                        <li>Köder-Wallets: Fake-Wallets oder Seed-Phrasen, die Diebe in die Irre führen, während die
+                            echten Mittel anderswo geschützt sind.</li>
+
+                        <li>Verschlüsselter digitaler Speicher: Seed in einer Datei, einem Bild oder Container mit
+                            starker Verschlüsselung versteckt; wirkt wie harmlose Daten, bis er entschlüsselt wird.</li>
+
+                        <li>Stille und Geheimhaltung: Verbale und schriftliche Hinweise minimieren; unnötige Personen
+                            nicht informieren und niemals offensichtliche Hinweise notieren.</li>
+
+
+
+
+                    </ul>
+
+
+                    <div>
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_2.3.2/stealth-tools-diagram.drawio.png"
+                            alt="Diagramm zu Stealth-Defense-Tools">
+                        <figcaption>Abbildung 4: Stealth-Defense-Tools</figcaption>
+                    </div>
+
+                    <h4>Vorteile</h4>
+                    <ul>
+                        <li>Verringert die Wahrscheinlichkeit, dass ein Angreifer den Gegenstand als wertvoll erkennt.</li>
+                        <li>Geringe Kosten und oft leicht umzusetzen.</li>
+                        <li>Lässt sich gut mit Redundanz und Verteilung für mehrschichtige Verteidigung kombinieren.</li>
+                    </ul>
+                    <h4>Nachteile</h4>
+                    <ul>
+                        <li>Hängt von Geheimhaltung ab — wenn das Schema entdeckt wird, versagt der Schutz.</li>
+                        <li>Kann versehentlich entsorgt oder verloren gehen, wenn die Tarnung zu überzeugend ist.</li>
+                        <li>Kann operative Reibung erzeugen (Tarnung merken, Echtheit prüfen, ohne das Geheimnis
+                            offenzulegen).</li>
+                    </ul>
+                    <h4>Umsetzungstipps</h4>
+                    <ul>
+                        <li>Bedeutungen und Orte sicher dokumentieren (verschlüsselte Notiz oder gemerkte Mnemonik),
+                            um Vergessen zu vermeiden.</li>
+                        <li>Stealth mit anderen Maßnahmen kombinieren: Köder, physische Sicherheit und Verteilung.
+                        </li>
+                        <li>Offensichtliche Krypto-Bilder oder -Beschriftungen vermeiden, die Aufmerksamkeit anziehen.</li>
+                        <li>Unauffällige, variierende Tarnungen nutzen und über die Zeit rotieren, um Muster zu
+                            vermeiden.</li>
+                        <li>Haltbarkeit und Wiederherstellbarkeit testen (z. B. ob Schreiben/Gravur erwartete
+                            Bedingungen übersteht), ohne das Geheimnis offenzulegen.</li>
+                    </ul>
+
+
+
+                    <h2 id="stage_2.4">Stufe 2.4: OPSEC – Operational Security</h2>
+
+
+                    <h3>OPSEC — Mission</h3>
+                    <p>Schützen Sie Vertraulichkeit, Integrität und Verfügbarkeit von Cold-Storage-Backups, indem Sie
+                        einfache, wiederholbare Handhabungsregeln durchsetzen, die Social Engineering, Diebstahl und
+                        versehentlichen Verlust verhindern.</p>
+
+                    <h3>Kernannahmen (Checkliste)</h3>
+                    <ul>
+                        <li>Seed wird niemals getippt, fotografiert, gescannt oder laut vorgelesen.</li>
+                        <li>Seed berührt niemals ein internetverbundenes Gerät.</li>
+                        <li>Backup-Standorte, Architektur und Beträge werden nicht mit Außenstehenden besprochen.</li>
+                        <li>Passphrase wird separat gelagert oder auswendig gelernt; nicht bei Seed-Kopien.</li>
+                        <li>Alle Anfragen zu Seed/Passphrase/Backups gelten als feindlich, sofern sie nicht vorab über
+                            einen Out-of-Band-Code autorisiert wurden.</li>
+                    </ul>
+
+                    <h3>Handhabungsregeln</h3>
+                    <ul>
+                        <li>Beim Erstellen oder Wiederherstellen von Backups immer eine air-gapped, kamerafreie
+                            Umgebung nutzen.</li>
+                        <li>Seed oder Passphrase niemals in ein vernetztes Gerät eingeben; nur Hardware-Wallets oder
+                            verifizierte Offline-Tools verwenden.</li>
+                        <li>Physische Backups unauffällig beschriften; offensichtliche „Seed“-Markierungen vermeiden.</li>
+                        <li>Nur das Nötige duplizieren und Kopien gemäß der gewählten Architektur verteilen.</li>
+                        <li>Dokumentation minimal und verschlüsselt halten; Wiederherstellungsanweisungen und Schlüssel
+                            nicht zusammen aufbewahren.</li>
+                    </ul>
+
+                    <h3>Kommunikationsprotokoll</h3>
+                    <ul>
+                        <li>Mit jedem vertrauenswürdigen Kontakt oder Erben eine Out-of-Band-Verifikation vereinbaren
+                            (Codephrase, physischer Token).</li>
+                        <li>Alle operativen Anfragen persönlich oder über vorab vereinbarte sichere Kanäle abwickeln;
+                            keine spontanen Nachrichten akzeptieren.</li>
+                        <li>Bei Kontaktaufnahme zum Backup nichts preisgeben; zuerst Verifikationsschritte einleiten.</li>
+                    </ul>
+
+                    <h3>Insider- & Zwangsabwehr</h3>
+                    <ul>
+                        <li>Kompartimentieren: vermeiden, dass eine einzelne Person alle Komponenten kennt
+                            (Standorte + Passphrase).</li>
+                        <li>Bei Bedarf und vorher getestet Köder-Wallets und plausible Abstreitbarkeit nutzen.</li>
+                        <li>Vertrauenspersonen im Protokoll schulen: wie verifiziert wird und wonach niemals gefragt
+                            wird.</li>
+                    </ul>
+
+                    <h3>Test- & Wartungsrhythmus</h3>
+                    <ul>
+                        <li>Wiederherstellungen mindestens jährlich auf einem air-gapped Gerät prüfen (einen Pfad
+                            testen, nicht alle gleichzeitig).</li>
+                        <li>Speicherorte rotieren oder Materialien alle 3–5 Jahre bzw. nach großen Lebensereignissen
+                            erneuern.</li>
+                        <li>Tests und Änderungen in einem verschlüsselten Protokoll festhalten, getrennt von den
+                            Backups.</li>
+                    </ul>
+
+                    <h3>Notfallabläufe (Sofortmaßnahmen)</h3>
+                    <ol>
+                        <li>Wenn ein Backup-Standort kompromittiert ist: von einer Kompromittierung ausgehen,
+                            verbleibende Teile verlagern und die Erstellung eines neuen Seed+Passphrase-Paares
+                            erwägen.</li>
+                        <li>Bei Zwang oder rechtlichem Druck: Sicherheit zuerst (z. B. Köder nutzen, wenn geplant),
+                            danach Mittel in eine neue Wallet verschieben, sobald es sicher ist.</li>
+                        <li>Bei Unsicherheit über eine Anfrage: stoppen, Out-of-Band verifizieren, nicht unter Druck
+                            handeln.</li>
+                    </ol>
+
+                    <h3>Hinweis zur Vererbung</h3>
+                    <ul>
+                        <li>Erben ein minimales, verschlüsseltes Instruktionsset geben, das den
+                            Wiederherstellungsprozess und die Verifikationsmethode beschreibt — Seeds oder Passphrasen
+                            niemals am selben Ort aufbewahren.</li>
+                        <li>Rechtliche Mechanismen (Testament, Trust, Executor) nutzen, um Zeitpunkt und Bedingungen
+                            für die Offenlegung von Recovery-Details zu steuern.</li>
+                    </ul>
+
+
+
+
+
+
+
+
+                </article>
+
+
+
+
+
+            </section>
+
+
+
+
+            <section class="basic-utility-guide-main-section guide-section">
+                <h1 id="stage_3">Stufe 3: Verteidigungsparameter festlegen</h1>
+
+
+
+
+
+                <article class="basic-utility-guide-article">
+
+
+
+
+                    <p>🔹 Ziel von Stufe 3
+
+                        Den Nutzer dabei unterstützen zu verstehen, was er verteidigt, vor wem und unter welchen
+                        Bedingungen — damit die spätere Modellwahl (Stufe 4) tatsächlich zur realen Lebenssituation
+                        passt.</p>
+
+
+
+
+
+                    <p>Ein Verteidigungsmodell kann sehr schnell extrem komplex werden. Es gibt praktisch kein Ende
+                        der Maßnahmen, mit denen ein Inhaber das Backup schwerer zugänglich machen kann — doch man
+                        muss stets abwägen. Irgendwann wird ein System so komplex, dass die größte Bedrohung die
+                        Komplexität selbst ist, weil sie menschliche Fehler auf Seiten der Verteidiger begünstigt.</p>
+
+                    <p>Um Fehler in der Planungsphase zu vermeiden, setzt Stufe 3 die Parameter, auf denen die
+                        Verteidigung aufgebaut wird. Zunächst beantwortet der Nutzer eine Reihe von Kernfragen.
+                        Weitere Parameter werden später im Leitfaden behandelt.</p>
+
+
+
+                    <p>Schreiben Sie die Antworten nicht am Computer, da dies im Falle einer Kompromittierung wichtige
+                        Informationen preisgeben könnte. Verwenden Sie stattdessen Stift und Papier.</p>
+
+
+
+
+
+
+                    <h3>Menschliche Parameter</h3>
+
+                    <ul>
+                        <li>Wie viele Personen sind beteiligt? (Nur Sie? Ein Partner? Zukünftiger Erbe?)</li>
+                        <li>Wohnen Sie allein oder mit Familie/Partner?</li>
+                        <li>Wer soll was wissen?
+
+                            <ul>
+                                <li>Wer weiß, dass es Backups gibt?</li>
+                                <li>Wer kennt die Orte?</li>
+                                <li>Wer weiß, wie man die Mittel wiederherstellt?</li>
+                                <li>Wenn Wachpersonal beteiligt ist: Wissen sie, was sie bewachen?</li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                    <p><strong>Ergebnis:</strong> Vertrauenspersonen, uninformierte Personen und potenzielle Erben
+                        definieren.</p>
+
+
+
+                    <h3>Physische & geografische Parameter</h3>
+
+
+
+                    <ul>
+                        <li>Wie viele unterschiedliche physische Standorte können Sie realistisch verwalten?</li>
+                        <li>Wie weit sollten sie auseinanderliegen (z. B. nicht alle in einer Stadt)?</li>
+                        <li>Gibt es sichere Aufbewahrungsoptionen (Bankschließfach, Safe zu Hause, Verwandte)?</li>
+                        <li>Welche Umweltrisiken gibt es (Feuer, Überschwemmung, Beschlagnahme, politisches Risiko)?</li>
+                    </ul>
+                    <p><strong>Ergebnis:</strong> Grenzen der physischen Diversifizierung festlegen.</p>
+
+
+
+
+
+
+                    <h3>Privatsphäre- & Expositionsparameter</h3>
+
+                    <ul>
+                        <li>Wie öffentlich ist Ihr Bitcoin-Besitz?</li>
+                        <li>Möchten Sie bereits die Existenz der Backups verbergen?</li>
+
+                        <li>Werden Sie verschlüsselte Karten oder unauffällige Hinweise verwenden?</li>
+                    </ul>
+                    <p><strong>Ergebnis:</strong> Grad von Stealth und Geheimhaltung festlegen.</p>
+
+
+
+
+
+
+                    <!--
+                        <h3>Strategy and scope</h3>
+
+                        <p>Focus: the overall approach, goals, and participants.
+                            Order is from general to specific.</p>
+
+                        <li>How many backups will be created?</li>
+                        <li>Will one or all backups be split?</li>
+                        <li>Will a 25th word or passphrase be added?</li>
+                        <li>Is the operation to be handled by the holder as a single individual without any third
+                            parties?
+                        </li>
+                        <li>If third parties are involved, who are they?</li>
+                        <li>Which threats are eliminated with this setup?</li>
+
+
+                        <h3>Storage and location</h3>
+
+                        <p>Focus: where and how the backups are physically or digitally stored.</p>
+
+                        <li>What will be the backup locations?</li>
+                        <li>Will redundancy be applied across different types of storage media (paper, metal, USB,
+                            etc.)?
+                        </li>
+                        <li>Will geographic separation be used between backups to reduce correlated risks?</li>
+                        <li>How will backups be physically protected (e.g., safe, deposit box, hidden location)?</li>
+                        <li>Are there any legal or jurisdictional considerations for storing backups in certain
+                            locations?
+                        </li>
+
+                        <h3>Security and Encryption</h3>
+
+                        <p>Focus: cryptography, privacy, and mitigation of attack vectors.</p>
+
+                        <li>Will backups be encrypted, and if so, with what method?</li>
+                        <li>How is privacy maintained while storing and transporting backups?</li>
+                        <li>How will social engineering risks be mitigated (e.g., fake stories, compartmentalization)?
+                        </li>
+                        <li>Are decoy backups or wallets planned to misdirect potential attackers?</li>
+                        <li>Will the backup strategy include monitoring or alerts for tampering or unauthorized access?
+                        </li>
+
+                        <h3>Maintenance & Operational Procedures</h3>
+
+                        <p>Focus: lifecycle, updates, and who can access the backups. </p>
+
+                        <li>How often will backups be updated or rotated?</li>
+                        <li>Who has knowledge of the backup locations and access methods?</li>
+                        <li>What is the minimum number of people required to access each backup, if multi-party access
+                            is used?</li>
+                        <li>Are there fallback plans if one or more backups become inaccessible?</li>
+                        <li>Is there a documented process for recovering funds from backups in case of emergency?</li>
+
+
+                        <h3>Risk Management & Disaster Recovery</h3>
+
+                        <p>Focus: contingency planning and robustness against disasters.</p>
+
+                        <li>What is the plan for disaster recovery (e.g., fire, flood, theft)?</li>
+                        <li>Is there a dead mans switch and plan to pass the BTC on to the heir?</li>
+
+
+                        <p>To further explore the last question head over to Advanced Course X: Estate Planning. (Not
+                            available yet)</p>
+-->
+
+
+
+                </article>
+
+
+            </section>
+
+
+
+
+            <section id="advanced_course_seed_storage_single_sig_stage_4"
+                class="basic-utility-guide-main-section guide-section">
+                <h1 id="stage_4">Stufe 4: Das Verteidigungsmodell entwerfen</h1>
+
+
+
+
+
+                <article class="basic-utility-guide-article">
+
+
+                    <p>In Stufe 4 wählt der Nutzer ein Basis-Verteidigungsmodell und passt es an seine Bedürfnisse an.
+                    </p>
+
+                    <p>Es gibt mehrere Wege, wie ein Bitcoiner seine Verteidigung aufbauen kann. Keine Verteidigung
+                        wird je perfekt sein, und jede Abwehrkomponente bringt Kompromisse mit sich. Jede Situation
+                        ist anders, deshalb muss das Modell an die individuelle Lage angepasst werden.</p>
+
+                    <p>Das empfohlene Modell kombiniert Power Defense, Stealth Defense, Redundanz und Verteilung.</p>
+
+                    <p>In diesem Leitfaden wird eine Single-Signature-Wallet verteidigt.</p>
+
+                    <p>Die folgenden Stufen bewerten zunächst verschiedene Basis-Modelle, damit der Nutzer eine
+                        fundierte Entscheidung treffen kann, ob das empfohlene Modell gewählt wird oder ein anderes
+                        besser passt.</p>
+
+
+                    <h2 id="stage_4.1">Stufe 4.1: Die drei grundlegenden Single-Signature-Backup-Modelle</h2>
+
+                    <p>Die Basis-Modelle sind:</p>
+
+                    <ul class="content-ul">
+                        <li><a href="#stage_4.1.1">Stufe 4.1.1: Vollständiges Backup (alle 24 Wörter)</a></li>
+
+
+
+                        <li><a href="#stage_4.1.2">Stufe 4.1.2: Shamir’s Secret Sharing (SSS)</a></li>
+
+                        <li><a href="#stage_4.1.3">Stufe 4.1.3: Geteiltes Backup (zwei 12‑Wort-Hälften)</a>
+                        </li>
+
+                    </ul>
+
+                    <p>In den jeweiligen Stufen lernen Sie die Vor- und Nachteile jedes Basis-Modells kennen. Wenn Sie
+                        direkt zum empfohlenen Modell springen möchten, können Sie zu
+                        <a href="#stage_4.2">Stufe 4.2</a> wechseln.</p>
+
+
+                    <h3 id="stage_4.1.1">Stufe 4.1.1: Vollständiges Backup (alle 24 Wörter)</h3>
+
+                    <p>In diesem Setup wird der Seed als vollständiger Satz aus 24 Wörtern gespeichert.</p>
+
+                    <h3>Vollständiges 24‑Wort-Backup</h3>
+                    <ul class="content-ul">
+                        <li><strong>Vorteile</strong>
+                            <ul>
+                                <li>Einfach & zuverlässig — ein Teil, leicht zu sichern und wiederherzustellen.</li>
+                                <li>Universell — funktioniert mit allen BIP39‑Wallets.</li>
+                                <li>Schnelle Wiederherstellung — keine Rekombination nötig.</li>
+                                <li>Geringe menschliche Fehlerquote — weniger Teile, die verloren gehen oder
+                                    verwechselt werden können.</li>
+                                <li>Einfache Vererbung — leicht zu erklären und weiterzugeben.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Nachteile</strong>
+                            <ul>
+                                <li>Single Point of Failure — Diebstahl oder Verlust = Totalverlust.</li>
+                                <li>Schwer sicher zu verteilen — jede volle Kopie ist ein volles Risiko.</li>
+                                <li>Keine eingebaute Redundanz — muss manuell dupliziert werden.</li>
+                                <li>Offensichtliches Format — als Seed erkennbar.</li>
+                                <li>Keine Zugriffskontrolle — lässt sich nicht sicher teilen oder aufsplitten.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+
+                    <h3 id="stage_4.1.2">Stufe 4.1.2: Shamir’s Secret Sharing (SSS)</h3>
+
+
+
+                    <ul>
+                        <li><strong>Vorteile</strong>
+                            <ul>
+                                <li>Eingebaute Redundanz — einzelne Anteile können verloren gehen und dennoch
+                                    wiederhergestellt werden.</li>
+                                <li>Kein Single Point of Failure — ein Anteil allein ist wertlos.</li>
+                                <li>Anpassbare Sicherheit — Schwelle wählen (z. B. 3‑von‑5).</li>
+                                <li>Gut für langfristigen Cold Storage und verteilte Verwahrung.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Nachteile</strong>
+                            <ul>
+                                <li>Höhere Komplexität — Einrichtung und Wiederherstellung erfordern Sorgfalt.</li>
+                                <li>Wallet-spezifisch — nicht alle Wallets unterstützen SSS.</li>
+                                <li>Schwieriger für Erben — ohne Anleitung technisch anspruchsvoller.</li>
+                                <li>Mehr Raum für Fehler — zu viele verlorene Anteile = permanenter Verlust.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <p>Um die Komplexität von SSS‑Anteilen (Verschlüsseln/Entschlüsseln) zu reduzieren, wird diese
+                        Methode in diesem Leitfaden nicht empfohlen. Wer Interesse hat, kann <a href="">hier</a>
+                        mehr über das SSS‑Setup erfahren.</p>
+
+
+                    <h3 id="stage_4.1.3">Stufe 4.1.3: Geteiltes Backup (zwei 12‑Wort‑Hälften)</h3>
+
+
+
+                    <ul>
+                        <li><strong>Vorteile</strong>
+                            <ul>
+                                <li>Reduziert Single‑Point‑Risiko — eine Hälfte allein ist wertlos.</li>
+                                <li>Flexible Verteilung — Hälften können getrennt gelagert werden.</li>
+                                <li>Mehr Geheimhaltung — schwerer als vollständiger Seed erkennbar.</li>
+                                <li>Kompatibel — funktioniert mit allen Standard‑Wallets, sobald die Hälften vereint
+                                    sind.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Nachteile</strong>
+                            <ul>
+                                <li>Komplexere Wiederherstellung — beide Hälften müssen zusammengeführt werden.</li>
+                                <li>Verlustrisiko — geht eine Hälfte verloren, ist der Verlust permanent.</li>
+                                <li>Erfordert klare Beschriftung — Hälften können leicht verwechselt werden.</li>
+                                <li>Keine Verschlüsselung — physisches Auffinden beider Hälften ermöglicht Zugriff.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+                    <h2 id="stage_4.2">Stufe 4.2: Das empfohlene Modell und seine Anpassungen</h2>
+
+                    <p>Dieser Leitfaden zielt darauf ab, ein einfaches, aber widerstandsfähiges Backup‑Modell zu
+                        entwickeln, das sehr häufige Angriffsvektoren eliminiert und zugleich viel
+                        Anpassungsspielraum je nach individuellen Bedürfnissen bietet.</p>
+
+
+                    <p>Unten finden Sie eine Vergleichstabelle als Zusammenfassung der drei vorherigen Kapitel.</p>
+                    <table class="seed-backup-comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Merkmal</th>
+                                <th>Vollständiges Backup (alle 24 Wörter)</th>
+                                <th>Geteiltes Backup (zwei 12‑Wort‑Hälften)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Einrichtungsaufwand</strong></td>
+                                <td>Sehr einfach — nur ein Seed</td>
+                                <td>Moderat — erfordert korrekte Beschriftung und Zusammenführen</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wiederherstellung</strong></td>
+                                <td>Sofort — 24 Wörter eingeben</td>
+                                <td>Beide Hälften müssen kombiniert werden</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Single Point of Failure</strong></td>
+                                <td>Ja — Verlust oder Diebstahl = Totalverlust</td>
+                                <td>Reduziert — beide Hälften erforderlich</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Redundanz‑Optionen</strong></td>
+                                <td>Leicht kopierbar, jede neue Kopie bedeutet volles Risiko</td>
+                                <td>Leicht kopierbar</td>
+                            </tr>
+
+
+                            <tr>
+                                <td><strong>Verteilbarkeit</strong></td>
+                                <td>Niedrig — jede Kopie ist ein vollständiger Schlüssel</td>
+                                <td>Hoch — Hälften können sicher getrennt gelagert werden</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Wartungsaufwand</strong></td>
+                                <td>Sehr gering</td>
+                                <td>Gering</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Erbenfreundlichkeit</strong></td>
+                                <td>Sehr einfach</td>
+                                <td>Moderat — Zusammenführen muss erklärt werden</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+
+
+                    <p>Beim Blick auf die Tabelle ist das geteilte Backup die offensichtlich sicherere Wahl. Der
+                        Abstand verändert sich jedoch, sobald weitere Verteidigungswerkzeuge hinzukommen. Im Folgenden
+                        erläutert der Leitfaden Passphrase, Köder‑Wallets, Redundanz und Verteilung — unter der
+                        Annahme, dass für beide Setups dieselben Standorte und Backup‑Materialien verwendet werden.</p>
+                    <p>Sehen wir uns die Bedrohungen für einen materialisierten Seed noch einmal an:</p>
+
+
+                    <ul class="summary-ul">
+
+                        <li>Gedächtnisversagen: Seed‑Phrase vergessen <span class="icon"><img
+                                    src="../images/icons/brain-damage-icon.png"></span></li>
+                        <li>Zwang <span class="icon"><img src="../images/icons/gun-icon.png"></span></li>
+                        <li>Beobachtung <span class="icon"><img src="../images/icons/surveillance-icon.png"></span>
+                        </li>
+                        <li>Nichtverfügbarkeit: Handlungsunfähigkeit oder Tod <span class="icon"><img
+                                    src="../images/icons/emergency-rescue-icon.png"></span></li>
+                        <li>Social Engineering <span class="icon"><img src="../images/icons/fishing-icon.png"></span>
+                        </li>
+
+                        <li>Diebstahl <span class="icon"><img src="../images/icons/thief-icon.png"></span></li>
+
+                        <li>Physische Umweltbedrohungen
+                            <ul>
+                                <li>🔥 Feuer</li>
+                                <li>💧 Wasser / Überschwemmung
+                                </li>
+                                <li>🌫️ Korrosion / Feuchtigkeit</li>
+                                <li>🧊 Extreme Temperatur</li>
+                                <li>⚡️ Elektrische oder magnetische Schäden</li>
+                                <li>💥 Aufprall oder Quetschung (z. B. Gebäudeeinsturz)</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+
+
+
+                    <p>Unter der Annahme mehrerer Kopien, verschiedener Standorte und eines Materials, das Feuer,
+                        Wasser und Quetschung standhält — entweder durch seine Haltbarkeit oder durch einen Safe —
+                        können Umweltbedrohungen ohne menschlichen Angreifer als gelöst gelten, da der Verlust eines
+                        Backups nicht zum Verlust der Mittel führt. Ein vollständiger Gedächtnisverlust durch Unfall
+                        oder anderes, der dazu führt, dass beide Backup‑Standorte vergessen werden, wird später im
+                        Modell berücksichtigt.</p>
+
+
+
+
+                    <div class="double-diagram-div-container">
+
+
+                        <div class="diagram-div">
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                                alt="Diagramm zu Redundanz und Verteilung">
+                            <figcaption>Abbildung 2: Diagramm zu Redundanz und Verteilung</figcaption>
+                        </div>
+
+
+                        <div class="diagram-div">
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                                alt="Diagramm zu eliminierten Umweltbedrohungen">
+                            <figcaption>Gedächtnisverlust, Feuer, Wasser, Blitz, Quetschung</figcaption>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                    <p>Ein menschlicher Angreifer könnte jedoch alle Mittel stehlen, wenn er eine einzige Kopie der
+                        vollständigen 24‑Wort‑Phrase besitzt. Deshalb sollte der Nutzer entweder die Methode des
+                        geteilten Backups wählen oder das Voll‑Backup‑Setup modifizieren.</p>
+
+                    <h3 id="stage_4.2.1">Modifikator 1: Die Passphrase</h3>
+
+                    <p>Synonyme:</p>
+
+                    <p>Die Passphrase ist ein Modifikator, der Komplexität, Verschlüsselung und die Möglichkeit erhöht,
+                        den Seed zu teilen.</p>
+
+
+
+
+                    <div>
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                            alt="Diagramm zur Seed‑Modifikator‑Passphrase">
+                        <figcaption>Abbildung 1: Seed‑Modifikator‑Passphrase‑Diagramm</figcaption>
+                    </div>
+
+
+                    <p>Wenn der ursprüngliche Seed ohne Passphrase verwendet wird, bleibt der neue Seed sicher. Ein
+                        Angreifer würde lediglich eine leere Wallet sehen. Das bedeutet jedoch, dass der Verlust
+                        entweder des ursprünglichen Schlüssels oder der Passphrase zum Verlust der Mittel führt.</p>
+
+
+                    <p>Nach dem Hinzufügen der Passphrase gibt es nun zwei entscheidende Informationen zu schützen:
+                        den ursprünglichen Schlüssel in Form von 24 Wörtern und die Passphrase.</p>
+
+
+                    <div>
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_4.2/passphrase-original-key-stage_4.2-figure-5.png"
+                            alt="Diagramm: Ursprünglicher Schlüssel + Passphrase">
+                        <figcaption>Abbildung 5: Entscheidende Informationen – Ursprünglicher Schlüssel + Passphrase</figcaption>
+                    </div>
+
+
+
+                    <p>Sinnvollerweise sollten die beiden Informationen nicht am selben Ort gespeichert werden. Wird
+                        der Standort kompromittiert, sind beide entscheidenden Informationen kompromittiert. Daraus
+                        folgt, dass Redundanz und Verteilung zur Backup‑Architektur hinzugefügt werden, um a) den
+                        Verlust von Mitteln bei kompromittiertem Standort zu vermeiden und b) den Verlust zu vermeiden,
+                        wenn ein Informationsstück kompromittiert wird.</p>
+
+
+
+
+
+                    <div class="double-diagram-div-container">
+
+
+                        <div class="diagram-div">
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_4.2/defense-model-architecture-passphrase-redundandy-distribution-figure-6.png"
+                                alt="Diagramm zu Passphrase, Redundanz und Verteilung">
+                            <figcaption>Abbildung 6: Passphrase‑, Redundanz‑ und Verteilungsdiagramm</figcaption>
+                        </div>
+
+
+                        <div class="diagram-div">
+                            <img class="responsive-figure-img"
+                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                                alt="Diagramm zu eliminierten Umweltbedrohungen">
+                            <figcaption>Gedächtnisverlust, Feuer, Wasser, Blitz, Quetschung</figcaption>
+
+                        </div>
+
+
+
+
+                    </div>
+
+
+                    <p>Diese Architektur verhindert einen SPOF (Single Point of Failure), bei dem ein Angreifer ein
+                        vollständiges Informationsstück findet. Sie erlaubt zudem den Verlust eines der Teile. Wird
+                        Standort A mit Schlüssel A zerstört, existiert Schlüssel B an Standort B und umgekehrt. Wird
+                        Standort C mit der Passphrase zerstört, gibt es ein Backup an Standort D.</p>
+
+                    <p>In den folgenden Teilen dieses Kapitels werden die Power‑ und Stealth‑Defense‑Tools in die
+                        Architektur eingebunden. Sobald die defensiven Werkzeuge gewählt sind, wird die OPSEC
+                        (Operational Security) besprochen, damit der Nutzer weiß, wie er mit dem Verteidigungssystem
+                        umzugehen hat.</p>
+
+
+
+
+
+
+
+
+
+                    <p>Hier sind die grundlegenden Parameter der zwei Setups, die wir zum Start empfehlen:</p>
+
+
+                    <ul>
+                        <li>2 vollständige Seed‑Backups, 2 Kopien der Passphrase</li>
+                        <li>4 Standorte</li>
+                        <li>Hohes Maß an Geheimhaltung darüber, was wo aufbewahrt wird</li>
+                        <li>Eine verschlüsselte Karte, verborgen im Offensichtlichen</li>
+                        <li>Sehr seltene Interaktion mit den Backups</li>
+                    </ul>
+
+                    <p>Wenn Sie das geteilte Backup wählen:</p>
+
+                    <ul>
+                        <li>2 Backups, in Hälften geteilt (H1A H2A, H1B H2B), sowie 2 Kopien einer 25. Passphrase</li>
+                        <li>6 Standorte</li>
+                        <li>Hohes Maß an Geheimhaltung darüber, was wo aufbewahrt wird</li>
+                        <li>Eine verschlüsselte Karte, verborgen im Offensichtlichen</li>
+                        <li>Sehr seltene Interaktion mit den Backups</li>
+                    </ul>
+
+
+
+
+
+
+
+
+                    <p>All dies sind Vorschläge und sollten an die jeweiligen Umstände angepasst werden. Wer ein
+                        Multi‑Sig‑Setup wählen möchte, sollte zu diesem Leitfaden wechseln.</p>
+
+                    <p>Die Backup‑Standorte sollten geografisch variieren und können ggf. eine dritte Person
+                        einbeziehen; das liegt beim Nutzer. Die dritte Person, die wir ab hier „Wächter“ nennen,
+                        sollte nicht wissen, um welches Informationsstück es sich handelt oder wofür es dient — außer
+                        es gibt einen Plan, die BTC später an einen Erben zu übergeben.</p>
+
+                    <p>All dies sind Vorschläge und sollten an die jeweiligen Umstände angepasst werden. Wer ein
+                        Multi‑Sig‑Setup wählen möchte, sollte zu diesem Leitfaden wechseln.</p>
+
+                    <!--
+      
+
+      <div class="guide-div-image-container--desktop">
+                            <img src="../images/advanced-courses/seed-storage-single-sig/flowchart-backups-basic-no-split.png"
+                                alt="file-location-image">
+                        </div>
+
+
+                        <div class="guide-div-image-container--desktop">
+                            <img src="../images/advanced-courses/seed-storage-single-sig/seed-backup-split.png"
+                                alt="file-location-image">
+                        </div>
+
+
+
+
+
+                        <div class="guide-div-image-container--desktop">
+                            <img src="../images/advanced-courses/seed-storage-single-sig/six-part-backup.png"
+                                alt="file-location-image">
+                        </div>
+
+                        -->
+
+                </article>
+
+            </section>
+
+
+
+
+
+
+
+
+            <!--To consider: 
+
+- a map of the locations becomes necessary
+- the map should be encrypted
+- for simplicity sake this will be considered a one man operation
+- should the copies be encrypted?
+- what are the recovery processes?
+- the master should remember the seed by heart and only check on backups for maintenance and or recovery in case of memory loss-->
+
+
+            </section>
+
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_5">Stufe 5: Testen und regelmäßige Wartung</h1>
+
+
+
+                <article class="basic-utility-guide-article">
+
+
+
+                    <ul>
+                        <li>Wie Sie Ihr Backup prüfen, ohne Ihre echte Wallet offenzulegen</li>
+                        <li>Sichere Wiederherstellung mit air‑gapped Geräten oder Test‑Wallets</li>
+                        <li>Seed‑Korrektheit mit Checksumme oder Wiederherstellungstest prüfen</li>
+                        <li>Backups regelmäßig auf Verschleiß oder Schäden prüfen</li>
+                        <li>Materialien bei Bedarf erneuern oder migrieren</li>
+                        <li>Ein konsistentes, organisiertes System über die Zeit beibehalten</li>
+                    </ul>
+
+
+
+
+
+
+
+                </article>
+
+
+
+
+            </section>
+
+
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_6">Stufe 6: Schlussgedanken</h1>
+
+
+
+                <article class="basic-utility-guide-article">
+
+
+
+
+
+
+                </article>
+
+
+
+
+            </section>
+
+
+
+        </div>
+
+
+    </main>
+
+
+
+
+</body>

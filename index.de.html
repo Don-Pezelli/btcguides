@@ -1,0 +1,279 @@
+<!--
+
+    1. Add help overlay functionality which introduces hyperlinks on clickable words that the user might want to have explained to them
+    2. 
+-->
+
+<!DOCTYPE html>
+<html id="html_index" class="no-scroll-html" lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de – Start</title>
+
+    <script>
+        var pass = prompt("Passwort:");
+        if (pass !== "bitcoin") {
+            alert("Falsches Passwort!");
+            window.location.href = "https://google.com";
+        }
+    </script>
+
+    <script src="js/nav.js"></script>
+
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body id="index_body">
+    <section id="index_header">
+  <nav class="index-header-nav">
+
+    <div class="logo-text-container">
+      <a href="index.de.html">
+        <span class="btc-symbol">₿</span>TCguides
+        <img src="images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+      </a>
+    </div>
+
+    <!-- MOBILE/TABLET HAMBURGER (NEW) -->
+    <button
+      class="menu-toggle-top"
+      aria-label="Open navigation"
+      aria-controls="site-nav"
+      aria-expanded="false"
+      type="button"
+    >
+      ☰
+    </button>
+
+    <!-- ADD id="site-nav" (NEW) -->
+    <div class="index-nav-links" id="site-nav">
+      <ul class="nav-ul" id="index_header_div_nav_links_ul">
+        <li><a href="index.de.html">Start</a></li>
+        <li><a href="pages/courses-basic-navigation.de.html">Kurse</a></li>
+        <li><a href="pages/glossary.de.html">Glossar</a></li>
+      </ul>
+    </div>
+
+    <div class="language-switch" aria-label="Language selection">
+      <a href="index.html" class="language-flag" aria-label="English">🇬🇧</a>
+      <a href="index.de.html" class="language-flag" aria-label="Deutsch">🇩🇪</a>
+    </div>
+
+  </nav>
+
+  <div class="index-text-box-top-padding" id="index_text_box">
+    <h1>Gratis Bitcoin-Kurse</h1>
+
+    <p>
+      Unsere Basis-Kurse helfen dir, deine eigene Node zu betreiben, <br>
+      ein Hot Wallet für den Alltag einzurichten und ein sicheres Cold Wallet für deine Ersparnisse.
+    </p>
+
+    <a href="pages/courses-basic-navigation.de.html"
+       class="hero-button-index index-landing-hero-button">
+      JETZT LOSLEGEN
+    </a>
+
+    <p id="index_p_learn_more">
+      <a href="#index_arrow_target">oder erfahre mehr über diese Seite</a>
+    </p>
+
+    <a class="index-arrow-animation-a" href="#index_arrow_target">
+      <div class="index-arrow-animation-box">
+        <span></span><span></span><span></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+    <section class="index-section-background">
+
+        <section class="index-section index-mission-section">
+
+            <!--
+        <video autoplay muted loop class="background-video">
+
+            <source src="images/index/3536308-uhd_3840_2160_25fps.mp4" type="video/mp4">
+
+        </video>
+    -->
+
+
+
+            <div id="index_arrow_target" class="index-section-div index-section-mission-div">
+
+
+<!-- <ul >
+                    <li>ZERO COST</li>
+                    <li>EASY</li>
+                    <li>HIGH SECURITY</li>
+                </ul>-->
+                
+                    <p>KOSTENLOS</p>
+                    <p>EINFACH</p>
+                    <p>HOHE SICHERHEIT</p>
+            
+
+                 
+
+
+                <a  href="pages/courses-basic-navigation.de.html"
+                     class="hero-button-index index-mission-hero-button">Baue dein
+                    BTC
+                    Setup</a>
+                <!--
+           
+             <h2>become a bitcoiner today: click here</h2>
+            <p>Take control of your money today!</p>
+
+           
+           -->
+                <!--
+        <legend><i>Make this an animation</i></legend>
+        <img src="images/vault-small.JPG" alt="diagram showing what airgapping means">
+-->
+            </div>
+
+
+        </section>
+
+        <section class="index-section index-section-vision">
+
+
+
+            <div class="index-section-vision-div">
+
+
+                <div class="index-section-vision-div-left-h3 index-vision-box">
+                    <h3 id="index-vision-section-h3">Bitcoin ist das Geschenk, das immer weiter gibt <br>und wir geben etwas zurück.<br>
+                        Profitiere von Jahren an Recherche<br> komprimiert in strukturierte Kurse <br>um Sie in
+                        15-Minuten-Schritten finanziell unabhängiger zu machen. </h3>
+
+                </div>
+
+
+
+                <div class="index-section-vision-div-right-text index-vision-box">
+
+                    <div class="index-pair index-reveal">
+                        <span class="index-pair-symbol index-pair-symbol-btc">₿</span>
+                        <span class="text">Spenden sind willkommen, aber nie Pflicht.</span>
+                    </div>
+
+                    <div class="index-pair index-reveal">
+                        <span class="index-pair-symbol">✔️</span>
+                        <span class="text">Es ist einfach. Wenn du lesen kannst, kannst du dein eigenes Bitcoin-Setup in kurzer Zeit einrichten.</span>
+                    </div>
+
+                    <div class="index-pair index-reveal">
+                        <span class="index-pair-symbol">🔒</span>
+                        <span class="text">Es ist klug. Stärke deine Verteidigung, ohne auf jemand anderen angewiesen zu sein.</span>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+<!--
+
+                <div class="index-section-div-image index-vision-box">
+                    <a href="pages/basic-utility-navigation.html">
+                        <img src="images/index/power-orange.png">
+                    </a>
+                </div>
+-->
+
+
+
+            </div>
+
+
+
+
+        </section>
+
+
+
+    </section>
+
+    <!--
+    
+    <section class="index-section index-section-social-proof">
+
+        <h2>Check out the zap board!</h2>
+        
+        <p>Here people who used BTCguides.de can show their appreciation by sending a few Sats and adding a message.</p>
+
+        <p>Tricky: "Actually free, easy to do and it did help me understand certain attack vectors I didn't know about
+            before."</p>
+        <p>RJ: "Cool Stuff."</p>
+        <p>A-Guitar-Star: "I eliminated a lot of counter party risk using the basic utility guide."</p>
+    </section>
+
+    <section class="index-section index-section-action">
+
+        <h2><i>CALL TO ACTION</i></h2>
+        <p><i>this needs to be an interesting segway into one of the learning experiences</i></p>
+
+
+    </section>
+
+
+    <section class="index-section">
+
+        <h2><i>FAQ section</i></h2>
+
+
+
+
+
+    </section>
+
+    <footer><i>
+
+            <a href="pages/impressum.html">Impressum</a>
+
+
+            FOOTER should include Logo, links to different socials, youtube, shop etc. everything organized</i>>
+    </footer> 
+    
+    -->
+
+    <!--This needs to be pre filtered. I don't want curses, gore or nudity to show up on the website.-->
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const reveals = document.querySelectorAll('.index-reveal');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // animate only once
+      }
+    });
+  }, { threshold: 0.7 });
+
+  reveals.forEach(el => observer.observe(el));
+});
+</script>
+
+
+</body>
+
+</html>
