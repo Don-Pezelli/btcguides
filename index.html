@@ -58,14 +58,25 @@
     <div class="index-nav-links" id="site-nav">
       <ul class="nav-ul" id="index_header_div_nav_links_ul">
         <li><a href="index.html">Home</a></li>
-        <li><a href="pages/courses-basic-navigation.html">Guides</a></li>
+        <li class="nav-item-has-submenu">
+          <a href="pages/courses-basic-navigation.html">Guides</a>
+          <ul class="nav-submenu" aria-label="Guides submenu">
+            <li><a href="pages/courses-basic-navigation.html">Basic</a></li>
+            <li><a href="pages/courses-advanced-navigation.html">Advanced</a></li>
+          </ul>
+        </li>
         <li><a href="pages/glossary.html">Glossary</a></li>
+        <li><a href="pages/solutions-forum.html">Forum</a></li>
       </ul>
     </div>
 
     <div class="language-switch" aria-label="Language selection">
-      <a href="index.html" class="language-flag" aria-label="English">🇬🇧</a>
-      <a href="index.de.html" class="language-flag" aria-label="Deutsch">🇩🇪</a>
+      <a href="index.html" class="language-flag" aria-label="English">
+        <img src="images/flags/gb.svg" alt="English" class="language-flag-icon">
+      </a>
+      <a href="index.de.html" class="language-flag" aria-label="Deutsch">
+        <img src="images/flags/de.svg" alt="Deutsch" class="language-flag-icon">
+      </a>
     </div>
 
   </nav>
@@ -209,6 +220,14 @@
         </section>
 
 
+
+        <section class="index-section index-forum-cta">
+            <div class="index-forum-cta-panel">
+                <h2>Solutions Forum</h2>
+                <p>Stuck in a guide? Post the step and get a concrete fix. Solved answers stay archived.</p>
+                <a href="pages/solutions-forum.html" class="hero-button-index">Visit the Solutions Forum</a>
+            </div>
+        </section>
 
     </section>
 

@@ -164,12 +164,7 @@
 
 
             </li>
-        </ul>
-
-
-
-
-    </nav>
+        </ul></nav>
 
     <main class="basic-utility-guide-main" id="basic_utility_level_1_main_doc">
 
@@ -602,53 +597,55 @@
                     zukünftigen Adressen sowie deine Transaktionshistorie. Das gefährdet nicht deinen privaten Schlüssel,
                     reduziert aber deine Privatsphäre.</p>
 
-                <table id="bu1_privacy_table">
-                    <caption>Bitcoin-Wallet-Privatsphäre (Best → Worst)</caption>
-                    <thead>
-                        <tr>
-                            <th>Setup</th>
-                            <th>Tor?</th>
-                            <th>Eigener Electrum-Server?</th>
-                            <th>IP-Privatsphäre</th>
-                            <th>Wallet/Blockchain-Privatsphäre</th>
-                            <th>Hinweise / Risiken</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tor + eigener Electrum</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                            <td>✅ IP verborgen</td>
-                            <td>✅ Volle Wallet-Privatsphäre</td>
-                            <td>Beste Privatsphäre: Netzwerk und Wallet geschützt</td>
-                        </tr>
-                        <tr>
-                            <td>Tor + öffentlicher Electrum</td>
-                            <td>✅</td>
-                            <td>❌</td>
-                            <td>✅ IP verborgen</td>
-                            <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
-                            <td>Teilweise Privatsphäre: Wallet sichtbar, Netzwerk verborgen</td>
-                        </tr>
-                        <tr>
-                            <td>Kein Tor + eigener Electrum</td>
-                            <td>❌</td>
-                            <td>✅</td>
-                            <td>❌ IP sichtbar für Server/ISP</td>
-                            <td>✅ Volle Wallet-Privatsphäre</td>
-                            <td>Wallet privat, aber Netzwerkmetadaten offen</td>
-                        </tr>
-                        <tr>
-                            <td>Kein Tor + öffentlicher Electrum</td>
-                            <td>❌</td>
-                            <td>❌</td>
-                            <td>❌ IP sichtbar für Server/ISP</td>
-                            <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
-                            <td>Schlechteste Privatsphäre: alles offen</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table id="bu1_privacy_table">
+                        <caption>Bitcoin-Wallet-Privatsphäre (Best → Worst)</caption>
+                        <thead>
+                            <tr>
+                                <th>Setup</th>
+                                <th>Tor?</th>
+                                <th>Eigener Electrum-Server?</th>
+                                <th>IP-Privatsphäre</th>
+                                <th>Wallet/Blockchain-Privatsphäre</th>
+                                <th>Hinweise / Risiken</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tor + eigener Electrum</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅ IP verborgen</td>
+                                <td>✅ Volle Wallet-Privatsphäre</td>
+                                <td>Beste Privatsphäre: Netzwerk und Wallet geschützt</td>
+                            </tr>
+                            <tr>
+                                <td>Tor + öffentlicher Electrum</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅ IP verborgen</td>
+                                <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
+                                <td>Teilweise Privatsphäre: Wallet sichtbar, Netzwerk verborgen</td>
+                            </tr>
+                            <tr>
+                                <td>Kein Tor + eigener Electrum</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌ IP sichtbar für Server/ISP</td>
+                                <td>✅ Volle Wallet-Privatsphäre</td>
+                                <td>Wallet privat, aber Netzwerkmetadaten offen</td>
+                            </tr>
+                            <tr>
+                                <td>Kein Tor + öffentlicher Electrum</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌ IP sichtbar für Server/ISP</td>
+                                <td>❌ Server sieht XPUB, Adressen, Salden, Transaktionshistorie</td>
+                                <td>Schlechteste Privatsphäre: alles offen</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h4>Schritt 1:</h4>
                 <p>Gehe zu Electrum Server</p>
@@ -961,16 +958,7 @@
 
 
 
-        </section>
-
-
-
-
-
-
-
-
-    </main>
+        </section></main>
 
 
     <script>

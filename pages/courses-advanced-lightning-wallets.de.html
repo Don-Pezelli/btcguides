@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/fortgeschritten-lightning-wallets</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_lightning_wallets_navbar"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_lightning_wallets_navbar">
+        <div class="logo-text-container">
+            <a href="../index.de.html"><span class="btc-symbol">₿</span>TCguides
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+            </a>
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+
+        <ul class="guide-nav-ul">
+            <li><a class="guide-nav-link" href="#overview">Überblick</a></li>
+            <li><a class="guide-nav-link" href="#stage_1">Stufe 1: Lightning-Grundlagen</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stufe 1.1: Was ist Lightning?</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stufe 1.2: Zahlungen & Kanäle</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_2">Stufe 2: Lightning-Wallets</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stufe 2.1: Wallet-Typen</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stufe 2.2: Sicherheits-Checkliste</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_3">Stufe 3: Vorteile & Nachteile</a></li>
+        </ul></nav>
+
+    <main class="basic-utility-guide-main" id="advanced_course_lightning_wallets_main_doc">
+        <section class="basic-utility-guide-main-section">
+            <h1 id="overview">Fortgeschrittener Kurs: Lightning-Wallets</h1>
+            <h2>Lightning-Wallets für schnelle, günstige Zahlungen nutzen</h2>
+            <article class="basic-utility-guide-article">
+                <p>Dieser Kurs zeigt dir, wie Lightning-Wallets sicher und sinnvoll eingesetzt werden. Du lernst, wie
+                    Lightning funktioniert, wie sich Verwahrmodelle unterscheiden und welche Wallets zu deinem
+                    Anwendungsfall passen.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_1">Stufe 1: Lightning-Grundlagen</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_1.1">Stufe 1.1: Was ist Lightning?</h2>
+                <p>Das Lightning Network ist eine Zahlungsebene auf Bitcoin, die schnelle und günstige Zahlungen
+                    ermöglicht, indem die meisten Transaktionen off-chain abgewickelt werden und am Ende auf Bitcoin
+                    finalisieren.</p>
+
+                <h2 id="stage_1.2">Stufe 1.2: Zahlungen & Kanäle</h2>
+                <p>Lightning arbeitet mit Zahlungskanälen und Routing über ein Netzwerk von Knoten. Deine Wallet verbindet
+                    sich entweder mit einem Anbieter oder mit einem eigenen Node.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_2">Stufe 2: Lightning-Wallets</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_2.1">Stufe 2.1: Wallet-Typen</h2>
+                <p>Wallets können custodial, semi-custodial oder vollständig selbstverwaltet sein. Deine Wahl beeinflusst
+                    Privatsphäre, Zuverlässigkeit und Kontrolle über deine Funds.</p>
+
+                <h2 id="stage_2.2">Stufe 2.2: Sicherheits-Checkliste</h2>
+                <p>Lerne, wie du deine Wallet mit Backups, Wiederherstellungsoptionen, Limits und einer sinnvollen Aufteilung
+                    zwischen Lightning und On-Chain-Speicherung absicherst.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_3">Stufe 3: Vorteile & Nachteile</h1>
+            <article class="basic-utility-guide-article">
+                <h3>Vorteile</h3>
+                <ul class="content-ul">
+                    <li>Sofortige Zahlungen mit sehr niedrigen Gebühren</li>
+                    <li>Ideal für kleine Alltagszahlungen</li>
+                    <li>Entlastet die Blockchain bei kleinen Transfers</li>
+                </ul>
+
+                <h3>Nachteile</h3>
+                <ul class="content-ul">
+                    <li>Custodial Wallets können Souveränität reduzieren</li>
+                    <li>Liquidität und Routing können bei großen Zahlungen scheitern</li>
+                    <li>Mehr Komplexität als reine On-Chain-Zahlungen</li>
+                </ul>
+            </article>
+        </section></main>
+</body>
+
+</html>

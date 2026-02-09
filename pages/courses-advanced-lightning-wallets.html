@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/advanced-course-lightning</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_lightning_navbar"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_lightning_navbar">
+        <div class="logo-text-container">
+            <a href="../index.html"><span class="btc-symbol">₿</span>TCguides
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+            </a>
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+
+        <ul class="guide-nav-ul">
+            <li><a class="guide-nav-link" href="#overview">Overview</a></li>
+            <li><a class="guide-nav-link" href="#wallets_overview">Lightning Wallets</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#wallets_stage_1">Wallets Stage 1: Lightning Basics</a>
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#wallets_stage_1_1">Stage 1.1: What is Lightning?</a></li>
+                            <li><a class="guide-nav-link sub-link" href="#wallets_stage_1_2">Stage 1.2: Payments and channels</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="guide-nav-link sub-link" href="#wallets_stage_2">Wallets Stage 2: Lightning Wallets</a>
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#wallets_stage_2_1">Stage 2.1: Wallet types</a></li>
+                            <li><a class="guide-nav-link sub-link" href="#wallets_stage_2_2">Stage 2.2: Safety checklist</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="guide-nav-link sub-link" href="#wallets_stage_3">Wallets Stage 3: Advantages &amp; Disadvantages</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#node_overview">Lightning Node</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#node_stage_1">Node Stage 1: What is a Lightning Node?</a>
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#node_stage_1_1">Stage 1.1: Node roles</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="guide-nav-link sub-link" href="#node_stage_2">Node Stage 2: Requirements</a>
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#node_stage_2_1">Stage 2.1: Hardware &amp; uptime</a></li>
+                            <li><a class="guide-nav-link sub-link" href="#node_stage_2_2">Stage 2.2: Liquidity planning</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="guide-nav-link sub-link" href="#node_stage_3">Node Stage 3: Operations</a>
+                        <ul class="guide-nav-ul">
+                            <li><a class="guide-nav-link sub-link" href="#node_stage_3_1">Stage 3.1: Channels and backups</a></li>
+                            <li><a class="guide-nav-link sub-link" href="#node_stage_3_2">Stage 3.2: Monitoring</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="guide-nav-link sub-link" href="#node_stage_4">Node Stage 4: Advantages &amp; Disadvantages</a></li>
+                </ul>
+            </li>
+        </ul>
+    
+        <div class="guide-nav-footer">
+            <a class="guide-nav-link" href="solutions-forum.html">Solutions Forum</a>
+        </div>
+
+    </nav>
+
+    <main class="basic-utility-guide-main" id="advanced_course_lightning_main_doc">
+        <section class="basic-utility-guide-main-section">
+            <h1 id="overview">Advanced Course: Lightning (Wallets + Node)</h1>
+            <h2>Everything you need to use Lightning and run your own node</h2>
+            <article class="basic-utility-guide-article">
+                <p>This combined course covers both Lightning wallets and operating a Lightning node. You will learn how
+                    Lightning works for daily payments, how wallet custody models differ, and what it takes to run a
+                    reliable node with proper liquidity and backups.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="wallets_overview">Lightning Wallets</h1>
+            <h2>How to use Lightning wallets for fast, low-fee payments</h2>
+            <article class="basic-utility-guide-article">
+                <p>This course focuses on using Lightning wallets safely and effectively. You will learn how Lightning
+                    works, how wallet custody models differ, and how to choose the right setup for your use case.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="wallets_stage_1">Wallets Stage 1: Lightning Basics</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="wallets_stage_1_1">Stage 1.1: What is Lightning?</h2>
+                <p>The Lightning Network is a payment layer built on Bitcoin that enables instant, low-cost payments by
+                    moving most activity off-chain while still settling to Bitcoin as the final base layer.</p>
+
+                <h2 id="wallets_stage_1_2">Stage 1.2: Payments and channels</h2>
+                <p>Lightning uses payment channels and routing across a network of nodes. Your wallet either connects to
+                    a service provider or a node you control to route payments.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="wallets_stage_2">Wallets Stage 2: Lightning Wallets</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="wallets_stage_2_1">Stage 2.1: Wallet types</h2>
+                <p>Wallets can be custodial, semi-custodial, or fully self-custodial. Your choice affects privacy,
+                    reliability, and control over funds.</p>
+
+                <h2 id="wallets_stage_2_2">Stage 2.2: Safety checklist</h2>
+                <p>Learn how to protect your wallet with backups, recovery options, spending limits, and a sensible
+                    amount allocation between Lightning and on-chain storage.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="wallets_stage_3">Wallets Stage 3: Advantages &amp; Disadvantages</h1>
+            <article class="basic-utility-guide-article">
+                <h3>Advantages</h3>
+                <ul class="content-ul">
+                    <li>Instant payments with low fees</li>
+                    <li>Great for small everyday transactions</li>
+                    <li>Reduces on-chain congestion for small transfers</li>
+                </ul>
+
+                <h3>Disadvantages</h3>
+                <ul class="content-ul">
+                    <li>Custodial wallets may reduce sovereignty</li>
+                    <li>Liquidity and routing can fail for large payments</li>
+                    <li>Operational complexity is higher than on-chain</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="node_overview">Lightning Node</h1>
+            <h2>Run your own node for privacy, reliability, and control</h2>
+            <article class="basic-utility-guide-article">
+                <p>This course explains what it means to operate a Lightning node, how to manage channels and liquidity,
+                    and what ongoing responsibilities come with routing payments.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="node_stage_1">Node Stage 1: What is a Lightning Node?</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="node_stage_1_1">Stage 1.1: Node roles</h2>
+                <p>A Lightning node can be private (for your own wallets), public (routing for others), or merchant
+                    focused. Each role has different liquidity and uptime requirements.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="node_stage_2">Node Stage 2: Requirements</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="node_stage_2_1">Stage 2.1: Hardware &amp; uptime</h2>
+                <p>Running a reliable node requires steady uptime, good connectivity, and a secure environment. A small
+                    dedicated device and backup power improve reliability.</p>
+
+                <h2 id="node_stage_2_2">Stage 2.2: Liquidity planning</h2>
+                <p>You will need inbound and outbound liquidity to receive and send payments. This course covers channel
+                    funding, rebalancing, and fee strategy.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="node_stage_3">Node Stage 3: Operations</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="node_stage_3_1">Stage 3.1: Channels and backups</h2>
+                <p>Learn how to open and close channels safely, handle force closes, and keep backups so you can recover
+                    from hardware failure.</p>
+
+                <h2 id="node_stage_3_2">Stage 3.2: Monitoring</h2>
+                <p>Monitoring your node helps you spot downtime, channel issues, and liquidity bottlenecks before they
+                    affect payments.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="node_stage_4">Node Stage 4: Advantages &amp; Disadvantages</h1>
+            <article class="basic-utility-guide-article">
+                <h3>Advantages</h3>
+                <ul class="content-ul">
+                    <li>Greater privacy and sovereignty</li>
+                    <li>Higher reliability for payments</li>
+                    <li>Potential routing fee income</li>
+                </ul>
+
+                <h3>Disadvantages</h3>
+                <ul class="content-ul">
+                    <li>Requires maintenance and uptime</li>
+                    <li>Capital tied up in channels</li>
+                    <li>Operational complexity vs. wallets</li>
+                </ul>
+            </article>
+        </section>
+    
+        <section class="forum-callout" aria-label="Solutions forum">
+            <div class="forum-callout-inner">
+                <h2>Stuck at a specific step?</h2>
+                <p>Post your issue in the Solutions Forum and I’ll reply with a concrete fix. Solved answers stay archived for everyone.</p>
+                <a class="hero-button-basic-utility forum-callout-button" href="solutions-forum.html">Go to Solutions Forum</a>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

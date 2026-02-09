@@ -19,6 +19,7 @@
 
 
     <link rel="stylesheet" href="../styles.css">
+    <script src="../js/nav.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,13 +52,24 @@
 
 
 
-            <div class="index-nav-links">
+            <button class="menu-toggle-top" aria-label="Open navigation" aria-controls="site-nav" aria-expanded="false"
+                type="button">
+                ☰
+            </button>
+
+            <div class="index-nav-links" id="site-nav">
 
                 <ul class="nav-ul">
                     <li><a href="../index.de.html">Start</a></li>
                     <!-- <li><a href="why-bitcoin-navigation.html">Warum Bitcoin?</a></li>
                     -->
-                    <li><a href="courses-basic-navigation.de.html">Kurse</a></li>
+                    <li class="nav-item-has-submenu">
+                        <a href="courses-basic-navigation.de.html">Kurse</a>
+                        <ul class="nav-submenu" aria-label="Kurse Untermenü">
+                            <li><a href="courses-basic-navigation.de.html">Basic</a></li>
+                            <li><a href="courses-advanced-navigation.html">Advanced</a></li>
+                                      </ul>
+                    </li>
                     <li><a href="glossary.de.html">Glossar</a></li>
 
                     <!--
@@ -69,6 +81,15 @@
 
                 </ul>
 
+            </div>
+
+            <div class="language-switch" aria-label="Sprachauswahl">
+                <a href="../pages/courses-basic-navigation.html" class="language-flag" aria-label="English">
+                    <img src="../images/flags/gb.svg" alt="English" class="language-flag-icon">
+                </a>
+                <a href="../pages/courses-basic-navigation.de.html" class="language-flag" aria-label="Deutsch">
+                    <img src="../images/flags/de.svg" alt="Deutsch" class="language-flag-icon">
+                </a>
             </div>
         </nav>
 
@@ -86,18 +107,16 @@
 
         <div class="index-type-hero-button-div">
 
-            <a href="courses-basic-node.de.html" class="hero-button-basic-utility-node hero-button-basic-utility">1.
-                Eine
-                Full
-                Node betreiben</a>
+            <a href="courses-basic-node.de.html" class="hero-button-basic-utility-node hero-button-basic-utility">
+                1. Privatsphäre</a>
             <a href="courses-basic-hot-wallets.de.html" class="hero-button-basic-utility-1 hero-button-basic-utility">
-                2. Hot Wallets</a>
+                2. Kleingeld</a>
             <a href="courses-basic-cold-wallets.de.html" class="hero-button-basic-utility-3 hero-button-basic-utility">
-                3. Cold Wallets</a>
+                3. Lebensersparnisse</a>
 
             <a href="courses-basic-acquiring-btc.de.html"
                 class="hero-button-basic-utility-acquiring-bitcoin hero-button-basic-utility">
-                4. Bitcoin erwerben</a>
+                4. Bitcoin kaufen</a>
 
         </div>
 

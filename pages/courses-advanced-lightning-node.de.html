@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/fortgeschritten-lightning-node</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <!-- Mobile guide menu button -->
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_lightning_node_navbar"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <!-- Dark overlay behind the sidebar -->
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_lightning_node_navbar">
+        <div class="logo-text-container">
+            <a href="../index.de.html"><span class="btc-symbol">₿</span>TCguides
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+            </a>
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+
+        <ul class="guide-nav-ul">
+            <li><a class="guide-nav-link" href="#overview">Überblick</a></li>
+            <li><a class="guide-nav-link" href="#stage_1">Stufe 1: Was ist ein Lightning-Node?</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stufe 1.1: Node-Rollen</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_2">Stufe 2: Voraussetzungen</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stufe 2.1: Hardware & Verfügbarkeit</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stufe 2.2: Liquiditätsplanung</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_3">Stufe 3: Betrieb</a>
+                <ul class="guide-nav-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.1">Stufe 3.1: Kanäle & Backups</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.2">Stufe 3.2: Monitoring</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_4">Stufe 4: Vorteile & Nachteile</a></li>
+        </ul></nav>
+
+    <main class="basic-utility-guide-main" id="advanced_course_lightning_node_main_doc">
+        <section class="basic-utility-guide-main-section">
+            <h1 id="overview">Fortgeschrittener Kurs: Lightning-Node</h1>
+            <h2>Eigenen Node betreiben für Privatsphäre, Zuverlässigkeit und Kontrolle</h2>
+            <article class="basic-utility-guide-article">
+                <p>Dieser Kurs erklärt, was es bedeutet, einen Lightning-Node zu betreiben, wie man Kanäle und Liquidität
+                    managt und welche laufenden Aufgaben beim Routing anfallen.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_1">Stufe 1: Was ist ein Lightning-Node?</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_1.1">Stufe 1.1: Node-Rollen</h2>
+                <p>Ein Lightning-Node kann privat (für eigene Wallets), öffentlich (Routing für andere) oder
+                    händlerorientiert sein. Jede Rolle hat andere Anforderungen an Liquidität und Verfügbarkeit.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_2">Stufe 2: Voraussetzungen</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_2.1">Stufe 2.1: Hardware & Verfügbarkeit</h2>
+                <p>Ein zuverlässiger Node braucht stabile Verfügbarkeit, gute Verbindung und eine sichere Umgebung.
+                    Ein kleines dediziertes Gerät und Backup-Strom erhöhen die Zuverlässigkeit.</p>
+
+                <h2 id="stage_2.2">Stufe 2.2: Liquiditätsplanung</h2>
+                <p>Du benötigst eingehende und ausgehende Liquidität, um Zahlungen zu empfangen und zu senden. Dieser Kurs
+                    behandelt Channel-Funding, Rebalancing und Fee-Strategien.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_3">Stufe 3: Betrieb</h1>
+            <article class="basic-utility-guide-article">
+                <h2 id="stage_3.1">Stufe 3.1: Kanäle & Backups</h2>
+                <p>Lerne, wie du Kanäle sicher öffnest und schließt, Force-Closes behandelst und Backups nutzt, um nach
+                    Hardwareausfällen wiederherzustellen.</p>
+
+                <h2 id="stage_3.2">Stufe 3.2: Monitoring</h2>
+                <p>Monitoring hilft dir, Downtime, Kanalprobleme und Liquiditätsengpässe frühzeitig zu erkennen.</p>
+            </article>
+        </section>
+
+        <section class="basic-utility-guide-main-section">
+            <h1 id="stage_4">Stufe 4: Vorteile & Nachteile</h1>
+            <article class="basic-utility-guide-article">
+                <h3>Vorteile</h3>
+                <ul class="content-ul">
+                    <li>Mehr Privatsphäre und Souveränität</li>
+                    <li>Höhere Zuverlässigkeit bei Zahlungen</li>
+                    <li>Mögliche Routing-Gebühren</li>
+                </ul>
+
+                <h3>Nachteile</h3>
+                <ul class="content-ul">
+                    <li>Wartung und hohe Verfügbarkeit nötig</li>
+                    <li>Kapital in Kanälen gebunden</li>
+                    <li>Mehr Komplexität als Wallets</li>
+                </ul>
+            </article>
+        </section></main>
+</body>
+
+</html>

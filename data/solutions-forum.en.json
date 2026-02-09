@@ -1,0 +1,36 @@
+{
+  "recent": [
+    {
+      "title": "Tor won't connect",
+      "course": "Privacy",
+      "summary": "On step 3 of the Privacy course I can't connect. Logs show a timeout.",
+      "status": "open",
+      "meta": "Status: open · 2 days ago"
+    },
+    {
+      "title": "Mobile wallet freezes on backup",
+      "course": "Pocket Change",
+      "summary": "The app crashes when I try to save the seed phrase. Is that expected?",
+      "status": "open",
+      "meta": "Status: open · yesterday"
+    },
+    {
+      "title": "Cold wallet: firmware update",
+      "course": "Life Savings",
+      "summary": "Update fails, device only shows a black screen.",
+      "status": "solved",
+      "solution": "Reformat the microSD, copy only the update file, then boot again.",
+      "meta": "Status: solved · 4 days ago"
+    }
+  ],
+  "archive": [
+    {
+      "title": "Exchange withdrawal stuck",
+      "course": "Buying BTC",
+      "summary": "Transaction stays \"pending\" even though the address is correct.",
+      "status": "solved",
+      "solution": "Check exchange network status, then inspect the mempool and re-send if needed.",
+      "meta": "Archive · 1 week ago"
+    }
+  ]
+}

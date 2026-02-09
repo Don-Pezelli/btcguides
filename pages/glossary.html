@@ -48,9 +48,25 @@
     <div class="index-nav-links" id="site-nav">
       <ul class="nav-ul">
         <li><a href="../index.html">Home</a></li>
-        <li><a href="courses-basic-navigation.html">Guides</a></li>
+        <li class="nav-item-has-submenu">
+          <a href="courses-basic-navigation.html">Guides</a>
+          <ul class="nav-submenu" aria-label="Guides submenu">
+            <li><a href="courses-basic-navigation.html">Basic</a></li>
+            <li><a href="courses-advanced-navigation.html">Advanced</a></li>
+          </ul>
+        </li>
         <li><a href="glossary.html">Glossary</a></li>
+        <li><a href="solutions-forum.html">Forum</a></li>
       </ul>
+    </div>
+
+    <div class="language-switch" aria-label="Language selection">
+      <a href="glossary.html" class="language-flag" aria-label="English">
+        <img src="../images/flags/gb.svg" alt="English" class="language-flag-icon">
+      </a>
+      <a href="glossary.de.html" class="language-flag" aria-label="Deutsch">
+        <img src="../images/flags/de.svg" alt="Deutsch" class="language-flag-icon">
+      </a>
     </div>
 
   </nav>
@@ -132,12 +148,19 @@
 
                                 <dt id="glossary_dt_acinq" class="glossary-dt-term">ACINQ</dt>
                                 <dd class="glossary-dd">
-                                    <p>ACINQ is a French company that develops Bitcoin and Lightning Network
+                                    <p>ACINQ is a French company that develops Bitcoin and <a
+                                            href="glossary.html#glossary_dt_lightning_network" class="glossary-link"
+                                            target="_blank"
+                                            title="glossary-entry">Lightning Network</a>
                                         infrastructure, best known for creating the Phoenix mobile wallet and operating
-                                        one of the largest Lightning routing nodes.
+                                        one of the largest Lightning <a href="glossary.html#glossary_dt_routing_nodes"
+                                            class="glossary-link" target="_blank" title="glossary-entry">routing nodes</a>.
                                     </p>
                                     <p>They also maintain Eclair, a
-                                        Lightning implementation in Scala, and build tools to improve scalability and
+                                        Lightning implementation in Scala, and build tools to improve <a
+                                            href="glossary.html#glossary_dt_scalability" class="glossary-link"
+                                            target="_blank"
+                                            title="glossary-entry">scalability</a> and
                                         usability for Bitcoin payments.</p>
 
                                     <!--<figure>
@@ -166,7 +189,8 @@
                                 <dt id="glossary_dt_airgapped" class="glossary-dt-term">Airgapped</dt>
                                 <dd class="glossary-dd">
                                     <p>Keeping information from ever being connected to the <a
-                                            href="glossary.html#glossary_dt_internet" target="_blank">internet</a>.
+                                            href="glossary.html#glossary_dt_internet" class="glossary-link"
+                                            target="_blank">internet</a>.
 
                                     <figure>
                                         <img src="../images/glossary/airgap-diagram.JPG"
@@ -179,11 +203,6 @@
 
 
                         </div>
-
-
-
-
-
 
                         <div class="glossary-div-accordion">
 
@@ -211,7 +230,6 @@
 
                         </div>
 
-
                         <div class="glossary-div-accordion">
 
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_archival_node"
@@ -231,26 +249,31 @@
                                         Bitcoin
                                         network by
                                         validating
-                                        <a href="glossary.html#glossary_dt_transaction" target="_blank">transactions</a>, maintaining a
+                                        <a href="glossary.html#glossary_dt_transaction" class="glossary-link"
+                                            target="_blank">transactions</a>, maintaining a
                                         copy of the
-                                        <a href="glossary.html#glossary_dt_blockchain" target="_blank">blockchain</a>, and relaying
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link"
+                                            target="_blank">blockchain</a>, and relaying
                                         information to
                                         other nodes.
                                         Nodes help ensure the integrity and security of the Bitcoin network by enforcing
-                                        <a href="glossary.html#glossary_dt_consensus_rules" target="_blank">consensus rules</a>
+                                        <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link"
+                                            target="_blank">consensus rules</a>
                                         and
                                         disseminating data across the network.
                                     </p>
 
                                     <p>An archival node is a type of Bitcoin node that maintains the complete history of
                                         the
-                                        blockchain. Unlike
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Unlike
                                         a full node, which may prune old <a
-                                            href="glossary.html#glossary_dt_block" target="_blank">blocks</a> to
+                                            href="glossary.html#glossary_dt_block" class="glossary-link"
+                                            target="_blank">blocks</a> to
                                         save
                                         storage space, an archival node stores every block and
                                         transaction ever processed by the network, from the <a
-                                            href="glossary.html#glossary_dt_genesis_block" target="_blank">Genesis block</a> to the most
+                                            href="glossary.html#glossary_dt_genesis_block" class="glossary-link"
+                                            target="_blank">Genesis block</a> to the most
                                         recent
                                         block.
                                     </p>
@@ -259,7 +282,7 @@
                                     <ul>
                                         <li><strong>Comprehensive Data Storage:</strong> Stores all blocks and
                                             transactions,
-                                            providing a complete and unaltered record of the entire blockchain history.
+                                            providing a complete and unaltered record of the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> history.
                                         </li>
                                         <li><strong>Advanced Data Access:</strong> Optimized for querying and retrieving
                                             detailed
@@ -275,10 +298,10 @@
                                     <ul>
                                         <li><strong>Historical Analysis:</strong> Useful for detailed analysis and
                                             auditing of
-                                            historical blockchain data.</li>
+                                            historical <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data.</li>
                                         <li><strong>Data Services:</strong> Provides comprehensive data services for
                                             organizations
-                                            needing full blockchain records for compliance or advanced analytics.</li>
+                                            needing full <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> records for compliance or advanced analytics.</li>
                                     </ul>
                                 </dd>
 
@@ -287,6 +310,29 @@
 
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_acronym"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_acronym"
+                                class="glossary-accordion-label">Acronym</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_acronym" class="glossary-dt-term">Acronym</dt>
+                                <dd class="glossary-dd">
+                                    <p>A word formed from the initial letters of a phrase, often pronounced as a word.
+                                        Examples in Bitcoin include <a href="glossary.html#glossary_dt_proof_of_work"
+                                            class="glossary-link" target="_blank">PoW</a> (Proof of Work), <a
+                                            href="glossary.html#glossary_dt_utxo" class="glossary-link"
+                                            target="_blank">UTXO</a> (Unspent Transaction Output), and <a
+                                            href="glossary.html#glossary_dt_lightning_network" class="glossary-link"
+                                            target="_blank">LN</a> (Lightning Network).</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -315,7 +361,7 @@
 
         <li><strong>Device compromise (malware):</strong> Keyloggers/clipboard hijackers on PC/phone that steal seeds or alter addresses. <em>Mitigation:</em> patched OS, dedicated signing device, hardware wallet.</li>
 
-        <li><strong>Physical theft / coercion:</strong> Thieves steal device/backups or force disclosure. <em>Mitigation:</em> PINs/passphrases, split backups, multisig, separate storage locations.</li>
+        <li><strong>Physical theft / coercion:</strong> Thieves steal device/backups or force disclosure. <em>Mitigation:</em> PINs/<a href="glossary.html#glossary_dt_passphrase" class="glossary-link" target="_blank">passphrases</a>, split backups, multisig, separate storage locations.</li>
 
         <li><strong>Supply-chain tampering:</strong> Malicious hardware or firmware inserted before delivery. <em>Mitigation:</em> buy from trusted channels, verify firmware & device fingerprint on first use.</li>
 
@@ -325,7 +371,7 @@
 
         <li><strong>Insider / custody risk:</strong> Custodians, family, or staff with access misuse or lose keys. <em>Mitigation:</em> multisig, split secrets, legal/operational access limits.</li>
 
-        <li><strong>Network & protocol attacks:</strong> Eclipse/51% or other blockchain-level attacks targeting confirmations. <em>Mitigation:</em> diverse peers, full nodes, confirmation policies.</li>
+        <li><strong>Network & protocol attacks:</strong> Eclipse/51% or other <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>-level attacks targeting confirmations. <em>Mitigation:</em> diverse peers, full nodes, confirmation policies.</li>
 
         <li><strong>Legal coercion / seizure:</strong> Court orders, law enforcement, or criminals force disclosure or seize devices. <em>Mitigation:</em> jurisdictional planning, multisig across independent parties, legal counsel.</li>
 
@@ -353,7 +399,6 @@
 
 
                         </div>
-
 
 
                         <div class="glossary-div-accordion">
@@ -508,10 +553,12 @@
 
                                 <dt id="glossary_dt_bip39_pbkdf2" class="glossary-dt-term">BIP39 PBKDF2</dt>
                                 <dd class="glossary-dd">
-                                    <p>BIP39 uses PBKDF2 (a key-derivation function) to turn a seed phrase and optional
-                                        passphrase into a master seed. It repeatedly hashes the inputs to slow down
-                                        guessing attacks and to make small changes (like a different passphrase)
-                                        produce a completely different master seed.</p>
+                                    <p>BIP39 uses PBKDF2 (a <a href="glossary.html#glossary_dt_key_derivation_function"
+                                            class="glossary-link" target="_blank">key-derivation function</a>) to turn a
+                                        <a href="glossary.html#glossary_dt_seedphrase" class="glossary-link" target="_blank">seed phrase</a> and optional
+                                        <a href="glossary.html#glossary_dt_passphrase" class="glossary-link" target="_blank">passphrase</a> into a <a href="glossary.html#glossary_dt_master_seed" class="glossary-link" target="_blank">master seed</a>. It repeatedly <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hashes</a> the inputs to slow down
+                                        <a href="glossary.html#glossary_dt_guessing_attacks" class="glossary-link" target="_blank">guessing attacks</a> and to make small changes (like a different <a href="glossary.html#glossary_dt_passphrase" class="glossary-link" target="_blank">passphrase</a>)
+                                        produce a completely different <a href="glossary.html#glossary_dt_master_seed" class="glossary-link" target="_blank">master seed</a>.</p>
                                 </dd>
 
                             </div>
@@ -530,17 +577,17 @@
 
                                 <dt id="glossary_binary" class="glossary-dt-term">Binary</dt>
                                 <dd class="glossary-dd">
-                                    <p>A binary number is a number expressed in the base-2 numeral system, which uses
+                                    <p>A binary number is a number expressed in the <a href="glossary.html#glossary_dt_base_2_numeral_system" class="glossary-link" target="_blank">base-2 numeral system</a>, which uses
                                         only two
                                         symbols: typically 0
-                                        and 1. Each digit in a binary number is called a bit. This system is fundamental
+                                        and 1. Each digit in a binary number is called a <a href="glossary.html#glossary_dt_bit" class="glossary-link" target="_blank">bit</a>. This system is fundamental
                                         to the
                                         operation of
                                         computers and digital systems, as they use binary to perform all their
                                         computations and
                                         processing.</p>
 
-                                    <p>In the binary system, each bit represents a power of 2, with the rightmost bit
+                                    <p>In the binary system, each <a href="glossary.html#glossary_dt_bit" class="glossary-link" target="_blank">bit</a> represents a power of 2, with the rightmost <a href="glossary.html#glossary_dt_bit" class="glossary-link" target="_blank">bit</a>
                                         representing
                                         2<sup>0</sup>,
                                         the next representing 2<sup>1</sup>, then 2<sup>2</sup>, and so on. For example,
@@ -579,6 +626,47 @@
                             </div>
 
 
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_base_2_numeral_system"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_base_2_numeral_system"
+                                class="glossary-accordion-label">Base-2 Numeral System</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_base_2_numeral_system" class="glossary-dt-term">Base-2 Numeral
+                                    System</dt>
+                                <dd class="glossary-dd">
+                                    <p>A numeral system that represents numbers using only two symbols (0 and 1),
+                                        commonly called binary.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_bit"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_bit"
+                                class="glossary-accordion-label">Bit</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_bit" class="glossary-dt-term">Bit</dt>
+                                <dd class="glossary-dd">
+                                    <p>The smallest unit of information in computing, represented as 0 or 1.</p>
+                                </dd>
+
+                            </div>
                         </div>
 
 
@@ -642,35 +730,37 @@
 
                                 <dt id="binary_baselayer" class="glossary-dt-term">Bitcoin Baselayer</dt>
                                 <dd class="glossary-dd">
-                                    <p>Also often used synonymously with the term: <a href="glossary.html#glossary_dt_bitcoin_network" target="_blank">Bitcoin
+                                    <p>Also often used synonymously with the term: <a
+                                            href="glossary.html#glossary_dt_bitcoin_network" class="glossary-link"
+                                            target="_blank">Bitcoin
                                             Network</a>
                                     </p>
-                                    <p>The term "bitcoin baselayer" refers to the fundamental protocol layer of the
+                                    <p>The term "bitcoin baselayer" refers to the fundamental <a href="glossary.html#glossary_dt_protocol_layer" class="glossary-link" target="_blank">protocol layer</a> of the
                                         Bitcoin
                                         network,
                                         which includes
-                                        the blockchain, the consensus rules, and the underlying network infrastructure.
+                                        the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, the <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a>, and the underlying network infrastructure.
                                         This
                                         layer
                                         is responsible
                                         for the core functionality of Bitcoin, such as:</p>
                                     <ul class="content-ul">
-                                        <li>Transaction validation and propagation: Ensuring that all transactions
+                                        <li><a href="glossary.html#glossary_dt_transaction_validation" class="glossary-link" target="_blank">Transaction validation</a> and <a href="glossary.html#glossary_dt_transaction_propagation" class="glossary-link" target="_blank">transaction propagation</a>: Ensuring that all transactions
                                             follow the
-                                            consensus rules and
+                                            <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> and
                                             are properly broadcast across the network.</li>
-                                        <li>Block creation and mining: The process by which new blocks are created,
+                                        <li><a href="glossary.html#glossary_dt_block_creation" class="glossary-link" target="_blank">Block creation</a> and mining: The process by which new blocks are created,
                                             validated,
                                             and
                                             added to the
-                                            blockchain.</li>
+                                            <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</li>
                                         <li>Security and integrity: Maintaining the cryptographic security that ensures
                                             the
                                             integrity and
-                                            immutability of the blockchain.</li>
+                                            <a href="glossary.html#glossary_dt_immutability" class="glossary-link" target="_blank">immutability</a> of the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</li>
                                     </ul>
                                     <p>The baselayer is what provides Bitcoin its primary value propositions, such as
-                                        decentralization, security,
+                                        <a href="glossary.html#glossary_dt_decentralization" class="glossary-link" target="_blank">decentralization</a>, security,
                                         and censorship resistance.</p>
                                 </dd>
 
@@ -680,7 +770,6 @@
 
 
                         </div>
-
 
 
                         <div class="glossary-div-accordion">
@@ -696,18 +785,18 @@
 
                                 <dt id="bitcoin_network" class="glossary-dt-term">Bitcoin Consensus Rules</dt>
                                 <dd class="glossary-dd">
-                                    <p>Bitcoin consensus rules are a set of predefined protocols that all nodes in the
+                                    <p>Bitcoin <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> are a set of predefined protocols that all nodes in the
                                         network
                                         must
                                         follow to agree on the validity of transactions and blocks. These rules ensure
                                         that
                                         transactions are legitimate, prevent double spending, and maintain the integrity
                                         of the
-                                        blockchain. By adhering to these rules, nodes collectively agree on the state of
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. By adhering to these rules, nodes collectively agree on the state of
                                         the
-                                        blockchain and secure the network against fraudulent activities.</p>
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> and secure the network against fraudulent activities.</p>
                                     <ul>
-                                        <li><strong>Block Size Limit:</strong> Each block in the blockchain must adhere
+                                        <li><strong>Block Size Limit:</strong> Each block in the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> must adhere
                                             to a
                                             maximum
                                             size limit, typically set at 1 MB, to prevent excessive block size and
@@ -719,10 +808,10 @@
                                             maintain the stability of the block generation rate and overall network
                                             synchronization.
                                         </li>
-                                        <li><strong>Proof of Work:</strong> Miners must solve a complex cryptographic
+                                        <li><strong><a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">Proof of Work</a>:</strong> <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">Miners</a> must solve a complex cryptographic
                                             puzzle to
                                             add
-                                            a new block to the blockchain, demonstrating computational effort and
+                                            a new block to the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, demonstrating computational effort and
                                             ensuring
                                             network
                                             security.</li>
@@ -730,18 +819,18 @@
                                             difficulty
                                             approximately every two weeks (every 2016 blocks) to maintain the average
                                             block time
-                                            around 10 minutes, balancing the rate of new block creation.</li>
-                                        <li><strong>Transaction Validation:</strong> Transactions must be valid
+                                            around 10 minutes, balancing the rate of new <a href="glossary.html#glossary_dt_block_creation" class="glossary-link" target="_blank">block creation</a>.</li>
+                                        <li><strong><a href="glossary.html#glossary_dt_transaction_validation" class="glossary-link" target="_blank">Transaction Validation</a>:</strong> Transactions must be valid
                                             according to
                                             specific rules, including proper digital signatures, correct input-output
                                             relationships,
                                             and adherence to Bitcoin's scripting language.</li>
                                         <li><strong>Coinbase Transaction:</strong> Each block must include a special
                                             transaction
-                                            called the coinbase transaction, which awards newly minted bitcoins and
+                                            called the coinbase transaction, which awards newly <a href="glossary.html#glossary_dt_minted" class="glossary-link" target="_blank">minted</a> bitcoins and
                                             transaction
                                             fees
-                                            to the miner.</li>
+                                            to the <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miner</a>.</li>
                                         <li><strong>Double-Spending Prevention:</strong> Transactions must reference
                                             unspent
                                             outputs
@@ -751,7 +840,7 @@
                                         <li><strong>Chain Length:</strong> The longest valid chain of blocks (the one
                                             with the
                                             most
-                                            accumulated work) is considered the correct blockchain, and nodes follow
+                                            accumulated work) is considered the correct <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, and nodes follow
                                             this chain
                                             to
                                             maintain network consensus.</li>
@@ -795,7 +884,9 @@
 
                                 <dt id="glossary_dt_bitcoin_core" class="glossary-dt-term">Bitcoin Core</dt>
                                 <dd class="glossary-dd">
-                                    <p>Often used interchangeably with the term: <a href="glossary.html#glossary_dt_bitcoin_network" target="_blank">Bitcoin
+                                    <p>Often used interchangeably with the term: <a
+                                            href="glossary.html#glossary_dt_bitcoin_network" class="glossary-link"
+                                            target="_blank">Bitcoin
                                             Network</a>
                                     </p>
                                     <p>"Bitcoin Core" refers to the reference implementation of the Bitcoin protocol,
@@ -870,11 +961,11 @@
                                 <dt id="glossary_dt_bitcoin_mining" class="glossary-dt-term">Bitcoin Mining</dt>
                                 <dd class="glossary-dd">
                                     <p>The process by which new Bitcoin transactions are verified and added to the
-                                        blockchain. Miners repeatedly guess solutions to a cryptographic problem to
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">Miners</a> repeatedly guess solutions to a cryptographic problem to
                                         create new blocks, securing the network against fraud and ensuring transaction
                                         integrity. This process consumes real-world energy, tying computational work to
-                                        the value and content of the network. In return, miners are rewarded with newly
-                                        minted Bitcoin and transaction fees.
+                                        the value and content of the network. In return, <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miners</a> are rewarded with newly
+                                        <a href="glossary.html#glossary_dt_minted" class="glossary-link" target="_blank">minted</a> Bitcoin and transaction fees.
                                     </p>
 
 
@@ -902,10 +993,12 @@
 
                                 <dt id="glossary_dt_bitcoin_network" class="glossary-dt-term">Bitcoin Network</dt>
                                 <dd class="glossary-dd">
-                                    <p>Often used interchangeably with the term: <a href="glossary.html#glossary_dt_bitcoin_core" target="_blank">Bitcoin
+                                    <p>Often used interchangeably with the term: <a
+                                            href="glossary.html#glossary_dt_bitcoin_core" class="glossary-link"
+                                            target="_blank">Bitcoin
                                             Core</a></p>
                                     <ul class="content-ul">
-                                        <li>Definition: The decentralized network of nodes and miners that operate
+                                        <li>Definition: The decentralized network of nodes and <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miners</a> that operate
                                             according to
                                             the
                                             Bitcoin
@@ -936,10 +1029,10 @@
                                 <dd class="glossary-dd">
 
                                     <p>A block is a group of Bitcoin transactions that have been verified and added to
-                                        the blockchain. Each block includes a reference (hash) to the previous block,
-                                        forming a chronological chain. It also contains a timestamp, a proof-of-work,
-                                        and a reward for the miner who created it. Blocks are the fundamental units that
-                                        make up Bitcoin’s ledger.</p>
+                                        the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Each block includes a reference (<a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a>) to the previous block,
+                                        forming a chronological chain. It also contains a <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamp</a>, a <a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">proof of work</a>,
+                                        and a <a href="glossary.html#glossary_dt_mining_reward" class="glossary-link" target="_blank">mining reward</a> for the <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miner</a> who created it. Blocks are the fundamental units that
+                                        make up Bitcoin’s <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a>.</p>
 
 
 
@@ -956,6 +1049,26 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_block_creation"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_block_creation"
+                                class="glossary-accordion-label">Block Creation</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_block_creation" class="glossary-dt-term">Block Creation</dt>
+                                <dd class="glossary-dd">
+                                    <p>The process of assembling validated transactions into a block and adding it to
+                                        the blockchain, typically through mining.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_blockchain"
                                 class="glossary-accordion-input">
 
@@ -967,21 +1080,22 @@
 
                                 <dt id="glossary_dt_blockchain" class="glossary-dt-term">Blockchain</dt>
                                 <dd class="glossary-dd">
-                                    <p>In the context of Bitcoin, a blockchain is a decentralized, public ledger that
+                                    <p>In the context of Bitcoin, a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> is a decentralized, public <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a> that
                                         records all Bitcoin transactions in a secure and transparent manner. </p>
 
                                     <p>It consists
-                                        of a series of blocks, each containing a list of transactions, a timestamp, and
-                                        a unique cryptographic hash that links it to the previous block. This chain
+                                        of a series of blocks, each containing a list of transactions, a <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamp</a>, and
+                                        a unique cryptographic <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> that links it to the previous block. This chain
                                         structure ensures the integrity of the data, as altering one block would require
                                         changing all subsequent blocks, which is computationally impractical. </p>
 
                                     <p> Bitcoin's
-                                        blockchain is maintained by a network of nodes and secured through a process
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> is maintained by a network of nodes and secured through a process
                                         called <a href="glossary.html#glossary_dt_bitcoin_mining"
-                                            target="_blank">mining</a>, which validates transactions and adds new blocks
+                                            class="glossary-link" target="_blank">mining</a>, which validates
+                                        transactions and adds new blocks
                                         to the chain. As
-                                        the backbone of Bitcoin, the blockchain provides trust and accountability
+                                        the backbone of Bitcoin, the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> provides trust and accountability
                                         without the need for a central authority.</p>
 
 
@@ -1011,7 +1125,7 @@
 
                                 <dt id="glossary_bonds" class="glossary-dt-term">Bonds</dt>
                                 <dd class="glossary-dd">
-                                    <p>Bonds are debt securities issued by governments or corporations to raise capital,
+                                    <p>Bonds are debt <a href="glossary.html#glossary_dt_securities" class="glossary-link" target="_blank">securities</a> issued by governments or corporations to raise capital,
                                         where
                                         the
                                         issuer promises
@@ -1022,11 +1136,11 @@
                                         investors and are generally considered lower-risk compared to stocks. Bond
                                         prices can
                                         fluctuate based on
-                                        interest rates and credit quality of the issuer.</p>
+                                        <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> and credit quality of the issuer.</p>
 
                                     <h3>Example of a Real-World Bond</h3>
                                     <p>An example of a real-world bond is a U.S. Treasury bond. Here’s how the debt
-                                        securities
+                                        <a href="glossary.html#glossary_dt_securities" class="glossary-link" target="_blank">securities</a>
                                         in it
                                         break down:</p>
                                     <ul>
@@ -1036,7 +1150,7 @@
                                         <li><strong>Principal:</strong> The amount borrowed, typically $1,000 per bond,
                                             which is
                                             repaid at maturity.</li>
-                                        <li><strong>Coupon Rate:</strong> The fixed annual interest rate paid to
+                                        <li><strong>Coupon Rate:</strong> The fixed annual <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rate</a> paid to
                                             bondholders,
                                             for
                                             example, 2% per
@@ -1093,9 +1207,9 @@
                                         <strong>Austrian School of Economics</strong>. Austrian economists argue that
                                         these
                                         cycles
-                                        are primarily caused by artificial manipulation of interest rates and money
+                                        are primarily caused by artificial manipulation of <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> and money
                                         supply by
-                                        central banks. They believe that when central banks lower interest rates below
+                                        central banks. They believe that when central banks lower <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> below
                                         their
                                         natural
                                         market level, it leads to excessive borrowing and investment, creating an
@@ -1279,7 +1393,7 @@
                                 <dt id="glossary_centralized" class="glossary-dt-term">Centralized</dt>
                                 <dd class="glossary-dd">
                                     <p>Controlled by a single authority or entity or a select group, often opposed to
-                                        decentralization.</p>
+                                        <a href="glossary.html#glossary_dt_decentralization" class="glossary-link" target="_blank">decentralization</a>.</p>
                                 </dd>
 
                             </div>
@@ -1324,7 +1438,7 @@
                                 <dt id="glossary_chain_analysis" class="glossary-dt-term">Chain-Analysis</dt>
                                 <dd class="glossary-dd">
                                     <p><strong>Bitcoin chain analysis</strong> refers to the process of examining and
-                                        interpreting the blockchain, the public ledger that records all Bitcoin
+                                        interpreting the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, the public <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a> that records all Bitcoin
                                         transactions. This analysis involves tracking transaction flows, identifying
                                         patterns, and linking addresses to gain insights into user behavior.</p>
                                 </dd>
@@ -1471,11 +1585,11 @@
                                 <dt id="glossary_dt_consensus_rules" class="glossary-dt-term">Consensus Rules</dt>
                                 <dd class="glossary-dd">
 
-                                    <p>In Bitcoin, consensus rules are the strict protocol rules that all full nodes
+                                    <p>In Bitcoin, <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> are the strict protocol rules that all full nodes
                                         follow to agree on which transactions and blocks are valid. They define the core
                                         logic of Bitcoin — things like the block size limit, how new coins are created,
                                         and what makes a transaction valid. If a node breaks these rules, its version of
-                                        the blockchain will be rejected by the rest of the network.</p>
+                                        the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> will be rejected by the rest of the network.</p>
 
                                     <p>Some examples:</p>
                                     <ul>
@@ -1483,7 +1597,7 @@
                                             MB before SegWit).</li>
                                         <li>Block reward schedule: The reward for mining a block halves every 210,000
                                             blocks (~4 years).</li>
-                                        <li>Proof of Work requirement: Each block must have a valid SHA-256 hash below
+                                        <li><a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">Proof of Work</a> requirement: Each block must have a valid SHA-256 <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> below
                                             the current difficulty target.</li>
                                         <li>Valid transaction structure: Transactions must have properly formatted
                                             inputs and outputs.</li>
@@ -1492,13 +1606,13 @@
                                             signatures proving ownership of the inputs.</li>
                                         <li>Coin supply cap: The total number of bitcoins that can ever exist is limited
                                             to 21 million.</li>
-                                        <li>Sequence and timestamp rules: Blocks must reference the previous block and
-                                            have valid timestamps.</li>
+                                        <li>Sequence and <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamp</a> rules: Blocks must reference the previous block and
+                                            have valid <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamps</a>.</li>
                                     </ul>
 
 
                                     <p>
-                                        Bitcoin’s consensus rules aren’t a simple numbered list — they are hundreds of
+                                        Bitcoin’s <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> aren’t a simple numbered list — they are hundreds of
                                         precise <strong>conditions</strong> defined in the Bitcoin Core codebase.
                                         Each rule ensures that all nodes agree on which blocks and transactions are
                                         valid. These rules fall into several main categories:
@@ -1509,7 +1623,7 @@
                                             <strong>Block Rules:</strong>
                                             Define what makes a block valid. Examples include the maximum block size (4
                                             million weight units),
-                                            correct linkage to the previous block, valid timestamps, and a valid Merkle
+                                            correct linkage to the previous block, valid <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamps</a>, and a valid Merkle
                                             root.
                                         </li>
                                         <li>
@@ -1525,8 +1639,8 @@
                                             signature proving ownership of the coins being spent.
                                         </li>
                                         <li>
-                                            <strong>Proof-of-Work Rules:</strong>
-                                            Ensure each block contains a SHA-256 hash below the current difficulty
+                                            <strong><a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">Proof-of-Work</a> Rules:</strong>
+                                            Ensure each block contains a SHA-256 <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> below the current difficulty
                                             target, providing security through computational effort.
                                         </li>
                                         <li>
@@ -1566,16 +1680,16 @@
 
                                     <h2>Long-Term Perspective</h2>
                                     <ul>
-                                        <li><strong>Technology and Adoption:</strong> Bitcoin is a decentralized ledger
+                                        <li><strong>Technology and Adoption:</strong> Bitcoin is a decentralized <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a>
                                             that
                                             records transactions securely.</li>
                                         <li><strong>Value Proposition:</strong> As a "truth machine," it ensures
-                                            transparency and immutability.</li>
+                                            transparency and <a href="glossary.html#glossary_dt_immutability" class="glossary-link" target="_blank">immutability</a>.</li>
                                     </ul>
 
                                     <h2>Key Attributes</h2>
                                     <ul>
-                                        <li><strong>Decentralization:</strong> Operates without central authority,
+                                        <li><strong><a href="glossary.html#glossary_dt_decentralization" class="glossary-link" target="_blank">Decentralization</a>:</strong> Operates without central authority,
                                             enhancing
                                             trust.</li>
                                         <li><strong>Security:</strong> Uses cryptographic principles to secure data.
@@ -1605,16 +1719,13 @@
 
                                     <p>By zooming out, you focus on Bitcoin's role as a transformative technology and
                                         its
-                                        enduring significance as a decentralized ledger.</p>
+                                        enduring significance as a decentralized <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a>.</p>
                                 </dd>
 
                             </div>
 
 
                         </div>
-
-
-
 
 
                         <div class="glossary-div-accordion">
@@ -1730,7 +1841,6 @@
                         </div>
 
 
-
                         <div class="glossary-div-accordion">
 
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_decentralized"
@@ -1752,6 +1862,26 @@
                             </div>
 
 
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_decentralization"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_decentralization"
+                                class="glossary-accordion-label">Decentralization</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt class="glossary-dt-term" id="glossary_dt_decentralization">Decentralization</dt>
+                                <dd class="glossary-dd">
+                                    <p>The distribution of control or authority across many independent participants
+                                        instead of a single central entity.</p>
+                                </dd>
+
+                            </div>
                         </div>
 
 
@@ -1948,10 +2078,10 @@
                                         authority,
                                         so it uses a different mechanism to prevent this issue.</p>
 
-                                    <h4>Bitcoin’s Solution to Double Spending: The Blockchain</h4>
-                                    <p>Bitcoin solves the double spending problem using a decentralized ledger called
+                                    <h4>Bitcoin’s Solution to Double Spending: The <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">Blockchain</a></h4>
+                                    <p>Bitcoin solves the double spending problem using a decentralized <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a> called
                                         the
-                                        blockchain. Here’s how it works:</p>
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Here’s how it works:</p>
 
                                     <ol>
                                         <li>Transaction Broadcast:
@@ -1961,18 +2091,18 @@
                                             (computers) participating in the Bitcoin network.</li>
                                         <li>Transaction Verification:
 
-                                            Miners (nodes that validate transactions) gather unconfirmed transactions
+                                            <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">Miners</a> (nodes that validate transactions) gather unconfirmed transactions
                                             from the
-                                            network into a block. Each miner competes to solve a complex cryptographic
+                                            network into a block. Each <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miner</a> competes to solve a complex cryptographic
                                             puzzle,
                                             and the first to solve it gets to add their block of transactions to the
-                                            blockchain.
+                                            <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.
                                         </li>
-                                        <li>Blockchain Confirmation:
+                                        <li><a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">Blockchain</a> Confirmation:
 
-                                            Once a block is added to the blockchain, the transactions within that block
+                                            Once a block is added to the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, the transactions within that block
                                             are
-                                            considered confirmed. The blockchain is a chain of blocks, each containing a
+                                            considered confirmed. The <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> is a chain of blocks, each containing a
                                             set of
                                             transactions. Because each block is cryptographically linked to the previous
                                             one,
@@ -1983,16 +2113,16 @@
 
                                             The Bitcoin network operates on a consensus mechanism, where the longest
                                             valid
-                                            blockchain (the one with the most computational work) is considered the true
+                                            <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> (the one with the most computational work) is considered the true
                                             record
                                             of transactions. If someone tries to double spend by sending the same
                                             Bitcoin in two
                                             different transactions, only one of those transactions can be confirmed and
                                             included
-                                            in the blockchain. The other will be rejected by the network.</li>
+                                            in the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. The other will be rejected by the network.</li>
                                         <li>Preventing Double Spending:
 
-                                            Once a transaction is included in the blockchain and several more blocks
+                                            Once a transaction is included in the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> and several more blocks
                                             have been
                                             added on top of it, the transaction is considered increasingly secure. This
                                             makes it
@@ -2005,8 +2135,8 @@
                                     <ul>
                                         <li>Scenario: A user sends 1 Bitcoin to both Merchant A and Merchant B.</li>
                                         <li>Process: Both transactions are broadcast to the network, but only one can be
-                                            confirmed first and included in the blockchain.</li>
-                                        <li>Result: The transaction included in the blockchain first becomes the valid
+                                            confirmed first and included in the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</li>
+                                        <li>Result: The transaction included in the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> first becomes the valid
                                             transaction, and the other is invalidated. If the user tries to double
                                             spend, the
                                             network will recognize the attempt and reject the second transaction. </li>
@@ -2020,7 +2150,7 @@
                                         by
                                         duplicating their spending, leading to inflation and loss of confidence in the
                                         system.
-                                        The blockchain and its consensus mechanism ensure that once a transaction is
+                                        The <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> and its consensus mechanism ensure that once a transaction is
                                         confirmed,
                                         it is final and cannot be reversed or duplicated, maintaining the currency's
                                         security
@@ -2183,12 +2313,12 @@
 
                                 <dt id="glossary_dt_distributed_ledger" class="glossary-dt-term">Distributed Ledger</dt>
                                 <dd class="glossary-dd">
-                                    <p>The distributed ledger in the context of Bitcoin is a decentralized database that
+                                    <p>The distributed <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a> in the context of Bitcoin is a decentralized database that
                                         records
                                         all transactions and balances across the entire network. It is maintained by a
                                         network
                                         of
-                                        interconnected nodes, ensuring transparency, immutability, and security without
+                                        interconnected nodes, ensuring transparency, <a href="glossary.html#glossary_dt_immutability" class="glossary-link" target="_blank">immutability</a>, and security without
                                         the need
                                         for
                                         a central authority.</p>
@@ -2490,6 +2620,24 @@
 
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_federally_insured"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_federally_insured"
+                                class="glossary-accordion-label">Federally Insured</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_federally_insured" class="glossary-dt-term">Federally Insured</dt>
+                                <dd class="glossary-dd">
+                                    <p>Deposits protected by government-backed insurance up to specified limits.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
 
                         <div class="glossary-div-accordion">
 
@@ -2606,9 +2754,9 @@
                                         resources.</p>
                                     <h4>Government Intervention and the Absence of a Free Market</h4>
                                     <ul>
-                                        <li><strong>Monetary Policy and Interest Rates:</strong> Central banks, like the
+                                        <li><strong>Monetary Policy and <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">Interest Rates</a>:</strong> Central banks, like the
                                             Federal
-                                            Reserve, manipulate interest rates through monetary policy. This
+                                            Reserve, manipulate <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> through monetary policy. This
                                             intervention
                                             distorts the natural market rate of interest, which would otherwise be
                                             determined by
@@ -2752,7 +2900,22 @@
                         </div>
 
 
+                        <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_minted"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_minted"
+                                class="glossary-accordion-label">Minted</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_minted" class="glossary-dt-term">Minted</dt>
+                                <dd class="glossary-dd">
+                                    <p>Newly created coins issued by the protocol, typically as part of a block reward.</p>
+                                </dd>
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -2773,19 +2936,19 @@
                                         participates in the Bitcoin protocol by performing several critical functions to
                                         maintain the integrity and security of the network. It downloads and verifies
                                         the entire
-                                        blockchain, from the genesis block to the most recent block, and ensures
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, from the genesis block to the most recent block, and ensures
                                         compliance with
                                         the Bitcoin protocol rules.</p>
                                     <h2>Key Functions</h2>
                                     <ul>
-                                        <li><strong>Blockchain Validation</strong>
+                                        <li><strong><a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">Blockchain</a> Validation</strong>
                                             <ul>
                                                 <li><strong>Complete Download:</strong> A full node downloads and stores
                                                     the
-                                                    entire blockchain, including all blocks and transactions.</li>
+                                                    entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, including all blocks and transactions.</li>
                                                 <li><strong>Verification:</strong> It validates all transactions and
                                                     blocks
-                                                    against the consensus rules of the Bitcoin protocol, ensuring that
+                                                    against the <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> of the Bitcoin protocol, ensuring that
                                                     all
                                                     transactions are legitimate and that no double-spending has
                                                     occurred.</li>
@@ -2804,7 +2967,7 @@
                                             <ul>
                                                 <li><strong>Enforcement of Rules:</strong> By validating every
                                                     transaction and
-                                                    block, full nodes enforce the network's consensus rules, helping to
+                                                    block, full nodes enforce the network's <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a>, helping to
                                                     secure
                                                     the network against fraudulent activities and attacks.</li>
                                             </ul>
@@ -2813,7 +2976,7 @@
                                             <ul>
                                                 <li><strong>Complete History:</strong> Full nodes maintain a complete
                                                     record of
-                                                    the blockchain, which includes every transaction ever processed.
+                                                    the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, which includes every transaction ever processed.
                                                     This allows
                                                     full nodes to provide a complete and accurate history of Bitcoin
                                                     transactions.</li>
@@ -2826,9 +2989,9 @@
                                             <ul>
                                                 <li><strong>Description:</strong> A pruned full node keeps only a subset
                                                     of the
-                                                    blockchain data, specifically recent blocks and transactions. It
+                                                    <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data, specifically recent blocks and transactions. It
                                                     does not
-                                                    retain the entire blockchain history, which reduces storage
+                                                    retain the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> history, which reduces storage
                                                     requirements
                                                     while still validating and relaying transactions.</li>
                                             </ul>
@@ -2837,7 +3000,7 @@
                                             <ul>
                                                 <li><strong>Description:</strong> Also known as a standard full node, it
                                                     retains
-                                                    the entire blockchain history. This type of node provides the most
+                                                    the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> history. This type of node provides the most
                                                     complete
                                                     data and supports various advanced features, such as historical data
                                                     analysis and data recovery.</li>
@@ -2850,19 +3013,19 @@
                                             and
                                             security of the Bitcoin network by validating all transactions and blocks.
                                         </li>
-                                        <li><strong>Decentralization:</strong> They contribute to the decentralized
+                                        <li><strong><a href="glossary.html#glossary_dt_decentralization" class="glossary-link" target="_blank">Decentralization</a>:</strong> They contribute to the decentralized
                                             nature of
-                                            Bitcoin by distributing the blockchain data across many independent nodes.
+                                            Bitcoin by distributing the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data across many independent nodes.
                                         </li>
                                         <li><strong>Data Availability:</strong> Full nodes provide complete access to
                                             the
-                                            blockchain history, which can be valuable for auditing, research, and
+                                            <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> history, which can be valuable for auditing, research, and
                                             analysis.</li>
                                     </ul>
                                     <h2>Summary</h2>
                                     <p>In summary, a full node in the Bitcoin network is a crucial component that
                                         downloads,
-                                        validates, and stores the entire blockchain. It plays a vital role in
+                                        validates, and stores the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. It plays a vital role in
                                         maintaining
                                         network security, enforcing protocol rules, and ensuring the decentralized and
                                         reliable
@@ -2969,9 +3132,9 @@
 
                                 <dt id="glossary_dt_genesis_block" class="glossary-dt-term">Genesis Block</dt>
                                 <dd class="glossary-dd">
-                                    <p>The first block in a blockchain, often hardcoded into the protocol and serving as
+                                    <p>The first block in a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, often hardcoded into the protocol and serving as
                                         the
-                                        foundation of the entire blockchain system.</p>
+                                        foundation of the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> system.</p>
                                     <p>
                                         <strong>Genesis Block:</strong> The Genesis Block is the very first Bitcoin
                                         block (block 0) and is
@@ -2979,9 +3142,9 @@
                                         Bitcoin Core software
                                         and not discovered or downloaded from the network. Every node starts with this
                                         block already in place.
-                                        It has no previous block to reference, and its data (timestamp, transactions,
-                                        hash, etc.) is fixed,
-                                        providing the common starting point for the entire blockchain.
+                                        It has no previous block to reference, and its data (<a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamp</a>, transactions,
+                                        <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a>, etc.) is fixed,
+                                        providing the common starting point for the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.
                                     </p>
 
                                 </dd>
@@ -2989,6 +3152,25 @@
                             </div>
 
 
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_guessing_attacks"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_guessing_attacks"
+                                class="glossary-accordion-label">Guessing Attacks</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_guessing_attacks" class="glossary-dt-term">Guessing Attacks</dt>
+                                <dd class="glossary-dd">
+                                    <p>Attempts to discover secrets like passwords or seeds by systematically trying
+                                        many possibilities.</p>
+                                </dd>
+
+                            </div>
                         </div>
 
 
@@ -3005,7 +3187,7 @@
 
                                 <dt id="glossary_gpg_key" class="glossary-dt-term">GPG key</dt>
                                 <dd class="glossary-dd">
-                                    <p><strong>Integrity with SHASUMs:</strong> SHASUMs are cryptographic hash functions
+                                    <p><strong>Integrity with SHASUMs:</strong> SHASUMs are cryptographic <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> functions
                                         that
                                         generate a fixed-size string unique to a file's content. By comparing the
                                         provided
@@ -3030,7 +3212,7 @@
                                         both tampering and impersonation.</p>
 
                                     <p><strong>User Verification:</strong> Users can independently verify the SHASUMs by
-                                        generating the hash of the downloaded file and comparing it with the provided
+                                        generating the <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> of the downloaded file and comparing it with the provided
                                         SHASUM.
                                         Similarly, they can verify the PGP signature using the public key to ensure it
                                         matches
@@ -3124,7 +3306,7 @@
                                 <dt id="glossary_dt_hash" class="glossary-dt-term">hash</dt>
                                 <dd class="glossary-dd">
                                     <p>Chat GPT explanation for kids:</p>
-                                    <p>Imagine you have a magical machine called a "hash machine." You can put anything
+                                    <p>Imagine you have a magical machine called a "<a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> machine." You can put anything
                                         you want
                                         into this machine—like a toy, a piece of candy, or even a note with some words
                                         on it.
@@ -3134,7 +3316,7 @@
 
                                     <p><strong>Unique Code:</strong> If you put the same thing into the machine again,
                                         you'll
-                                        always get the exact same secret code. But if you put something even a tiny bit
+                                        always get the exact same secret code. But if you put something even a tiny <a href="glossary.html#glossary_dt_bit" class="glossary-link" target="_blank">bit</a>
                                         different in, like changing one word on your note, you'll get a completely
                                         different
                                         code.</p>
@@ -3151,11 +3333,11 @@
                                         machine
                                         works really fast!</p>
 
-                                    <p>Cryptographic hashes are like those secret codes. They’re used to keep things
+                                    <p>Cryptographic <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hashes</a> are like those secret codes. They’re used to keep things
                                         safe and
                                         secure, like hiding your passwords or making sure your messages haven't been
                                         changed by
-                                        anyone else. So, just like your magical hash machine, they help protect secrets
+                                        anyone else. So, just like your magical <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> machine, they help protect secrets
                                         and keep
                                         things safe!</p>
                                     <fig>
@@ -3187,11 +3369,11 @@
 
                                 <dt id="glossary_dt_hashrate" class="glossary-dt-term">hashrate</dt>
                                 <dd class="glossary-dd">
-                                    <p>The hashrate refers to the total computational power used by miners in the
-                                        proof-of-work
+                                    <p>The hashrate refers to the total computational power used by <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miners</a> in the
+                                        <a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">proof-of-work</a>
                                         process. A higher hashrate indicates a more secure network, as it becomes more
                                         difficult
-                                        for malicious actors to manipulate the blockchain.</p>
+                                        for malicious actors to manipulate the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</p>
                                 </dd>
 
                             </div>
@@ -3366,12 +3548,12 @@
                                         </li>
                                         <li><strong>Dynamic Host Configuration Protocol (DHCP):</strong> Automatically
                                             assigns
-                                            IP addresses and other network configuration details to devices on a
+                                            <a href="glossary.html#glossary_dt_ip_address" class="glossary-link" target="_blank">IP addresses</a> and other network configuration details to devices on a
                                             network,
                                             allowing them to communicate effectively.</li>
                                         <li><strong>Domain Name System (DNS):</strong> Translates human-readable domain
                                             names
-                                            (like www.example.com) into IP addresses that computers use to identify each
+                                            (like www.example.com) into <a href="glossary.html#glossary_dt_ip_address" class="glossary-link" target="_blank">IP addresses</a> that computers use to identify each
                                             other
                                             on the network.</li>
                                         <li><strong>Simple Mail Transfer Protocol (SMTP):</strong> Governs the sending
@@ -3388,6 +3570,63 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_immutability"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_immutability"
+                                class="glossary-accordion-label">Immutability</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_immutability" class="glossary-dt-term">Immutability</dt>
+                                <dd class="glossary-dd">
+                                    <p>The property of data being very difficult to alter once recorded.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_ip_address"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_ip_address"
+                                class="glossary-accordion-label">IP Address</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_ip_address" class="glossary-dt-term">IP Address</dt>
+                                <dd class="glossary-dd">
+                                    <p>A numerical label assigned to a device on a network that identifies it and
+                                        helps route traffic (e.g., IPv4 or IPv6).</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_interest_rates"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_interest_rates"
+                                class="glossary-accordion-label">Interest Rates</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_interest_rates" class="glossary-dt-term">Interest Rates</dt>
+                                <dd class="glossary-dd">
+                                    <p>The cost of borrowing money or the return on savings, typically expressed as a
+                                        percentage per year.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_isp"
                                 class="glossary-accordion-input">
 
@@ -3399,7 +3638,7 @@
                                 <dt id="glossary_dt_isp" class="glossary-dt-term">ISP - Internet Service Provider</dt>
                                 <dd class="glossary-dd">
 
-                                    <p>An <strong>Internet Service Provider</strong> — the company that provides you with internet access. They assign your IP address and can see <a href="glossary.html#glossary_dt_metadata" title="internal link glossary entry explaining metadata" class="glossary-link">metadata</a>  about your online activity, such as which servers you connect to.</p>
+                                    <p>An <strong>Internet Service Provider</strong> — the company that provides you with internet access. They assign your <a href="glossary.html#glossary_dt_ip_address" class="glossary-link" target="_blank">IP address</a> and can see <a href="glossary.html#glossary_dt_metadata" title="internal link glossary entry explaining metadata" class="glossary-link" target="_blank">metadata</a>  about your online activity, such as which servers you connect to.</p>
                                     
                                 </dd>
 
@@ -3443,6 +3682,25 @@
                             </div>
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_key_derivation_function"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_key_derivation_function"
+                                class="glossary-accordion-label">Key-Derivation Function</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_key_derivation_function" class="glossary-dt-term">Key-Derivation
+                                    Function</dt>
+                                <dd class="glossary-dd">
+                                    <p>A function that turns input like a password or seed into a cryptographic key,
+                                        typically using <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hashing</a> and many iterations to resist <a href="glossary.html#glossary_dt_guessing_attacks" class="glossary-link" target="_blank">guessing attacks</a>.</p>
+                                </dd>
+                            </div>
+                        </div>
 
 
 
@@ -3457,8 +3715,67 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_ledger"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_ledger"
+                                class="glossary-accordion-label">Ledger</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_ledger" class="glossary-dt-term">Ledger</dt>
+                                <dd class="glossary-dd">
+                                    <p>A record of transactions or balances, traditionally kept in a book or, in
+                                        Bitcoin, in a shared digital system.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_liquid_assets"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_liquid_assets"
+                                class="glossary-accordion-label">Liquid Assets</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_liquid_assets" class="glossary-dt-term">Liquid Assets</dt>
+                                <dd class="glossary-dd">
+                                    <p>Assets that can be quickly converted to cash with minimal loss in value.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_liquidity"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_liquidity"
+                                class="glossary-accordion-label">Liquidity</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_liquidity" class="glossary-dt-term">Liquidity</dt>
+                                <dd class="glossary-dd">
+                                    <p><strong>Banking & finance:</strong> The ease of converting an asset to cash
+                                        without a large price impact.</p>
+                                    <p><strong>Lightning channels:</strong> The available inbound and outbound channel
+                                        capacity that determines whether payments can be sent or routed.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox"
-                                id="glossary_accordion_input_checkbox_open_keynsian_lightning_network"
+                                id="glossary_accordion_input_checkbox_open_lightning_network"
                                 class="glossary-accordion-input">
 
                             <label for="glossary_accordion_input_checkbox_open_lightning_network"
@@ -3468,12 +3785,15 @@
 
                                 <dt id="glossary_dt_lightning_network" class="glossary-dt-term">Lightning Network</dt>
                                 <dd class="glossary-dd">
-                                    <p>A second-layer solution for Bitcoin that enables fast and scalable off-chain
+                                    <p>A <a href="glossary.html#glossary_dt_second_layer_solution"
+                                            class="glossary-link" target="_blank"
+                                            title="glossary-entry">second-layer solution</a> for
+                                        Bitcoin that enables fast and scalable off-chain
                                         transactions.</p>
                                     <ul class="content-ul">
                                         <li>Off-Chain Transactions: Transactions occur off-chain, reducing the load on
                                             the main
-                                            Bitcoin blockchain.</li>
+                                            Bitcoin <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</li>
                                         <li>Payment Channels: Users can open payment channels with each other, enabling
                                             multiple
                                             transactions to be conducted privately and quickly without broadcasting each
@@ -3499,9 +3819,13 @@
 
                                 <dt id="glossary_dt_lightning_node" class="glossary-dt-term">Lightning Node</dt>
                                 <dd class="glossary-dd">
-                                    <p>A <strong>lightning node</strong> is a type of node in the Bitcoin Lightning
-                                        Network,
-                                        which is a second-layer solution designed to enable faster and cheaper
+                                    <p>A <strong>lightning node</strong> is a type of node in the Bitcoin <a
+                                            href="glossary.html#glossary_dt_lightning_network" class="glossary-link"
+                                            target="_blank" title="glossary-entry">Lightning Network</a>,
+                                        which is a <a href="glossary.html#glossary_dt_second_layer_solution"
+                                            class="glossary-link" target="_blank"
+                                            title="glossary-entry">second-layer solution</a>
+                                        designed to enable faster and cheaper
                                         transactions
                                         off-chain. Here's an overview of its functions:</p>
                                     <h3>Key Functions</h3>
@@ -3511,7 +3835,10 @@
                                             channels, which are off-chain channels used to facilitate rapid and low-cost
                                             transactions between users.</li>
                                         <li><strong>Transaction Routing:</strong> These nodes route payments through the
-                                            Lightning Network, allowing users to send and receive Bitcoin transactions
+                                            <a href="glossary.html#glossary_dt_lightning_network"
+                                                class="glossary-link" target="_blank"
+                                                title="glossary-entry">Lightning Network</a>,
+                                            allowing users to send and receive Bitcoin transactions
                                             instantly
                                             and with minimal fees.</li>
                                         <li><strong>Network Connectivity:</strong> Lightning nodes maintain connections
@@ -3524,7 +3851,10 @@
                                         <li><strong>Speed:</strong> Lightning nodes enable near-instantaneous
                                             transactions by
                                             settling payments off-chain.</li>
-                                        <li><strong>Low Fees:</strong> Transactions routed through the Lightning Network
+                                        <li><strong>Low Fees:</strong> Transactions routed through the <a
+                                                href="glossary.html#glossary_dt_lightning_network"
+                                                class="glossary-link" target="_blank"
+                                                title="glossary-entry">Lightning Network</a>
                                             incur
                                             lower fees compared to on-chain transactions.</li>
                                     </ul>
@@ -3549,7 +3879,7 @@
                                         is a
                                         type of Bitcoin node that operates with minimal resource requirements. Unlike
                                         full
-                                        nodes, SPV nodes do not download and validate the entire blockchain. Instead,
+                                        nodes, SPV nodes do not download and validate the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Instead,
                                         they rely
                                         on other full nodes to validate transactions and blocks.</p>
                                     <h2>Key Features of an SPV Node:</h2>
@@ -3559,7 +3889,7 @@
                                             much less storage and computational power compared to full nodes. This makes
                                             them
                                             suitable for devices with limited resources, such as mobile phones.</li>
-                                        <li><strong>Partial Blockchain Download:</strong> SPV nodes only download the
+                                        <li><strong>Partial <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">Blockchain</a> Download:</strong> SPV nodes only download the
                                             block
                                             headers (about 80 bytes each) instead of full blocks, which contain all the
                                             transactions. This drastically reduces the amount of data that needs to be
@@ -3601,7 +3931,7 @@
                                         <li>An SPV node starts by downloading the block headers from the longest chain.
                                         </li>
                                         <li>When the user wants to check if a transaction has been included in the
-                                            blockchain,
+                                            <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>,
                                             the SPV node queries full nodes for the relevant block header and the Merkle
                                             branch
                                             of the transaction.</li>
@@ -3620,6 +3950,26 @@
                             </div>
                         </div>
 
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_scalability"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_scalability"
+                                class="glossary-accordion-label">Scalability</label>
+
+                            <div class="glossary-accordion-content">
+
+
+                                <dt id="glossary_dt_scalability" class="glossary-dt-term">Scalability</dt>
+                                <dd class="glossary-dd">
+                                    <p>The ability of a system to handle more users or transactions without degrading
+                                        performance.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -3650,7 +4000,7 @@
                                             throughout the network by relaying data to and from connected peers.</li>
                                         <li><strong>Network Synchronization:</strong> Listening nodes synchronize with
                                             other
-                                            nodes to stay updated with the latest blockchain data and network changes.
+                                            nodes to stay updated with the latest <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data and network changes.
                                         </li>
                                     </ul>
                                     <h3>Benefits</h3>
@@ -3715,8 +4065,8 @@
 
                                 <dt id="glossary_dt_merkle_root" class="glossary-dt-term">Merkle Root</dt>
                                 <dd class="glossary-dd">
-                                    <p>The Merkle Root is the topmost hash in a Merkle Tree. It represents the
-                                        cumulative hash
+                                    <p>The Merkle Root is the topmost <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> in a Merkle Tree. It represents the
+                                        cumulative <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a>
                                         of all transactions in a block, providing a secure and efficient way to verify
                                         the
                                         integrity of the data.</p>
@@ -3745,7 +4095,7 @@
                                 <dt id="glossary_dt_merkle_tree" class="glossary-dt-term">Merkle Tree</dt>
                                 <dd class="glossary-dd">
                                     <h3>What is a Merkle Tree?</h3>
-                                    <p>A <strong>Merkle tree</strong>, also known as a hash tree, is a data structure
+                                    <p>A <strong>Merkle tree</strong>, also known as a <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> tree, is a data structure
                                         used in
                                         computer science and cryptography to efficiently and securely verify the
                                         integrity of
@@ -3753,20 +4103,20 @@
                                     <ul>
                                         <li><strong>Structure:</strong> A Merkle tree is a binary tree where each leaf
                                             node
-                                            represents a hash of a piece of data (e.g., a transaction). Non-leaf nodes
+                                            represents a <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> of a piece of data (e.g., a transaction). Non-leaf nodes
                                             are
-                                            hashes of their child nodes, with the root node being the hash of all other
-                                            hashes
+                                            <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hashes</a> of their child nodes, with the root node being the <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> of all other
+                                            <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hashes</a>
                                             in the tree.</li>
                                         <li><strong>Purpose:</strong> It allows for the efficient and secure
                                             verification of
-                                            data integrity. By comparing the root hash of the tree, one can verify that
+                                            data integrity. By comparing the root <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> of the tree, one can verify that
                                             data has
                                             not been altered, even if the data is distributed or spread across different
                                             locations.</li>
                                         <li><strong>Usage in Bitcoin:</strong> In Bitcoin, Merkle trees are used to
                                             organize
-                                            transactions within a block. The Merkle root, which is the top hash of the
+                                            transactions within a block. The Merkle root, which is the top <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> of the
                                             tree, is
                                             included in the block header. This enables efficient and secure verification
                                             of
@@ -3802,7 +4152,7 @@
 
                                 <dt id="glossary_dt_metadata" class="glossary-dt-term">Metadata</dt>
                                 <dd class="glossary-dd">
-                                    <p>Data about data — information that describes your activity, like timestamps, IP addresses, device type, or connection details, without showing the actual content.</p>
+                                    <p>Data about data — information that describes your activity, like <a href="glossary.html#glossary_dt_timestamp" class="glossary-link" target="_blank">timestamps</a>, <a href="glossary.html#glossary_dt_ip_address" class="glossary-link" target="_blank">IP addresses</a>, device type, or connection details, without showing the actual content.</p>
 
                                 </dd>
                             </div>
@@ -3828,9 +4178,46 @@
                             </div>
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_master_seed"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_master_seed"
+                                class="glossary-accordion-label">Master Seed</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_master_seed" class="glossary-dt-term">Master Seed</dt>
+                                <dd class="glossary-dd">
+                                    <p>The root secret derived from a <a href="glossary.html#glossary_dt_seedphrase" class="glossary-link" target="_blank">seed phrase</a> and optional <a href="glossary.html#glossary_dt_passphrase" class="glossary-link" target="_blank">passphrase</a> that is used
+                                        to generate wallet keys.</p>
+                                </dd>
+                            </div>
+                        </div>
 
 
 
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_mining_reward"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_mining_reward"
+                                class="glossary-accordion-label">Mining Reward</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_mining_reward" class="glossary-dt-term">Mining Reward</dt>
+                                <dd class="glossary-dd">
+                                    <p>The newly created coins and transaction fees awarded to a <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miner</a> for producing a
+                                        valid block.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -3846,7 +4233,7 @@
 
                                 <dt id="glossary_dt_miner" class="glossary-dt-term">Miner</dt>
                                 <dd>
-                                    <p>An individual or entity that validates and processes transactions on a blockchain
+                                    <p>An individual or entity that validates and processes transactions on a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>
                                         network.</p>
                                 </dd>
                             </div>
@@ -3871,7 +4258,7 @@
                                         in the
                                         process of mining new blocks. Mining involves solving complex mathematical
                                         problems to
-                                        validate transactions and add them to the blockchain. Here are the key aspects
+                                        validate transactions and add them to the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Here are the key aspects
                                         of a
                                         mining node:</p>
                                     <h3>Key Functions</h3>
@@ -3880,10 +4267,10 @@
                                             puzzles
                                             in order to create new blocks. The first node to solve the puzzle gets to
                                             add the
-                                            block to the blockchain and is rewarded with newly minted bitcoins and
+                                            block to the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> and is rewarded with newly <a href="glossary.html#glossary_dt_minted" class="glossary-link" target="_blank">minted</a> bitcoins and
                                             transaction
                                             fees.</li>
-                                        <li><strong>Transaction Validation:</strong> Mining nodes validate transactions
+                                        <li><strong><a href="glossary.html#glossary_dt_transaction_validation" class="glossary-link" target="_blank">Transaction Validation</a>:</strong> Mining nodes validate transactions
                                             before
                                             including them in new blocks, ensuring that they adhere to Bitcoin's
                                             consensus
@@ -3894,7 +4281,7 @@
                                     </ul>
                                     <h3>Benefits</h3>
                                     <ul>
-                                        <li><strong>Rewards:</strong> Miners receive block rewards and transaction fees
+                                        <li><strong>Rewards:</strong> <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">Miners</a> receive block rewards and transaction fees
                                             as
                                             compensation for their computational efforts.</li>
                                         <li><strong>Network Security:</strong> By participating in mining, nodes help
@@ -3926,7 +4313,7 @@
                                         It often
                                         involves creating associations between easily remembered elements and the
                                         information
-                                        being learned, such as acronyms, rhymes, or visual imagery. For example, the
+                                        being learned, such as <a href="glossary.html#glossary_dt_acronym" class="glossary-link" target="_blank">acronyms</a>, rhymes, or visual imagery. For example, the
                                         phrase
                                         "Every Good Boy Deserves Fruit" helps music students remember the notes on the
                                         lines of
@@ -3952,7 +4339,7 @@
                                 <dt id="glossary_dt_mnemonic_seedphrase" class="glossary-dt-term">Mnemonic Seedphrase
                                 </dt>
                                 <dd class="glossary-dd">
-                                    <p>The seed phrase is considered "mnemonic" because it uses a sequence of easily
+                                    <p>The <a href="glossary.html#glossary_dt_seedphrase" class="glossary-link" target="_blank">seed phrase</a> is considered "mnemonic" because it uses a sequence of easily
                                         remembered
                                         words to help users recall and reconstruct the complex cryptographic key
                                         necessary to
@@ -3988,7 +4375,7 @@
 
                                 <dt id="glossary_dt_m2_liquidity" class="glossary-dt-term">M2 Liquidity</dt>
                                 <dd class="glossary-dd">
-                                    <p><strong>Monetary M2 liquidity</strong> refers to a measure of the money supply
+                                    <p><strong>Monetary M2 <a href="glossary.html#glossary_dt_liquidity" class="glossary-link" target="_blank">liquidity</a></strong> refers to a measure of the money supply
                                         that
                                         includes both physical cash and easily accessible deposits (like checking and
                                         savings
@@ -3996,7 +4383,7 @@
                                         deposits. It
                                         represents the portion of money supply that can quickly be converted into cash
                                         or used
-                                        for spending, thus indicating the overall liquidity available in an economy. M2
+                                        for spending, thus indicating the overall <a href="glossary.html#glossary_dt_liquidity" class="glossary-link" target="_blank">liquidity</a> available in an economy. M2
                                         is a key
                                         indicator for central banks and economists to assess inflation potential and
                                         economic
@@ -4026,9 +4413,9 @@
                                     <p>Money market funds are mutual funds that invest in short-term, low-risk financial
                                         instruments like Treasury bills, certificates of deposit, and commercial paper.
                                         They
-                                        offer higher liquidity than other investments and usually provide better returns
+                                        offer higher <a href="glossary.html#glossary_dt_liquidity" class="glossary-link" target="_blank">liquidity</a> than other investments and usually provide better returns
                                         than
-                                        regular savings accounts, though they are not federally insured.</p>
+                                        regular savings accounts, though they are not <a href="glossary.html#glossary_dt_federally_insured" class="glossary-link" target="_blank">federally insured</a>.</p>
                                 </dd>
 
 
@@ -4076,7 +4463,7 @@
                                 <dd class="glossary-dd">
                                     <p>The total amount of money in circulation within a particular economy, including
                                         physical
-                                        currency, digital money, and other liquid assets.</p>
+                                        currency, digital money, and other <a href="glossary.html#glossary_dt_liquid_assets" class="glossary-link" target="_blank">liquid assets</a>.</p>
                                 </dd>
 
 
@@ -4106,7 +4493,7 @@
                                         by
                                         different parties or devices, must agree to the transaction before it can be
                                         executed on
-                                        the blockchain.</p>
+                                        the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</p>
                                 </dd>
 
 
@@ -4131,10 +4518,12 @@
                                         money,
                                         which is then managed by a professional to invest in a diversified portfolio of
                                         assets
-                                        like stocks, bonds, or other securities. It allows individual investors to gain
+                                        like stocks, bonds, or other <a href="glossary.html#glossary_dt_securities" class="glossary-link" target="_blank">securities</a>. It allows individual investors to gain
                                         exposure
                                         to a broad range of assets with relatively low minimum investment requirements,
-                                        spreading risk across the portfolio.</p>
+                                        spreading risk across the portfolio. Investors must trust the professional
+                                        manager, face significant third-party risk, and typically have only peripheral
+                                        information about the companies and assets being invested in.</p>
                                 </dd>
 
 
@@ -4167,7 +4556,7 @@
 
                                 <dt id="glossary_dt_node" class="glossary-dt-term">Node</dt>
                                 <dd class="glossary-dd">
-                                    <p>A computer or device on a blockchain network that participates in maintaining the
+                                    <p>A computer or device on a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> network that participates in maintaining the
                                         network
                                         by validating and relaying transactions.</p>
                                 </dd>
@@ -4307,6 +4696,44 @@
                             </div>
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_passphrase"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_passphrase"
+                                class="glossary-accordion-label">Passphrase</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_passphrase" class="glossary-dt-term">Passphrase</dt>
+                                <dd class="glossary-dd">
+                                    <p>An optional secret added to a <a href="glossary.html#glossary_dt_seedphrase" class="glossary-link" target="_blank">seed phrase</a> to create a different <a href="glossary.html#glossary_dt_master_seed" class="glossary-link" target="_blank">master seed</a>.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_protocol_layer"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_protocol_layer"
+                                class="glossary-accordion-label">Protocol Layer</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_protocol_layer" class="glossary-dt-term">Protocol Layer</dt>
+                                <dd class="glossary-dd">
+                                    <p>A logical layer in a system stack that defines rules for how data is formatted
+                                        and exchanged.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -4406,16 +4833,16 @@
                                     <h2>Power Projection in the Bitcoin Network</h2>
                                     <p><strong>Power Projection in the Bitcoin Network</strong> involves utilizing
                                         computational
-                                        resources to secure the blockchain. This is a form of physical power digitally
+                                        resources to secure the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. This is a form of physical power digitally
                                         stored:</p>
                                     <ul>
                                         <li><strong>Mining:</strong> Using energy-intensive processes to validate
                                             transactions and
                                             secure the network through computational effort.</li>
-                                        <li><strong>Hash Rate:</strong> Represents the total computational power,
+                                        <li><strong><a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">Hash</a> Rate:</strong> Represents the total computational power,
                                             indicating the
                                             network's security level.</li>
-                                        <li><strong>Proof of Work:</strong> Demonstrates energy expenditure and
+                                        <li><strong><a href="glossary.html#glossary_dt_proof_of_work" class="glossary-link" target="_blank">Proof of Work</a>:</strong> Demonstrates energy expenditure and
                                             computational
                                             effort, ensuring consensus and preventing fraud.</li>
                                     </ul>
@@ -4445,7 +4872,7 @@
                                     <h1>What is a Pruned Node?</h1>
                                     <p>A pruned node is a type of Bitcoin full node that operates with reduced storage
                                         requirements.
-                                        Unlike a traditional full node, which stores the entire Bitcoin blockchain
+                                        Unlike a traditional full node, which stores the entire Bitcoin <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>
                                         (which can be
                                         hundreds of gigabytes), a pruned node only keeps a subset of the most recent
                                         blocks while
@@ -4458,7 +4885,7 @@
                                             node drastically reduces the amount of disk space required, making it
                                             possible for users
                                             with limited storage to still run a full node.</li>
-                                        <li><strong>Full Validation:</strong> Despite not storing the entire blockchain,
+                                        <li><strong>Full Validation:</strong> Despite not storing the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>,
                                             a pruned
                                             node still performs full validation of all transactions and blocks, ensuring
                                             the
@@ -4474,7 +4901,7 @@
 
                                     <h2>How It Works:</h2>
                                     <p>When a node is pruned, it starts by downloading and validating the entire
-                                        blockchain. Once it
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>. Once it
                                         has reached a pre-set storage limit (for example, 2 GB), it begins to delete the
                                         oldest
                                         blocks, keeping only the most recent ones, typically enough to maintain the
@@ -4494,7 +4921,7 @@
 
                                     <p>In summary, pruned nodes allow users to participate fully in the Bitcoin network
                                         without
-                                        needing to store the entire blockchain history, balancing resource efficiency
+                                        needing to store the entire <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> history, balancing resource efficiency
                                         with network
                                         security.</p>
                                 </dd>
@@ -4518,7 +4945,7 @@
 
                                 <dt id="glossary_dt_proof_of_stake" class="glossary-dt-term">PoS (Proof of Stake)</dt>
                                 <dd class="glossary-dd">
-                                    <p>A consensus mechanism used in blockchain networks where validators are chosen to
+                                    <p>A consensus mechanism used in <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> networks where validators are chosen to
                                         create new
                                         blocks and validate transactions based on the amount of cryptocurrency they hold
                                         and are
@@ -4545,10 +4972,10 @@
 
                                 <dt id="glossary_dt_proof_of_work" class="glossary-dt-term">PoW (Proof of Work)</dt>
                                 <dd class="glossary-dd">
-                                    <p>A consensus mechanism used in blockchain networks where validators, known as
-                                        miners, compete
+                                    <p>A consensus mechanism used in <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> networks where validators, known as
+                                        <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miners</a>, compete
                                         to solve complex mathematical puzzles to validate and add new blocks to the
-                                        blockchain.</p>
+                                        <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</p>
                                 </dd>
 
                             </div>
@@ -4605,7 +5032,7 @@
                                         same as anonymity —
                                         once an address is linked to a person through exchanges, payments, or other
                                         clues, all related transactions
-                                        can be traced back to them on the blockchain.</p>
+                                        can be traced back to them on the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>.</p>
                                 </dd>
 
 
@@ -4701,6 +5128,26 @@
                         </div>
 
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_routing_nodes"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_routing_nodes"
+                                class="glossary-accordion-label">Routing Nodes</label>
+
+                            <div class="glossary-accordion-content">
+
+
+                                <dt id="glossary_dt_routing_nodes" class="glossary-dt-term">Routing Nodes</dt>
+                                <dd class="glossary-dd">
+                                    <p>Nodes that forward payments across a network by finding and relaying routes
+                                        between other participants.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
 
                         <div class="glossary-div-accordion">
 
@@ -4733,7 +5180,7 @@
                                         <li><strong>Token Creation:</strong> The creators mint or create tokens for the
                                             cryptocurrency and make them available for purchase or trade on various
                                             platforms,
-                                            such as decentralized exchanges (DEXs) or liquidity pools.</li>
+                                            such as decentralized exchanges (DEXs) or <a href="glossary.html#glossary_dt_liquidity" class="glossary-link" target="_blank">liquidity</a> pools.</li>
                                         <li><strong>Build-Up of Value:</strong> Initially, the value of the
                                             cryptocurrency may
                                             rise as more investors buy in, leading to a perception of legitimacy and
@@ -4741,7 +5188,7 @@
                                             profitability.</li>
                                         <li><strong>Exit Strategy:</strong> Once a significant amount of money has been
                                             invested, the creators of the project suddenly and unexpectedly remove
-                                            liquidity
+                                            <a href="glossary.html#glossary_dt_liquidity" class="glossary-link" target="_blank">liquidity</a>
                                             from the market. This action causes the value of the cryptocurrency to
                                             plummet
                                             rapidly, leaving investors with substantial losses.</li>
@@ -4842,6 +5289,25 @@
                         </div>
 
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_securities"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_securities"
+                                class="glossary-accordion-label">Securities</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_securities" class="glossary-dt-term">Securities</dt>
+                                <dd class="glossary-dd">
+                                    <p>Financial instruments such as stocks or bonds that represent ownership or debt.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
 
 
                         <div class="glossary-div-accordion">
@@ -4883,6 +5349,29 @@
                                     <p>A small, portable storage device commonly used to store data such as photos,
                                         videos, and
                                         files.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_second_layer_solution"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_second_layer_solution"
+                                class="glossary-accordion-label">Second-Layer Solution</label>
+
+                            <div class="glossary-accordion-content">
+
+
+                                <dt id="glossary_dt_second_layer_solution" class="glossary-dt-term">Second-Layer
+                                    Solution</dt>
+                                <dd class="glossary-dd">
+                                    <p>A protocol built on top of a base <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> that processes transactions off the
+                                        main chain, while relying on it for final security and settlement.</p>
                                 </dd>
 
                             </div>
@@ -5009,7 +5498,7 @@
 
                                 <dt id="glossary_dt_sha256" class="glossary-dt-term">SHA256</dt>
                                 <dd class="glossary-dd">
-                                    <p>A cryptographic hash function used in blockchain networks to secure and validate
+                                    <p>A cryptographic <a href="glossary.html#glossary_dt_hash" class="glossary-link" target="_blank">hash</a> function used in <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> networks to secure and validate
                                         transactions.</p>
                                     <p><a target="_blank" href="https://www.youtube.com/watch?v=S9JGmA5_unY">Video 1
                                             (short
@@ -5210,7 +5699,7 @@
                                             <ul>
                                                 <li><strong>Archival Capabilities:</strong> Some super nodes might
                                                     retain a
-                                                    complete historical record of the blockchain, similar to an archival
+                                                    complete historical record of the <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>, similar to an archival
                                                     node,
                                                     providing valuable data for analysis and research.</li>
                                                 <li><strong>Data Relaying:</strong> They can act as important relays in
@@ -5273,17 +5762,17 @@
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li><strong>Blockchain Data Services:</strong>
+                                                        <li><strong><a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">Blockchain</a> Data Services:</strong>
                                                             <ul>
                                                                 <li><strong>Data Analytics Firms:</strong> Companies
-                                                                    specializing in blockchain data analytics and
+                                                                    specializing in <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data analytics and
                                                                     reporting might run super nodes to access and
                                                                     analyze
-                                                                    comprehensive historical blockchain data.
+                                                                    comprehensive historical <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> data.
                                                                 </li>
                                                                 <li><strong>Compliance and Auditing Firms:</strong>
                                                                     Organizations that require detailed and complete
-                                                                    blockchain records for regulatory compliance or
+                                                                    <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> records for regulatory compliance or
                                                                     auditing
                                                                     purposes would benefit from the
                                                                     extensive data stored and managed by super nodes.
@@ -5297,14 +5786,14 @@
                                                                     applications or services that
                                                                     interact with the Bitcoin network might use super
                                                                     nodes to
-                                                                    gain deeper insights into blockchain
+                                                                    gain deeper insights into <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>
                                                                     data and ensure robust connectivity.</li>
                                                                 <li><strong>Researchers:</strong> Academic researchers
                                                                     and
-                                                                    analysts studying blockchain technology
+                                                                    analysts studying <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> technology
                                                                     or Bitcoin's transaction history may run super nodes
                                                                     to have
-                                                                    complete access to all blockchain
+                                                                    complete access to all <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a>
                                                                     data for their studies.</li>
                                                             </ul>
                                                         </li>
@@ -5317,7 +5806,7 @@
                                                                     operate
                                                                     super nodes to support network
                                                                     stability and performance.</li>
-                                                                <li><strong>Decentralization Advocates:</strong>
+                                                                <li><strong><a href="glossary.html#glossary_dt_decentralization" class="glossary-link" target="_blank">Decentralization</a> Advocates:</strong>
                                                                     Individuals
                                                                     interested in enhancing the
                                                                     decentralized nature of the Bitcoin network might
@@ -5331,7 +5820,7 @@
                                                                 <li><strong>Internet Service Providers (ISPs):</strong>
                                                                     ISPs or
                                                                     infrastructure providers involved in
-                                                                    supporting blockchain and cryptocurrency networks
+                                                                    supporting <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> and cryptocurrency networks
                                                                     might run
                                                                     super nodes to offer enhanced
                                                                     connectivity and data services.</li>
@@ -5366,6 +5855,69 @@
                     <h1 class="glossary-h1-letter">T</h1>
                     <dl>
 
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_transaction_propagation"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_transaction_propagation"
+                                class="glossary-accordion-label">Transaction Propagation</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_transaction_propagation" class="glossary-dt-term">Transaction
+                                    Propagation</dt>
+                                <dd class="glossary-dd">
+                                    <p>The process of relaying transactions across nodes so they spread through the
+                                        network.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_transaction_validation"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_transaction_validation"
+                                class="glossary-accordion-label">Transaction Validation</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_transaction_validation" class="glossary-dt-term">Transaction
+                                    Validation</dt>
+                                <dd class="glossary-dd">
+                                    <p>Checking that a transaction follows the <a href="glossary.html#glossary_dt_consensus_rules" class="glossary-link" target="_blank">consensus rules</a> before accepting it.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_timestamp"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_timestamp"
+                                class="glossary-accordion-label">Timestamp</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_timestamp" class="glossary-dt-term">Timestamp</dt>
+                                <dd class="glossary-dd">
+                                    <p>A recorded time value attached to data to indicate when it was created or
+                                        observed.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
 
                         <div class="glossary-div-accordion">
@@ -5414,7 +5966,7 @@
                                         require the
                                         money to be held
                                         for a fixed term, ranging from months to years, in exchange for a higher
-                                        interest rate.
+                                        <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rate</a>.
                                         Withdrawals
                                         before the term ends usually incur penalties, making these deposits less liquid
                                         than
@@ -5567,8 +6119,8 @@
                                 <dd class="glossary-dd">
                                     <p>An exchange or transfer of value between two or more parties, often recorded and
                                         verified
-                                        on a blockchain or
-                                        distributed ledger.</p>
+                                        on a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> or
+                                        distributed <a href="glossary.html#glossary_dt_ledger" class="glossary-link" target="_blank">ledger</a>.</p>
                                 </dd>
 
                             </div>
@@ -5591,10 +6143,10 @@
 
                                 <dt id="glossary_dt_transaction_fees" class="glossary-dt-term">Transaction Fees</dt>
                                 <dd class="glossary-dd">
-                                    <p>The fees paid by users to include their transactions in a blockchain network,
+                                    <p>The fees paid by users to include their transactions in a <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> network,
                                         typically
                                         used to incentivize
-                                        miners or validators.</p>
+                                        <a href="glossary.html#glossary_dt_miner" class="glossary-link" target="_blank">miners</a> or validators.</p>
                                 </dd>
 
                             </div>
@@ -5615,7 +6167,7 @@
 
                                 <dt id="glossary_dt_trustless" class="glossary-dt-term">Trustless</dt>
                                 <dd class="glossary-dd">
-                                    <p>A characteristic of blockchain systems where parties can transact or interact
+                                    <p>A characteristic of <a href="glossary.html#glossary_dt_blockchain" class="glossary-link" target="_blank">blockchain</a> systems where parties can transact or interact
                                         without
                                         needing to trust each
                                         other.</p>
@@ -5736,7 +6288,7 @@
                                 <dd class="glossary-dd">
                                     <p>A VPN is a service that creates a secure, encrypted connection over the internet,
                                         allowing users to browse the
-                                        web privately and securely by masking their IP address and location.</p>
+                                        web privately and securely by masking their <a href="glossary.html#glossary_dt_ip_address" class="glossary-link" target="_blank">IP address</a> and location.</p>
                                 </dd>
 
                             </div>
@@ -5795,6 +6347,27 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_yield"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_yield"
+                                class="glossary-accordion-label">Yield</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_yield" class="glossary-dt-term">Yield</dt>
+                                <dd class="glossary-dd">
+                                    <p>The return an investment generates, often expressed as a percentage. Examples
+                                        include <a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">higher-yielding assets</a> that offer greater returns in exchange for more
+                                        risk.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_yen_carry_trade"
                                 class="glossary-accordion-input">
 
@@ -5807,19 +6380,19 @@
 
                                 <dt id="glossary_dt_yen_carry_trade" class="glossary-dt-term">Yen Carry Trade</dt>
                                 <dd class="glossary-dd">
-                                    <p>The Japanese yen carry trade involves borrowing yen at low interest rates and
+                                    <p>The Japanese yen carry trade involves borrowing yen at low <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> and
                                         investing
                                         the proceeds in
-                                        higher-yielding assets in other currencies. Investors profit from the interest
+                                        <a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">higher-yielding assets</a> in other currencies. Investors profit from the interest
                                         rate
                                         differential between the
-                                        low-yielding yen and the higher-yielding assets. This strategy can lead to
+                                        low-<a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">yielding</a> yen and the <a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">higher-yielding assets</a>. This strategy can lead to
                                         significant
                                         currency movements, as
                                         large-scale borrowing of yen and converting it into other currencies can affect
                                         exchange
                                         rates. The trade is
-                                        risky because changes in interest rates or economic conditions can lead to
+                                        risky because changes in <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> or economic conditions can lead to
                                         losses if the
                                         yen strengthens or
                                         asset returns fall. It gained prominence during periods of low Japanese interest
@@ -5831,11 +6404,11 @@
                                     <ul>
                                         <li><strong>Borrow Yen:</strong> Obtain a loan in Japanese yen, taking advantage
                                             of
-                                            Japan's low interest rates.</li>
+                                            Japan's low <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a>.</li>
                                         <li><strong>Convert to Foreign Currency:</strong> Exchange the borrowed yen for
                                             a
-                                            higher-yielding foreign currency.</li>
-                                        <li><strong>Invest in Higher-Yielding Assets:</strong> Use the foreign currency
+                                            higher-<a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">yielding</a> foreign currency.</li>
+                                        <li><strong>Invest in <a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">Higher-<a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">Yielding</a> Assets</a>:</strong> Use the foreign currency
                                             to
                                             invest in assets that offer higher returns, such as bonds or equities in
                                             other
@@ -5853,11 +6426,11 @@
                                     <h3>Real-World Example</h3>
                                     <p>During the early 2000s, many investors engaged in the yen carry trade by
                                         borrowing yen at
-                                        low interest rates and
-                                        investing in higher-yielding assets like Australian government bonds or New
+                                        low <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rates</a> and
+                                        investing in <a href="glossary.html#glossary_dt_yield" class="glossary-link" target="_blank">higher-yielding assets</a> like Australian government bonds or New
                                         Zealand
                                         equities, capitalizing on
-                                        the significant interest rate differential between Japan and those countries.
+                                        the significant <a href="glossary.html#glossary_dt_interest_rates" class="glossary-link" target="_blank">interest rate</a> differential between Japan and those countries.
                                     </p>
                                 </dd>
 
@@ -5873,9 +6446,6 @@
                 <section id="z">
                     <h1 class="glossary-h1-letter">Z</h1>
                     <dl>
-
-                       
-
 
                     </dl>
                 </section>

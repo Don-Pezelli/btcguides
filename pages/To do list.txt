@@ -7,12 +7,20 @@ To Do List:
 
 primary tasks:
 
-- finish responsive layout
 
 
-- hot wallets stage 2.3 make table fit on mobile phones as well TASK ID 1036
-- cold wallets stage 4.1.2 PDF replace with a working file path
-- advanced course seed storage  stage 2.3.1.2 add list of backup materials TASK ID 1037
+
+
+
+
+
+- add different background picture to advanced courses navgiation page TASK ID 1042
+
+- think about base function for forum and add them, make it usable TASK ID 1043
+- read seed storage course and improve it until it is finished TASK ID 1044
+- read lightning course and improve it till finished TASK 1045
+- read inheritance course and improve till finished TASK 1046
+- 
 
 
 
@@ -22,7 +30,7 @@ secondary tasks:
 
 - GLOSSARY back to the top button, there should be an icon above it that is a rising arrow representing the price chart TASK ID: 1031
 - back to top button position  TASK ID: 1032
-- make the letters at the top like a terminal of buttons so people understand they are pressable TASK ID: 1033
+
 - make the S button a Satoshi sign TASK ID: 1034
 - Upscale all small images Task ID: 1005
 - add video tuts and timestamps Task ID: 1007 (WHERE?)
@@ -65,14 +73,25 @@ Done:
 - BU1 Stage 3 clean up TASK ID: 1028
 
 - finish text BU3 Stage 3.1 and 3.2 TASK ID: 1030
+
+
+
 - cold wallet basic fix the table in stage 4.1.3 on medium sized screens (laptops) TASK ID 1035
+- hot wallets stage 2.3 make table fit on mobile phones as well TASK ID 1036
+- advanced course seed storage  stage 2.3.1.2 add list of backup materials TASK ID 1037
+- make basic course panels appear larger on desktop and wide screens task ID 1038
+- add a dropdown with basic and advanced for the guides in the header TASK ID 1039
+- on th basic courses navigation add some sort of visual cue with a funnel towards the paid advanced courses section TASK ID 1040
+- FINISH!! cold wallets stage 4.1.2 PDF replace with a working file path ID1041
 
 
 
 
 
 
+Deleted: 
 
+- make the letters at the top like a terminal of buttons so people understand they are pressable TASK ID: 1033
 
 
 

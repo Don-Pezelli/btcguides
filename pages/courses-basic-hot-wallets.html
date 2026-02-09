@@ -169,12 +169,17 @@
 
 
 
+    
+        <div class="guide-nav-footer">
+            <a class="guide-nav-link" href="solutions-forum.html">Solutions Forum</a>
+        </div>
+
     </nav>
 
     <main class="basic-utility-guide-main" id="basic_utility_level_1_main_doc">
 
         <section class="basic-utility-guide-main-section">
-            <h1>Basic Course 2: Hot Wallets</h1>
+            <h1>Basic Course 2: Pocket Change</h1>
             <h2>Non-custodial hot-wallets using public node</h2>
             <h1 id="overview">Overview</h1>
 
@@ -187,6 +192,10 @@
                     baselayer and the lightning network. You will also learn what the risks of the hot wallet are and
                     what
                     best practice is for handling it.</p>
+                <p class="color-orange">Want to go deeper? Explore the advanced courses for long-term security and
+                    Lightning mastery. <a href="courses-advanced-navigation.html" target="_blank"
+                        title="internal link to advanced courses">Advanced Courses</a><span
+                        class="premium-tag premium-tag-inline">Premium</span>.</p>
 
 
                 <div class="two-column-container-div donation-div">
@@ -448,6 +457,10 @@
                 <p><strong>Settlement on Bitcoin Network:</strong> Disputes and final settlements can be referred back
                     to the
                     Bitcoin network, ensuring the security and integrity of transactions.</p>
+                <p class="color-orange">Add security to your setup with the combined advanced course: <a
+                        href="courses-advanced-lightning-wallets.html#overview" target="_blank"
+                        title="internal link to advanced course">Advanced: Lightning (Wallets + Node)</a><span
+                        class="premium-tag premium-tag-inline">Premium</span>.</p>
 
 
 
@@ -632,54 +645,60 @@
                 <p>Note that if you do not use your own nodes Electrum server the public server you use will learn all
                     your current and future addresses as well as your transaction history. This does not endager your
                     private key, but lessens your privacy.</p>
+                <p class="color-orange">Add security to your setup with this advanced course: <a
+                        href="courses-advanced-lightning-wallets.html#node_overview" target="_blank"
+                        title="internal link to advanced course">Advanced: Lightning (Wallets + Node)</a><span
+                        class="premium-tag premium-tag-inline">Premium</span>.</p>
 
-                <table id="bu1_privacy_table">
-                    <caption>Bitcoin Wallet Privacy Setups (Best → Worst)</caption>
-                    <thead>
-                        <tr>
-                            <th>Setup</th>
-                            <th>Tor?</th>
-                            <th>Own Electrum Server?</th>
-                            <th>IP Privacy</th>
-                            <th>Wallet/Blockchain Privacy</th>
-                            <th>Notes / Risks</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Tor + Own Electrum</td>
-                            <td>✅</td>
-                            <td>✅</td>
-                            <td>✅ IP hidden</td>
-                            <td>✅ Full wallet privacy</td>
-                            <td>Best privacy: both network and wallet protected</td>
-                        </tr>
-                        <tr>
-                            <td>Tor + Public Electrum</td>
-                            <td>✅</td>
-                            <td>❌</td>
-                            <td>✅ IP hidden</td>
-                            <td>❌ Server sees XPUB, addresses, balances, tx history</td>
-                            <td>Partial privacy: wallet exposed, network hidden</td>
-                        </tr>
-                        <tr>
-                            <td>No Tor + Own Electrum</td>
-                            <td>❌</td>
-                            <td>✅</td>
-                            <td>❌ IP exposed to server/ISP</td>
-                            <td>✅ Full wallet privacy</td>
-                            <td>Wallet private, but network metadata exposed</td>
-                        </tr>
-                        <tr>
-                            <td>No Tor + Public Electrum</td>
-                            <td>❌</td>
-                            <td>❌</td>
-                            <td>❌ IP exposed to server/ISP</td>
-                            <td>❌ Server sees XPUB, addresses, balances, tx history</td>
-                            <td>Worst privacy: everything exposed</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-scroll">
+                    <table id="bu1_privacy_table">
+                        <caption>Bitcoin Wallet Privacy Setups (Best → Worst)</caption>
+                        <thead>
+                            <tr>
+                                <th>Setup</th>
+                                <th>Tor?</th>
+                                <th>Own Electrum Server?</th>
+                                <th>IP Privacy</th>
+                                <th>Wallet/Blockchain Privacy</th>
+                                <th>Notes / Risks</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Tor + Own Electrum</td>
+                                <td>✅</td>
+                                <td>✅</td>
+                                <td>✅ IP hidden</td>
+                                <td>✅ Full wallet privacy</td>
+                                <td>Best privacy: both network and wallet protected</td>
+                            </tr>
+                            <tr>
+                                <td>Tor + Public Electrum</td>
+                                <td>✅</td>
+                                <td>❌</td>
+                                <td>✅ IP hidden</td>
+                                <td>❌ Server sees XPUB, addresses, balances, tx history</td>
+                                <td>Partial privacy: wallet exposed, network hidden</td>
+                            </tr>
+                            <tr>
+                                <td>No Tor + Own Electrum</td>
+                                <td>❌</td>
+                                <td>✅</td>
+                                <td>❌ IP exposed to server/ISP</td>
+                                <td>✅ Full wallet privacy</td>
+                                <td>Wallet private, but network metadata exposed</td>
+                            </tr>
+                            <tr>
+                                <td>No Tor + Public Electrum</td>
+                                <td>❌</td>
+                                <td>❌</td>
+                                <td>❌ IP exposed to server/ISP</td>
+                                <td>❌ Server sees XPUB, addresses, balances, tx history</td>
+                                <td>Worst privacy: everything exposed</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
                 <h4>Step 1:</h4>
                 <p>Go to Electrum Server</p>
@@ -700,6 +719,7 @@
                 <h4>Step 2:</h4>
                 <p>Go to "Modify"</p>
 
+                <!--
                 <div class="guide-div-image-container--portrait">
 
                     <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-3.PNG"
@@ -707,6 +727,8 @@
 
 
                 </div>
+                -->
+                
 
 
 
@@ -742,13 +764,15 @@
                 <p>Input the onion address into the server field where it says "example.com" and use port 50002. Then
                     press the "save" button.</p>
 
-
-                <div class="guide-div-image-container--portrait">
+<!--
+         <div class="guide-div-image-container--portrait">
 
                     <img src="../images/basic-utility-level-1-images/phoenix-electrum/phoenix-electrum-4.PNG"
                         alt="image of phoenix wallet home screen">
 
-                </div>
+                </div>            
+-->
+               
 
 
 
@@ -910,6 +934,10 @@
                         terms used to describe the system used to protect the private key from being lost.</p>
 
                     <p>The strategy you use to protect your private key is called backup or seed storage strategy.</p>
+                    <p class="color-orange">Go deeper on backups with this advanced course: <a
+                            href="courses-advanced-seed-storage.html" target="_blank"
+                            title="internal link to advanced course">Advanced: Seed Storage</a><span
+                            class="premium-tag premium-tag-inline">Premium</span>.</p>
 
                     <p>Now let us do a thought experiment revolving around our backup strategy.</p>
 
@@ -1033,6 +1061,9 @@
                 <h2 id="basic_utility_node_stage_3_next_guide">Click here to go to the next guide: <a
                         class="external-link" title="link to internal course website"
                         href="courses-basic-cold-wallets.html" target="_blank">3. Cold Wallets</a></h2>
+                <p class="color-orange">Ready for the next level? <a href="courses-advanced-navigation.html"
+                        target="_blank" title="internal link to advanced courses">Advanced Courses</a><span
+                        class="premium-tag premium-tag-inline">Premium</span>.</p>
             </article>
 
 
@@ -1044,6 +1075,15 @@
 
 
 
+
+    
+        <section class="forum-callout" aria-label="Solutions forum">
+            <div class="forum-callout-inner">
+                <h2>Stuck at a specific step?</h2>
+                <p>Post your issue in the Solutions Forum and I’ll reply with a concrete fix. Solved answers stay archived for everyone.</p>
+                <a class="hero-button-basic-utility forum-callout-button" href="solutions-forum.html">Go to Solutions Forum</a>
+            </div>
+        </section>
 
     </main>
 
