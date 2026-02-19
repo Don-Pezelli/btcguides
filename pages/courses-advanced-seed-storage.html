@@ -170,11 +170,7 @@
                                     set
                                     backup</a></li>
 
-                            <li> <a class="guide-nav-link sub-link" href="#stage_4.1.2">Stage 4.1.2: Shamirs Secret
-                                    Sharing
-                                    (SSS) Method</a></li>
-
-                            <li> <a class="guide-nav-link sub-link" href="#stage_4.1.3">Stage 4.1.3: Two half split
+                            <li> <a class="guide-nav-link sub-link" href="#stage_4.1.2">Stage 4.1.2: Two half split
                                     24 word
                                     backup (12 words each)</a></li>
 
@@ -239,8 +235,8 @@
 
                     <p>If you are reading this guide as a business, family office, or merchant, skip ahead to the
                         upcoming
-                        <a href="courses-advanced-seed-storage-multi-sig.html" target="_blank"
-                            title="internal link to multi sig seed storage guide">Multi-Signature Course</a> for an
+                        <a href="courses-advanced-seed-storage-businesses.html" target="_blank"
+                            title="internal link to seed storage for businesses guide">Seed Storage for Businesses</a> for an
                         appropriate model. This chapter focuses on single-signature setups for individual control.
                     </p>
 
@@ -253,10 +249,10 @@
 
 
 
-                    <div class="two-column-container-div donation-div">
+                    <div class="two-column-container-div donation-div donation-div--compact-text donation-div--overview-spacing">
 
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div donation-primary-text">
                             <p>If you have questions feel free to contact us at: <b>contact@btcguides.de</b></p>
                             <p>To support the website scan the QR code to send Sats via ⚡ lightning network:
                                 <b>ruddywall05@walletofsatoshi.com</b>
@@ -267,21 +263,21 @@
                         <div class="two-column-image-container">
                             <img src="../images/donation-address/lightning-donation-address-1.jpg"
                                 alt="QR code for lightning donation">
-
+                            <p class="donation-qr-caption">QR code for lightning donation</p>
 
                         </div>
 
-                        <div id="donation_text_2" class="text-two-column-div">
+                        <div id="donation_text_2" class="text-two-column-div donation-secondary-text">
                             <p>You can also send donations on-chain, but keep in mind that those transactions are
-                                slower and cost more in transaction fees.</b></p>
+                                slower and cost more in transaction fees.</p>
 
                         </div>
 
 
                         <div class="two-column-image-container">
                             <img src="../images/donation-address/on-chain-donation-address-1.jpg"
-                                alt="QR code for lightning donation">
-
+                                alt="QR code for on-chain donation">
+                            <p class="donation-qr-caption">QR code for on-chain donation</p>
 
                         </div>
 
@@ -366,7 +362,7 @@
                         future addresses, reducing privacy.<br>
 
                     </p>
-                    <p><strong>Use xpubs only for view-only purposes</strong> (accounting, backups, or watch-only
+                    <p><strong>Use xpubs for view-only purposes</strong> (accounting, backups, or watch-only
                         wallets) and avoid publishing them if you want to keep activity private.</p>
 
 
@@ -410,12 +406,19 @@
 
 
 
-                    <div class="two-column-container-div">
+                    <div class="two-column-container-div equal-height-columns">
 
 
                         <div class="text-two-column-div">
                             <p>
-                                The seed or private key is immaterialized if it hasn't been written down.<br>
+                                The seed or private key is immaterialized if it hasn't been written down.
+                            </p>
+
+                            <div class="two-column-image-container immaterialized-key-image-center">
+                                <img src="../images/icons/immaterialized-key.png" alt="icon of immaterialzed seed / key">
+                            </div>
+
+                            <p>
                                 This means only the holder of the key knows it.
                             </p>
 
@@ -425,16 +428,6 @@
                                 As the Seedsigner is stateless, it will dematerialize the seed / private key as soon
                                 as power is turned off.
                             </p>
-
-                        </div>
-
-
-                        <div class="two-column-image-container">
-                            <img src="../images/icons/immaterialized-key.png" alt="icon of immaterialzed seed / key">
-
-
-
-
 
                         </div>
 
@@ -490,7 +483,7 @@
                                         that
                                         search the holder might find a materialized seed phrase. Upon completion of
                                         transport
-                                        howeverr
+                                        however
                                         the
                                         seed should either be materialized or the funds be sent to a different seed
                                         phrase.
@@ -606,7 +599,7 @@
 
                                     <h5>Solutions:</h5>
 
-                                    <p>Best practice is to never access the seed phrase in a room with cameras and
+                                    <p>Best practice is to <b>never access the seed phrase in a room with cameras</b> and
                                         or
                                         microphones.
                                         There
@@ -636,7 +629,9 @@
                                         <img src="../images/icons/emergency-rescue-icon.png" alt="" class="icon">
                                     </summary>
 
-                                    <p>This threat will be tackled in detail in the estate planning course in which
+                                    <p>This threat will be tackled in detail in the <a
+                                            href="courses-advanced-inheritance.html" target="_blank">inheritance
+                                            course</a> in which
                                         the user
                                         will
                                         learn
@@ -780,8 +775,9 @@
 
 
 
-                    <div>
-                        <img src="../images/icons/materialized-seed-threats-icon.png"
+                    <div class="figure-2-framed figure-7-centered">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_1.2.2/materialized-seed-threats-icon-2.png"
                             alt="icon of materialized seed / key">
                         <figcaption>Figure 7: materialized seed threat categories</figcaption>
                     </div>
@@ -816,7 +812,7 @@
                                     </summary>
                                     <p>If there is only one physical copy the key becomes susceptible to destruction
                                         by
-                                        environmental hazards such a water, fire or crushing. Corrosion or
+                                        environmental hazards such as water, fire or crushing. Corrosion or
                                         electrictiy may
                                         also damage the backup.</p>
 
@@ -855,7 +851,15 @@
 
 
                     <p>This stage will introduce the types of defensive components a bitcoiner can work with. There
-                        are Seed Modifiers, Backup Architecture, Power and Stealth Defense Tools.</p>
+                        are:
+                        
+                        <ul class="stage-2-topic-list">
+                            <li><a href="#stage_2.1">Seed Modifiers</a></li>
+                            <li><a href="#stage_2.2">Backup Architecture</a></li>
+                            <li><a href="#stage_2.3.1">Power Defense Tools</a></li>
+                            <li><a href="#stage_2.3.2">Stealth Defense Tools</a></li>
+                        </ul>
+                    </p>
 
 
 
@@ -964,22 +968,23 @@
 
                     <p>This allows us to effectively create a hidden wallet behind the initial seed phrase.</p>
 
-                    <h4>Key Points</h4>
-                    <ul>
-                        <li>Same recovery words + different passphrase = different wallet.</li>
-                        <li>A missing or incorrect passphrase means the wallet cannot be recovered.</li>
-                        <li>The passphrase is never stored by the wallet software.</li>
-
-                    </ul>
-
-
-
+                    <div class="key-points-callout">
+                        <h4>Key Points</h4>
+                        <ul class="opsec-list">
+                            <li>Same recovery words + different passphrase = different wallet.</li>
+                            <li>A missing or incorrect passphrase means the wallet cannot be recovered.</li>
+                            <li>The passphrase is never stored by the wallet software.</li>
+                        </ul>
+                    </div>
 
 
 
-                    <div>
+
+
+
+                    <div class="figure-2-framed figure-1-centered">
                         <img class="responsive-figure-img"
-                            src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                            src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase-2.png"
                             alt="backup architecure diagram">
                         <figcaption>Figure 1: Seed Modifier Passphrase Diagram</figcaption>
                     </div>
@@ -1001,9 +1006,9 @@
 
 
 
-                    <div>
+                    <div class="figure-2-framed figure-2-centered">
                         <img class="responsive-figure-img"
-                            src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                            src="../images/advanced-courses/stage_2.2/backup-architecture-diagram-2.png"
                             alt="backup architecure diagram">
                         <figcaption>Figure 2: Redundancy and Distribution Diagram</figcaption>
                     </div>
@@ -1026,10 +1031,10 @@
 
 
 
-                    <div class="two-column-container-div">
+                    <div class="two-column-container-div equal-height-columns">
 
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div advantage-box">
 
                             <h4>Advantages</h4>
                             <ul>
@@ -1041,7 +1046,7 @@
 
                         </div>
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div disadvantage-box">
 
 
                             <h4>Disadvantages</h4>
@@ -1103,10 +1108,10 @@ HOUSE LOCATION ICONS
 
 
 
-                    <div class="two-column-container-div">
+                    <div class="two-column-container-div equal-height-columns">
 
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div advantage-box">
 
                             <h4>Advantages</h4>
                             <ul>
@@ -1118,7 +1123,7 @@ HOUSE LOCATION ICONS
 
                         </div>
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div disadvantage-box">
 
 
                             <h4>Disadvantages</h4>
@@ -1169,93 +1174,60 @@ HOUSE LOCATION ICONS
 
 
 
-                    <div class="two-column-container-div">
-
-
-                        <div class="text-two-column-div">
-
+                    <div class="power-defense-intro-card">
+                        <div class="power-defense-intro-text">
                             <p>
                                 Power defense tools are physical or mechanical measures designed to make accessing a
-                                backup or seed significantly more difficult for attackers.<br><br>
-                                They provide strong protection against theft, destruction, or tampering.
+                                backup or seed significantly more difficult for attackers. They provide strong
+                                protection against theft, destruction, or tampering.
                             </p>
-
-
                         </div>
-
-
-                        <div class="two-column-image-container">
+                        <div class="power-defense-intro-icon">
                             <img src="../images/icons/weightlifting-icon.png" alt="icon of immaterialzed seed / key">
-
                         </div>
-
                     </div>
 
+                    <div class="figure-2-framed figure-3-centered power-defense-figure">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/stage_2.3.1/power-defense-tools-1.1.png"
+                            alt="backup architecure diagram">
+                        <figcaption>Figure 3: Defensive Power Tools</figcaption>
+                    </div>
 
-                    <div class="two-column-container-div">
+                    <h4 class="power-defense-tools-heading">Common Power Defense Tools</h4>
 
+                    <div class="power-defense-tools-panel">
+                        <ul class="power-defense-tools-list">
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Reinforced Backup Media:</span>
+                                    </summary>
+                                    <p>Hardened metal plates (stainless steel, titanium, Inconel) protect the
+                                        engraved seed against fire, water, and physical damage.</p>
+                                </details>
+                            </li>
 
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Secure Storage Units:</span>
+                                    </summary>
+                                    <p>Fireproof, water-resistant safes or vaults, ideally reinforced steel or deposit
+                                        boxes that require significant time, tools, or authorization to access.</p>
+                                </details>
+                            </li>
 
-
-                        <div class="text-two-column-div">
-
-                            <img class="responsive-figure-img"
-                                src="../images/advanced-courses/stage_2.3.1/power-defense-tools-1.png"
-                                alt="backup architecure diagram">
-                            <figcaption>Figure 3: Defensive Power Tools</figcaption>
-
-                        </div>
-
-
-
-                        <div class="text-two-column-div">
-
-
-
-
-
-                            <ul>
-                                <li>
-                                    <details class="threat">
-                                        <summary>
-                                            <span class="threat-title">Reinforced Backup Media:</span>
-
-                                        </summary>
-                                        <p>Hardened metal plates (stainless steel, titanium, Inconel) protect the
-                                            engraved seed against fire, water, and physical damage.</p>
-                                </li>
-
-                                <li>
-                                    <details class="threat">
-                                        <summary>
-                                            <span class="threat-title">Secure Storage Units:</span>
-
-                                        </summary>
-                                        <p>Fireproof, water-resistant safes or vaults — ideally reinforced steel or
-                                            deposit boxes that require significant time, tools, or authorization to
-                                            access.</p>
-                                </li>
-
-                                <li>
-                                    <details class="threat">
-                                        <summary>
-                                            <span class="threat-title">Access Control & Detection:</span>
-
-                                        </summary>
-                                        <p> Physical locks, security cages, guards, alarm systems, and surveillance
-                                            restrict access and deter tampering.</p>
-                                </li>
-
-
-
-                            </ul>
-
-
-                        </div>
-
-
-
-
+                            <li>
+                                <details class="threat">
+                                    <summary>
+                                        <span class="threat-title">Access Control & Detection:</span>
+                                    </summary>
+                                    <p>Physical locks, security cages, guards, alarm systems, and surveillance restrict
+                                        access and deter tampering.</p>
+                                </details>
+                            </li>
+                        </ul>
                     </div>
 
 
@@ -1270,10 +1242,10 @@ HOUSE LOCATION ICONS
 
 
 
-                    <div class="two-column-container-div">
+                    <div class="two-column-container-div equal-height-columns">
 
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div advantage-box">
 
 
                             <h4>Advantages</h4>
@@ -1286,7 +1258,7 @@ HOUSE LOCATION ICONS
 
                         </div>
 
-                        <div class="text-two-column-div">
+                        <div class="text-two-column-div disadvantage-box">
 
 
 
@@ -1478,7 +1450,7 @@ HOUSE LOCATION ICONS
 
                     </details>
 
-                    <p>The material which this guide will suggest is stainless steel for its durability and
+                    <p>The material which this guide will suggest is <b>stainless steel</b> for its durability and
                         cost
                         efficiency.
                         Any higher grade, more resistant but also more expensive material is usable if the
@@ -1497,80 +1469,68 @@ HOUSE LOCATION ICONS
 
 
 
-                    <div class="two-column-container-div">
-
-
-                        <div class="text-two-column-div">
-
+                    <div class="stealth-defense-intro-card">
+                        <div class="stealth-defense-intro-text">
                             <p>Stealth tools are methods and objects designed to make the target seed harder to
-                                identify and
-                                find. They rely on disguise, misdirection, and minimal exposure so an attacker
-                                overlooks the real material.</p>
-
+                                identify and find. They rely on disguise, misdirection, and minimal exposure so an
+                                attacker overlooks the real material.</p>
                         </div>
 
-
-                        <div class="two-column-image-container">
+                        <div class="stealth-defense-intro-icon-group">
                             <img src="../images/icons/hide-private-hidden-icon.png"
                                 alt="icon of immaterialzed seed / key">
-
                             <img src="../images/icons/ninja-icon.png" alt="icon of immaterialzed seed / key">
-
-
                         </div>
-
                     </div>
 
-
-
-             
-
-
-
-                    <ul>
-                        <li><strong>Stealth Storage:</strong> Seed written or engraved inside an everyday object (book, diary,
-                            behind a painting, inside a household item).</li>
-                        <li><strong>False labeling</strong>: Making the storage look unimportant or misleading (e.g., labeled “old
-                            notes”, “warranty”, or “receipts”).</li>
-                        <li><strong>Decoy wallets:</strong> Fake wallets or seed phrases that mislead thieves while the real funds
-                            are protected elsewhere.</li>
-
-                        <li><strong>Key Disguise via Encryption: </strong>Seed hidden inside a file, picture, or container using strong
-                            encryption; appears as harmless data until decrypted.</li>
-
-                        <li><strong>Secrecy:</strong> Minimize verbal and written references; avoid telling unnecessary
-                            people and never annotate obvious hints.</li>
-
-
-
-
-                    </ul>
-
-
-                    <div>
+                    <div class="figure-2-framed figure-4-centered stealth-defense-figure">
                         <img class="responsive-figure-img"
-                            src="../images/advanced-courses/stage_2.3.2/stealth-tools-diagram.drawio.png"
+                            src="../images/advanced-courses/stage_2.3.2/stealth-tools-diagram.drawio-2.png"
                             alt="backup architecure diagram">
                         <figcaption>Figure 4: Defensive Stealth Tools</figcaption>
                     </div>
 
+                    <h4 class="stealth-defense-tools-heading">Common Stealth Defense Tools</h4>
+
+                    <div class="stealth-defense-tools-panel">
+                        <ul class="opsec-list stealth-defense-tools-list">
+                            <li><strong>Stealth Storage:</strong> Seed written or engraved inside an everyday object
+                                (book, diary, behind a painting, inside a household item).</li>
+                            <li><strong>False labeling:</strong> Making the storage look unimportant or misleading
+                                (e.g., labeled "old notes", "warranty", or "receipts").</li>
+                            <li><strong>Decoy wallets:</strong> Fake wallets or seed phrases that mislead thieves
+                                while the real funds are protected elsewhere.</li>
+                            <li><strong>Key Disguise via Encryption:</strong> Seed hidden inside a file, picture, or
+                                container using strong encryption, appearing as harmless data until decrypted.</li>
+                            <li><strong>Secrecy:</strong> Minimize verbal and written references, avoid telling
+                                unnecessary people, and never annotate obvious hints.</li>
+                        </ul>
+                    </div>
 
 
-                    <h4>Advantages</h4>
-                    <ul>
-                        <li>Reduces the chance an attacker recognizes the item as valuable.</li>
-                        <li>Low cost and often easy to implement.</li>
-                        <li>Works well combined with redundancy and distribution for layered defense.</li>
-                    </ul>
-                    <h4>Disadvantages</h4>
-                    <ul>
-                        <li>Relies on secrecy—if the scheme is discovered, protection fails.</li>
-                        <li>Can be accidentally discarded or lost if the disguise is too convincing.</li>
-                        <li>May create operational friction (remembering the disguise, verifying authenticity
-                            without exposing the secret).</li>
-                    </ul>
+
+                    <div class="two-column-container-div equal-height-columns">
+                        <div class="text-two-column-div advantage-box">
+                            <h4>Advantages</h4>
+                            <ul>
+                                <li>Reduces the chance an attacker recognizes the item as valuable.</li>
+                                <li>Low cost and often easy to implement.</li>
+                                <li>Works well combined with redundancy and distribution for layered defense.</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-two-column-div disadvantage-box">
+                            <h4>Disadvantages</h4>
+                            <ul>
+                                <li>Relies on secrecy—if the scheme is discovered, protection fails.</li>
+                                <li>Can be accidentally discarded or lost if the disguise is too convincing.</li>
+                                <li>May create operational friction (remembering the disguise, verifying authenticity
+                                    without exposing the secret).</li>
+                            </ul>
+                        </div>
+                    </div>
                     <h4>Implementation tips</h4>
-                    <ul>
+                    <ul class="opsec-list">
                         <li>Keep meanings and locations documented securely (encrypted note or memorized mnemonic)
                             to avoid forgetting.</li>
                         <li>Mix stealth with other defenses: combine decoys, physical security, and distribution.
@@ -1585,79 +1545,119 @@ HOUSE LOCATION ICONS
 
                     <h2 id="stage_2.4">Stage 2.4: OPSEC - Operational Security</h2>
 
+                    <div class="opsec-grid">
+                        <div class="opsec-card opsec-card--wide opsec-card--accent">
+                            <h3>OPSEC — Mission</h3>
+                            <p>Protect the confidentiality, integrity, and availability of cold-storage backups by
+                                enforcing simple, repeatable handling rules that prevent social engineering, theft,
+                                and accidental loss.</p>
+                        </div>
 
-                    <h3>OPSEC — Mission</h3>
-                    <p>Protect the confidentiality, integrity, and availability of cold-storage backups by enforcing
-                        simple, repeatable handling rules that prevent social engineering, theft, and accidental
-                        loss.</p>
+                        <div class="opsec-card">
+                            <h3>Core Assumptions (Checklist)</h3>
+                            <ul class="opsec-list">
+                                <li>Seed never typed, photographed, scanned, or read aloud.</li>
+                                <li>Seed never touches an internet-connected device.</li>
+                                <li>Backup locations, architecture, and amounts are not discussed with outsiders.</li>
+                                <li>Passphrase is stored separately or memorized; not kept with seed copies.</li>
+                                <li>All requests concerning seed/passphrase/backups are treated as hostile unless
+                                    pre-authorized through an out-of-band code.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Core Assumptions (Checklist)</h3>
-                    <ul>
-                        <li>Seed never typed, photographed, scanned, or read aloud.</li>
-                        <li>Seed never touches an internet-connected device.</li>
-                        <li>Backup locations, architecture, and amounts are not discussed with outsiders.</li>
-                        <li>Passphrase is stored separately or memorized; not kept with seed copies.</li>
-                        <li>All requests concerning seed/passphrase/backups are treated as hostile unless
-                            pre-authorized through an out-of-band code.</li>
-                    </ul>
+                        <div class="opsec-card">
+                            <h3>Rules of Handling</h3>
+                            <ul class="opsec-list">
+                                <li>Always use an air-gapped, camera-free environment when creating or restoring
+                                    backups.</li>
+                                <li>Never enter seed or passphrase into a networked device; use hardware wallets or
+                                    verified offline tools only.</li>
+                                <li>Label physical backups innocuously; avoid obvious “seed” markers.</li>
+                                <li>Duplicate only what is necessary and distribute copies according to the chosen
+                                    architecture.</li>
+                                <li>Keep documentation minimal and encrypted; do not store both recovery instructions
+                                    and keys together.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Rules of Handling</h3>
-                    <ul>
-                        <li>Always use an air-gapped, camera-free environment when creating or restoring backups.
-                        </li>
-                        <li>Never enter seed or passphrase into a networked device; use hardware wallets or verified
-                            offline tools only.</li>
-                        <li>Label physical backups innocuously; avoid obvious “seed” markers.</li>
-                        <li>Duplicate only what is necessary and distribute copies according to the chosen
-                            architecture.</li>
-                        <li>Keep documentation minimal and encrypted; do not store both recovery instructions and
-                            keys together.</li>
-                    </ul>
+                        <div class="opsec-card">
+                            <h3>Communication Protocol</h3>
+                            <ul class="opsec-list">
+                                <li>Agree an out-of-band verification method (code phrase, physical token) with any
+                                    trusted contact or heir.</li>
+                                <li>Handle all operational requests in person or via pre-agreed secure channels; no
+                                    ad-hoc messages accepted.</li>
+                                <li>If contacted about the backup, do not disclose anything; escalate to verification
+                                    steps first.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Communication Protocol</h3>
-                    <ul>
-                        <li>Agree an out-of-band verification method (code phrase, physical token) with any trusted
-                            contact or heir.</li>
-                        <li>Handle all operational requests in person or via pre-agreed secure channels; no ad-hoc
-                            messages accepted.</li>
-                        <li>If contacted about the backup, do not disclose anything; escalate to verification steps
-                            first.</li>
-                    </ul>
+                        <div class="opsec-card">
+                            <h3>Insider & Coercion Defenses</h3>
+                            <ul class="opsec-list">
+                                <li>Compartmentalize: avoid any single person knowing all components (locations +
+                                    passphrase).</li>
+                                <li>Use decoy wallets and plausible deniability where appropriate and tested in
+                                    advance.</li>
+                                <li>Train trusted parties on the protocol: how to verify and what to never ask for.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Insider & Coercion Defenses</h3>
-                    <ul>
-                        <li>Compartmentalize: avoid any single person knowing all components (locations +
-                            passphrase).</li>
-                        <li>Use decoy wallets and plausible deniability where appropriate and tested in advance.
-                        </li>
-                        <li>Train trusted parties on the protocol: how to verify and what to never ask for.</li>
-                    </ul>
+                        <div class="opsec-card">
+                            <h3>Testing & Maintenance Cadence</h3>
+                            <ul class="opsec-list">
+                                <li>Verify restores on an air-gapped device at least annually (test one path, not all at
+                                    once).</li>
+                                <li>Rotate storage locations or refresh materials every 3–5 years or after major life
+                                    events.</li>
+                                <li>Log tests and changes in an encrypted record stored separately from the backups.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Testing & Maintenance Cadence</h3>
-                    <ul>
-                        <li>Verify restores on an air-gapped device at least annually (test one path, not all at
-                            once).</li>
-                        <li>Rotate storage locations or refresh materials every 3–5 years or after major life
-                            events.</li>
-                        <li>Log tests and changes in an encrypted record stored separately from the backups.</li>
-                    </ul>
+                        <div class="opsec-card">
+                            <h3>Inheritance Note</h3>
+                            <ul class="opsec-list">
+                                <li>Provide heirs with a minimal, encrypted instruction set outlining the recovery
+                                    process and verification method — do not include seeds or passphrases in the same
+                                    place.</li>
+                                <li>Use legal mechanisms (will, trust, executor) to control timing and conditions for
+                                    revealing recovery details.</li>
+                            </ul>
+                        </div>
 
-                    <h3>Emergency Flows (Immediate Steps)</h3>
-                    <ol>
-                        <li>If a backup location is compromised: assume compromise, move remaining pieces, and
-                            consider creating a new seed+passphrase pair.</li>
-                        <li>If coerced or legally compelled: obey safety-first rules (e.g., produce decoy if
-                            planned), then rotate funds to a new wallet when safe.</li>
-                        <li>If unsure about a request: stop, verify out-of-band, do not act under pressure.</li>
-                    </ol>
+                        <div class="opsec-card opsec-card--action opsec-card--wide">
+                            <h3>Emergency Flows (Immediate Steps)</h3>
+                            <div class="opsec-flow">
+                                <div class="opsec-flow-item">
+                                    <div class="opsec-flow-title">Backup location compromised</div>
+                                    <div class="opsec-flow-steps">
+                                        
+                                        <span class="opsec-flow-step">Move remaining pieces</span>
+                                        <span class="opsec-flow-step">Create new seed+passphrase & backups</span>
+                                        <span class="opsec-flow-step">Review breach cause & fix the weakness</span>
+                                    </div>
+                                </div>
 
-                    <h3>Inheritance Note</h3>
-                    <ul>
-                        <li>Provide heirs with a minimal, encrypted instruction set outlining the recovery process
-                            and verification method — do not include seeds or passphrases in the same place.</li>
-                        <li>Use legal mechanisms (will, trust, executor) to control timing and conditions for
-                            revealing recovery details.</li>
-                    </ul>
+                                <div class="opsec-flow-item">
+                                    <div class="opsec-flow-title">Coerced or legally compelled</div>
+                                    <div class="opsec-flow-steps">
+                                        <span class="opsec-flow-step">Obey safety-first rules</span>
+                                        <span class="opsec-flow-step">Use decoy if planned</span>
+                                        <span class="opsec-flow-step">Rotate funds to a new wallet when safe</span>
+                                    </div>
+                                </div>
+
+                                <div class="opsec-flow-item">
+                                    <div class="opsec-flow-title">Unclear or suspicious request</div>
+                                    <div class="opsec-flow-steps">
+                                        <span class="opsec-flow-step">Stop</span>
+                                        <span class="opsec-flow-step">Verify out-of-band</span>
+                                        <span class="opsec-flow-step">Do not act under pressure</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
 
 
@@ -1689,9 +1689,8 @@ HOUSE LOCATION ICONS
 
 
 
-                    <p>🔹 Goal of Stage 3
-
-                        Help the user understand what they're defending, from whom, and under what conditions — so
+                    <h2>Goal of Stage 3 <img src="../images/icons/goal-flag-icon.svg" alt="goal icon" class="inline-icon"></h2>
+                    <p>Help the user understand what they're defending, from whom, and under what conditions — so
                         that their later choice of model (Stage 4) actually fits their real life.</p>
 
 
@@ -1704,67 +1703,60 @@ HOUSE LOCATION ICONS
                         threat to it is the complexity itself, by inviting human error on the defenders
                         part.</p>
 
-                    <p>To avoid mistakes in the planning phase Stage 3 aims at setting the parameters around which
-                        the defense will be built. For now the user will answer a set of core questions. Other
-                        parameters will be dealt with later in the guide.</p>
+                    <p>To avoid mistakes in the planning phase, Stage 3 sets the parameters around which the defense
+                        will be built. For now the user will answer a set of core questions. Other parameters will be
+                        dealt with later in the guide.</p>
 
 
 
-                    <p>Make sure not to write the answer on a computer as that could potentially leak important
-                        information if the device is compromised. Instead use pen and paper.</p>
+                    <div class="stage-3-callout">
+                        <p><strong>Important:</strong> Do not write these answers on a computer. If the device is
+                            compromised, that information could leak. Use pen and paper.</p>
+                    </div>
 
+                    <div class="stage-3-grid">
+                        <div class="stage-3-card">
+                            <h3 class="stage-3-heading-small">Human Parameters</h3>
+                            <ul class="content-ul">
+                                <li>How many people are involved (just you, a partner, future heir)?</li>
+                                <li>Do you live alone or with family/partner?</li>
+                            </ul>
+                        </div>
 
-
-
-
-
-                    <h3>Human Parameters</h3>
-
-                    <ul>
-                        <li>How many people are involved? (Just you? A partner? Future heir?)</li>
-                        <li>Do you live alone or with family/partner?</li>
-                        <li>Who should know what?
-
-                            <ul>
+                        <div class="stage-3-card">
+                            <h3>Information Distribution Parameters</h3>
+                            <ul class="content-ul">
                                 <li>Who knows there are backups?</li>
                                 <li>Who knows locations?</li>
                                 <li>Who knows how to recover funds?</li>
-                                <li>If there are guards involved, will they know what they guard?</li>
+                                <li>If guards are involved, will they know what they guard?</li>
                             </ul>
-                        </li>
+                            <p class="stage-3-outcome"><strong>Outcome:</strong> Define trusted parties, unaware
+                                parties, and potential heirs.</p>
+                        </div>
 
-                    </ul>
+                        <div class="stage-3-card">
+                            <h3>Physical & Geographic Parameters</h3>
+                            <ul class="content-ul">
+                                <li>How many distinct physical locations can you reasonably maintain?</li>
+                                <li>How far apart should they be (e.g., not all in one city)?</li>
+                                <li>Are there safe storage options available (bank box, home safe, relative)?</li>
+                                <li>What environmental risks exist (fire, flood, confiscation, political risk)?</li>
+                            </ul>
+                            <p class="stage-3-outcome"><strong>Outcome:</strong> Set physical diversity limits.</p>
+                        </div>
 
-                    <p><strong>Outcome:</strong> Define trusted parties, unaware parties, and potential heirs.</p>
-
-
-
-                    <h3>Physical & Geographic Parameters</h3>
-
-
-
-                    <ul>
-                        <li>How many distinct physical locations can you reasonably maintain?</li>
-                        <li>How far apart should they be (e.g., not all in one city)?</li>
-                        <li>Are there safe storage options available (bank box, home safe, relative)?</li>
-                        <li>What environmental risks exist (fire, flood, confiscation, political risk)?</li>
-                    </ul>
-                    <p><strong>Outcome:</strong> Set physical diversity limits.</p>
-
-
-
-
-
-
-                    <h3>Privacy & Exposure Parameters</h3>
-
-                    <ul>
-                        <li>How public is your Bitcoin ownership?</li>
-                        <li>Do you want to hide the very existence of the backups?</li>
-
-                        <li>Will you use encrypted maps or innocuous hints?</li>
-                    </ul>
-                    <p><strong>Outcome:</strong> Define the level of stealth and secrecy.</p>
+                        <div class="stage-3-card">
+                            <h3>Privacy & Exposure Parameters</h3>
+                            <ul class="content-ul">
+                                <li>How public is your Bitcoin ownership?</li>
+                                <li>Do you want to hide the very existence of the backups?</li>
+                                <li>Will you use encrypted maps or innocuous hints?</li>
+                            </ul>
+                            <p class="stage-3-outcome"><strong>Outcome:</strong> Define the level of stealth and
+                                secrecy.</p>
+                        </div>
+                    </div>
 
 
 
@@ -1873,9 +1865,9 @@ HOUSE LOCATION ICONS
                    
 
 
-                    <h2 id="stage_4.1">Stage 4.1: The three basic single signature backup models</h2>
+                    <h2 id="stage_4.1">Stage 4.1: The two basic single signature backup models</h2>
 
-                    <p>This stage introduces the three base models and will help the user decide, whether to use a base model or a more advanced setup.</p>
+                    <p>This stage introduces the two base models and will help the user decide, whether to use a base model or a more advanced setup.</p>
 
                     <p>The base models are as follows:</p>
 
@@ -1884,9 +1876,7 @@ HOUSE LOCATION ICONS
 
 
 
-                        <li><a href="#stage_4.1.2">Stage 4.1.2: Shamirs Secret Sharing (SSS) Method</a></li>
-
-                        <li><a href="#stage_4.1.3">Stage 4.1.3: Split Backup (Two 12‑Word Halves)</a>
+                        <li><a href="#stage_4.1.2">Stage 4.1.2: Split Backup (Two 12‑Word Halves)</a>
                         </li>
 
                     </ul>
@@ -1901,82 +1891,59 @@ HOUSE LOCATION ICONS
 
                     <p>In this setup the seed is stored as a complete set of 24 words.</p>
 
-                    <h3>Full 24-Word Backup</h3>
-                    <ul class="content-ul">
-                        <li><strong>Advantages</strong>
-                            <ul>
+                  
+                    <div class="stage-3-grid">
+                        <div class="stage-3-card">
+                            <h3 class="stage-3-heading-small">Advantages</h3>
+                            <ul class="content-ul">
                                 <li>Simple & reliable — one piece, easy to back up and recover.</li>
                                 <li>Universal — works with all BIP39 wallets.</li>
                                 <li>Fast recovery — no recombination needed.</li>
                                 <li>Low human error — fewer parts to lose or mix up.</li>
                                 <li>Easy inheritance — simple to explain and pass on.</li>
                             </ul>
-                        </li>
-                        <li><strong>Disadvantages</strong>
-                            <ul>
+                        </div>
+
+                        <div class="stage-3-card">
+                            <h3>Disadvantages</h3>
+                            <ul class="content-ul">
                                 <li>Single point of failure — theft or loss = total loss.</li>
                                 <li>Hard to distribute safely — each full copy is a full risk.</li>
                                 <li>No built-in redundancy — must manually duplicate.</li>
                                 <li>Obvious format — recognizable as a seed.</li>
                                 <li>No access control — can’t split or share safely.</li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
 
 
 
 
-                    <h3 id="stage_4.1.2">Stage 4.1.2: Shamirs Secret Sharing (SSS) Method</h3>
+                    <h3 id="stage_4.1.2">Stage 4.1.2: Split Backup (Two 12-Word Halves)</h3>
 
 
 
-                    <ul>
-                        <li><strong>Advantages</strong>
-                            <ul>
-                                <li>Built-in redundancy — can lose some shares and still recover.</li>
-                                <li>No single point of failure — one share alone is worthless.</li>
-                                <li>Customizable security — choose threshold (e.g., 3-of-5).</li>
-                                <li>Good for long-term cold storage and distributed custody.</li>
-                            </ul>
-                        </li>
-                        <li><strong>Disadvantages</strong>
-                            <ul>
-                                <li>Higher complexity — setup and recovery require care.</li>
-                                <li>Wallet-specific — not all wallets support SSS.</li>
-                                <li>Harder for heirs — more technical to restore without guidance.</li>
-                                <li>More room for user error — losing too many shares = permanent loss.</li>
-                            </ul>
-                        </li>
-                    </ul>
-
-
-                    <p>To reduce complexity in form of encrypting and decrypting the shares of SSS, this method will
-                        not be recommended in this guide. However for anyone interested head over <a href="">here</a> to
-                        learn more about the SSS Setup.</p>
-
-
-                    <h3 id="stage_4.1.3">Stage 4.1.3: Split Backup (Two 12-Word Halves)</h3>
-
-
-
-                    <ul>
-                        <li><strong>Advantages</strong>
-                            <ul>
+                    <div class="stage-3-grid">
+                        <div class="stage-3-card">
+                            <h3 class="stage-3-heading-small">Advantages</h3>
+                            <ul class="content-ul">
                                 <li>Reduces single-point risk — one half alone is useless.</li>
                                 <li>Flexible distribution — halves can be stored separately.</li>
                                 <li>Adds secrecy — harder for attackers to recognize a full seed.</li>
                                 <li>Compatible — works with all standard wallets once rejoined.</li>
                             </ul>
-                        </li>
-                        <li><strong>Disadvantages</strong>
-                            <ul>
+                        </div>
+
+                        <div class="stage-3-card">
+                            <h3>Disadvantages</h3>
+                            <ul class="content-ul">
                                 <li>More complex recovery — both halves must be reunited.</li>
                                 <li>Risk of loss — losing one half means permanent loss.</li>
                                 <li>Requires clear labeling — easy to confuse or mis-pair halves.</li>
                                 <li>No encryption — physical discovery of both halves still gives full access.</li>
                             </ul>
-                        </li>
-                    </ul>
+                        </div>
+                    </div>
 
 
 
@@ -1987,7 +1954,7 @@ HOUSE LOCATION ICONS
                         their individual needs.</p>
 
 
-                    <p>See below a comparison table to recap the three previous chapters.</p>
+                    <p>See below a comparison table to recap the two previous chapters.</p>
                     <table class="seed-backup-comparison-table">
                         <thead>
                             <tr>
@@ -2047,29 +2014,29 @@ HOUSE LOCATION ICONS
                     </p>
 
 
-                    <ul class="summary-ul">
+                    <ul class="summary-ul threat-recap-list">
 
-                        <li>Memory Failure: Forgetting the Seedphrase <span class="icon"><img
+                        <li><span class="threat-recap-text">Memory Failure: Forgetting the Seedphrase</span> <span class="icon"><img
                                     src="../images/icons/brain-damage-icon.png"></span></li>
-                        <li>Compulsion <span class="icon"><img src="../images/icons/gun-icon.png"></span></li>
-                        <li>Observation <span class="icon"><img src="../images/icons/surveillance-icon.png"></span>
+                        <li><span class="threat-recap-text">Compulsion</span> <span class="icon"><img src="../images/icons/gun-icon.png"></span></li>
+                        <li><span class="threat-recap-text">Observation</span> <span class="icon"><img src="../images/icons/surveillance-icon.png"></span>
                         </li>
-                        <li>Inaccessibility: Incapacitation or death <span class="icon"><img
+                        <li><span class="threat-recap-text">Inaccessibility: Incapacitation or death</span> <span class="icon"><img
                                     src="../images/icons/emergency-rescue-icon.png"></span></li>
-                        <li>Social Engineering <span class="icon"><img src="../images/icons/fishing-icon.png"></span>
+                        <li><span class="threat-recap-text">Social Engineering</span> <span class="icon"><img src="../images/icons/fishing-icon.png"></span>
                         </li>
 
-                        <li>Theft <span class="icon"><img src="../images/icons/thief-icon.png"></span></li>
+                        <li><span class="threat-recap-text">Theft</span> <span class="icon"><img src="../images/icons/thief-icon.png"></span></li>
 
-                        <li>Physical Environmental Threats
-                            <ul>
-                                <li>🔥 Fire</li>
-                                <li>💧 Water / flooding
+                        <li class="has-sublist"><span class="threat-recap-text">Physical Environmental Threats</span>
+                            <ul class="threat-recap-sublist">
+                                <li><span class="threat-subtext">Fire</span><span class="threat-subicon">🔥</span></li>
+                                <li><span class="threat-subtext">Water / flooding</span><span class="threat-subicon">💧</span>
                                 </li>
-                                <li>🌫️ Corrosion / humidity</li>
-                                <li>🧊 Extreme temperature</li>
-                                <li>⚡️ Electrical or magnetic damage</li>
-                                <li>💥 Impact or crushing (e.g., building collapse)</li>
+                                <li><span class="threat-subtext">Corrosion / humidity</span><span class="threat-subicon">🌫️</span></li>
+                                <li><span class="threat-subtext">Extreme temperature</span><span class="threat-subicon">🧊</span></li>
+                                <li><span class="threat-subtext">Electrical or magnetic damage</span><span class="threat-subicon">⚡️</span></li>
+                                <li><span class="threat-subtext">Impact or crushing (e.g., building collapse)</span><span class="threat-subicon">💥</span></li>
                             </ul>
                         </li>
                     </ul>
@@ -2078,12 +2045,11 @@ HOUSE LOCATION ICONS
 
 
 
-                    <p>Considering multiple copies, locations and a material that withstands fire, water and
-                        crushing either because of its durability or a safe it is located in, environmental threats
-                        that do not involve a human attacker can be considered solved, as even losing one backup to
-                        either of these threats will not result in loss of funds. A full memory loss due to an
-                        accident or other that results in forgetting both back up locations will be factored in
-                        later in the model.</p>
+                    <p>Use multiple backup copies in different locations. Store them on materials that resist fire,
+                        water, and crushing, or place them in secure safes.</p>
+                    <p>With that setup, non-human environmental threats are mostly covered. Losing one backup to a
+                        disaster should not cause loss of funds. Total memory loss, including forgetting both backup
+                        locations, is addressed later in this model.</p>
 
 
 
@@ -2091,19 +2057,19 @@ HOUSE LOCATION ICONS
                     <div class="double-diagram-div-container">
 
 
-                        <div class="diagram-div">
+                        <div class="diagram-div figure-2-framed stage-4-2-centered-media">
                             <img class="responsive-figure-img"
-                                src="../images/advanced-courses/stage_2.2/redundancy-distribution-diagram.png"
+                                src="../images/advanced-courses/stage_2.2/backup-architecture-diagram-2.png"
                                 alt="backup architecure diagram">
                             <figcaption>Figure 2: Redundancy and Distribution Diagram</figcaption>
                         </div>
 
 
-                        <div class="diagram-div">
-                            <img class="responsive-figure-img"
-                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                        <div class="diagram-div figure-2-framed stage-4-2-centered-media">
+                            <img class="responsive-figure-img figure-8-small"
+                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental-2.png"
                                 alt="backup architecure diagram">
-                            <figcaption>memory loss, fire, water, lightning, crushing</figcaption>
+                            <figcaption>Figure 8: memory loss, fire, water, lightning, crushing</figcaption>
 
                         </div>
 
@@ -2126,16 +2092,16 @@ HOUSE LOCATION ICONS
 
 
 
-                    <div>
+                    <div class="diagram-div figure-2-framed stage-4-2-centered-media">
                         <img class="responsive-figure-img"
-                            src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase.png"
+                            src="../images/advanced-courses/stage_2.1/seed-modifier-passphrase-2.png"
                             alt="backup architecure diagram">
                         <figcaption>Figure 1: Seed Modifier Passphrase Diagram</figcaption>
                     </div>
 
 
                     <p>If the original seed is used without adding the passphrase, then the new seed stays safe. The
-                        attacker wouLd simply see an empty wallet. This in return however means that by losing
+                        attacker would simply see an empty wallet. This in return however means that by losing
                         either the original key or the pass phrase the funds are lost.</p>
 
 
@@ -2143,9 +2109,9 @@ HOUSE LOCATION ICONS
                         original key in the form of 24 words and the passphrase.</p>
 
 
-                    <div>
+                    <div class="diagram-div figure-2-framed stage-4-2-centered-media">
                         <img class="responsive-figure-img"
-                            src="../images/advanced-courses/stage_4.2/passphrase-original-key-stage_4.2-figure-5.png"
+                            src="../images/advanced-courses/stage_4.2/passphrase-original-key-stage_4.2-figure-5-2.png"
                             alt="backup architecure diagram">
                         <figcaption>Figure 5: Crucial Information Original Key + Passphrase</figcaption>
                     </div>
@@ -2154,8 +2120,8 @@ HOUSE LOCATION ICONS
 
                     <p>Sensibly the two pieces should not be stored in the same location. If the location were to be
                         compromised both crucial pieces of information would be as well. This naturally leads us to
-                        adding Redundancy and Distribution to the backup architecture to a) avoid loss of funds if
-                        one location were to be compromised and b) to avoid loss of funds if 1 piece of information
+                        adding Redundancy and Distribution to the backup architecture to <b>a)</b> avoid loss of funds if
+                        one location were to be compromised and <b>b)</b> to avoid loss of funds if 1 piece of information
                         were to be compromised.</p>
 
 
@@ -2165,19 +2131,19 @@ HOUSE LOCATION ICONS
                     <div class="double-diagram-div-container">
 
 
-                        <div class="diagram-div">
+                        <div class="diagram-div figure-2-framed stage-4-2-centered-media">
                             <img class="responsive-figure-img"
-                                src="../images/advanced-courses/stage_4.2/defense-model-architecture-passphrase-redundandy-distribution-figure-6.png"
+                                src="../images/advanced-courses/stage_4.2/defense-model-architecture-passphrase-redundandy-distribution-figure-6-2.png"
                                 alt="backup architecure diagram figure 6">
                             <figcaption>Figure 6: Passphrase, Redundancy and Distribution Diagram</figcaption>
                         </div>
 
 
-                        <div class="diagram-div">
-                            <img class="responsive-figure-img"
-                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental.png"
+                        <div class="diagram-div figure-2-framed stage-4-2-centered-media">
+                            <img class="responsive-figure-img figure-8-small"
+                                src="../images/advanced-courses/stage_4.2/eliminated-threats-1-memory-environmental-2.png"
                                 alt="backup architecure diagram">
-                            <figcaption>memory loss, fire, water, lightning, crushing</figcaption>
+                            <figcaption>Figure 8: memory loss, fire, water, lightning, crushing</figcaption>
 
                         </div>
 
@@ -2187,16 +2153,21 @@ HOUSE LOCATION ICONS
                     </div>
 
 
-                    <p>This architecture prevents a SPOF (single-point-of-failure) in the form of an attacker
-                        finding a complete piece of information. It also allows for losing one of the respective
-                        pieces of the whole. If location A and original key A get distroyed there is original key B
+                    <p class="stage-4-2-spof-paragraph">This architecture prevents a SPOF (single-point-of-failure) in the form of an attacker
+                        finding a complete piece of information. </p>
+
+                        <p>It also allows for losing one of the respective
+                        pieces of the whole.</p>
+
+                        <p>If location A and original key A get distroyed there is original key B
                         at location B and vice versa. If Location C with the passphrase gets destroyed, there is a
                         backup at location D.</p>
+
 
                     <p>In the following parts of this chapter the defensive power and stealth tools will be deployed
                         into the architecture. Once the defensive tools have been chosen, the OPSEC (operational
                         security) component will be discussed to ensure the user knows how to interact with the
-                        defense system.c</p>
+                        defense system.</p>
 
 
 
@@ -2206,46 +2177,55 @@ HOUSE LOCATION ICONS
 
 
 
-                    <p>Here are the basic parameters of the two setups we suggest to start out with:</p>
+                    <p>Here are the basic parameters of the two setups we suggest to choose from:</p>
+
+                    <div class="stage-4-2-setups-grid">
+                        <article class="stage-4-2-setup-card stage-4-2-setup-card--full">
+                            <h4>Setup A: Dual Full + Passphrase</h4>
+                            <p class="stage-4-2-setup-subtitle">Complete-seed redundancy with passphrase backup.</p>
+                            <ul class="stage-4-2-setup-list">
+                                <li><strong>Backup format:</strong> 2 complete seed backups + 2 passphrase copies</li>
+                                <li><strong>Locations:</strong> 4</li>
+                                <li><strong>Secrecy:</strong> High secrecy about what is stored where</li>
+                                <li><strong>Navigation aid:</strong> Encrypted map hidden in plain sight</li>
+                                <li><strong>Interaction pattern:</strong> Very rare interaction with backups</li>
+                            </ul>
+                        </article>
+
+                        <article class="stage-4-2-setup-card stage-4-2-setup-card--split-passphrase">
+                            <h4>Setup B: Split Halves</h4>
+                            <p class="stage-4-2-setup-subtitle">Lean split model with fewer stored components.</p>
+                            <ul class="stage-4-2-setup-list">
+                                <li><strong>Backup format:</strong> Split halves only (H1A H2A, H1B H2B)</li>
+                                <li><strong>Locations:</strong> 4-6</li>
+                                <li><strong>Optional:</strong> If a user chooses to, they may add a 25th-word passphrase to increase locations to 6</li>
+                                <li><strong>Secrecy:</strong> High secrecy about what is stored where</li>
+                                <li><strong>Navigation aid:</strong> Encrypted map hidden in plain sight</li>
+                                <li><strong>Interaction pattern:</strong> Very rare interaction with backups</li>
+                            </ul>
+                        </article>
+                    </div>
 
 
-                    <ul>
-                        <li>2 complete seed backups, 2 copies of the passphrase </li>
-                        <li>4 locations</li>
-                        <li>high level of secrecy in terms of what is held where</li>
-                        <li>an encrypted map hidden in plain sight</li>
-                        <li>very rare interaction with the backups</li>
-                    </ul>
-
-
-                    <p>If you choose the split backup:</p>
-
-                    <ul>
-                        <li>2 backups split in half resulting in H1A H2A, H1B H2B, as well as 2 copies of a 25th
-                            passphrase</li>
-                        <li>6 locations</li>
-                        <li>high level of secrecy in terms of what is held where</li>
-                        <li>an encrypted map hidden in plain sight</li>
-                        <li>very rare interaction with the backups</li>
-                    </ul>
 
 
 
 
 
 
-
-
-                    <p>All of these are suggestions and should be modified to the needs of the circumstance. If one
-                        wants to choose a multi sig setup head over to that guide.</p>
+                   
 
                     <p>The backup locations should vary geographically and potentially involve a third party, but
-                        that is up to the user. The third party, which will be called a guard from here on out,
+                        that is up to the user.</p>
+
+                        <p>The third party, which will be called a guard from here on out,
                         should not know what the piece of information is and what it is for unless a plan is in
                         place to pass the BTC on to an heir at some point.</p>
 
                     <p>All of these are suggestions and should be modified to the needs of the circumstance. If one
-                        wants to choose a multi sig setup head over to that guide.</p>
+                        wants to choose a multi sig setup, head over to the <a
+                            href="courses-advanced-seed-storage-businesses.html" target="_blank"
+                            title="internal link to seed storage for businesses guide">seed storage for businesses course</a>.</p>
 
                     <!--
       
