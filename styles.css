@@ -153,47 +153,63 @@ pre {
 .threat-recap-list {
   width: min(820px, 100%);
   margin: 0.75rem auto 2rem;
-  padding: 0;
+  padding: 0.85rem 1rem;
   list-style: none;
+  border: 2px solid #c0392b;
+  border-radius: 12px;
+  background: #fff6f5;
 }
 
 .threat-recap-list > li {
   display: grid;
   grid-template-columns: 1fr auto;
-  gap: 0.9rem;
   align-items: center;
-  margin: 0.45rem 0;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid #e2e2e2;
-  border-left: 4px solid #8a8a8a;
-  border-radius: 8px;
-  background: #fff;
+  gap: 0.9rem;
+  margin: 0.15rem 0;
+  padding: 0.45rem 0.2rem;
+  font-size: 1.35rem !important;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  cursor: default;
+}
+
+.threat-recap-list > li + li {
+  border-top: 1px solid rgba(192, 57, 43, 0.28);
 }
 
 .threat-recap-list .threat-recap-text {
-  grid-column: 1;
-  font-weight: 650;
+  position: relative;
+  padding-left: 1.05rem;
+  font-weight: 700;
+  font-size: inherit !important;
+  line-height: 1.35;
   letter-spacing: 0.01em;
 }
 
+.threat-recap-list .threat-recap-text::before {
+  content: none;
+}
+
 .threat-recap-list > li > .icon {
-  grid-column: 2;
   justify-self: end;
+  line-height: 0;
+  pointer-events: none;
 }
 
 .threat-recap-list .icon img {
-  width: 2.25em;
-  height: 2.25em;
+  width: 1.72em;
+  height: 1.72em;
 }
 
 .threat-recap-list > li.has-sublist {
-  grid-template-columns: 1fr;
-  align-items: start;
-  border-left-color: #606060;
+  display: block;
+  align-items: initial;
+  padding-bottom: 0.45rem;
 }
 
 .threat-recap-list > li.has-sublist > .threat-recap-sublist {
-  grid-column: 1;
+  display: block;
 }
 
 .threat-recap-sublist {
@@ -209,6 +225,20 @@ pre {
   align-items: center;
   gap: 0.75rem;
   padding: 0.18rem 0 0.18rem 1rem;
+  font-size: 1.2rem !important;
+}
+
+/* Stage 4.2 threat recap must read larger than standard body copy */
+.guide-content ul.threat-recap-list > li {
+  font-size: 1.9rem !important;
+}
+
+.guide-content ul.threat-recap-list > li .threat-recap-text {
+  font-size: inherit !important;
+}
+
+.guide-content ul.threat-recap-list .threat-recap-sublist li {
+  font-size: 1.6rem !important;
 }
 
 .threat-recap-sublist li::before {
@@ -1539,6 +1569,17 @@ body.region-eu.season-winter .basic-utility-navigation-body-header-section {
 
 .index-forum-cta-panel p {
   margin: 10px 0 18px;
+}
+
+.index-forum-cta-panel .hero-button-index {
+  border: 3px solid var(--orange1);
+  color: #000;
+  font-size: clamp(1.9rem, 2.4vw, 2.4rem);
+}
+
+.index-forum-cta-panel .hero-button-index:visited,
+.index-forum-cta-panel .hero-button-index:hover {
+  color: #000;
 }
 
 @media (max-width: 900px) {
@@ -3102,6 +3143,106 @@ body.nav-open .nav-backdrop {
   background: #f2f8ff;
 }
 
+.stage-5-1-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.9rem;
+  margin-top: 1.8rem;
+  margin-bottom: 2.4rem;
+}
+
+.stage-5-1-card {
+  border: 1px solid #dbe3ec;
+  border-left: 6px solid #8a8a8a;
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  background: #f8fafc;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+  line-height: 1.6;
+}
+
+.stage-5-1-card h4 {
+  margin: 0 0 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.stage-5-1-card ol {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: 2rem;
+}
+
+.stage-5-1-card li + li {
+  margin-top: 0.4rem;
+}
+
+.stage-5-1-card--digital {
+  border-left-color: #1d4ed8;
+  background: #eaf2ff;
+}
+
+.stage-5-1-card--digital ol li:nth-child(4) {
+  margin-top: 1rem;
+  padding-top: 0.9rem;
+  border-top: 2px solid #bcd2fb;
+}
+
+.stage-5-1-card--physical {
+  border-left-color: #b45309;
+  background: #fff1de;
+}
+
+.stage-5-1-card--locations {
+  border-left-color: #3f7d20;
+  background: #eef8e8;
+}
+
+.stage-5-1-card--cleanup {
+  border-left-color: #0f766e;
+  background: #e6f8f5;
+}
+
+.stage-5-1-close {
+  margin-top: 0;
+  padding: 0.8rem 1rem;
+  border: 1px solid #d3dbe5;
+  border-left: 5px solid #1f2937;
+  border-radius: 10px;
+  background: #f8fafc;
+}
+
+.stage-5-2-policy {
+  margin-top: 1.2rem;
+  border: 1px solid #d7dee8;
+  border-left: 6px solid #4b5563;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  background: #f6f8fb;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.07);
+}
+
+.stage-5-2-policy h4 {
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 1.35rem;
+  line-height: 1.25;
+}
+
+.stage-5-2-policy ol {
+  margin: 0;
+  padding-left: 1.3em;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.stage-5-2-policy li + li {
+  margin-top: 0.35rem;
+}
+
 .opsec-card--accent {
   border-left-color: var(--bitcoin-color);
 }
@@ -3192,7 +3333,11 @@ body.nav-open .nav-backdrop {
   }
 
   .stage-4-2-setups-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: 1fr;
+  }
+
+  .stage-5-1-grid {
+    grid-template-columns: 1fr;
   }
 }
 

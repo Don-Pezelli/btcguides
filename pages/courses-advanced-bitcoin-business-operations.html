@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>btcguides.de/advanced-course-bitcoin-business-operations</title>
+    <link rel="stylesheet" href="../styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .business-placeholder-diagram {
+            margin: 24px 0;
+            padding: 20px;
+            border: 3px dashed #f39c12;
+            border-radius: 16px;
+            background: linear-gradient(180deg, #fff8ef 0%, #ffffff 100%);
+        }
+
+        .business-placeholder-diagram h4,
+        .business-diagram-card h5 {
+            margin-top: 0;
+        }
+
+        .business-diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .business-diagram-card {
+            padding: 16px;
+            border: 2px solid #121212;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .business-checklist {
+            width: min(920px, 100%);
+            margin: 18px auto;
+            padding: 18px 20px;
+            border: 2px solid #f39c12;
+            border-radius: 14px;
+            background: #fffaf4;
+        }
+
+        .business-checklist ul {
+            margin-bottom: 0;
+        }
+
+        .supporter-panel h4 {
+            margin-top: 0;
+        }
+
+        .supporter-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .process-map-table tbody tr {
+            cursor: pointer;
+        }
+
+        .process-map-table tbody tr:hover,
+        .process-map-row-active {
+            background: #fff3df;
+        }
+
+        .process-map-viewer {
+            display: none;
+            margin: 18px 0 28px;
+            overflow-x: auto;
+            border: 1px solid #d2d2d2;
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 12px;
+        }
+
+        .process-map-viewer.is-visible {
+            display: block;
+        }
+
+        .process-map-svg {
+            display: block;
+            min-width: 920px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script src="../js/scrollspy.js" defer></script>
+    <script src="../js/nav.js" defer></script>
+    <script src="../js/process-map-viewer.js" defer></script>
+</head>
+
+<body class="basic-utility-guide-body">
+    <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_bitcoin_business_operations_navbar"
+        aria-expanded="false">
+        ☰
+    </button>
+
+    <div class="nav-backdrop" hidden></div>
+
+    <nav class="guide-navbar" id="advanced_course_bitcoin_business_operations_navbar">
+        <div class="logo-text-container">
+            <a href="../index.html"><span class="btc-symbol">₿</span>TCguides
+                <img src="../images/logo/guido-no-bg.png" alt="Guido Mascot" class="mascot">
+            </a>
+        </div>
+
+        <header class="basic-utility-guide-header"></header>
+
+        <ul class="guide-nav-ul">
+            <li><a class="guide-nav-link" href="#overview">Overview</a></li>
+            <li><a class="guide-nav-link" href="#stage_1">Stage 1: Operating Layers</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stage 1.1: Counter, online, and reserve
+                            roles</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stage 1.2: Staff boundaries</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_2">Stage 2: BTCPay Server Setup</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stage 2.1: POS and online checkout</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stage 2.2: Online and offline operations</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_3">Stage 3: Wallet Flow</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.1">Stage 3.1: Counter liquidity</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.2">Stage 3.2: Sweeps and refills</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_4">Stage 4: Staff and Incidents</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_4.1">Stage 4.1: Employee access</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_4.2">Stage 4.2: Outages and compromise</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_5">Stage 5: Summary</a></li>
+        </ul>
+
+        <div class="guide-nav-footer">
+            <a class="guide-nav-link" href="courses-advanced-navigation.html">Advanced Courses</a>
+        </div>
+    </nav>
+
+    <main class="basic-utility-guide-main guide-main-content" id="advanced_course_bitcoin_business_operations_main_doc">
+        <div class="guide-content">
+            <h1>Advanced Course: Bitcoin Business Operations</h1>
+            <h3>BTCPay Server, staff workflows, online checkout, and over-the-counter payments</h3>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="overview">Overview</h1>
+                <article class="basic-utility-guide-article">
+                    <h4>What this guide teaches:</h4>
+                    <p>This course covers the day-to-day side of accepting Bitcoin in a small business. It is about the
+                        payment flow that customers and employees touch, not the deepest long-term seed storage layer.</p>
+                    <p>The goal is to keep Bitcoin practical at the counter and online while preventing staff devices,
+                        checkout screens, and hot wallets from becoming the business vault.</p>
+                    <p>You will structure BTCPay Server, over-the-counter payments, online checkout, staff permissions,
+                        operating liquidity, sweeps, outage handling, and incident response.</p>
+                    <p class="color-orange">Premium course <span class="premium-tag premium-tag-inline">Premium</span>
+                    </p>
+
+                    <div class="business-checklist supporter-panel">
+                        <h4>Supporter Panel</h4>
+                        <p>Organizations can support continued development of this premium course by partnering with
+                            BTCguides.</p>
+                        <p>Supporters may be listed here with a logo and short description. Course content remains
+                            independent and security recommendations are not sponsored.</p>
+                        <p>For partnership questions, contact <b>contact@btcguides.de</b>.</p>
+                        <p>For questions about course content, use the <a href="solutions-forum.html">Solutions
+                                Forum</a>.</p>
+                    </div>
+
+                    <div class="business-checklist">
+                        <h4>What You'll Build</h4>
+                        <ul>
+                            <li>A staff-facing BTCPay Server Point of Sale flow for in-person payments</li>
+                            <li>An online checkout flow for invoices, orders, or webshop payments</li>
+                            <li>A wallet stack that separates counter liquidity from business reserves</li>
+                            <li>Employee access rules for invoice creation, refunds, and payment checks</li>
+                            <li>Daily procedures for sweeps, refills, outages, and staff changes</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_1">Stage 1: Operating Layers</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_1.1">Stage 1.1: Counter, online, and reserve roles</h2>
+                    <p>A business payment setup works best when each wallet layer has one job. The counter flow should
+                        accept payments quickly. The online flow should handle remote orders and invoices. The reserve
+                        layer should hold funds that do not need to remain online.</p>
+                    <p>Do not run the shop from the same wallet that protects long-term savings. Treat the checkout
+                        system like a cash register: useful, visible, and limited.</p>
+
+                    <div class="business-placeholder-diagram">
+                        <h4>Graphic Placeholder: Business payment stack</h4>
+                        <p>This placeholder can later become a diagram showing how in-person and online payments feed
+                            into operating wallets and then into deeper reserves.</p>
+                        <div class="business-diagram-grid">
+                            <div class="business-diagram-card">
+                                <h5>Counter POS</h5>
+                                <p>BTCPay Server Point of Sale for over-the-counter payments and payment status.</p>
+                            </div>
+                            <div class="business-diagram-card">
+                                <h5>Online checkout</h5>
+                                <p>BTCPay Server invoices for webshop orders, remote invoices, and customer payment links.</p>
+                            </div>
+                            <div class="business-diagram-card">
+                                <h5>Operating reserve</h5>
+                                <p>Owner-controlled buffer for refills, sweeps, refunds, and short-term business use.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h2 id="stage_1.2">Stage 1.2: Staff boundaries</h2>
+                    <p>Employees should be able to create invoices and confirm payment status without seeing seed words,
+                        wallet backups, node credentials, or owner reserve controls.</p>
+                    <p>A BTCPay Server Point of Sale page is a cleaner boundary than a normal mobile wallet at the cash
+                        register. Staff can request payment and see whether it arrived, while owners keep control of
+                        wallet recovery, Lightning liquidity, sweeps, and treasury movement.</p>
+
+                    <p>Use these actor categories when drawing process maps: <strong>Owner A</strong>,
+                        <strong>Owner B</strong>, <strong>Keyholder C</strong>, <strong>Employee</strong>, and
+                        <strong>Customer</strong>. In this operations course, Keyholder C usually does not participate
+                        in day-to-day payments. Keyholder C belongs to the deep reserve recovery process, not the cash
+                        register.</p>
+
+                    <div class="table-scroll">
+                        <p><strong>Click any process row to display its process map.</strong></p>
+                        <table class="guide-table process-map-table">
+                            <thead>
+                                <tr>
+                                    <th>Priority</th>
+                                    <th>Operations process to map</th>
+                                    <th>Actors normally involved</th>
+                                    <th>Protocol should define</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Opening-the-day payment readiness</td>
+                                    <td>Employee, Owner A or Owner B</td>
+                                    <td>Device check, BTCPay access, POS page, Lightning liquidity, fallback method, and
+                                        who is contacted if something is not ready</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical / frequent</td>
+                                    <td>In-house sale using Lightning</td>
+                                    <td>Employee, Customer</td>
+                                    <td>Invoice creation, amount check, payment confirmation, receipt, and unpaid invoice
+                                        handling</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical / frequent</td>
+                                    <td>Website payment using BTCPay Server</td>
+                                    <td>Customer, Employee if order support is needed, Owner A or Owner B</td>
+                                    <td>Invoice expiry, order status, underpayment, overpayment, fulfillment hold, and
+                                        support escalation</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>End-of-day reconciliation</td>
+                                    <td>Employee, Owner A or Owner B</td>
+                                    <td>Paid invoices, unpaid invoices, refunds, cash register totals, wallet balances,
+                                        and exception log</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Employee onboarding for payment tools</td>
+                                    <td>Employee, Owner A or Owner B</td>
+                                    <td>Allowed screens, device handling, password rules, refund escalation, and what
+                                        employees must never access</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Offline or connectivity-failure payment</td>
+                                    <td>Employee, Customer, Owner A or Owner B</td>
+                                    <td>Whether Bitcoin payments pause, what fallback method is allowed, and how delayed
+                                        payment status is reconciled</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Common edge case</td>
+                                    <td>Underpayment, overpayment, late payment, or expired invoice</td>
+                                    <td>Employee, Customer, Owner A or Owner B if exception approval is needed</td>
+                                    <td>Customer script, order status, extra payment request, refund threshold, and
+                                        accounting note</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Common edge case</td>
+                                    <td>Customer says they paid but POS says unpaid</td>
+                                    <td>Employee, Customer, Owner A or Owner B</td>
+                                    <td>Who checks BTCPay, mempool, Lightning invoice status, and what the employee tells
+                                        the customer while status is unclear</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Common edge case</td>
+                                    <td>Payment received but order not found</td>
+                                    <td>Employee, Customer, Owner A or Owner B</td>
+                                    <td>How to match payment to customer/order, fulfillment hold, manual record, and
+                                        escalation</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Frequent</td>
+                                    <td>Manual invoice or remote payment link</td>
+                                    <td>Employee, Customer, Owner A or Owner B for large invoices</td>
+                                    <td>Who may create links, amount limits, expiry, payment confirmation, and customer
+                                        communication</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Frequent</td>
+                                    <td>Move from Lightning or hot wallet to intermediary wallet</td>
+                                    <td>Owner A or Owner B</td>
+                                    <td>Sweep threshold, timing, transaction record, and maximum value left in hot
+                                        systems</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Frequent</td>
+                                    <td>Lightning liquidity refill</td>
+                                    <td>Owner A or Owner B</td>
+                                    <td>Minimum channel balance, refill source, maximum hot balance, and who approves
+                                        liquidity moves</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Frequent</td>
+                                    <td>Customer refund</td>
+                                    <td>Customer, Employee, Owner A or Owner B</td>
+                                    <td>Refund approval, destination verification, wrong-address prevention, fee
+                                        handling, partial refunds, and accounting record</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Frequent</td>
+                                    <td>Move from intermediary wallet toward deep reserve</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Threshold, approval rule, address verification, and handoff to the seed storage
+                                        reserve protocol</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Useful after launch</td>
+                                    <td>In-house sale using on-chain payment</td>
+                                    <td>Employee, Customer, Owner A or Owner B if approval is needed</td>
+                                    <td>When on-chain is accepted, required confirmations, customer wait rule, and
+                                        reconciliation</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Useful after launch</td>
+                                    <td>Chargeback-like customer dispute</td>
+                                    <td>Customer, Employee, Owner A or Owner B</td>
+                                    <td>Disputed delivery, duplicate payment, refund terms, escalation path, and written
+                                        customer record</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Useful after launch</td>
+                                    <td>Price or exchange-rate source failure</td>
+                                    <td>Employee, Customer, Owner A or Owner B</td>
+                                    <td>Whether Bitcoin payments pause, fallback pricing source, stale-rate limit, and
+                                        who approves manual pricing</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Useful after launch</td>
+                                    <td>Website order fulfillment hold rule</td>
+                                    <td>Customer, Employee, Owner A or Owner B</td>
+                                    <td>When an order can ship, required confirmations for on-chain payments, and how
+                                        riskier orders are reviewed</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Periodic</td>
+                                    <td>Employee offboarding</td>
+                                    <td>Owner A or Owner B</td>
+                                    <td>Account removal, device return, password rotation, checkout link review, and
+                                        access audit</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Periodic</td>
+                                    <td>BTCPay admin credential rotation</td>
+                                    <td>Owner A or Owner B</td>
+                                    <td>When credentials rotate, who stores admin access, and what changes after staff
+                                        changes or device loss</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Periodic</td>
+                                    <td>Privacy policy and customer payment data retention</td>
+                                    <td>Owner A or Owner B, Employee if support role needs records</td>
+                                    <td>What customer/payment data is stored, who can see it, how long it is retained,
+                                        and how support uses it</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Lightning channel or liquidity failure</td>
+                                    <td>Employee, Owner A or Owner B, Customer if payment is affected</td>
+                                    <td>Routing failure, exhausted inbound liquidity, force-close handling, fallback
+                                        payment path, and customer communication</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Compromised POS, BTCPay, or hot wallet</td>
+                                    <td>Employee, Owner A or Owner B, Customer if open orders are affected</td>
+                                    <td>Stop-payment rule, customer communication, credential rotation, safe sweep,
+                                        incident record, and rebuild process</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Hardware replacement or server restore</td>
+                                    <td>Employee, Owner A or Owner B</td>
+                                    <td>How to replace tablet, register, node, or server without exposing owner wallets
+                                        or losing order records</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="process-map-viewer" aria-live="polite"></div>
+
+                    <div class="two-column-container-div equal-height-columns">
+                        <div class="text-two-column-div advantage-box">
+                            <h4>Good operating boundary</h4>
+                            <ul>
+                                <li>Staff can create invoices and verify paid invoices</li>
+                                <li>Owners manage wallet backups and reserve transfers</li>
+                                <li>Counter devices hold limited authority</li>
+                                <li>Online checkout does not expose deep storage keys</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-two-column-div disadvantage-box">
+                            <h4>Weak operating boundary</h4>
+                            <ul>
+                                <li>The cash register phone also controls reserve funds</li>
+                                <li>Employees can restore or spend from a business wallet</li>
+                                <li>Website payment credentials are shared casually</li>
+                                <li>No one knows the fallback process during an outage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_2">Stage 2: BTCPay Server Setup</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_2.1">Stage 2.1: POS and online checkout</h2>
+                    <p>BTCPay Server can support both in-person and online payment flows. For the counter, use a Point
+                        of Sale app that staff can open on a tablet or register screen. For online payments, connect
+                        BTCPay Server to the website, webshop, invoice page, or payment link workflow.</p>
+                    <p>The owner should control the store settings, wallet connection, Lightning setup, user roles, and
+                        sweep policy. Staff accounts should be limited to the screens they need for customer service.</p>
+
+                    <h2 id="stage_2.2">Stage 2.2: Online and offline operations</h2>
+                    <p>Online checkout needs reliable server access, invoice creation, payment status checks, and
+                        order reconciliation. Over-the-counter payments need a fast local routine that still works when
+                        the shop is busy.</p>
+                    <p>Prepare a fallback plan for connectivity problems. If the internet is down, staff should know
+                        whether the shop pauses Bitcoin payments, uses a pre-approved backup payment method, or asks the
+                        customer to wait until payment status can be verified. Avoid improvised wallet sharing during an
+                        outage.</p>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_3">Stage 3: Wallet Flow</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_3.1">Stage 3.1: Counter liquidity</h2>
+                    <p>The counter wallet or Lightning balance should hold only enough value to keep sales moving. It
+                        should have a refill threshold, a maximum balance, and a clear owner responsibility for
+                        replenishing liquidity.</p>
+                    <p>Normal mobile Lightning wallets are better treated as owner or personal wallets, not employee
+                        cash register wallets. If a cashier can restore the wallet elsewhere, that cashier has too much
+                        authority over business funds.</p>
+
+                    <h2 id="stage_3.2">Stage 3.2: Sweeps and refills</h2>
+                    <p>Revenue from the counter and online checkout should move through a planned flow. Keep operational
+                        liquidity online, sweep excess funds into an owner-controlled operating reserve, and move
+                        long-term retained earnings into deep storage on a schedule.</p>
+                    <p>Make the thresholds visible to owners but not to casual staff. A simple weekly review is often
+                        enough for small shops: reconcile paid invoices, check liquidity, sweep excess, and document any
+                        refunds or exceptions.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Function</th>
+                                    <th>Typical person</th>
+                                    <th>Recommended permission level</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Create payment invoices</td>
+                                    <td>Cashier or owner</td>
+                                    <td>Allowed through BTCPay Server POS or checkout only</td>
+                                </tr>
+                                <tr>
+                                    <td>Verify payment status</td>
+                                    <td>Cashier or owner</td>
+                                    <td>Allowed through checkout or POS view only</td>
+                                </tr>
+                                <tr>
+                                    <td>Refund customer</td>
+                                    <td>Owner or trained manager</td>
+                                    <td>Allowed through a documented approval flow</td>
+                                </tr>
+                                <tr>
+                                    <td>Refill Lightning liquidity</td>
+                                    <td>Owner</td>
+                                    <td>Allowed from operating reserve only</td>
+                                </tr>
+                                <tr>
+                                    <td>Sweep funds to deep storage</td>
+                                    <td>Owner or both owners</td>
+                                    <td>Never from a staff device</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_4">Stage 4: Staff and Incidents</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_4.1">Stage 4.1: Employee access</h2>
+                    <p>Staff onboarding should be specific and narrow. Show employees how to create an invoice, confirm
+                        paid status, handle an unpaid or expired invoice, and escalate refunds or unusual requests.</p>
+                    <p>When staff leave, remove account access, rotate shared passwords where needed, review devices,
+                        and check whether any checkout links or permissions were exposed beyond their intended use.</p>
+
+                    <h2 id="stage_4.2">Stage 4.2: Outages and compromise</h2>
+                    <p>Incident procedures should be written before the shop is busy. A stolen tablet, broken phone,
+                        failed Lightning channel, unavailable BTCPay Server instance, or suspicious refund request should
+                        trigger a known checklist instead of improvisation.</p>
+
+                    <div class="table-scroll">
+                        <table class="seed-backup-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Operational event</th>
+                                    <th>Required action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>New cashier starts</td>
+                                    <td>Limit access to invoice creation and payment status checks</td>
+                                </tr>
+                                <tr>
+                                    <td>Staff member leaves</td>
+                                    <td>Review accounts, devices, passwords, checkout links, and POS access immediately</td>
+                                </tr>
+                                <tr>
+                                    <td>Counter device lost</td>
+                                    <td>Remove device access, review payment credentials, and restore the POS flow safely</td>
+                                </tr>
+                                <tr>
+                                    <td>BTCPay Server outage</td>
+                                    <td>Use the documented fallback plan and reconcile any delayed payments afterward</td>
+                                </tr>
+                                <tr>
+                                    <td>Counter wallet compromise</td>
+                                    <td>Drain, isolate, investigate, and rebuild the operating payment flow</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_5">Stage 5: Summary</h1>
+
+                <article class="basic-utility-guide-article">
+                    <p>In this course you separated customer-facing Bitcoin operations from the deeper business reserve.
+                        Staff can accept payments and check status without receiving seed phrases, signer control, or
+                        reserve authority.</p>
+                    <p>You now have the outline of a merchant payment system with BTCPay Server POS, online checkout,
+                        operating liquidity, sweep rules, employee access control, and incident procedures.</p>
+                    <p>The long-term on-chain multisig reserve belongs in the separate seed storage for business
+                        reserves course.</p>
+                </article>
+            </section>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 760" role="img" aria-labelledby="title desc">
+  <title id="title">Mind map of the business Bitcoin reserve course</title>
+  <desc id="desc">A central business Bitcoin reserve node branches into actors, key structure, storage layers, trust questions, recovery design, and operating protocols.</desc>
+  <defs>
+    <linearGradient id="headerBlue" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#dff0ff"/>
+      <stop offset="1" stop-color="#73bfff"/>
+    </linearGradient>
+    <filter id="softShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="8" flood-color="#000000" flood-opacity="0.13"/>
+    </filter>
+    <style>
+      .bg { fill: #ffffff; }
+      .title-bar { fill: url(#headerBlue); }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 42px; font-weight: 800; fill: #050505; }
+      .node { fill: #ffffff; stroke: #171717; stroke-width: 2.5; rx: 8; filter: url(#softShadow); }
+      .node-blue { fill: #eef7ff; }
+      .node-orange { fill: #fff4e4; stroke: #f39c12; stroke-width: 3; }
+      .node-green { fill: #effaf2; }
+      .node-red { fill: #fff0ee; }
+      .node-gray { fill: #f8f8f8; }
+      .line { fill: none; stroke: #f39c12; stroke-width: 4; stroke-linecap: round; }
+      .heading { font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 800; fill: #050505; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 500; fill: #161616; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 600; fill: #333333; }
+      .center-title { font-family: Inter, Arial, sans-serif; font-size: 25px; font-weight: 900; fill: #050505; }
+      .center-sub { font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 650; fill: #2d2d2d; }
+      .coin { fill: #f39c12; stroke: #121212; stroke-width: 3; }
+      .coin-text { font-family: Inter, Arial, sans-serif; font-size: 40px; font-weight: 900; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1120" height="760"/>
+  <rect class="title-bar" x="32" y="32" width="1056" height="86"/>
+  <text class="title" x="64" y="88">Business Bitcoin Reserve Course Map</text>
+
+  <path class="line" d="M560 360 C455 290 360 235 255 210"/>
+  <path class="line" d="M560 360 C665 290 760 235 865 210"/>
+  <path class="line" d="M560 380 C430 390 325 420 215 500"/>
+  <path class="line" d="M560 380 C690 390 795 420 905 500"/>
+  <path class="line" d="M560 440 C520 500 470 570 365 620"/>
+  <path class="line" d="M560 440 C600 500 650 570 755 620"/>
+
+  <rect class="node node-orange" x="390" y="285" width="340" height="178" rx="8"/>
+  <circle class="coin" cx="560" cy="341" r="39"/>
+  <text class="coin-text" x="548" y="356">B</text>
+  <text class="center-title" x="560" y="398" text-anchor="middle">Business Bitcoin</text>
+  <text class="center-title" x="560" y="426" text-anchor="middle">Reserve</text>
+  <text class="center-sub" x="560" y="449" text-anchor="middle">shared 2-of-3 on-chain deep storage</text>
+
+  <rect class="node node-blue" x="68" y="160" width="278" height="150" rx="8"/>
+  <text class="heading" x="92" y="200">Actors</text>
+  <text class="body" x="92" y="232">Owner A and Owner B</text>
+  <text class="body" x="92" y="258">Keyholder C</text>
+  <text class="body" x="92" y="284">Employees, accountant, legal support</text>
+
+  <rect class="node node-blue" x="774" y="160" width="278" height="150" rx="8"/>
+  <text class="heading" x="798" y="200">Key Structure</text>
+  <text class="body" x="798" y="232">2-of-3 multisig policy</text>
+  <text class="body" x="798" y="258">Three independently generated seeds</text>
+  <text class="body" x="798" y="284">Descriptor and xpub backups</text>
+
+  <rect class="node node-green" x="56" y="430" width="318" height="158" rx="8"/>
+  <text class="heading" x="82" y="470">Storage Layers</text>
+  <text class="body" x="82" y="502">Lightning and hot operations</text>
+  <text class="body" x="82" y="528">Intermediary wallet</text>
+  <text class="body" x="82" y="554">Deep reserve wallet</text>
+
+  <rect class="node node-red" x="746" y="430" width="318" height="158" rx="8"/>
+  <text class="heading" x="772" y="470">Trust Questions</text>
+  <text class="body" x="772" y="502">Can owners steal with key C?</text>
+  <text class="body" x="772" y="528">Who may release recovery info?</text>
+  <text class="body" x="772" y="554">What should not be outsourced?</text>
+
+  <rect class="node node-gray" x="202" y="600" width="326" height="120" rx="8"/>
+  <text class="heading" x="228" y="638">Recovery Design</text>
+  <text class="body" x="228" y="670">Lost key, death, absence, conflict</text>
+  <text class="body" x="228" y="696">Documented recovery workflow</text>
+
+  <rect class="node node-gray" x="592" y="600" width="326" height="120" rx="8"/>
+  <text class="heading" x="618" y="638">Operating Protocols</text>
+  <text class="body" x="618" y="670">Funding, spending, testing</text>
+  <text class="body" x="618" y="696">Maintenance, migration, reporting</text>
+</svg>

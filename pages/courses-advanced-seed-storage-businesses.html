@@ -13,18 +13,108 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap"
         rel="stylesheet">
 
+    <style>
+        .business-placeholder-diagram {
+            margin: 24px 0;
+            padding: 20px;
+            border: 3px dashed #f39c12;
+            border-radius: 16px;
+            background: linear-gradient(180deg, #fff8ef 0%, #ffffff 100%);
+        }
+
+        .business-placeholder-diagram h4,
+        .business-diagram-card h5 {
+            margin-top: 0;
+        }
+
+        .business-diagram-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 18px;
+        }
+
+        .business-diagram-card {
+            padding: 16px;
+            border: 2px solid #121212;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .business-checklist {
+            width: min(920px, 100%);
+            margin: 18px auto;
+            padding: 18px 20px;
+            border: 2px solid #f39c12;
+            border-radius: 14px;
+            background: #fffaf4;
+        }
+
+        .business-checklist ul {
+            margin-bottom: 0;
+        }
+
+        .supporter-panel h4 {
+            margin-top: 0;
+        }
+
+        .supporter-panel p:last-child {
+            margin-bottom: 0;
+        }
+
+        .business-reserve-schematic {
+            margin: 18px 0 24px;
+        }
+
+        .business-reserve-schematic img {
+            width: min(100%, 980px);
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .process-map-table tbody tr {
+            cursor: pointer;
+        }
+
+        .process-map-table tbody tr:hover,
+        .process-map-row-active {
+            background: #fff3df;
+        }
+
+        .process-map-viewer {
+            display: none;
+            margin: 18px 0 28px;
+            overflow-x: auto;
+            border: 1px solid #d2d2d2;
+            border-radius: 8px;
+            background: #ffffff;
+            padding: 12px;
+        }
+
+        .process-map-viewer.is-visible {
+            display: block;
+        }
+
+        .process-map-svg {
+            display: block;
+            min-width: 920px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
     <script src="../js/scrollspy.js" defer></script>
     <script src="../js/nav.js" defer></script>
+    <script src="../js/process-map-viewer.js" defer></script>
 </head>
 
 <body class="basic-utility-guide-body">
-    <!-- Mobile guide menu button -->
     <button class="menu-toggle-guide" type="button" aria-controls="advanced_course_seed_storage_businesses_navbar"
         aria-expanded="false">
         ☰
     </button>
 
-    <!-- Dark overlay behind the sidebar -->
     <div class="nav-backdrop" hidden></div>
 
     <nav class="guide-navbar" id="advanced_course_seed_storage_businesses_navbar">
@@ -38,47 +128,965 @@
 
         <ul class="guide-nav-ul">
             <li><a class="guide-nav-link" href="#overview">Overview</a></li>
-            <li><a class="guide-nav-link" href="#what-youll-build">What You'll Build</a></li>
-            <li><a class="guide-nav-link" href="#coming-next">Coming Next</a></li>
+            <li><a class="guide-nav-link" href="#stage_1">Stage 1: Reserve Scope</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.1">Stage 1.1: Shared reserve vs personal
+                            wallets</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_1.2">Stage 1.2: What belongs in deep
+                            storage</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_2">Stage 2: Multisig Model</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.1">Stage 2.1: Two-owner reserve control</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.2">Stage 2.2: Keys, devices, and policy</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_2.3">Stage 2.3: Recovery key control</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_3">Stage 3: Backup Distribution</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.1">Stage 3.1: Seed and descriptor backups</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_3.2">Stage 3.2: Location planning</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_4">Stage 4: System Model Draft</a></li>
+            <li><a class="guide-nav-link" href="#stage_5">Stage 5: Recovery Process Workflow</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_5.1">Stage 5.1: Recovery trigger map</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_5.2">Stage 5.2: Private trusted person path</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_5.3">Stage 5.3: Institution path</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_5.4">Stage 5.4: Recovery protocol draft</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_6">Stage 6: Wallet Rehearsal</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_6.1">Stage 6.1: Signing and withdrawal rules</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_6.2">Stage 6.2: Air-gapped wallet test</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_7">Stage 7: Operating Protocols</a>
+                <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
+                    <li><a class="guide-nav-link sub-link" href="#stage_7.1">Stage 7.1: Initial funding protocol</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_7.2">Stage 7.2: Day-to-day treasury flow</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_7.3">Stage 7.3: Employee access and devices</a></li>
+                    <li><a class="guide-nav-link sub-link" href="#stage_7.4">Stage 7.4: Incident and review protocols</a></li>
+                </ul>
+            </li>
+            <li><a class="guide-nav-link" href="#stage_8">Stage 8: Summary</a></li>
         </ul>
 
-        <div class="guide-nav-footer">
-            <a class="guide-nav-link" href="courses-advanced-navigation.html">Advanced Courses</a>
-        </div>
     </nav>
 
-    <main class="basic-utility-guide-main" id="advanced_course_seed_storage_businesses_main_doc">
-        <h1>Advanced Course: Seed Storage for Businesses</h1>
-        <h3>Operational seed custody for organizations with multiple stakeholders</h3>
+    <main class="basic-utility-guide-main guide-main-content" id="advanced_course_seed_storage_businesses_main_doc">
+        <div class="guide-content">
+            <h1>Advanced Course: Seed Storage for Business Reserves</h1>
+            <h3>On-chain <a href="glossary.html#glossary_dt_multi_sig" class="glossary-link" target="_blank">multisig</a>
+                storage for a shared business reserve controlled by two owners</h3>
 
-        <section class="basic-utility-guide-main-section">
-            <h1 id="overview">Overview</h1>
-            <article class="basic-utility-guide-article">
-                <p>This course focuses on enterprise-grade seed storage, access control, and recovery planning for
-                    teams, treasuries, and business operations.</p>
-                <p class="color-orange">Premium course <span class="premium-tag premium-tag-inline">Premium</span>
-                </p>
-            </article>
-        </section>
+            <section class="basic-utility-guide-main-section">
+                <h1 id="overview">Overview</h1>
+                <article class="basic-utility-guide-article">
+                    <h4>What this guide teaches:</h4>
 
-        <section class="basic-utility-guide-main-section">
-            <h1 id="what-youll-build">What You'll Build</h1>
-            <article class="basic-utility-guide-article">
-                <ul>
-                    <li>Seed custody model with clear roles and separation of duties</li>
-                    <li>Operational playbooks for onboarding, rotation, and incident response</li>
-                    <li>Auditable backup and recovery procedures</li>
-                </ul>
-            </article>
-        </section>
+                    <p>This course focuses only on the deepest layer of a small business Bitcoin setup: the long-term
+                        on-chain reserve.</p>
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/business-seed-storage-reserve-schematic.svg"
+                            alt="Schematic showing a shop separated from a long-term Bitcoin reserve vault with owner-controlled multisig seed backups">
+                        <figcaption>Figure 1: BTC Reserve separation from day to day operations</figcaption>
+                    </figure>
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/business-reserve-course-mind-map.svg"
+                            alt="Mind map showing the actors, keys, storage layers, trust questions, recovery design, and operating protocols covered in the course">
+                        <figcaption>Figure 2: Course map for the business Bitcoin reserve system</figcaption>
+                    </figure>
+                    <p>This course is not about the customer-facing payment systems or daily operating
+                        procedures.</p>
+                    <p>For detailed information on those topics, visit the next course:
+                        <a href="courses-advanced-bitcoin-business-operations.html">Bitcoin Business Operations</a>.
+                    </p>
+                    <p>The target model is a shared business reserve where two owners hold keys to a multisig wallet.
+                        The reserve is separate from day-to-day funds and is used for retained earnings, savings, or
+                        strategic Bitcoin holdings that should not move casually.</p>
+                    <p>Both owners may also keep separate personal Bitcoin wallets or personal reserves outside the
+                        shared business reserve. The shared multisig protects company funds; it does not need to replace
+                        each owner's own wallet or private savings plan.</p>
 
-        <section class="basic-utility-guide-main-section">
-            <h1 id="coming-next">Coming Next</h1>
-            <article class="basic-utility-guide-article">
-                <p>Full curriculum and materials are in progress. If you want early access, email
-                    <strong>contact@btcguides.de</strong>.</p>
-            </article>
-        </section>
+
+                    <div class="business-checklist supporter-panel">
+                        <h4>Supporter Panel</h4>
+                        <p>Organizations can support continued development of this premium course by partnering with
+                            BTCguides.</p>
+                        <p>Supporters may be listed here with a logo and short description. Course content remains
+                            independent and security recommendations are not sponsored.</p>
+                        <p>For partnership questions mail <b>contact@btcguides.de</b>.</p>
+                        <p>For questions about course content, use the <a href="solutions-forum.html">Solutions
+                                Forum</a>.</p>
+                    </div>
+
+                    <div class="business-checklist">
+                        <h4>What You'll Build</h4>
+                        <ul>
+                            <li>A clean boundary between the shared business reserve and personal owner wallets</li>
+                            <li>An on-chain multisig policy for two owners who jointly control reserve funds</li>
+                            <li>A seed and descriptor backup plan that can survive device loss and owner absence</li>
+                            <li>A documented signing process for withdrawals from the reserve</li>
+                            <li>A review schedule for recovery tests, key replacement, and governance changes</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_1">Stage 1: Reserve Scope</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_1.1">Stage 1.1: Shared reserve vs personal wallets</h2>
+                    <p>The first design decision is what the business reserve is allowed to contain. A shared reserve
+                        should hold Bitcoin that belongs to the business, not every coin controlled by either owner.</p>
+                    <p>This distinction matters because the reserve has a different purpose from a personal wallet. The
+                        shared reserve is governed by both owners and should require deliberate coordination to spend.
+                        Personal wallets can remain under each owner's own control, with their own backup and privacy
+                        choices.</p>
+
+                    <div class="two-column-container-div equal-height-columns">
+                        <div class="text-two-column-div advantage-box">
+                            <h4>Shared business reserve</h4>
+                            <ul>
+                                <li>Holds company savings and retained earnings</li>
+                                <li>Uses a documented multisig policy</li>
+                                <li>Requires owner agreement before spending</li>
+                                <li>Has formal recovery and review procedures</li>
+                            </ul>
+                        </div>
+
+                        <div class="text-two-column-div advantage-box">
+                            <h4>Separate owner wallets</h4>
+                            <ul>
+                                <li>Hold personal Bitcoin outside the company reserve</li>
+                                <li>Can use a different wallet design and privacy model</li>
+                                <li>Do not give the other owner control over private savings</li>
+                                <li>Should not be mixed with business accounting records</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2 id="stage_1.2">Stage 1.2: What belongs in deep storage</h2>
+                    <p>Deep storage is for funds that do not need to move quickly. If the business expects to use some
+                        Bitcoin for short-term expenses, refunds, supplier payments, or operational liquidity, those
+                        funds should live in a separate operating wallet or business reserve layer outside this course.</p>
+                    <p>The deeper reserve should be boring by design. It should receive planned deposits and make rare,
+                        documented withdrawals. That discipline keeps the owners from exposing long-term savings during
+                        normal business activity.</p>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/business-reserve-boundary-schematic.svg"
+                            alt="Schematic showing Owner A wallet, Owner B wallet, operating funds, and the shared on-chain multisig reserve as separate Bitcoin storage categories">
+                        <figcaption>Figure 3: personal holdings, business operations active holdings, on-chain reserve holdings</figcaption>
+                    </figure>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_2">Stage 2: Multisig Model</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_2.1">Stage 2.1: Two-owner reserve control</h2>
+                    <p>For two owners, the usual starting point is a simple on-chain multisig wallet where no single
+                        everyday device can move the reserve by itself. The goal is to prevent unilateral mistakes,
+                        theft from one device, and accidental loss from one failed backup.</p>
+                    <p>A common policy is <strong>2-of-3 multisig</strong>: Owner A controls one signer, Owner B
+                        controls one signer, and a third signer or recovery key is stored separately. Spending normally
+                        requires both owners, while recovery remains possible if one signer is lost.</p>
+                    <p>A stricter <strong>2-of-2 multisig</strong> can enforce full agreement, but it has less
+                        tolerance for key loss. For many small businesses, 2-of-3 is easier to operate responsibly
+                        because it gives the owners a recovery path without letting one owner spend alone.</p>
+                    <p>That last sentence is only true if the third key is controlled carefully. If Owner A can access
+                        Owner A's signer plus the recovery signer, Owner A can spend. If Owner B can access Owner B's
+                        signer plus the recovery signer, Owner B can spend. A 2-of-3 wallet therefore needs a recovery
+                        mechanic that prevents either owner from assembling the third key alone.</p>
+                    <p>This is a fundamental trust problem. A business could choose a design where both owners trust
+                        each other completely and either owner can recover with the third key, but this course does not
+                        recommend relying on that assumption. The goal is to minimize the amount of trust required
+                        between owners, especially as the reserve grows.</p>
+                    <p>If the reserve becomes valuable enough, the recovery key can become a theft incentive. Owner A or
+                        Owner B may decide that accessing the recovery key is worth the risk, then combine it with their
+                        own signer to move funds without the other owner's consent. The setup can be adjusted later
+                        when the value rises, but it is better to solve this governance problem before the reserve ever
+                        reaches that point.</p>
+
+                    <h2 id="stage_2.2">Stage 2.2: Keys, devices, and policy</h2>
+                    <p>Each signer should be generated and backed up independently. Do not create all keys on one laptop
+                        and then hand them out. Each owner should understand which signer they control, where its seed
+                        backup is stored, and what information is needed to reconstruct the multisig wallet.</p>
+                    <p>The best starting point is for each signer to be created independently with a stateless signing
+                        device such as SeedSigner, using real physical randomness from the outside world. Coin flips,
+                        dice rolls, or another auditable source of entropy are preferable to blindly trusting a device's
+                        internal random number generator. In the basic cold-wallet course, you learned this process in
+                        <a href="courses-basic-cold-wallets.html#basic_utility_level_3_stage_4.1.1"
+                            title="internal link to creating your own entropy using a coin or dice">Stage 4.1.1:
+                            Creating your own entropy using a coin or dice</a>.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Item</th>
+                                    <th>Recommended rule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Owner A signer</td>
+                                    <td>Generated and backed up by Owner A, stored away from Owner B's signer</td>
+                                </tr>
+                                <tr>
+                                    <td>Owner B signer</td>
+                                    <td>Generated and backed up by Owner B, stored away from Owner A's signer</td>
+                                </tr>
+                                <tr>
+                                    <td>Recovery signer</td>
+                                    <td>Controlled by a mechanism that prevents either owner from accessing it alone</td>
+                                </tr>
+                                <tr>
+                                    <td>Wallet descriptor</td>
+                                    <td>Backed up by both owners and by the party holding key C so the multisig wallet
+                                        can be reconstructed</td>
+                                </tr>
+                                <tr>
+                                    <td>Spending policy</td>
+                                    <td>Written down before meaningful funds enter the reserve</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="stage_2.3">Stage 2.3: Recovery key control</h2>
+                    <p>The recovery signer exists to solve a real problem: the business still needs a path forward if
+                        one owner dies, disappears, becomes incapacitated, loses a signer, or refuses to cooperate with
+                        a legitimate recovery process. But the recovery signer also creates a new risk. If one owner can
+                        get it alone, that owner can combine it with their own signer and take the reserve.</p>
+                    <p>The course cannot decide the legal or personal conditions for your business. Owner A and Owner B
+                        must discuss those conditions themselves and document them with the right professional help where
+                        needed. The technical requirement is simpler: the third key should require a recovery process,
+                        not unilateral access by one owner.</p>
+
+                    <div class="business-checklist">
+                        <h4>Starting questions for the owners</h4>
+                        <ul>
+                            <li>When is the recovery signer allowed to be used?</li>
+                            <li>Who confirms that an owner is dead, incapacitated, absent, or legally removed?</li>
+                            <li>Which people or institutions are trusted enough to hold recovery material?</li>
+                            <li>How do those parties verify that a release request is legitimate?</li>
+                            <li>What records should be created when the recovery signer is used?</li>
+                        </ul>
+                    </div>
+
+                    <p>There are several ways to build the mechanic. The right choice depends on the amount stored, the
+                        relationship between the owners, the available trusted parties, and the business's legal setup.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Recovery mechanic</th>
+                                    <th>Concept</th>
+                                    <th>Main tradeoff</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Split recovery material</td>
+                                    <td>Owner A's trusted party holds one part of the recovery key material, and Owner
+                                        B's trusted party holds the other part</td>
+                                    <td>Neither owner can recover alone, but the trusted parties need clear release
+                                        rules</td>
+                                </tr>
+                                <tr>
+                                    <td>Device and secret separation</td>
+                                    <td>One party holds the third signer device while a different party holds the PIN,
+                                        passphrase, or recovery instructions</td>
+                                    <td>Simple to understand, but the split must be tested carefully</td>
+                                </tr>
+                                <tr>
+                                    <td>Neutral custodian</td>
+                                    <td>A bank, notary, lawyer, accountant, professional key agent, or other neutral
+                                        party controls the recovery signer under agreed conditions</td>
+                                    <td>Cleaner governance, but it depends on the quality and reliability of the
+                                        custodian</td>
+                                </tr>
+                                <tr>
+                                    <td>Two trusted-party release</td>
+                                    <td>Each owner appoints a trusted party, and both trusted parties must cooperate to
+                                        unlock or release the recovery signer</td>
+                                    <td>Useful for owner-death scenarios, but the parties must understand their role</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p>Do not treat this as a place for clever secrecy. The owners should be able to explain the
+                        recovery mechanic in plain language: normal spending needs both owners, emergency recovery needs
+                        the surviving owner plus the agreed recovery process, and no single owner can quietly obtain two
+                        keys.</p>
+                    <p>Some owners may be tempted to avoid this work by handing full reserve control to a large bank,
+                        custodian, or other institution. That may be operationally possible, and it may allow a company
+                        to keep growing while using Bitcoin on its balance sheet. But it defeats much of the purpose of
+                        Bitcoin custody: the business no longer minimizes trust, it simply moves full trust to the
+                        institution. If that institution can freeze, lose, rehypothecate, censor, or seize the reserve,
+                        the attack vector is glaring.</p>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_3">Stage 3: Backup Distribution</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_3.1">Stage 3.1: Seed and descriptor backups</h2>
+                    <p>A multisig backup is not only the seed words. To recover the reserve wallet, the owners also need
+                        the wallet policy and descriptor information that explains how the signers combine into the same
+                        wallet.</p>
+                    <p>Each seed backup should be durable, private, and stored separately from the other seeds. The
+                        descriptor backup can be copied more broadly because it does not spend by itself, but it still
+                        reveals wallet structure and should be treated as sensitive business information.</p>
+                    <p>A descriptor or xpub backup is not a private key, but it is still not public information. It can
+                        reveal the wallet structure and, when connected to blockchain data, can reveal balances,
+                        addresses, and transaction history. Treat descriptor backups as business-confidential records,
+                        and use your own Bitcoin full node for reserve monitoring where possible instead of leaking
+                        reserve addresses to random public servers. This privacy model is introduced in
+                        <a href="courses-basic-node.html#overview"
+                            title="internal link to Basic Course 1: Privacy">Basic Course 1: Privacy</a>.</p>
+
+                    <h2 id="stage_3.2">Stage 3.2: Location planning</h2>
+                    <p>Location planning should avoid two failures: all keys in one place, or so much separation that
+                        the owners cannot recover under stress. The reserve should survive a burglary, fire, device
+                        failure, or one owner being unavailable without making normal theft easy.</p>
+
+                    <div class="business-checklist">
+                        <h4>Backup design checks</h4>
+                        <ul>
+                            <li>No single location contains enough material to spend alone</li>
+                            <li>No single owner can combine their own signer with the recovery signer alone</li>
+                            <li>No single lost device destroys access to the reserve</li>
+                            <li>Both owners have the descriptor and recovery instructions</li>
+                            <li>Seed backups are labelled carefully without advertising their value</li>
+                            <li>The recovery signer has a clear access rule for emergencies</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_4">Stage 4: System Model Draft</h1>
+
+                <article class="basic-utility-guide-article">
+                    <p>Before choosing the exact recovery process, the owners should draft the basic system model on
+                        one page. This draft does not need to be perfect. It should make the assumptions visible before
+                        legal documents, trusted people, institutions, or real funds are added.</p>
+
+                    <div class="business-checklist">
+                        <h4>System model draft</h4>
+                        <ul>
+                            <li>Who controls signer A, signer B, and signer C?</li>
+                            <li>Where are each seed backup, signer device, PIN, passphrase, and descriptor stored?</li>
+                            <li>Which single person or location could currently assemble two keys?</li>
+                            <li>Which events allow signer C to be used?</li>
+                            <li>Who verifies those events and who must be notified?</li>
+                            <li>How does the reserve move to a new wallet after recovery?</li>
+                            <li>Which assumptions depend on personal trust instead of technical or legal separation?</li>
+                            <li>Which company records, shareholder agreements, heir documents, accounting rules, or tax
+                                records need to match this custody model?</li>
+                        </ul>
+                    </div>
+
+                    <p>This stage is also where the owners identify legal and accounting boundaries. This course cannot
+                        provide legal or tax advice, but the custody model should match company ownership records,
+                        signing authority, inheritance plans, bookkeeping practice, and any contracts that define what
+                        happens when an owner leaves, dies, or is removed.</p>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_5">Stage 5: Recovery Process Workflow</h1>
+
+                <article class="basic-utility-guide-article">
+                    <p>This stage is a practical worksheet for designing the recovery process around key C. The goal is
+                        not to make the third key easy to access. The goal is to make it available only under the exact
+                        emergency conditions the owners agreed to in advance.</p>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/recovery-key-workflow-flowchart.svg"
+                            alt="Flowchart for deciding who participates in the recovery key process and how information is released">
+                        <figcaption>Recovery key workflow: decide who participates, what they know, what they hold, and
+                            how release is documented.</figcaption>
+                    </figure>
+
+                    <h2 id="stage_5.1">Stage 5.1: Recovery trigger map</h2>
+                    <p>Start by listing every situation where the recovery key may be used. The owners should define
+                        the trigger before choosing people, institutions, or storage locations.</p>
+
+                    <div class="business-checklist">
+                        <h4>Trigger questions</h4>
+                        <ul>
+                            <li>Is recovery allowed when one signer device is lost but both owners are available?</li>
+                            <li>Is recovery allowed when one owner dies, disappears, or becomes incapacitated?</li>
+                            <li>Is recovery allowed when one owner is removed from the company by contract or court
+                                order?</li>
+                            <li>Who confirms that the trigger event is real?</li>
+                            <li>What documents prove the trigger: death certificate, court order, shareholder decision,
+                                medical incapacity document, police report, or notarized statement?</li>
+                            <li>Is there a waiting period before the recovery key can be released?</li>
+                            <li>Who must be notified before the recovery key is released?</li>
+                            <li>Is there a direct heir, executor, or legal representative if one owner disappears or
+                                dies?</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="stage_5.2">Stage 5.2: Private trusted person path</h2>
+                    <p>If a private trusted person is involved, the owners must decide exactly what that person knows
+                        and what they physically hold. A trusted person should not receive vague responsibility. They
+                        need a narrow role, written instructions, and a clear release protocol.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Decision</th>
+                                    <th>Questions to answer</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Knowledge</td>
+                                    <td>Do they know this is a Bitcoin recovery process, or only that they hold a sealed
+                                        business document or device?</td>
+                                </tr>
+                                <tr>
+                                    <td>Material</td>
+                                    <td>Do they hold a signer device, a seed backup, a PIN, a passphrase, a descriptor,
+                                        or only instructions?</td>
+                                </tr>
+                                <tr>
+                                    <td>Partial control</td>
+                                    <td>Can their material combine with one owner signer to spend, or is another person
+                                        or document required?</td>
+                                </tr>
+                                <tr>
+                                    <td>Release request</td>
+                                    <td>Who is allowed to ask them for the material, and how does the trusted person
+                                        verify that identity?</td>
+                                </tr>
+                                <tr>
+                                    <td>Heir path</td>
+                                    <td>If an owner dies, does the trusted person release material to the surviving
+                                        owner, a direct heir, an executor, or a lawyer?</td>
+                                </tr>
+                                <tr>
+                                    <td>Refusal and conflict</td>
+                                    <td>What should they do if one owner requests release and the other owner objects?</td>
+                                </tr>
+                                <tr>
+                                    <td>Record keeping</td>
+                                    <td>What record do they create when material is released: date, requester, proof
+                                        checked, witnesses, and destination?</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="stage_5.3">Stage 5.3: Institution path</h2>
+                    <p>If a bank, lawyer, notary, accountant, professional key agent, or several institutions are
+                        involved, the key question changes from personal trust to enforceable procedure. The contract
+                        should define the institution's exact role and should avoid giving one institution quiet,
+                        unilateral control over company reserves.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Contract area</th>
+                                    <th>What it should regulate</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Custody scope</td>
+                                    <td>Exactly what the institution holds: device, seed words, sealed envelope,
+                                        descriptor, PIN, passphrase, or instructions.</td>
+                                </tr>
+                                <tr>
+                                    <td>Release conditions</td>
+                                    <td>Which events allow release and which documents must be presented before release.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Multi-party approval</td>
+                                    <td>Whether one institution can release alone, or whether two institutions, two
+                                        trustees, or a trustee plus legal document must agree.</td>
+                                </tr>
+                                <tr>
+                                    <td>Notification duty</td>
+                                    <td>Who must be notified before release, how long they have to object, and how
+                                        notices are delivered.</td>
+                                </tr>
+                                <tr>
+                                    <td>Dispute handling</td>
+                                    <td>What happens if owners, heirs, or officers disagree about whether recovery is
+                                        legitimate.</td>
+                                </tr>
+                                <tr>
+                                    <td>Continuity</td>
+                                    <td>What happens if the institution closes, merges, loses records, changes policy,
+                                        or refuses service.</td>
+                                </tr>
+                                <tr>
+                                    <td>Audit and testing</td>
+                                    <td>How the company verifies the material still exists without exposing enough
+                                        information to spend.</td>
+                                </tr>
+                                <tr>
+                                    <td>Liability</td>
+                                    <td>Who is responsible if the institution releases too early, refuses a valid
+                                        release, or loses material.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="stage_5.4">Stage 5.4: Recovery protocol draft</h2>
+                    <p>After answering the questions above, write the recovery protocol as an ordered checklist. It
+                        should be simple enough that a stressed owner, heir, or professional can follow it without
+                        improvising.</p>
+
+                    <div class="business-checklist">
+                        <h4>Minimum recovery protocol</h4>
+                        <ul>
+                            <li>Name the normal signers, the recovery signer, and the descriptor backup locations</li>
+                            <li>Define every recovery trigger and the proof required for each trigger</li>
+                            <li>State who may request recovery and who must be notified</li>
+                            <li>State exactly what each private person or institution holds</li>
+                            <li>State exactly when and how release happens</li>
+                            <li>Define how heirs, executors, or legal representatives are identified</li>
+                            <li>Define what record is created when material is released</li>
+                            <li>Define how the reserve is moved to a new wallet after recovery</li>
+                            <li>Test the protocol with a small amount before relying on it</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_6">Stage 6: Wallet Rehearsal</h1>
+
+                <article class="basic-utility-guide-article">
+                    <h2 id="stage_6.1">Stage 6.1: Signing and withdrawal rules</h2>
+                    <p>Before the reserve receives meaningful funds, define how withdrawals are approved. Write down who
+                        can propose a transaction, what business reason is required, how the destination address is
+                        verified, and which records are kept after signing.</p>
+                    <p>The signing process should be slow enough to catch mistakes. Owners should verify the receive
+                        address on trusted screens, compare transaction details independently, and keep a short record
+                        of why the withdrawal happened. This address-verification ceremony is mandatory before any large
+                        deposit: both owners compare the receive address against the same multisig descriptor and wallet
+                        policy before funds move.</p>
+
+                    <h2 id="stage_6.2">Stage 6.2: Air-gapped wallet test</h2>
+                    <p>Test the setup before storing serious funds. Build the wallet, receive a small amount, recover
+                        the wallet from backups, sign a test spend, and confirm both owners understand the steps. This
+                        stage is only a rehearsal with small funds. Real reserve funding belongs in Stage 7 after the
+                        recovery process and test signing have been proven.</p>
+
+                    <div class="business-checklist">
+                        <h4>Practical task: air-gapped reserve wallet rehearsal</h4>
+                        <ul>
+                            <li>Create three independent entropy sets for signer A, signer B, and signer C. Use real
+                                physical randomness such as coin flips or dice rolls, and calculate the seed words with
+                                SeedSigner without typing seed material into an internet-connected device.</li>
+                            <li>Load signer A into SeedSigner and export its public key information as an animated QR
+                                or other air-gapped export. Repeat separately for signer B and signer C.</li>
+                            <li>Create the 2-of-3 multisig wallet in Sparrow Wallet on the coordinator computer. Sparrow
+                                should act as the watch-only coordinator wallet: it may know the wallet policy, public
+                                keys, receive addresses, UTXOs, and descriptor, but it must not receive any seed words
+                                or private keys. This course uses Sparrow Wallet as the default coordinator, but the
+                                owners may choose another multisig-capable wallet or coordinator if they understand its
+                                backup format, PSBT workflow, and recovery requirements.</li>
+                            <li>Connect Sparrow to the business's own Bitcoin full node where possible. A public server
+                                can learn reserve addresses and balances from a watch-only wallet, even though it cannot
+                                spend funds. Review <a href="courses-basic-node.html#overview"
+                                    title="internal link to Basic Course 1: Privacy">Basic Course 1: Privacy</a> if the
+                                owners need to understand why the node matters for on-chain reserve privacy.</li>
+                            <li>Back up the wallet descriptor before funds are added. Both owners and the key C holder
+                                should have the descriptor backup needed to reconstruct the multisig wallet.</li>
+                            <li>Recover the Sparrow watch-only wallet from the descriptor on a second device or clean
+                                wallet profile. Confirm that the same receive addresses appear.</li>
+                            <li>Send a small initial test amount to the reserve wallet. Both owners verify the receive
+                                address through Sparrow and against the exported descriptor information before sending.</li>
+                            <li>Create a small spend from the reserve in Sparrow. Keep the transaction unsigned on the
+                                online coordinator, move the PSBT to SeedSigner by QR, sign with signer A, then sign
+                                with signer B. Sparrow receives the signed PSBT and broadcasts only after both owners
+                                verify destination address, amount, and fee.</li>
+                            <li>Repeat the spend test with one owner signer plus signer C. This confirms the recovery
+                                path works technically, but it should happen under the test protocol before meaningful
+                                funds are stored.</li>
+                            <li>Recover the wallet again while the remaining test funds are still on it. Rebuild the
+                                watch-only wallet from descriptor backups, reload the required SeedSigner seeds from
+                                backups, and confirm the funds and transaction history are visible.</li>
+                            <li>Document every step: which signers were used, where descriptor backups are stored, which
+                                recovery combination was tested, transaction IDs, and what the owners would do
+                                differently before larger deposits.</li>
+                        </ul>
+                    </div>
+
+                    <div class="table-scroll">
+                        <table class="seed-backup-comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Review event</th>
+                                    <th>Required action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>New reserve wallet created</td>
+                                    <td>Test receive, descriptor restore, and small withdrawal before larger deposits</td>
+                                </tr>
+                                <tr>
+                                    <td>Signer device lost</td>
+                                    <td>Assess exposure, use the recovery path, and replace the signer if needed</td>
+                                </tr>
+                                <tr>
+                                    <td>Owner relationship changes</td>
+                                    <td>Move funds to a new policy before trust assumptions become unclear</td>
+                                </tr>
+                                <tr>
+                                    <td>Annual review</td>
+                                    <td>Confirm storage locations, documentation, signer health, and recovery access</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_7">Stage 7: Operating Protocols</h1>
+
+                <article class="basic-utility-guide-article">
+                    <p>This stage turns the wallet design into business procedure. The owners should decide the order
+                        of actions before funds move, so staff, owners, and outside parties are not inventing policy
+                        during normal operations or emergencies.</p>
+
+                    <h2 id="stage_7.1">Stage 7.1: Initial funding protocol</h2>
+                    <p>Before the first meaningful deposit, write the source-of-funds and purchase path. The business
+                        should know whether reserve Bitcoin comes from retained earnings, owner contributions, customer
+                        receipts, treasury purchases, or transfers from an older company wallet.</p>
+
+                    <p>Use these actor categories when drawing process maps: <strong>Owner A</strong>,
+                        <strong>Owner B</strong>, <strong>Keyholder C</strong>, <strong>Employee</strong>, and
+                        <strong>Customer</strong>. Not every process uses every actor, but every protocol should make
+                        clear who initiates, who verifies, who signs, who records, and who must not have access.</p>
+
+                    <div class="table-scroll">
+                        <p><strong>Click any process row to display its process map.</strong></p>
+                        <table class="guide-table process-map-table">
+                            <thead>
+                                <tr>
+                                    <th>Priority</th>
+                                    <th>Reserve process to map</th>
+                                    <th>Actors normally involved</th>
+                                    <th>Protocol should define</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Initial reserve wallet test: receive</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Address verification, test amount, transaction record, and confirmation rule</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Initial reserve wallet test: spend</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>PSBT creation, air-gapped SeedSigner signing, broadcast, and documentation</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Recovery test using descriptor and two keys</td>
+                                    <td>Owner A or Owner B, Keyholder C</td>
+                                    <td>Descriptor restore, signer combination, proof of recovery, and test limits</td>
+                                </tr>
+                                <tr>
+                                    <td>1 - Launch critical</td>
+                                    <td>Large deposit ceremony</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Source of funds, address verification, fee environment, accounting entry, signer
+                                        readiness, and final approval</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Recurring</td>
+                                    <td>Sending from intermediary wallet to deep reserve</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Threshold, approval, address ceremony, accounting entry, and transaction ID</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Recurring</td>
+                                    <td>Regular reserve maintenance</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Review cadence, signer location check, descriptor check, node connection, and
+                                        rehearsal schedule</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Recurring</td>
+                                    <td>Reserve accounting and reporting</td>
+                                    <td>Owner A, Owner B, Employee if bookkeeping is delegated</td>
+                                    <td>Tax records, year-end reporting, valuation method, transaction exports, and who
+                                        receives read-only information</td>
+                                </tr>
+                                <tr>
+                                    <td>2 - Recurring</td>
+                                    <td>Employee access review for reserve-related records</td>
+                                    <td>Owner A, Owner B, Employee</td>
+                                    <td>Which records the employee can see, which records stay owner-only, and how access
+                                        is revoked</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Occasional / high value</td>
+                                    <td>Spending from the deep reserve</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Business reason, approval rule, destination verification, signing order, and
+                                        record keeping</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Occasional / high value</td>
+                                    <td>Large withdrawal ceremony</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Business reason, owner or board approval, destination verification, tax/accounting
+                                        note, PSBT review, and two signatures</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Periodic</td>
+                                    <td>Annual legal and accounting reconciliation</td>
+                                    <td>Owner A, Owner B, Employee if bookkeeping is delegated</td>
+                                    <td>Wallet balance, company books, ownership agreements, tax reports, recovery
+                                        documents, and signer authority</td>
+                                </tr>
+                                <tr>
+                                    <td>3 - Periodic</td>
+                                    <td>Death or incapacity tabletop rehearsal</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Who calls whom, which documents are needed, what Keyholder C releases, and how
+                                        the process is recorded without exposing keys</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Emergency recovery with key C</td>
+                                    <td>Owner A or Owner B, Keyholder C</td>
+                                    <td>Trigger event, proof required, release protocol, notification, and post-recovery
+                                        wallet migration</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Reserve migration after compromise or owner change</td>
+                                    <td>Owner A, Owner B, Keyholder C if needed</td>
+                                    <td>Freeze rule, new wallet creation, transfer plan, old-key retirement, and audit
+                                        record</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Keyholder C handover or replacement</td>
+                                    <td>Owner A, Owner B, Keyholder C, replacement keyholder if chosen</td>
+                                    <td>Loss of trust, death, relocation, unreachable keyholder, handover record, and
+                                        whether wallet migration is required</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Owner exit or new owner onboarding</td>
+                                    <td>Owner A, Owner B, Keyholder C if needed</td>
+                                    <td>Share sale, resignation, removal, new partner onboarding, signer replacement, and
+                                        migration to a new policy</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Descriptor or xpub leak response</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Privacy impact, balance/address exposure, monitoring changes, and whether wallet
+                                        migration is needed</td>
+                                </tr>
+                                <tr>
+                                    <td>4 - Rare / high impact</td>
+                                    <td>Fee spike, stuck transaction, RBF, or conflicting wallet views</td>
+                                    <td>Owner A, Owner B</td>
+                                    <td>Who decides to wait or fee-bump, how RBF is handled, which node/wallet view is
+                                        trusted, and how exceptions are documented</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="process-map-viewer" aria-live="polite"></div>
+
+                    <div class="business-checklist">
+                        <h4>Initial funding action order</h4>
+                        <ul>
+                            <li>Confirm Stage 6 is complete: descriptor restore, A+B spend, owner-plus-key-C recovery
+                                spend, and recovery with funds visible</li>
+                            <li>Choose the funding source: retained earnings, owner contribution, treasury purchase,
+                                customer receipts, or transfer from an older company wallet</li>
+                            <li>Confirm the purchase path: exchange, broker, OTC desk, direct payment, or transfer from
+                                existing business holdings</li>
+                            <li>Run the address-verification ceremony again before the first real deposit</li>
+                            <li>Document the purchase method, exchange or broker, bank account, invoice, and accounting
+                                category</li>
+                            <li>Move the first real reserve deposit in a controlled amount before scaling to larger
+                                treasury deposits</li>
+                        </ul>
+                    </div>
+
+                    <h2 id="stage_7.2">Stage 7.2: Day-to-day treasury flow</h2>
+                    <p>The deep reserve should not receive every small payment directly. Define when operational Bitcoin
+                        moves into an intermediary owner-controlled wallet, and when that intermediary wallet moves
+                        funds into the deep reserve.</p>
+                    <p>For this seed-storage course, the important node is the Bitcoin full node used for on-chain
+                        privacy and verification. A Lightning node is different: it manages payment channels, liquidity,
+                        and instant merchant payments. This reserve course does not require Lightning, but the separate
+                        <a href="courses-advanced-bitcoin-business-operations.html"
+                            title="internal link to Bitcoin Business Operations course">Bitcoin Business Operations</a>
+                        course does cover business payment flows where Lightning may matter. For Lightning wallets and
+                        running a Lightning node, use <a href="courses-advanced-lightning-wallets.html#overview"
+                            title="internal link to Advanced Course 5: Lightning Wallets and Node">Advanced Course 5:
+                            Lightning (Wallets + Node)</a>.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Flow</th>
+                                    <th>Protocol decision</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Customer payments</td>
+                                    <td>Define whether payments arrive in BTCPay Server, Lightning channels, a hot
+                                        wallet, or an operating wallet.</td>
+                                </tr>
+                                <tr>
+                                    <td>Operating consolidation</td>
+                                    <td>Choose a schedule: daily, weekly, by balance threshold, or after large invoices.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Intermediary wallet</td>
+                                    <td>Define who controls it, how much may remain there, and when excess moves deeper.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Deep reserve deposit</td>
+                                    <td>Define a higher threshold or monthly cadence so the reserve only receives
+                                        deliberate, recorded deposits.</td>
+                                </tr>
+                                <tr>
+                                    <td>UTXO and fee management</td>
+                                    <td>Avoid sending many tiny deposits into deep storage. Consolidate deliberately
+                                        when fees are acceptable and record why consolidation happened.</td>
+                                </tr>
+                                <tr>
+                                    <td>Accounting record</td>
+                                    <td>Record transaction ID, source, fiat value at time of transfer, purpose, and
+                                        approving owner.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="stage_7.3">Stage 7.3: Employee access and devices</h2>
+                    <p>Employees should be able to do their jobs without learning seeds, descriptors, recovery
+                        procedures, or reserve balances unless their role truly requires it. Access should be assigned
+                        by role, not by convenience.</p>
+
+                    <div class="table-scroll">
+                        <table class="guide-table">
+                            <thead>
+                                <tr>
+                                    <th>Role</th>
+                                    <th>Allowed access</th>
+                                    <th>Device rule</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Cashier or floor staff</td>
+                                    <td>Create invoices and confirm payment status only</td>
+                                    <td>Store devices remain on site and are not taken home</td>
+                                </tr>
+                                <tr>
+                                    <td>Manager</td>
+                                    <td>Refund workflow, invoice review, and limited operating-wallet visibility</td>
+                                    <td>No seed entry, no descriptor export, no reserve signer access</td>
+                                </tr>
+                                <tr>
+                                    <td>Bookkeeper</td>
+                                    <td>Transaction records, reports, and accounting exports</td>
+                                    <td>Read-only access where possible</td>
+                                </tr>
+                                <tr>
+                                    <td>Owners</td>
+                                    <td>Reserve signing, signer backups, recovery process, and policy updates</td>
+                                    <td>Signing devices stored separately and used only under documented conditions</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="stage_7.4">Stage 7.4: Incident and review protocols</h2>
+                    <p>Write incident protocols before they are needed. A lost phone, compromised checkout device,
+                        missing signer, staff departure, or owner conflict should trigger a known action sequence.</p>
+
+                    <div class="business-checklist">
+                        <h4>Protocols to maintain</h4>
+                        <ul>
+                            <li>Lost or stolen staff device: revoke access, rotate credentials, review recent invoices
+                            </li>
+                            <li>Compromised operating wallet: stop intake, sweep safe funds, replace wallet, document
+                                exposure</li>
+                            <li>Emergency freeze: if signer A, signer B, signer C, a seed backup, or a descriptor
+                                location is suspected compromised, stop new deposits until the owners decide whether a
+                                wallet migration is required</li>
+                            <li>Signer lost or suspected copied: freeze new deposits, assess whether reserve migration
+                                is required</li>
+                            <li>Wallet migration: move funds to a new multisig policy after owner departure, signer
+                                compromise, recovery key exposure, broken trust assumptions, or a major governance
+                                change</li>
+                            <li>Employee departure: remove accounts, recover devices, rotate shared credentials</li>
+                            <li>Owner absence or dispute: follow the recovery process from Stage 5, not ad hoc
+                                negotiation</li>
+                            <li>Quarterly review: check access lists, device locations, descriptor backups, and
+                                operating balances</li>
+                            <li>Annual rehearsal: restore watch-only wallet, verify signers, test a small transaction,
+                                and update written procedures</li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+
+            <section class="basic-utility-guide-main-section">
+                <h1 id="stage_8">Stage 8: Summary</h1>
+
+                <article class="basic-utility-guide-article">
+                    <p>In this course you separated the deepest business reserve from daily merchant activity and from
+                        each owner's personal Bitcoin wallet. The shared reserve is a company asset with its own
+                        governance, backup, and recovery process.</p>
+                    <p>You now have the outline of an on-chain multisig reserve where two owners hold keys, a recovery
+                        path exists for device loss, and withdrawals happen through a deliberate owner approval process.</p>
+                    <p>Customer-facing payments and operating procedures belong in the separate business operations
+                        course.</p>
+                    <p><a href="courses-advanced-navigation.html">Back to Advanced Courses</a></p>
+                </article>
+            </section>
+        </div>
     </main>
 </body>
 

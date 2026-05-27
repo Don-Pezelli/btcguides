@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">Goal Flag</title>
+  <rect width="64" height="64" fill="none" />
+  <line x1="16" y1="8" x2="16" y2="56" stroke="#1b1b1b" stroke-width="4" stroke-linecap="round" />
+  <polygon points="18,12 48,20 18,28" fill="#2ecc71" stroke="#1b1b1b" stroke-width="2" />
+  <circle cx="16" cy="8" r="3" fill="#1b1b1b" />
+</svg>

@@ -567,6 +567,27 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_bip85"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_bip85"
+                                class="glossary-accordion-label">BIP85</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_bip85" class="glossary-dt-term">BIP85</dt>
+                                <dd class="glossary-dd">
+                                    <p>A Bitcoin Improvement Proposal that allows deriving independent child seeds or
+                                        secrets from a single master seed, enabling multiple wallets without reusing
+                                        the same seed.</p>
+                                </dd>
+
+                            </div>
+
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_binary"
                                 class="glossary-accordion-input">
 
@@ -865,10 +886,6 @@
 
 
                         </div>
-
-
-
-
 
 
                         <div class="glossary-div-accordion">
@@ -1423,6 +1440,26 @@
 
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_custom_salt"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_custom_salt"
+                                class="glossary-accordion-label">Custom Salt</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_custom_salt" class="glossary-dt-term">Custom Salt</dt>
+                                <dd class="glossary-dd">
+                                    <p>An additional secret value mixed into a seed-derivation process. It acts like a
+                                        personalized <a href="glossary.html#glossary_dt_salt" class="glossary-link" target="_blank">salt</a> and must be preserved for recovery.</p>
+                                </dd>
+
+                            </div>
+
+                        </div>
+
 
                         <div class="glossary-div-accordion">
 
@@ -1862,6 +1899,43 @@
                             </div>
 
 
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_derivation_path"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_derivation_path"
+                                class="glossary-accordion-label">Derivation Path</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_derivation_path" class="glossary-dt-term">Derivation Path</dt>
+                                <dd class="glossary-dd">
+                                    <p>A structured path (like <code>m/84'/0'/0'</code>) that tells a wallet how to
+                                        derive specific keys and addresses from a master seed.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_double_pbkdf2_layer"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_double_pbkdf2_layer"
+                                class="glossary-accordion-label">Double-PBKDF2 Layer</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_double_pbkdf2_layer" class="glossary-dt-term">Double-PBKDF2 Layer</dt>
+                                <dd class="glossary-dd">
+                                    <p>An extra round of key stretching applied on top of the standard <a href="glossary.html#glossary_dt_bip39_pbkdf2" class="glossary-link" target="_blank">BIP39 PBKDF2</a> step. It is not standardized and may reduce portability.</p>
+                                </dd>
+
+                            </div>
                         </div>
 
 
@@ -2417,6 +2491,47 @@
 
                             </div>
 
+
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_external_encryption_layer"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_external_encryption_layer"
+                                class="glossary-accordion-label">External Encryption Layer</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_external_encryption_layer" class="glossary-dt-term">External Encryption Layer</dt>
+                                <dd class="glossary-dd">
+                                    <p>Encrypting a seed or its backup with a separate key or password, adding a layer
+                                        beyond the seed phrase itself.</p>
+                                </dd>
+
+                            </div>
+
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_encoding_transformation_scheme"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_encoding_transformation_scheme"
+                                class="glossary-accordion-label">Encoding / Transformation Scheme</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_encoding_transformation_scheme" class="glossary-dt-term">Encoding / Transformation Scheme</dt>
+                                <dd class="glossary-dd">
+                                    <p>A method of disguising a seed or passphrase using a private rule (book code,
+                                        pattern, or numeric encoding). It adds secrecy but requires careful
+                                        documentation for recovery.</p>
+                                </dd>
+
+                            </div>
 
                         </div>
 
@@ -4394,6 +4509,24 @@
                             </div>
                         </div>
 
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_miniscript"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_miniscript"
+                                class="glossary-accordion-label">Miniscript</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_miniscript" class="glossary-dt-term">Miniscript</dt>
+                                <dd class="glossary-dd">
+                                    <p>A structured language for describing Bitcoin spending conditions, making complex
+                                        scripts easier to write, analyze, and audit.</p>
+                                </dd>
+                            </div>
+                        </div>
+
 
 
 
@@ -5460,6 +5593,30 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox"
+                                id="glossary_accordion_input_checkbox_open_shamirs_secret_sharing"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_shamirs_secret_sharing"
+                                class="glossary-accordion-label">Shamir's Secret Sharing (SSS)</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_shamirs_secret_sharing" class="glossary-dt-term">Shamir's Secret
+                                    Sharing (SSS)</dt>
+                                <dd class="glossary-dd">
+                                    <p>A cryptographic method that splits one secret into multiple shares, where only a
+                                        chosen threshold of shares is needed to recover it (for example, 3 of 5).</p>
+                                    <p>For seed backups, this means one lost share does not destroy access, and one
+                                        stolen share alone does not reveal the full seed.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_self_custody"
                                 class="glossary-accordion-input">
 
@@ -6304,6 +6461,26 @@
                     <dl>
 
 
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_wallet_specific_modifiers"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_wallet_specific_modifiers"
+                                class="glossary-accordion-label">Wallet-Specific Modifiers</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_wallet_specific_modifiers" class="glossary-dt-term">Wallet-Specific Modifiers</dt>
+                                <dd class="glossary-dd">
+                                    <p>Advanced settings that are unique to a wallet or script policy, such as
+                                        <a href="glossary.html#glossary_dt_bip85" class="glossary-link" target="_blank">BIP85</a> child seeds or
+                                        <a href="glossary.html#glossary_dt_miniscript" class="glossary-link" target="_blank">Miniscript</a> parameters.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
                         <div class="glossary-div-accordion">
 

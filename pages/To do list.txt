@@ -20,7 +20,13 @@ primary tasks:
 - read seed storage course and improve it until it is finished TASK ID 1044
 - read lightning course and improve it till finished TASK 1045
 - read inheritance course and improve till finished TASK 1046
-- 
+advanced course stage  2.1 make a better figure 1 TASK ID 1047
+- stage 4.2
+
+If location A and original key A get distroyed there is original key B at location B and vice versa. If Location C with the passphrase gets destroyed, there is a backup at location D.
+
+add diagram TASK ID 1048
+- stage 4.2 clean up the three model setups on the cards so terminology is very clear
 
 
 
@@ -200,7 +206,6 @@ Short Form:
 clips from the long form videos
 high speed videos where guides are condensed
 memes
-
 
 
 
