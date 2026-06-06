@@ -1,0 +1,356 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R] /Count 4 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 3199 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 18 Tf 48 742 Td (Business Bitcoin Reserve Recovery Protocol) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Filled example) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 684 Td (Educational example only. Replace every role, location, release condition, and legal) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 670 Td (reference with the company's actual setup.) Tj ET
+1 0.957 0.894 rg 48 616 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 616 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 626 Td (1. Business and Reserve Identity) Tj ET
+0.985 0.985 0.985 rg 48 564 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 564 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 586 Td (Business name:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 572 Td (Example Bakery GmbH) Tj ET
+0.985 0.985 0.985 rg 48 516 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 516 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 538 Td (Reserve wallet label:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 524 Td (Reserve Alpha 2026) Tj ET
+0.985 0.985 0.985 rg 48 443 516 63 re f
+0.82 0.82 0.82 RG 0.8 w 48 443 516 63 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 490 Td (Wallet policy:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 476 Td (2-of-3 multisig. Normal spending uses Owner A + Owner B.) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 463 Td (Emergency recovery uses one owner plus Key C through this) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 450 Td (protocol.) Tj ET
+0.985 0.985 0.985 rg 48 383 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 383 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 417 Td (Descriptor backup locations:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 403 Td (Owner A office safe, Owner B home safe, sealed copy with) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 390 Td (Keyholder C.) Tj ET
+1 0.957 0.894 rg 48 331 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 331 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 341 Td (2. Roles) Tj ET
+0.985 0.985 0.985 rg 48 279 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 279 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 301 Td (Owner A:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 287 Td (Anna Example, managing partner, controls signer A.) Tj ET
+0.985 0.985 0.985 rg 48 231 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 231 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 253 Td (Owner B:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 239 Td (Ben Example, managing partner, controls signer B.) Tj ET
+0.985 0.985 0.985 rg 48 171 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 171 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 205 Td (Keyholder C:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 191 Td (Example Notary Office holds sealed recovery material and) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 178 Td (release instructions.) Tj ET
+0.985 0.985 0.985 rg 48 111 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 111 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 145 Td (Heir / legal representative:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 131 Td (Named executor in the shareholder agreement may request) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 118 Td (recovery after death proof is accepted.) Tj ET
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 3113 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 18 Tf 48 742 Td (Business Bitcoin Reserve Recovery Protocol) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Filled example) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+1 0.957 0.894 rg 48 656 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 656 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 666 Td (3. Recovery Triggers) Tj ET
+0.985 0.985 0.985 rg 48 579 516 63 re f
+0.82 0.82 0.82 RG 0.8 w 48 579 516 63 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 626 Td (Allowed triggers:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 612 Td (Loss or destruction of one owner signer; death or legal) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 599 Td (incapacity of one owner; court order or contract-defined) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 586 Td (removal.) Tj ET
+0.985 0.985 0.985 rg 48 506 516 63 re f
+0.82 0.82 0.82 RG 0.8 w 48 506 516 63 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 553 Td (Proof required:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 539 Td (Device-loss declaration signed by both available owners, death) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 526 Td (certificate, court order, or shareholder resolution as) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 513 Td (applicable.) Tj ET
+0.985 0.985 0.985 rg 48 446 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 446 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 480 Td (Not allowed:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 466 Td (Convenience access, urgent spending without documentation, or) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 453 Td (request by one owner without the defined proof.) Tj ET
+1 0.957 0.894 rg 48 394 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 394 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 404 Td (4. What Each Party Holds) Tj ET
+0.985 0.985 0.985 rg 48 330 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 330 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 364 Td (Owner A holds:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 350 Td (Signer A, seed A backup, descriptor copy, recovery) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 337 Td (instructions.) Tj ET
+0.985 0.985 0.985 rg 48 270 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 270 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 304 Td (Owner B holds:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 290 Td (Signer B, seed B backup, descriptor copy, recovery) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 277 Td (instructions.) Tj ET
+0.985 0.985 0.985 rg 48 210 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 210 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 244 Td (Keyholder C holds:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 230 Td (Sealed signer C material, descriptor copy, and written release) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 217 Td (protocol.) Tj ET
+0.985 0.985 0.985 rg 48 150 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 150 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 184 Td (Separation rule:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 170 Td (No single owner may access their own signer plus signer C) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 157 Td (without the documented release process.) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 3457 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 18 Tf 48 742 Td (Business Bitcoin Reserve Recovery Protocol) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Filled example) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+1 0.957 0.894 rg 48 656 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 656 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 666 Td (5. Release Protocol for Key C) Tj ET
+0.985 0.985 0.985 rg 48 592 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 592 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 626 Td (Who may request recovery:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 612 Td (Owner A, Owner B, or the named executor/legal representative) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 599 Td (after a listed trigger.) Tj ET
+0.985 0.985 0.985 rg 48 532 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 532 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 566 Td (Notification:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 552 Td (Both owners, the company accountant, and the named legal) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 539 Td (contact are notified before release when possible.) Tj ET
+0.985 0.985 0.985 rg 48 472 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 472 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 506 Td (Waiting period:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 492 Td (Seven calendar days unless a court order or death/incapacity) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 479 Td (document requires faster action.) Tj ET
+0.985 0.985 0.985 rg 48 399 516 63 re f
+0.82 0.82 0.82 RG 0.8 w 48 399 516 63 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 446 Td (Release action:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 432 Td (Keyholder C verifies documents, logs the request, releases) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 419 Td (signer C material or participates in signing according to the) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 406 Td (agreed method.) Tj ET
+0.985 0.985 0.985 rg 48 339 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 339 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 373 Td (Release record:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 359 Td (Date, requestor, trigger, documents checked, people notified,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 346 Td (and signature of the person releasing material.) Tj ET
+1 0.957 0.894 rg 48 287 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 287 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 297 Td (6. Recovery Transaction Process) Tj ET
+0.985 0.985 0.985 rg 48 223 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 223 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 257 Td (Coordinator:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 243 Td (Sparrow watch-only wallet connected to the business Bitcoin) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 230 Td (full node.) Tj ET
+0.985 0.985 0.985 rg 48 163 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 163 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 197 Td (Signers used:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 183 Td (For loss of signer A: Owner B signer + signer C. For loss of) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 170 Td (signer B: Owner A signer + signer C.) Tj ET
+0.985 0.985 0.985 rg 48 103 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 103 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 137 Td (New wallet:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 123 Td (Create a fresh 2-of-3 multisig with a new signer set before) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 110 Td (moving reserve funds.) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2807 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 18 Tf 48 742 Td (Business Bitcoin Reserve Recovery Protocol) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Filled example) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 640 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 640 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 674 Td (Broadcast:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 660 Td (Broadcast through the business full node. Record transaction) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 647 Td (ID, new descriptor location, and approval notes.) Tj ET
+1 0.957 0.894 rg 48 588 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 588 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 598 Td (7. After Recovery) Tj ET
+0.985 0.985 0.985 rg 48 536 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 536 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 558 Td (Old wallet:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 544 Td (Mark as retired. Do not receive new funds to old addresses.) Tj ET
+0.985 0.985 0.985 rg 48 476 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 476 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 510 Td (New wallet policy:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 496 Td (Document the new signers, backup locations, descriptor) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 483 Td (backups, and next rehearsal date.) Tj ET
+0.985 0.985 0.985 rg 48 416 516 50 re f
+0.82 0.82 0.82 RG 0.8 w 48 416 516 50 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 450 Td (Accounting/legal:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 436 Td (Update balance sheet records, internal custody register,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 423 Td (shareholder records, and tax documentation.) Tj ET
+0.985 0.985 0.985 rg 48 368 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 368 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 390 Td (Review:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9.5 Tf 190 376 Td (Run a small recovery rehearsal within 30 days after migration.) Tj ET
+1 0.957 0.894 rg 48 316 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 316 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 326 Td (8. Signatures) Tj ET
+0.985 0.985 0.985 rg 48 264 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 264 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 286 Td (Owner A signature and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 190 272 m 552 272 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 216 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 216 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 238 Td (Owner B signature and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 190 224 m 552 224 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 168 516 38 re f
+0.82 0.82 0.82 RG 0.8 w 48 168 516 38 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 190 Td (Keyholder C acknowledgement and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 190 176 m 552 176 l S 0 0 0 RG
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000135 00000 n 
+0000000205 00000 n 
+0000000280 00000 n 
+0000003531 00000 n 
+0000003667 00000 n 
+0000006832 00000 n 
+0000006968 00000 n 
+0000010477 00000 n 
+0000010614 00000 n 
+0000013474 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+13612
+%%EOF

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Signing and withdrawal rules map</title>
+  <desc id="desc">A vertical two-column diagram showing reserve transaction rules for proposal, approval, address verification, independent checking, air-gapped SeedSigner signing, and recordkeeping.</desc>
+  <defs>
+    <linearGradient id="headerBlue" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#dff0ff"/>
+      <stop offset="1" stop-color="#73bfff"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #ffffff; }
+      .title-bar { fill: url(#headerBlue); }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 38px; font-weight: 850; fill: #050505; }
+      .card { fill: #ffffff; stroke: #171717; stroke-width: 2.5; rx: 8; filter: url(#shadow); }
+      .card-blue { fill: #eef7ff; }
+      .card-orange { fill: #fff4e4; stroke: #f39c12; stroke-width: 3; }
+      .card-green { fill: #effaf2; }
+      .card-red { fill: #fff0ee; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 850; fill: #050505; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 580; fill: #171717; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 12px; font-weight: 650; fill: #333333; }
+      .center-title { font-family: Inter, Arial, sans-serif; font-size: 25px; font-weight: 900; fill: #050505; }
+      .center-sub { font-family: Inter, Arial, sans-serif; font-size: 15px; font-weight: 650; fill: #2d2d2d; }
+      .coin { fill: #f39c12; stroke: #121212; stroke-width: 3; }
+      .coin-text { font-family: Inter, Arial, sans-serif; font-size: 34px; font-weight: 900; fill: #ffffff; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="980" height="1040"/>
+  <rect class="title-bar" x="32" y="32" width="916" height="86"/>
+  <text class="title" x="62" y="88">Signing and Withdrawal Rules</text>
+
+  <rect class="card card-orange" x="300" y="158" width="380" height="150" rx="8"/>
+  <circle class="coin" cx="490" cy="204" r="32"/>
+  <text class="coin-text" x="480" y="216">B</text>
+  <text class="center-title" x="490" y="258" text-anchor="middle">Reserve Transaction</text>
+  <text class="center-sub" x="490" y="284" text-anchor="middle">slow, verified, documented</text>
+
+  <rect class="card card-blue" x="88" y="380" width="360" height="142" rx="8"/>
+  <text class="label" x="118" y="422">1. Proposal Rule</text>
+  <text class="body" x="118" y="456">Who may propose a spend?</text>
+  <text class="body" x="118" y="482">Which business reason is required?</text>
+
+  <rect class="card card-blue" x="532" y="380" width="360" height="142" rx="8"/>
+  <text class="label" x="562" y="422">2. Approval Rule</text>
+  <text class="body" x="562" y="456">Which owners must approve?</text>
+  <text class="body" x="562" y="482">What amount needs extra review?</text>
+
+  <rect class="card card-green" x="88" y="590" width="360" height="154" rx="8"/>
+  <text class="label" x="118" y="632">3. Address Ceremony</text>
+  <text class="body" x="118" y="666">Verify destination or receive address</text>
+  <text class="body" x="118" y="692">on trusted screens before funds move</text>
+  <text class="small" x="118" y="720">Mandatory before large deposits</text>
+
+  <rect class="card card-green" x="532" y="590" width="360" height="154" rx="8"/>
+  <text class="label" x="562" y="632">4. Independent Check</text>
+  <text class="body" x="562" y="666">Both owners compare amount, fee,</text>
+  <text class="body" x="562" y="692">address, descriptor, and wallet policy</text>
+  <text class="small" x="562" y="720">No rushed signing</text>
+
+  <rect class="card card-red" x="88" y="812" width="360" height="142" rx="8"/>
+  <text class="label" x="118" y="854">5. Signing Rule</text>
+  <text class="body" x="118" y="884">Who signs?</text>
+  <text class="body" x="118" y="910">Move the PSBT by QR only</text>
+  <text class="small" x="118" y="936">Offline, stateless signing device</text>
+
+  <rect class="card card-red" x="532" y="812" width="360" height="142" rx="8"/>
+  <text class="label" x="562" y="854">6. Records Rule</text>
+  <text class="body" x="562" y="888">Record reason, approvals, txid,</text>
+  <text class="body" x="562" y="914">destination, fee, and signers used</text>
+
+</svg>

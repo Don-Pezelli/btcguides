@@ -5542,6 +5542,29 @@
 
                         <div class="glossary-div-accordion">
 
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_seedsigner"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_seedsigner"
+                                class="glossary-accordion-label">SeedSigner</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_seedsigner" class="glossary-dt-term">SeedSigner</dt>
+                                <dd class="glossary-dd">
+                                    <p>A stateless, air-gapped Bitcoin signing device used to generate keys, display
+                                        public key information, and sign transactions without storing seed words on the
+                                        device after use.</p>
+                                </dd>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="glossary-div-accordion">
+
                             <input type="checkbox" id="glossary_accordion_input_checkbox_open_seedphrase"
                                 class="glossary-accordion-input">
 
@@ -6461,6 +6484,56 @@
                     <dl>
 
 
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_wallet_descriptor"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_wallet_descriptor"
+                                class="glossary-accordion-label">Wallet Descriptor</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_wallet_descriptor" class="glossary-dt-term">Wallet Descriptor</dt>
+                                <dd class="glossary-dd">
+                                    <p>Text information that describes how a Bitcoin wallet is built, including the
+                                        script type, public keys, derivation paths, and signing policy needed to
+                                        reconstruct the wallet and verify receive addresses.</p>
+                                    <p>A recovery phrase alone may not tell wallet software which address type,
+                                        derivation path, public keys, or multisig policy was used. The descriptor stores
+                                        that wallet map so a restored wallet can find the same addresses again instead
+                                        of guessing.</p>
+                                    <figure>
+                                        <img src="../images/glossary/wallet-descriptor-explainer.svg"
+                                            alt="Diagram explaining that wallet descriptors store the method, keys, paths, and policy needed to restore the correct Bitcoin wallet addresses">
+                                        <figcaption>Wallet descriptors tell restore software which wallet rules to use.
+                                        </figcaption>
+                                    </figure>
+                                </dd>
+
+                            </div>
+                        </div>
+
+                        <div class="glossary-div-accordion">
+
+                            <input type="checkbox" id="glossary_accordion_input_checkbox_open_wallet_policy"
+                                class="glossary-accordion-input">
+
+                            <label for="glossary_accordion_input_checkbox_open_wallet_policy"
+                                class="glossary-accordion-label">Wallet Policy</label>
+
+                            <div class="glossary-accordion-content">
+
+                                <dt id="glossary_dt_wallet_policy" class="glossary-dt-term">Wallet Policy</dt>
+                                <dd class="glossary-dd">
+                                    <p>The rules that define how a Bitcoin wallet can receive and spend funds, such as
+                                        the script type, required number of signatures, signer public keys, and key
+                                        paths. In a multisig wallet, the policy describes which signers must cooperate.</p>
+                                </dd>
+
+                            </div>
+                        </div>
 
                         <div class="glossary-div-accordion">
 

@@ -55,6 +55,46 @@
             margin-bottom: 0;
         }
 
+        .business-task-list {
+            margin-bottom: 0;
+            padding-left: 1.4rem;
+        }
+
+        .business-task-list li {
+            font-size: 1.608rem;
+            font-weight: 800;
+            line-height: 1.32;
+            margin-bottom: 14px;
+        }
+
+        .business-task-list strong {
+            font-size: inherit;
+            line-height: inherit;
+        }
+
+        .business-task-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .business-task-list p {
+            font-size: 1.866rem;
+            font-weight: 500;
+            line-height: 1.55;
+            margin: 4px 0 0;
+        }
+
+        .business-task-reference {
+            font-size: 1.763rem;
+        }
+
+        .business-review-table-scroll {
+            box-shadow: none;
+        }
+
+        .business-section-break {
+            height: 38px;
+        }
+
         .supporter-panel h4 {
             margin-top: 0;
         }
@@ -217,7 +257,7 @@
 
                     <div class="business-checklist supporter-panel">
                         <h4>Supporter Panel</h4>
-                        <p>Organizations can support continued development of this premium course by partnering with
+                        <p>Organizations can support continued development of this premium course by partnering withno
                             BTCguides.</p>
                         <p>Supporters may be listed here with a logo and short description. Course content remains
                             independent and security recommendations are not sponsored.</p>
@@ -323,9 +363,12 @@
                         and then hand them out. Each owner should understand which signer they control, where its seed
                         backup is stored, and what information is needed to reconstruct the multisig wallet.</p>
                     <p>The best starting point is for each signer to be created independently with a stateless signing
-                        device such as SeedSigner, using real physical randomness from the outside world. Coin flips,
+                        device such as <a href="glossary.html#glossary_dt_seedsigner" class="glossary-link"
+                            target="_blank">SeedSigner</a>, using real physical randomness from the outside world. Coin flips,
                         dice rolls, or another auditable source of entropy are preferable to blindly trusting a device's
-                        internal random number generator. In the basic cold-wallet course, you learned this process in
+                        internal random number generator. SeedSigner is interchangeable because it does not permanently
+                        store the seed or private key; the signer is reconstructed from the backup only when signing is
+                        needed. In the basic cold-wallet course, you learned this process in
                         <a href="courses-basic-cold-wallets.html#basic_utility_level_3_stage_4.1.1"
                             title="internal link to creating your own entropy using a coin or dice">Stage 4.1.1:
                             Creating your own entropy using a coin or dice</a>.</p>
@@ -352,7 +395,8 @@
                                     <td>Controlled by a mechanism that prevents either owner from accessing it alone</td>
                                 </tr>
                                 <tr>
-                                    <td>Wallet descriptor</td>
+                                    <td><a href="glossary.html#glossary_dt_wallet_descriptor" class="glossary-link"
+                                            target="_blank">Wallet descriptor</a></td>
                                     <td>Backed up by both owners and by the party holding key C so the multisig wallet
                                         can be reconstructed</td>
                                 </tr>
@@ -373,6 +417,10 @@
                         must discuss those conditions themselves and document them with the right professional help where
                         needed. The technical requirement is simpler: the third key should require a recovery process,
                         not unilateral access by one owner.</p>
+                    <p>Do not try to finalize the full recovery protocol in this stage. The goal here is to understand
+                        the control problem: Key C is necessary for recovery, but dangerous if one owner can access it
+                        alone. Read the questions below as design warnings. You will answer them properly in Stage 5
+                        when you build the recovery process workflow.</p>
 
                     <div class="business-checklist">
                         <h4>Starting questions for the owners</h4>
@@ -407,8 +455,9 @@
                                 </tr>
                                 <tr>
                                     <td>Device and secret separation</td>
-                                    <td>One party holds the third signer device while a different party holds the PIN,
-                                        passphrase, or recovery instructions</td>
+                                    <td>One party holds the third SeedSigner or other stateless signing device while a
+                                        different party holds the PIN, passphrase, seed backup, or recovery
+                                        instructions</td>
                                     <td>Simple to understand, but the split must be tested carefully</td>
                                 </tr>
                                 <tr>
@@ -427,6 +476,8 @@
                             </tbody>
                         </table>
                     </div>
+
+                    <div class="business-section-break" aria-hidden="true"></div>
 
                     <p>Do not treat this as a place for clever secrecy. The owners should be able to explain the
                         recovery mechanic in plain language: normal spending needs both owners, emergency recovery needs
@@ -447,7 +498,8 @@
                 <article class="basic-utility-guide-article">
                     <h2 id="stage_3.1">Stage 3.1: Seed and descriptor backups</h2>
                     <p>A multisig backup is not only the seed words. To recover the reserve wallet, the owners also need
-                        the wallet policy and descriptor information that explains how the signers combine into the same
+                        the <a href="glossary.html#glossary_dt_wallet_policy" class="glossary-link"
+                            target="_blank">wallet policy</a> and descriptor information that explains how the signers combine into the same
                         wallet.</p>
                     <p>Each seed backup should be durable, private, and stored separately from the other seeds. The
                         descriptor backup can be copied more broadly because it does not spend by itself, but it still
@@ -464,6 +516,14 @@
                     <p>Location planning should avoid two failures: all keys in one place, or so much separation that
                         the owners cannot recover under stress. The reserve should survive a burglary, fire, device
                         failure, or one owner being unavailable without making normal theft easy.</p>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/business-reserve-location-planning-example.svg"
+                            alt="Example location plan showing Owner A, Owner B, and Keyholder C materials separated so no single owner or location can spend alone">
+                        <figcaption>Figure 4: example location plan for signer, backup, descriptor, and recovery
+                            material separation</figcaption>
+                    </figure>
 
                     <div class="business-checklist">
                         <h4>Backup design checks</h4>
@@ -489,18 +549,97 @@
 
                     <div class="business-checklist">
                         <h4>System model draft</h4>
+                        <h5>Core system model questions</h5>
                         <ul>
+                            <li>How many signatures are required to spend from the reserve?</li>
+                            <li>Which three signers exist in the system?</li>
                             <li>Who controls signer A, signer B, and signer C?</li>
-                            <li>Where are each seed backup, signer device, PIN, passphrase, and descriptor stored?</li>
-                            <li>Which single person or location could currently assemble two keys?</li>
-                            <li>Which events allow signer C to be used?</li>
-                            <li>Who verifies those events and who must be notified?</li>
-                            <li>How does the reserve move to a new wallet after recovery?</li>
+                            <li>Where are each SeedSigner or other stateless signing device, seed backup, PIN,
+                                passphrase, and descriptor stored?</li>
+                            <li>Which recovery path exists if one signer is lost?</li>
+                            <li>Which recovery path exists if one owner is unavailable?</li>
                             <li>Which assumptions depend on personal trust instead of technical or legal separation?</li>
                             <li>Which company records, shareholder agreements, heir documents, accounting rules, or tax
                                 records need to match this custody model?</li>
                         </ul>
+                        <h5>Model check questions</h5>
+                        <ul>
+                            <li>Could any single person currently assemble two keys? If yes, the model is not finished.</li>
+                            <li>Could any single location currently contain enough material to spend? If yes, the
+                                location plan needs to change.</li>
+                            <li>Which parts of the model must be decided before legal documents, shareholder
+                                agreements, or keyholder instructions are written?</li>
+                            <li>Which assumptions still need professional legal, accounting, or tax review before real
+                                reserve funds are added?</li>
+                        </ul>
+                        <h5>Download template</h5>
+                        <ul>
+                            <li><a href="../downloads/business-system-model-draft-template.pdf" target="_blank"
+                                    title="Download blank system model draft template PDF">Blank system model draft
+                                    template</a></li>
+                        </ul>
                     </div>
+
+                    <div class="business-checklist">
+                        <h4>Example draft</h4>
+                        <p>This is only an example structure. The owners should replace every role, location, access
+                            rule, and legal condition with their own actual business setup.</p>
+                        <ul>
+                            <li><strong>Reserve purpose:</strong> long-term company Bitcoin reserve, separate from
+                                daily Lightning operations, the intermediary wallet, and both owners' personal
+                                wallets.</li>
+                            <li><strong>Wallet policy:</strong> 2-of-3 multisig. Normal spending requires Owner A and
+                                Owner B. Emergency recovery requires one owner plus signer C through the documented
+                                recovery process.</li>
+                            <li><strong>Signer A:</strong> controlled by Owner A. Seed backup stored at Owner A's
+                                chosen backup location. Label uses an internal code name and does not say Bitcoin,
+                                seed, wallet, or reserve.</li>
+                            <li><strong>Signer B:</strong> controlled by Owner B. Seed backup stored at Owner B's
+                                chosen backup location. Label uses an internal code name and does not reveal its
+                                value.</li>
+                            <li><strong>Signer C:</strong> controlled by Keyholder C or by the agreed recovery
+                                arrangement. Neither Owner A nor Owner B can access signer C alone.</li>
+                            <li><strong>Descriptor and instructions:</strong> Owner A, Owner B, and Keyholder C each
+                                hold a copy of the wallet descriptor and recovery instructions. These copies are treated
+                                as business-confidential records.</li>
+                            <li><strong>Allowed recovery triggers:</strong> death, legal incapacity, confirmed loss of
+                                one owner signer, court order, contractual owner removal, or another trigger named in
+                                the company agreement.</li>
+                            <li><strong>Release rule for signer C:</strong> Keyholder C releases or uses signer C only
+                                after the required evidence has been checked and the required parties have been
+                                notified.</li>
+                            <li><strong>After recovery:</strong> funds are moved to a new 2-of-3 wallet with a fresh
+                                signer set. The old signer set is retired and documented.</li>
+                            <li><strong>Review schedule:</strong> owners review signer locations, descriptor backups,
+                                recovery contacts, and company records at least once per year and after any ownership
+                                change.</li>
+                        </ul>
+                    </div>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/system-model-example-draft.svg"
+                            alt="Graphic showing the example system model draft with reserve purpose, 2-of-3 policy, signer A, signer B, signer C, descriptor copies, recovery triggers, and post-recovery migration">
+                        <figcaption>Example system model draft: the written model becomes a map of purpose, policy,
+                            signer control, backup records, recovery triggers, and post-recovery migration.</figcaption>
+                    </figure>
+
+                    <h4>Example process maps</h4>
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/process-map-spending-from-reserve.svg"
+                            alt="Business process map showing the approval, signing, broadcast, and recordkeeping flow for spending from the reserve">
+                        <figcaption>Spending from the reserve: Owner A drafts the request, Owner B approves, both
+                            owners sign, the transaction is broadcast, and the company records the withdrawal.</figcaption>
+                    </figure>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/process-map-recovery-key-c-loss-a.svg?v=5"
+                            alt="Business process map showing recovery with Key C after signer A is lost">
+                        <figcaption>Recovery after loss of signer A: the trigger is checked, Keyholder C participates
+                            under the recovery rule, funds move to a new wallet, and the old wallet is retired.</figcaption>
+                    </figure>
 
                     <p>This stage is also where the owners identify legal and accounting boundaries. This course cannot
                         provide legal or tax advice, but the custody model should match company ownership records,
@@ -516,6 +655,10 @@
                     <p>This stage is a practical worksheet for designing the recovery process around key C. The goal is
                         not to make the third key easy to access. The goal is to make it available only under the exact
                         emergency conditions the owners agreed to in advance.</p>
+                    <p>Stage 4 showed example process maps so you can see what a finished business flow might look
+                        like. Stage 5 is the step before drawing your own custom maps: the owners answer the key
+                        questions that determine which people, documents, release rules, notifications, and fallback
+                        paths must appear in their actual recovery process.</p>
 
                     <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
                         <img class="responsive-figure-img"
@@ -532,7 +675,8 @@
                     <div class="business-checklist">
                         <h4>Trigger questions</h4>
                         <ul>
-                            <li>Is recovery allowed when one signer device is lost but both owners are available?</li>
+                            <li>Is recovery allowed when one SeedSigner or other stateless signing device is lost, even
+                                though the key can be reconstructed from the seed backup?</li>
                             <li>Is recovery allowed when one owner dies, disappears, or becomes incapacitated?</li>
                             <li>Is recovery allowed when one owner is removed from the company by contract or court
                                 order?</li>
@@ -543,6 +687,12 @@
                             <li>Who must be notified before the recovery key is released?</li>
                             <li>Is there a direct heir, executor, or legal representative if one owner disappears or
                                 dies?</li>
+                        </ul>
+                        <h5>Download template</h5>
+                        <ul>
+                            <li><a href="../downloads/business-recovery-trigger-map-template.pdf" target="_blank"
+                                    title="Download blank recovery trigger map template PDF">Blank recovery trigger
+                                    map template</a></li>
                         </ul>
                     </div>
 
@@ -567,8 +717,8 @@
                                 </tr>
                                 <tr>
                                     <td>Material</td>
-                                    <td>Do they hold a signer device, a seed backup, a PIN, a passphrase, a descriptor,
-                                        or only instructions?</td>
+                                    <td>Do they hold a SeedSigner or other stateless signing device, a seed backup, a
+                                        PIN, a passphrase, a descriptor, or only instructions?</td>
                                 </tr>
                                 <tr>
                                     <td>Partial control</td>
@@ -676,6 +826,23 @@
                             <li>Test the protocol with a small amount before relying on it</li>
                         </ul>
                     </div>
+
+                    <div class="business-checklist">
+                        <h4>Practical task</h4>
+                        <p>Owner A and Owner B should work through the recovery protocol template together and fill in
+                            the blanks for their own company. Use the questions from Stage 5.1 to Stage 5.4 to decide
+                            which recovery events are valid, who participates, what Keyholder C may release, which
+                            documents are required, who must be notified, and how the recovery transaction is recorded.</p>
+                        <h5>Download templates</h5>
+                        <ul>
+                            <li><a href="../downloads/business-recovery-protocol-template.pdf?v=2" target="_blank"
+                                    title="Download blank recovery protocol template PDF">Blank recovery protocol
+                                    template</a></li>
+                            <li><a href="../downloads/business-recovery-protocol-example.pdf?v=2" target="_blank"
+                                    title="Download filled recovery protocol example PDF">Filled recovery protocol
+                                    example</a></li>
+                        </ul>
+                    </div>
                 </article>
             </section>
 
@@ -684,14 +851,38 @@
 
                 <article class="basic-utility-guide-article">
                     <h2 id="stage_6.1">Stage 6.1: Signing and withdrawal rules</h2>
-                    <p>Before the reserve receives meaningful funds, define how withdrawals are approved. Write down who
-                        can propose a transaction, what business reason is required, how the destination address is
-                        verified, and which records are kept after signing.</p>
+                    <p>By this point, the owners have already drafted the system model, recovery process, and example
+                        spending flow. Before the reserve receives meaningful funds, turn that work into a final
+                        withdrawal rule: who can propose a transaction, what business reason is required, how the
+                        destination address is verified, and which records are kept after signing.</p>
                     <p>The signing process should be slow enough to catch mistakes. Owners should verify the receive
                         address on trusted screens, compare transaction details independently, and keep a short record
                         of why the withdrawal happened. This address-verification ceremony is mandatory before any large
                         deposit: both owners compare the receive address against the same multisig descriptor and wallet
                         policy before funds move.</p>
+
+                    <figure class="diagram-div figure-2-framed stage-4-2-centered-media business-reserve-schematic">
+                        <img class="responsive-figure-img"
+                            src="../images/advanced-courses/seed-storage-businesses/signing-withdrawal-rules-map.svg"
+                            alt="Rule map showing proposal, approval, address verification, independent checking, air-gapped SeedSigner signing, and recordkeeping for reserve withdrawals">
+                        <figcaption>Signing and withdrawal rules: define who proposes, who approves, how addresses are
+                            verified, how signing happens, and which records are kept.</figcaption>
+                    </figure>
+
+                    <div class="business-checklist">
+                        <h4>Practical task</h4>
+                        <p>Owner A and Owner B should work through the PDF template together and fill in the blanks for
+                            their own company. The goal is to turn the abstract rules above into a written withdrawal
+                            protocol: who can propose a transaction, who approves it, how addresses are verified, how
+                            signing happens, who broadcasts, and which records are kept.</p>
+                        <h5>Download template</h5>
+                        <ul>
+                            <li><a href="../downloads/business-reserve-signing-withdrawal-rules-template.pdf"
+                                    target="_blank"
+                                    title="Download blank signing and withdrawal rules template PDF">Blank signing and
+                                    withdrawal rules template</a></li>
+                        </ul>
+                    </div>
 
                     <h2 id="stage_6.2">Stage 6.2: Air-gapped wallet test</h2>
                     <p>Test the setup before storing serious funds. Build the wallet, receive a small amount, recover
@@ -701,46 +892,98 @@
 
                     <div class="business-checklist">
                         <h4>Practical task: air-gapped reserve wallet rehearsal</h4>
-                        <ul>
-                            <li>Create three independent entropy sets for signer A, signer B, and signer C. Use real
-                                physical randomness such as coin flips or dice rolls, and calculate the seed words with
-                                SeedSigner without typing seed material into an internet-connected device.</li>
-                            <li>Load signer A into SeedSigner and export its public key information as an animated QR
-                                or other air-gapped export. Repeat separately for signer B and signer C.</li>
-                            <li>Create the 2-of-3 multisig wallet in Sparrow Wallet on the coordinator computer. Sparrow
-                                should act as the watch-only coordinator wallet: it may know the wallet policy, public
-                                keys, receive addresses, UTXOs, and descriptor, but it must not receive any seed words
-                                or private keys. This course uses Sparrow Wallet as the default coordinator, but the
-                                owners may choose another multisig-capable wallet or coordinator if they understand its
-                                backup format, PSBT workflow, and recovery requirements.</li>
-                            <li>Connect Sparrow to the business's own Bitcoin full node where possible. A public server
-                                can learn reserve addresses and balances from a watch-only wallet, even though it cannot
-                                spend funds. Review <a href="courses-basic-node.html#overview"
-                                    title="internal link to Basic Course 1: Privacy">Basic Course 1: Privacy</a> if the
-                                owners need to understand why the node matters for on-chain reserve privacy.</li>
-                            <li>Back up the wallet descriptor before funds are added. Both owners and the key C holder
-                                should have the descriptor backup needed to reconstruct the multisig wallet.</li>
-                            <li>Recover the Sparrow watch-only wallet from the descriptor on a second device or clean
-                                wallet profile. Confirm that the same receive addresses appear.</li>
-                            <li>Send a small initial test amount to the reserve wallet. Both owners verify the receive
-                                address through Sparrow and against the exported descriptor information before sending.</li>
-                            <li>Create a small spend from the reserve in Sparrow. Keep the transaction unsigned on the
-                                online coordinator, move the PSBT to SeedSigner by QR, sign with signer A, then sign
-                                with signer B. Sparrow receives the signed PSBT and broadcasts only after both owners
-                                verify destination address, amount, and fee.</li>
-                            <li>Repeat the spend test with one owner signer plus signer C. This confirms the recovery
-                                path works technically, but it should happen under the test protocol before meaningful
-                                funds are stored.</li>
-                            <li>Recover the wallet again while the remaining test funds are still on it. Rebuild the
-                                watch-only wallet from descriptor backups, reload the required SeedSigner seeds from
-                                backups, and confirm the funds and transaction history are visible.</li>
-                            <li>Document every step: which signers were used, where descriptor backups are stored, which
-                                recovery combination was tested, transaction IDs, and what the owners would do
-                                differently before larger deposits.</li>
-                        </ul>
+                        <ol class="business-task-list">
+                            <li>
+                                <strong>Create independent entropy.</strong>
+                                <p>Generate separate entropy for signer A, signer B, and signer C with physical
+                                    randomness such as coin flips or dice rolls. Use SeedSigner to calculate the seed
+                                    words without typing seed material into an internet-connected device.</p>
+                                <p class="business-task-reference">Reference:
+                                    <a href="courses-basic-cold-wallets.html#basic_utility_level_3_stage_4.1.1"
+                                        title="internal link to creating your own entropy using a coin or dice">Basic
+                                        Cold Wallets, Stage 4.1.1: Creating your own entropy using a coin or dice</a>.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Export each signer public key.</strong>
+                                <p>Load signer A into SeedSigner and export its public key information as an animated QR
+                                    or other air-gapped export. Repeat separately for signer B and signer C.</p>
+                            </li>
+                            <li>
+                                <strong>Create the 2-of-3 coordinator wallet.</strong>
+                                <p>Create the multisig wallet in Sparrow Wallet on the coordinator computer. Sparrow
+                                    should be watch-only: it may know the wallet policy, public keys, receive addresses,
+                                    UTXOs, and descriptor, but it must not receive seed words or private keys.</p>
+                                <p>This course uses Sparrow Wallet as the default coordinator. Owners may choose another
+                                    multisig-capable wallet only if they understand its backup format, PSBT workflow, and
+                                    recovery requirements.</p>
+                                <p class="business-task-reference">Reference:
+                                    <a href="courses-basic-cold-wallets.html#basic_utility_level_3_stage_5.2"
+                                        title="internal link to creating a watch-only wallet in Sparrow Wallet">Basic
+                                        Cold Wallets, Stage 5.2: Create the watch only wallet</a> and
+                                    <a href="courses-basic-cold-wallets.html#basic_utility_level_3_stage_5.3.3"
+                                        title="internal link to testing a SeedSigner and Sparrow Wallet send with PSBT QR signing">Stage
+                                        5.3.3: Wallet - Test send</a>. Adapt the same air-gapped method to three signer
+                                    xpubs and a 2-of-3 policy.</p>
+                            </li>
+                            <li>
+                                <strong>Connect to the business node.</strong>
+                                <p>Connect Sparrow to the business's own Bitcoin full node where possible. A public
+                                    server can learn reserve addresses and balances from a watch-only wallet, even
+                                    though it cannot spend funds.</p>
+                                <p class="business-task-reference">Reference:
+                                    <a href="courses-basic-node.html#overview"
+                                        title="internal link to Basic Course 1: Privacy">Basic Course 1: Privacy</a>.
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Back up the descriptor.</strong>
+                                <p>Back up the <a href="glossary.html#glossary_dt_wallet_descriptor"
+                                        class="glossary-link" target="_blank">wallet descriptor</a> before funds are
+                                    added. Both owners and the key C holder should have the descriptor backup needed to
+                                    reconstruct the multisig wallet.</p>
+                            </li>
+                            <li>
+                                <strong>Recover the watch-only wallet.</strong>
+                                <p>Restore the Sparrow watch-only wallet from the descriptor on a second device or clean
+                                    wallet profile. Confirm that the same receive addresses appear.</p>
+                            </li>
+                            <li>
+                                <strong>Send a small test deposit.</strong>
+                                <p>Send a small initial test amount to the reserve wallet. Both owners verify the receive
+                                    address through Sparrow and against the exported descriptor information before
+                                    sending.</p>
+                            </li>
+                            <li>
+                                <strong>Test normal signing.</strong>
+                                <p>Create a small spend from the reserve in Sparrow. Keep the transaction unsigned on the
+                                    online coordinator, move the PSBT to SeedSigner by QR, sign with signer A, then sign
+                                    with signer B.</p>
+                                <p>Sparrow receives the signed PSBT and broadcasts only after both owners verify the
+                                    destination address, amount, and fee.</p>
+                            </li>
+                            <li>
+                                <strong>Test recovery signing.</strong>
+                                <p>Repeat the spend test with one owner signer plus signer C. This confirms the recovery
+                                    path works technically, but it should happen under the test protocol before
+                                    meaningful funds are stored.</p>
+                            </li>
+                            <li>
+                                <strong>Recover once more with funds visible.</strong>
+                                <p>Rebuild the watch-only wallet from descriptor backups, reload the required SeedSigner
+                                    seeds from backups, and confirm the remaining test funds and transaction history are
+                                    visible.</p>
+                            </li>
+                            <li>
+                                <strong>Document the rehearsal.</strong>
+                                <p>Record which signers were used, where descriptor backups are stored, which recovery
+                                    combination was tested, transaction IDs, and what the owners would change before
+                                    larger deposits.</p>
+                            </li>
+                        </ol>
                     </div>
 
-                    <div class="table-scroll">
+                    <div class="table-scroll business-review-table-scroll">
                         <table class="seed-backup-comparison-table">
                             <thead>
                                 <tr>
@@ -754,8 +997,9 @@
                                     <td>Test receive, descriptor restore, and small withdrawal before larger deposits</td>
                                 </tr>
                                 <tr>
-                                    <td>Signer device lost</td>
-                                    <td>Assess exposure, use the recovery path, and replace the signer if needed</td>
+                                    <td>SeedSigner or other stateless signing device lost</td>
+                                    <td>Assess exposure, use the recovery path, and replace the interchangeable signing
+                                        device if needed</td>
                                 </tr>
                                 <tr>
                                     <td>Owner relationship changes</td>
@@ -1035,7 +1279,8 @@
                                 <tr>
                                     <td>Owners</td>
                                     <td>Reserve signing, signer backups, recovery process, and policy updates</td>
-                                    <td>Signing devices stored separately and used only under documented conditions</td>
+                                    <td>SeedSigner or other stateless signing devices used only under documented
+                                        conditions; keys are not stored on the device</td>
                                 </tr>
                             </tbody>
                         </table>

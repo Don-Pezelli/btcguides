@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 820" role="img" aria-labelledby="title desc">
+  <title id="title">Example system model draft for a business Bitcoin reserve</title>
+  <desc id="desc">A graphic version of the example system model draft showing reserve purpose, 2-of-3 multisig policy, signers, descriptor copies, recovery triggers, Key C release rule, recovery migration, and review schedule.</desc>
+  <defs>
+    <linearGradient id="headerBlue" x1="0" x2="1" y1="0" y2="0">
+      <stop offset="0" stop-color="#dff0ff"/>
+      <stop offset="1" stop-color="#73bfff"/>
+    </linearGradient>
+    <filter id="shadow" x="-12%" y="-12%" width="124%" height="124%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <style>
+      .bg { fill: #ffffff; }
+      .title-bar { fill: url(#headerBlue); }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 40px; font-weight: 850; fill: #050505; }
+      .card { fill: #ffffff; stroke: #171717; stroke-width: 2.5; rx: 8; filter: url(#shadow); }
+      .orange { fill: #fff4e4; stroke: #f39c12; stroke-width: 3; }
+      .blue { fill: #eef7ff; }
+      .green { fill: #effaf2; }
+      .red { fill: #fff0ee; }
+      .gray { fill: #f8f8f8; }
+      .label { font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 850; fill: #050505; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 580; fill: #171717; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 12px; font-weight: 650; fill: #333333; }
+      .center-title { font-family: Inter, Arial, sans-serif; font-size: 24px; font-weight: 900; fill: #050505; }
+      .center-sub { font-family: Inter, Arial, sans-serif; font-size: 14px; font-weight: 650; fill: #2d2d2d; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1120" height="820"/>
+  <rect class="title-bar" x="32" y="32" width="1056" height="86"/>
+  <text class="title" x="62" y="88">Example System Model Draft</text>
+
+  <rect class="card orange" x="350" y="142" width="420" height="178" rx="8"/>
+  <text class="center-title" x="560" y="198" text-anchor="middle">Shared Business Reserve</text>
+  <text class="center-sub" x="560" y="230" text-anchor="middle">2-of-3 multisig, long-term company funds</text>
+  <text class="center-sub" x="560" y="258" text-anchor="middle">separate from operations and intermediary wallet</text>
+  <text class="center-sub" x="560" y="286" text-anchor="middle">separate from both owners' personal wallets</text>
+
+  <rect class="card blue" x="790" y="158" width="260" height="126" rx="8"/>
+  <text class="label" x="816" y="198">Wallet Policy</text>
+  <text class="body" x="816" y="230">Normal spend: Owner A + Owner B</text>
+  <text class="body" x="816" y="254">Recovery: one owner + signer C</text>
+
+  <rect class="card green" x="70" y="368" width="290" height="150" rx="8"/>
+  <text class="label" x="96" y="408">Signer A</text>
+  <text class="body" x="96" y="440">Controlled by Owner A</text>
+  <text class="body" x="96" y="464">Seed backup in Owner A</text>
+  <text class="body" x="96" y="488">backup location</text>
+  <text class="small" x="96" y="508">Coded label, no Bitcoin wording</text>
+
+  <rect class="card green" x="415" y="368" width="290" height="150" rx="8"/>
+  <text class="label" x="441" y="408">Signer B</text>
+  <text class="body" x="441" y="440">Controlled by Owner B</text>
+  <text class="body" x="441" y="464">Seed backup in Owner B</text>
+  <text class="body" x="441" y="488">backup location</text>
+  <text class="small" x="441" y="508">Coded label, no value signal</text>
+
+  <rect class="card red" x="760" y="368" width="290" height="150" rx="8"/>
+  <text class="label" x="786" y="408">Signer C</text>
+  <text class="body" x="786" y="440">Held by Keyholder C or</text>
+  <text class="body" x="786" y="464">recovery arrangement</text>
+  <text class="body" x="786" y="488">No owner can access C alone</text>
+  <text class="small" x="786" y="508">Released only under agreed process</text>
+
+  <rect class="card gray" x="70" y="590" width="302" height="138" rx="8"/>
+  <text class="label" x="96" y="630">Descriptor Copies</text>
+  <text class="body" x="96" y="662">Owner A, Owner B, and Keyholder C</text>
+  <text class="body" x="96" y="686">each hold descriptor + instructions</text>
+  <text class="small" x="96" y="712">Business-confidential record</text>
+
+  <rect class="card gray" x="409" y="590" width="302" height="138" rx="8"/>
+  <text class="label" x="435" y="630">Recovery Triggers</text>
+  <text class="body" x="435" y="662">Death, legal incapacity, signer loss,</text>
+  <text class="body" x="435" y="686">court order, contractual owner removal</text>
+  <text class="small" x="435" y="712">Detailed proof rules in Stage 5</text>
+
+  <rect class="card gray" x="748" y="590" width="302" height="138" rx="8"/>
+  <text class="label" x="774" y="624">After Recovery</text>
+  <text class="body" x="774" y="654">Move funds to fresh 2-of-3 wallet</text>
+  <text class="body" x="774" y="678">Retire old signer set</text>
+  <text class="body" x="774" y="702">and document change</text>
+  <text class="small" x="774" y="722">Review yearly and after owner change</text>
+
+</svg>

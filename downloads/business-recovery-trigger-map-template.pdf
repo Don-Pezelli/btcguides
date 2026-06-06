@@ -1,0 +1,155 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R] /Count 2 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2999 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve Recovery Trigger Map) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 5.1 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 684 Td (Use this worksheet before drafting the full recovery protocol. Owner A and Owner B should) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 670 Td (define exactly which events allow Key C to be used, which proof is required, who verifies) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 656 Td (the event, and who must be notified. This is not legal advice.) Tj ET
+0.985 0.985 0.985 rg 48 542 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 542 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 622 Td (Signer-loss trigger:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 607 Td (Is recovery allowed when one signer device is lost but both owners are) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 595 Td (available? Define which proof is required.) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 576 m 552 576 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 558 m 552 558 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 436 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 436 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 516 Td (Owner death / incapacity / disappearance:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 501 Td (Is recovery allowed when one owner dies, disappears, or becomes legally) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 489 Td (incapacitated? Define the proof.) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 470 m 552 470 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 452 m 552 452 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 330 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 330 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 410 Td (Owner removal:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 395 Td (Is recovery allowed when one owner is removed from the company by contract,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 383 Td (court order, or shareholder decision?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 364 m 552 364 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 346 m 552 346 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 224 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 224 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 304 Td (Trigger verifier:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 289 Td (Who confirms that the trigger event is real?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 258 m 552 258 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 240 m 552 240 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 118 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 118 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 198 Td (Required documents:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 183 Td (Which documents prove the trigger: death certificate, court order, shareholder) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 171 Td (decision, medical incapacity document, police report, notarized statement, or) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 159 Td (other proof?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 152 m 552 152 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 134 m 552 134 l S 0 0 0 RG
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2288 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve Recovery Trigger Map) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 5.1 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 594 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 594 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 674 Td (Waiting period:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 659 Td (Is there a waiting period before Key C can be released? If yes, how long and) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 647 Td (when does it start?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 628 m 552 628 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 610 m 552 610 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 488 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 488 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 568 Td (Notification rule:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 553 Td (Who must be notified before Key C is released?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 522 m 552 522 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 504 m 552 504 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 382 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 382 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 462 Td (Heir / executor / legal representative:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 447 Td (Is there a direct heir, executor, or legal representative if one owner) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 435 Td (disappears or dies? How are they identified?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 416 m 552 416 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 398 m 552 398 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 276 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 276 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 356 Td (Dispute or block rule:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 341 Td (Who can dispute or block release if the trigger is unclear?) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 310 m 552 310 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 292 m 552 292 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 170 516 96 re f
+0.82 0.82 0.82 RG 0.8 w 48 170 516 96 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 10 Tf 60 250 Td (Final trigger rule:) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 9 Tf 60 235 Td (Write the final rule for when Key C may be used.) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 204 m 552 204 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 186 m 552 186 l S 0 0 0 RG
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+xref
+0 9
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000121 00000 n 
+0000000191 00000 n 
+0000000266 00000 n 
+0000003317 00000 n 
+0000003453 00000 n 
+0000005793 00000 n 
+trailer
+<< /Size 9 /Root 1 0 R >>
+startxref
+5929
+%%EOF

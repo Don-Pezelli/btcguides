@@ -1,0 +1,327 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [6 0 R 8 0 R 10 0 R 12 0 R 14 0 R] /Count 5 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Length 2583 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve System Model Draft) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 4 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 684 Td (Use this worksheet before drafting legal documents, selecting trusted people, or funding the) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 670 Td (reserve. The goal is to describe the custody model, identify trust assumptions, and find any) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 656 Td (person or location that could assemble too much control. This is not legal, tax, accounting,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 10 Tf 48 642 Td (or custody advice.) Tj ET
+1 0.957 0.894 rg 48 588 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 588 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 598 Td (1. Reserve Architecture) Tj ET
+0.985 0.985 0.985 rg 48 502 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 502 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 558 Td (How many signatures are required to spend from the reserve?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 530 m 552 530 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 512 m 552 512 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 434 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 434 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 476 Td (Which three signers exist in the system?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 448 m 552 448 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 366 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 366 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 408 Td (What wallet policy is used, for example 2-of-3 multisig?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 380 m 552 380 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 284 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 284 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 340 Td (Which wallet descriptor backups exist and where are they stored?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 312 m 552 312 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 294 m 552 294 l S 0 0 0 RG
+1 0.957 0.894 rg 48 232 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 232 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 242 Td (2. Signer Control) Tj ET
+0.985 0.985 0.985 rg 48 160 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 160 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 202 Td (Who controls signer A?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 174 m 552 174 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 92 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 92 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 134 Td (Who controls signer B?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 106 m 552 106 l S 0 0 0 RG
+endstream
+endobj
+6 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 5 0 R >>
+endobj
+7 0 obj
+<< /Length 2270 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve System Model Draft) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 4 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 632 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 632 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 674 Td (Who controls signer C / Keyholder C?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 646 m 552 646 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 550 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 550 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 606 Td (Which signer combinations are allowed for normal spending?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 578 m 552 578 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 560 m 552 560 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 482 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 482 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 524 Td (Which signer combinations are allowed for recovery only?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 496 m 552 496 l S 0 0 0 RG
+1 0.957 0.894 rg 48 430 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 430 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 440 Td (3. Device and Backup Locations) Tj ET
+0.985 0.985 0.985 rg 48 358 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 358 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 400 Td (Where is each signer device stored?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 372 m 552 372 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 290 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 290 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 332 Td (Where is each seed backup stored?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 304 m 552 304 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 208 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 208 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 264 Td (Where are PINs, passphrases, and sealed instructions stored?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 236 m 552 236 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 218 m 552 218 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 126 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 126 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 182 Td (Which locations must never contain enough material to spend?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 154 m 552 154 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 136 m 552 136 l S 0 0 0 RG
+endstream
+endobj
+8 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 7 0 R >>
+endobj
+9 0 obj
+<< /Length 2307 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve System Model Draft) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 4 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+1 0.957 0.894 rg 48 656 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 656 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 666 Td (4. Recovery Paths) Tj ET
+0.985 0.985 0.985 rg 48 570 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 570 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 626 Td (Which recovery path exists if signer A or signer B is lost?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 598 m 552 598 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 580 m 552 580 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 502 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 502 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 544 Td (Which recovery path exists if signer C is unavailable?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 516 m 552 516 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 420 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 420 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 476 Td (Which recovery path exists if one owner is unavailable, dead, incapacitated,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 464 Td (or legally removed?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 448 m 552 448 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 430 m 552 430 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 338 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 338 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 394 Td (Which decisions are left for the detailed recovery protocol in Stage 5?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 366 m 552 366 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 348 m 552 348 l S 0 0 0 RG
+1 0.957 0.894 rg 48 286 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 286 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 296 Td (5. Trust Assumptions) Tj ET
+0.985 0.985 0.985 rg 48 214 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 214 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 256 Td (Which assumptions depend on personal trust?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 228 m 552 228 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 146 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 146 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 188 Td (Which assumptions are enforced by technical separation?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 160 m 552 160 l S 0 0 0 RG
+endstream
+endobj
+10 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 9 0 R >>
+endobj
+11 0 obj
+<< /Length 2369 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve System Model Draft) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 4 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 618 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 618 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 674 Td (Which assumptions are enforced by legal documents or contracts?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 646 m 552 646 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 628 m 552 628 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 536 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 536 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 592 Td (Which trust assumption is currently the weakest part of the model?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 564 m 552 564 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 546 m 552 546 l S 0 0 0 RG
+1 0.957 0.894 rg 48 484 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 484 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 494 Td (6. Company Records and Legal Alignment) Tj ET
+0.985 0.985 0.985 rg 48 398 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 398 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 454 Td (Which shareholder agreements must match this custody model?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 426 m 552 426 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 408 m 552 408 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 316 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 316 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 372 Td (Which heir, executor, or ownership-transfer documents must match this model?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 344 m 552 344 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 326 m 552 326 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 234 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 234 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 290 Td (Which accounting, tax, or year-end reporting records must reference the) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 278 Td (reserve?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 262 m 552 262 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 244 m 552 244 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 152 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 152 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 208 Td (Which professional review is needed before meaningful funds are stored?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 180 m 552 180 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 162 m 552 162 l S 0 0 0 RG
+endstream
+endobj
+12 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 11 0 R >>
+endobj
+13 0 obj
+<< /Length 2632 >>
+stream
+0 0 0 rg 0 0 0 RG
+BT /F2 17 Tf 48 742 Td (Business Bitcoin Reserve System Model Draft) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F1 11 Tf 48 722 Td (Stage 4 blank template) Tj ET
+0.65 0.65 0.65 RG 1 w 48 706 m 564 706 l S 0 0 0 RG
+1 0.957 0.894 rg 48 656 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 656 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 666 Td (7. Model Check Questions) Tj ET
+0.985 0.985 0.985 rg 48 570 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 570 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 626 Td (Could any single person currently assemble two keys? If yes, what must) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 614 Td (change?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 598 m 552 598 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 580 m 552 580 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 488 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 488 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 544 Td (Could any single location currently contain enough material to spend? If yes,) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 532 Td (what must change?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 516 m 552 516 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 498 m 552 498 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 406 516 72 re f
+0.82 0.82 0.82 RG 0.8 w 48 406 516 72 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 462 Td (Which parts must be decided before legal documents or keyholder instructions) Tj ET
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 450 Td (are written?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 434 m 552 434 l S 0 0 0 RG
+0.65 0.65 0.65 RG 0.7 w 60 416 m 552 416 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 338 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 338 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 380 Td (Which unresolved questions block real reserve funding?:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 352 m 552 352 l S 0 0 0 RG
+1 0.957 0.894 rg 48 286 516 30 re f
+0.95 0.60 0.07 RG 0.8 w 48 286 516 30 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 13 Tf 60 296 Td (8. Sign-Off) Tj ET
+0.985 0.985 0.985 rg 48 214 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 214 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 256 Td (Owner A signature and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 228 m 552 228 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 146 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 146 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 188 Td (Owner B signature and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 160 m 552 160 l S 0 0 0 RG
+0.985 0.985 0.985 rg 48 78 516 58 re f
+0.82 0.82 0.82 RG 0.8 w 48 78 516 58 re S 0 0 0 RG
+0 0 0 rg 0 0 0 RG
+BT /F2 9.5 Tf 60 120 Td (Optional legal/accounting reviewer and date:) Tj ET
+0.65 0.65 0.65 RG 0.7 w 60 92 m 552 92 l S 0 0 0 RG
+endstream
+endobj
+14 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 13 0 R >>
+endobj
+xref
+0 15
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000142 00000 n 
+0000000212 00000 n 
+0000000287 00000 n 
+0000002922 00000 n 
+0000003058 00000 n 
+0000005380 00000 n 
+0000005516 00000 n 
+0000007875 00000 n 
+0000008012 00000 n 
+0000010434 00000 n 
+0000010572 00000 n 
+0000013257 00000 n 
+trailer
+<< /Size 15 /Root 1 0 R >>
+startxref
+13395
+%%EOF

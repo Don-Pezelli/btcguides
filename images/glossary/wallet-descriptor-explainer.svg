@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 820" role="img" aria-labelledby="title desc">
+  <title id="title">Wallet descriptor explainer</title>
+  <desc id="desc">Four-panel explanation showing that wallet descriptors tell restore software which script type, keys, derivation paths, and signing policy to use.</desc>
+  <defs>
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="116%">
+      <feDropShadow dx="0" dy="8" stdDeviation="7" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#171717"/>
+    </marker>
+    <style>
+      .bg { fill: #ffffff; }
+      .panel { fill: #fffaf4; stroke: #171717; stroke-width: 2.5; rx: 8; filter: url(#shadow); }
+      .panel-alt { fill: #eef7ff; }
+      .title { font-family: Inter, Arial, sans-serif; font-size: 34px; font-weight: 900; fill: #050505; }
+      .heading { font-family: Inter, Arial, sans-serif; font-size: 20px; font-weight: 850; fill: #050505; }
+      .body { font-family: Inter, Arial, sans-serif; font-size: 16px; font-weight: 600; fill: #171717; }
+      .small { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 650; fill: #333333; }
+      .box { fill: #ffffff; stroke: #171717; stroke-width: 2; rx: 6; }
+      .box-dark { fill: #171717; stroke: #171717; stroke-width: 2; rx: 6; }
+      .box-blue { fill: #dff0ff; stroke: #171717; stroke-width: 2; rx: 6; }
+      .box-orange { fill: #f39c12; stroke: #171717; stroke-width: 2; rx: 6; }
+      .text-dark { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 800; fill: #ffffff; }
+      .text-box { font-family: Inter, Arial, sans-serif; font-size: 13px; font-weight: 800; fill: #050505; }
+      .line { stroke: #171717; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .warning { fill: #fff0ee; stroke: #c0392b; stroke-width: 2; rx: 6; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="1100" height="820"/>
+  <text class="title" x="54" y="64">Wallet Descriptors</text>
+
+  <rect class="panel" x="44" y="96" width="490" height="318" rx="8"/>
+  <text class="heading" x="74" y="136">Wallets derive addresses from key material</text>
+  <text class="body" x="74" y="166">A seed is not the whole wallet map.</text>
+  <rect class="box-blue" x="194" y="196" width="190" height="34"/>
+  <text class="text-box" x="289" y="218" text-anchor="middle">Recovery phrase</text>
+  <path class="line" d="M289 232 V260"/>
+  <rect class="box-dark" x="192" y="262" width="194" height="34"/>
+  <text class="text-dark" x="289" y="284" text-anchor="middle">Extended private key</text>
+  <path class="line" d="M289 298 V326"/>
+  <path class="line" d="M289 314 C218 314 168 326 132 350"/>
+  <path class="line" d="M289 314 C360 314 410 326 446 350"/>
+  <rect class="box-dark" x="74" y="352" width="116" height="34"/>
+  <text class="text-dark" x="132" y="374" text-anchor="middle">Private key 1</text>
+  <rect class="box-dark" x="231" y="352" width="116" height="34"/>
+  <text class="text-dark" x="289" y="374" text-anchor="middle">Private key 2</text>
+  <rect class="box-dark" x="388" y="352" width="116" height="34"/>
+  <text class="text-dark" x="446" y="374" text-anchor="middle">Private key 3</text>
+
+  <rect class="panel panel-alt" x="566" y="96" width="490" height="318" rx="8"/>
+  <text class="heading" x="596" y="136">There are different wallet methods</text>
+  <text class="body" x="596" y="166">The same seed can be used with different rules.</text>
+  <rect class="box-blue" x="716" y="196" width="190" height="34"/>
+  <text class="text-box" x="811" y="218" text-anchor="middle">Recovery phrase</text>
+  <path class="line" d="M811 232 V254"/>
+  <path class="line" d="M811 244 C740 244 696 257 672 276"/>
+  <path class="line" d="M811 244 C882 244 926 257 950 276"/>
+  <rect class="box-dark" x="616" y="278" width="112" height="34"/>
+  <text class="text-dark" x="672" y="300" text-anchor="middle">Method 1</text>
+  <rect class="box-dark" x="755" y="278" width="112" height="34"/>
+  <text class="text-dark" x="811" y="300" text-anchor="middle">Method 2</text>
+  <rect class="box-dark" x="894" y="278" width="112" height="34"/>
+  <text class="text-dark" x="950" y="300" text-anchor="middle">Method 3</text>
+  <path class="line" d="M672 314 V342"/>
+  <path class="line" d="M811 314 V342"/>
+  <path class="line" d="M950 314 V342"/>
+  <rect class="box" x="616" y="344" width="112" height="34"/>
+  <text class="text-box" x="672" y="366" text-anchor="middle">Address 1</text>
+  <rect class="box" x="755" y="344" width="112" height="34"/>
+  <text class="text-box" x="811" y="366" text-anchor="middle">Address 2</text>
+  <rect class="box" x="894" y="344" width="112" height="34"/>
+  <text class="text-box" x="950" y="366" text-anchor="middle">Address 3</text>
+
+  <rect class="panel panel-alt" x="44" y="448" width="490" height="318" rx="8"/>
+  <text class="heading" x="74" y="488">During restore, guessing is unsafe</text>
+  <text class="body" x="74" y="518">The app needs to know which wallet design</text>
+  <text class="body" x="74" y="542">created the original addresses.</text>
+  <rect class="box-blue" x="194" y="574" width="190" height="34"/>
+  <text class="text-box" x="289" y="596" text-anchor="middle">Recovery phrase</text>
+  <path class="line" d="M289 610 V638"/>
+  <rect class="warning" x="244" y="640" width="90" height="34"/>
+  <text class="text-box" x="289" y="662" text-anchor="middle">Which rule?</text>
+  <path class="line" d="M289 674 V702"/>
+  <rect class="warning" x="219" y="704" width="140" height="34"/>
+  <text class="text-box" x="289" y="726" text-anchor="middle">Which address?</text>
+
+  <rect class="panel" x="566" y="448" width="490" height="318" rx="8"/>
+  <text class="heading" x="596" y="488">A descriptor tells the wallet what to do</text>
+  <text class="body" x="596" y="518">It records the script type, public keys, paths,</text>
+  <text class="body" x="596" y="542">and policy needed to rebuild the wallet.</text>
+  <rect class="box-orange" x="660" y="580" width="302" height="54"/>
+  <text class="text-box" x="811" y="602" text-anchor="middle">Use this script type, keys,</text>
+  <text class="text-box" x="811" y="620" text-anchor="middle">paths, and signing policy</text>
+  <path class="line" d="M811 636 V660"/>
+  <rect class="box-dark" x="734" y="662" width="154" height="42"/>
+  <text class="text-dark" x="811" y="688" text-anchor="middle">Descriptor</text>
+  <path class="line" d="M811 706 V730"/>
+  <rect class="box-blue" x="714" y="732" width="194" height="42"/>
+  <text class="text-box" x="811" y="758" text-anchor="middle">Restored wallet</text>
+  <text class="small" x="596" y="794">Result: the wallet can find the same addresses again.</text>
+</svg>
