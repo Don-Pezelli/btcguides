@@ -117,8 +117,21 @@
             cursor: pointer;
         }
 
-        .process-map-table tbody tr:hover,
-        .process-map-row-active {
+        .process-map-table-scroll {
+            box-shadow: none;
+        }
+
+        .process-map-table-note {
+            min-width: 720px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 10px 12px;
+            border: 1px solid #f39c12;
+            background: #fff3df;
+        }
+
+        table.process-map-table tbody tr:hover,
+        table.process-map-table tbody tr.process-map-row-active {
             background: #fff3df;
         }
 
@@ -204,6 +217,9 @@
                     <li><a class="guide-nav-link sub-link" href="#stage_6.2">Stage 6.2: Air-gapped wallet test</a></li>
                 </ul>
             </li>
+
+         
+
             <li><a class="guide-nav-link" href="#stage_7">Stage 7: Operating Protocols</a>
                 <ul class="guide-nav-ul basic-utility-guide-second-child-ul">
                     <li><a class="guide-nav-link sub-link" href="#stage_7.1">Stage 7.1: Initial funding protocol</a></li>
@@ -1028,13 +1044,34 @@
                         should know whether reserve Bitcoin comes from retained earnings, owner contributions, customer
                         receipts, treasury purchases, or transfers from an older company wallet.</p>
 
+                    <div class="business-checklist">
+                        <h4>Initial Funding Checklist</h4>
+                        <ul>
+                            <li>Confirm Stage 6 is complete: descriptor restore, A+B spend, owner-plus-key-C recovery
+                                spend, and recovery with funds visible</li>
+                            <li>Choose the funding source: retained earnings, owner contribution, treasury purchase,
+                                customer receipts, or transfer from an older company wallet</li>
+                            <li>Confirm the purchase path: exchange, broker, OTC desk, direct payment, or transfer from
+                                existing business holdings</li>
+                            <li>Run the address-verification ceremony again before the first real deposit</li>
+                            <li>Document the purchase method, exchange or broker, bank account, invoice, and accounting
+                                category</li>
+                            <li>Move the first real reserve deposit in a controlled amount before scaling to larger
+                                treasury deposits</li>
+                        </ul>
+                    </div>
+
+                    <p>The checklist above covers the first real reserve deposit. The table below is broader: it lists
+                        the reserve processes the business should eventually document as process maps. Start with the
+                        launch-critical rows before moving to recurring, periodic, and emergency workflows.</p>
+
                     <p>Use these actor categories when drawing process maps: <strong>Owner A</strong>,
                         <strong>Owner B</strong>, <strong>Keyholder C</strong>, <strong>Employee</strong>, and
                         <strong>Customer</strong>. Not every process uses every actor, but every protocol should make
                         clear who initiates, who verifies, who signs, who records, and who must not have access.</p>
 
-                    <div class="table-scroll">
-                        <p><strong>Click any process row to display its process map.</strong></p>
+                    <div class="table-scroll process-map-table-scroll">
+                        <p class="process-map-table-note"><strong>Click any process row to display its process map.</strong></p>
                         <table class="guide-table process-map-table">
                             <thead>
                                 <tr>
@@ -1049,32 +1086,36 @@
                                     <td>1 - Launch critical</td>
                                     <td>Initial reserve wallet test: receive</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>Address verification, test amount, transaction record, and confirmation rule</td>
+                                    <td>Both-owner address verification, test amount, transaction record, and
+                                        confirmation rule</td>
                                 </tr>
                                 <tr>
                                     <td>1 - Launch critical</td>
                                     <td>Initial reserve wallet test: spend</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>PSBT creation, air-gapped SeedSigner signing, broadcast, and documentation</td>
+                                    <td>PSBT creation, both-owner destination and amount checks, air-gapped SeedSigner
+                                        signing, broadcast, and documentation</td>
                                 </tr>
                                 <tr>
                                     <td>1 - Launch critical</td>
-                                    <td>Recovery test using descriptor and two keys</td>
-                                    <td>Owner A or Owner B, Keyholder C</td>
-                                    <td>Descriptor restore, signer combination, proof of recovery, and test limits</td>
+                                    <td>Recovery test using descriptor and all signer pairs</td>
+                                    <td>Owner A, Owner B, Keyholder C</td>
+                                    <td>A+B normal spend test, A+C recovery test, B+C recovery test, descriptor restore,
+                                        proof of signing or broadcast, and test limits</td>
                                 </tr>
                                 <tr>
                                     <td>1 - Launch critical</td>
                                     <td>Large deposit ceremony</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>Source of funds, address verification, fee environment, accounting entry, signer
-                                        readiness, and final approval</td>
+                                    <td>Source of funds, both-owner address and amount verification, fee environment,
+                                        accounting entry, signer readiness, and final approval</td>
                                 </tr>
                                 <tr>
                                     <td>2 - Recurring</td>
                                     <td>Sending from intermediary wallet to deep reserve</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>Threshold, approval, address ceremony, accounting entry, and transaction ID</td>
+                                    <td>Balance or schedule threshold for moving excess funds, approval, both-owner
+                                        address ceremony, accounting entry, and transaction ID</td>
                                 </tr>
                                 <tr>
                                     <td>2 - Recurring</td>
@@ -1094,22 +1135,22 @@
                                     <td>2 - Recurring</td>
                                     <td>Employee access review for reserve-related records</td>
                                     <td>Owner A, Owner B, Employee</td>
-                                    <td>Which records the employee can see, which records stay owner-only, and how access
-                                        is revoked</td>
+                                    <td>Employee access decision, allowed information, owner-only rights, and
+                                        grant/revoke steps</td>
                                 </tr>
                                 <tr>
                                     <td>3 - Occasional / high value</td>
                                     <td>Spending from the deep reserve</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>Business reason, approval rule, destination verification, signing order, and
-                                        record keeping</td>
+                                    <td>Business reason, approval rule, both-owner destination and amount verification,
+                                        signing order, and record keeping</td>
                                 </tr>
                                 <tr>
                                     <td>3 - Occasional / high value</td>
                                     <td>Large withdrawal ceremony</td>
                                     <td>Owner A, Owner B</td>
-                                    <td>Business reason, owner or board approval, destination verification, tax/accounting
-                                        note, PSBT review, and two signatures</td>
+                                    <td>Business reason, owner or board approval, both-owner destination and amount
+                                        verification, tax/accounting note, PSBT review, and two signatures</td>
                                 </tr>
                                 <tr>
                                     <td>3 - Periodic</td>
@@ -1171,23 +1212,6 @@
                         </table>
                     </div>
                     <div class="process-map-viewer" aria-live="polite"></div>
-
-                    <div class="business-checklist">
-                        <h4>Initial funding action order</h4>
-                        <ul>
-                            <li>Confirm Stage 6 is complete: descriptor restore, A+B spend, owner-plus-key-C recovery
-                                spend, and recovery with funds visible</li>
-                            <li>Choose the funding source: retained earnings, owner contribution, treasury purchase,
-                                customer receipts, or transfer from an older company wallet</li>
-                            <li>Confirm the purchase path: exchange, broker, OTC desk, direct payment, or transfer from
-                                existing business holdings</li>
-                            <li>Run the address-verification ceremony again before the first real deposit</li>
-                            <li>Document the purchase method, exchange or broker, bank account, invoice, and accounting
-                                category</li>
-                            <li>Move the first real reserve deposit in a controlled amount before scaling to larger
-                                treasury deposits</li>
-                        </ul>
-                    </div>
 
                     <h2 id="stage_7.2">Stage 7.2: Day-to-day treasury flow</h2>
                     <p>The deep reserve should not receive every small payment directly. Define when operational Bitcoin

@@ -34,9 +34,9 @@
         )).join("");
     }
 
-    function taskBox(x, y, width, height, label) {
+    function taskBox(x, y, width, height, label, className = "pm-task") {
         return [
-            `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="4" class="pm-task"/>`,
+            `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="4" class="${className}"/>`,
             textBlock(label, x + width / 2, y + 24, Math.floor(width / 7), "pm-small")
         ].join("");
     }
@@ -52,39 +52,104 @@
         return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" class="pm-arrow" marker-end="url(#pm-arrowhead)"/>`;
     }
 
+    function actionLabel(process) {
+        if (/regular reserve maintenance/i.test(process)) {
+            return "Perform maintenance checks";
+        }
+        if (/accounting|reporting/i.test(process)) {
+            return "Create accounting or tax records";
+        }
+        if (/employee access review/i.test(process)) {
+            return "Grant, retain, or revoke access rights";
+        }
+        if (/receive/i.test(process)) {
+            return "Receive to verified wallet address";
+        }
+        if (/spend|withdrawal/i.test(process)) {
+            return "Sign and broadcast approved spend";
+        }
+        if (/recovery/i.test(process)) {
+            return "Run approved recovery test";
+        }
+        if (/deposit|sending|transfer|migration/i.test(process)) {
+            return "Send to verified reserve address";
+        }
+
+        return "Complete approved action";
+    }
+
     function renderMap(process, actors, protocol) {
         const lanes = uniqueActors(actors);
-        const laneHeight = 96;
-        const top = 146;
-        const width = 1120;
-        const height = top + lanes.length * laneHeight + 46;
-        const contentLeft = 170;
-        const laneLabelWidth = 145;
+        const width = 920;
+        const centerX = width / 2;
+        const boxX = 250;
+        const boxWidth = 420;
+        const boxHeight = 64;
         const rowWidth = width - 60;
-        const actorRows = lanes.map((actor, index) => {
-            const y = top + index * laneHeight;
+        const requiresBothOwners = actors.includes("Owner A, Owner B");
+        const needsTransactionCheck = /address|destination|amount|deposit|spend|withdrawal|wallet|transaction|psbt|fee/i
+            .test(`${process} ${protocol}`);
+        const needsPrivacyCheck = /\b(seed|signer|signers|signing|psbt|spend|spending|withdrawal|send|sending|receive|receiving|deposit|transfer|migration|recovery|descriptor|xpub|address|keyholder)\b|key c/i
+            .test(`${process} ${protocol}`);
+        const height = needsPrivacyCheck ? 1060 : 960;
+        const verifyOneY = needsPrivacyCheck ? 482 : 386;
+        const verifyTwoY = needsPrivacyCheck ? 578 : 482;
+        const decisionY = needsPrivacyCheck ? 722 : 626;
+        const executeY = needsPrivacyCheck ? 796 : 700;
+        const recordY = needsPrivacyCheck ? 892 : 796;
+        const endY = needsPrivacyCheck ? 1014 : 918;
+        const correctionX = 690;
+        const correctionWidth = 190;
+        const correctionY = decisionY - 32;
+        const verificationSteps = /employee access review/i.test(process)
+            ? [
+                "Owner A reviews employee access to devices, wallets, records, and information",
+                "Owner B independently confirms which rights to grant, retain, or revoke"
+            ]
+            : /accounting|reporting/i.test(process)
+            ? [
+                "Access watch-only wallet and business records",
+                "Verify accumulated inflows, outflows, balances, and labels"
+            ]
+            : requiresBothOwners
+            ? needsTransactionCheck
+                ? [
+                    "Owner A verifies address or destination, amount, authority, source, and records",
+                    "Owner B independently verifies address or destination, amount, authority, source, and records"
+                ]
+                : [
+                    "Owner A verifies authority, scope, required evidence, and records",
+                    "Owner B independently verifies authority, scope, required evidence, and records"
+                ]
+            : needsTransactionCheck
+                ? [
+                    "Required actors verify address or destination, amount, authority, proof, and records",
+                    "Second required party checks release rule, limits, and documentation"
+                ]
+                : [
+                    "Required actors verify identity, authority, proof, scope, and records",
+                    "Second required party checks release rule, limits, and documentation"
+                ];
+        const participantChips = lanes.map((actor, index) => {
+            const chipWidth = 148;
+            const gap = 12;
+            const totalWidth = lanes.length * chipWidth + (lanes.length - 1) * gap;
+            const x = centerX - totalWidth / 2 + index * (chipWidth + gap);
             return [
-                `<rect x="30" y="${y}" width="${laneLabelWidth}" height="${laneHeight - 6}" class="pm-lane-label"/>`,
-                `<text x="${30 + laneLabelWidth / 2}" y="${y + 52}" text-anchor="middle" class="pm-actor">${actor}</text>`,
-                `<line x1="30" y1="${y + laneHeight}" x2="${rowWidth}" y2="${y + laneHeight}" class="pm-separator"/>`
+                `<rect x="${x}" y="146" width="${chipWidth}" height="36" rx="4" class="pm-lane-label"/>`,
+                `<text x="${x + chipWidth / 2}" y="170" text-anchor="middle" class="pm-actor">${actor}</text>`
             ].join("");
         }).join("");
-
-        const firstLaneY = top + laneHeight / 2;
-        const ownerLaneIndex = lanes.findIndex((actor) => actor === "Owner A" || actor === "Owner B");
-        const ownerLaneY = top + (ownerLaneIndex >= 0 ? ownerLaneIndex : 0) * laneHeight + laneHeight / 2;
-        const recordLaneIndex = lanes.findIndex((actor) => actor === "Owner A" || actor === "Owner B" || actor === "Employee");
-        const recordLaneY = top + (recordLaneIndex >= 0 ? recordLaneIndex : lanes.length - 1) * laneHeight + laneHeight / 2;
-
-        const startX = contentLeft + 35;
-        const initiateX = contentLeft + 95;
-        const verifyX = contentLeft + 270;
-        const decisionX = contentLeft + 470;
-        const executeX = contentLeft + 575;
-        const recordX = contentLeft + 730;
-        const endX = contentLeft + 930;
-
-        const protocolShort = protocol.length > 96 ? `${protocol.slice(0, 93)}...` : protocol;
+        const protocolShort = protocol.length > 100
+            ? protocol.slice(0, 100).replace(/\s+\S*$/, "").replace(/[,\s]+$/, "")
+            : protocol;
+        const privacyStep = needsPrivacyCheck
+            ? [
+                `${arrow(centerX, 354, centerX, 386)}`,
+                `${taskBox(boxX, 386, boxWidth, boxHeight, "Confirm only required actors are present; block observers before exposing seed, signer, address, or PSBT details", "pm-sensitive")}`,
+                `${arrow(centerX, 450, centerX, verifyOneY)}`
+            ].join("")
+            : `${arrow(centerX, 354, centerX, verifyOneY)}`;
 
         return `
             <svg class="process-map-svg" viewBox="0 0 ${width} ${height}" role="img" aria-label="Business process map for ${process}">
@@ -100,12 +165,15 @@
                 <style>
                     .pm-title { font: 800 42px Inter, Arial, sans-serif; fill: #050505; }
                     .pm-subtitle { font: 700 18px Inter, Arial, sans-serif; fill: #121212; }
-                    .pm-actor { font: 700 17px Inter, Arial, sans-serif; fill: #050505; }
-                    .pm-small { font: 700 12px Inter, Arial, sans-serif; fill: #111; }
+                    .pm-actor { font: 700 14px Inter, Arial, sans-serif; fill: #050505; }
+                    .pm-small { font: 700 13px Inter, Arial, sans-serif; fill: #111; }
                     .pm-white { fill: #fff; }
                     .pm-lane-label { fill: #dceeff; }
-                    .pm-separator { stroke: #d8d8d8; stroke-width: 2; }
                     .pm-task { fill: #dceeff; stroke: none; }
+                    .pm-verify { fill: #fff3df; stroke: #f39c12; stroke-width: 2; }
+                    .pm-sensitive { fill: #fff8e8; stroke: #d97706; stroke-width: 1.5; }
+                    .pm-record { fill: #f7f7f7; stroke: #c7c7c7; stroke-width: 1.5; }
+                    .pm-correction { fill: #fff; stroke: #d24b4b; stroke-width: 1.5; }
                     .pm-decision { fill: #085bd8; stroke: #085bd8; stroke-width: 2; }
                     .pm-start-end { fill: #59b1ff; stroke: none; }
                     .pm-arrow { stroke: #2f77d0; stroke-width: 2; }
@@ -113,22 +181,28 @@
                 <rect x="30" y="32" width="${rowWidth}" height="82" fill="url(#pm-title-bg)"/>
                 <text x="78" y="88" class="pm-title">Business Process Map</text>
                 ${textBlock(process, 78, 130, 80, "pm-subtitle", "start", 19)}
-                ${actorRows}
-                <circle cx="${startX}" cy="${firstLaneY}" r="26" class="pm-start-end"/>
-                <text x="${startX}" y="${firstLaneY + 4}" text-anchor="middle" class="pm-small">Start</text>
-                ${taskBox(initiateX, firstLaneY - 28, 128, 56, `Initiate: ${process}`)}
-                ${arrow(startX + 26, firstLaneY, initiateX, firstLaneY)}
-                ${arrow(initiateX + 128, firstLaneY, verifyX, ownerLaneY)}
-                ${taskBox(verifyX, ownerLaneY - 32, 138, 64, "Verify actor, amount, authority, and records")}
-                ${arrow(verifyX + 138, ownerLaneY, decisionX - 58, ownerLaneY)}
-                ${diamond(decisionX, ownerLaneY, "Approved?")}
-                ${taskBox(executeX, firstLaneY - 32, 138, 64, "Execute protocol step")}
-                ${arrow(decisionX + 56, ownerLaneY, executeX, firstLaneY)}
-                ${arrow(executeX + 138, firstLaneY, recordX, recordLaneY)}
-                ${taskBox(recordX, recordLaneY - 34, 150, 68, `Record: ${protocolShort}`)}
-                ${arrow(recordX + 150, recordLaneY, endX - 26, recordLaneY)}
-                <circle cx="${endX}" cy="${recordLaneY}" r="26" class="pm-start-end"/>
-                <text x="${endX}" y="${recordLaneY + 4}" text-anchor="middle" class="pm-small">End</text>
+                ${participantChips}
+                <circle cx="${centerX}" cy="232" r="26" class="pm-start-end"/>
+                <text x="${centerX}" y="236" text-anchor="middle" class="pm-small">Start</text>
+                ${arrow(centerX, 258, centerX, 290)}
+                ${taskBox(boxX, 290, boxWidth, boxHeight, `Initiate: ${process}`)}
+                ${privacyStep}
+                ${taskBox(boxX, verifyOneY, boxWidth, boxHeight, verificationSteps[0], "pm-verify")}
+                ${arrow(centerX, verifyOneY + boxHeight, centerX, verifyTwoY)}
+                ${taskBox(boxX, verifyTwoY, boxWidth, boxHeight, verificationSteps[1], "pm-verify")}
+                ${arrow(centerX, verifyTwoY + boxHeight, centerX, decisionY - 34)}
+                ${diamond(centerX, decisionY, "Approved?")}
+                <text x="${centerX + 22}" y="${decisionY + 56}" class="pm-small">Yes</text>
+                ${arrow(centerX + 55, decisionY, correctionX, decisionY)}
+                <text x="${centerX + 112}" y="${decisionY - 8}" class="pm-small">No</text>
+                ${taskBox(correctionX, correctionY, correctionWidth, boxHeight, "Pause, correct issue, then restart approval", "pm-correction")}
+                ${arrow(centerX, decisionY + 34, centerX, executeY)}
+                ${taskBox(boxX, executeY, boxWidth, boxHeight, actionLabel(process))}
+                ${arrow(centerX, executeY + boxHeight, centerX, recordY)}
+                ${taskBox(boxX, recordY, boxWidth, boxHeight, `Record: ${protocolShort}`, "pm-record")}
+                ${arrow(centerX, recordY + boxHeight, centerX, endY - 26)}
+                <circle cx="${centerX}" cy="${endY}" r="26" class="pm-start-end"/>
+                <text x="${centerX}" y="${endY + 4}" text-anchor="middle" class="pm-small">End</text>
             </svg>
         `;
     }
@@ -157,6 +231,12 @@
                 row.classList.add("process-map-row-active");
                 viewer.innerHTML = renderMap(cells[1], cells[2], cells[3]);
                 viewer.classList.add("is-visible");
+                viewer.tabIndex = -1;
+
+                window.requestAnimationFrame(() => {
+                    viewer.scrollIntoView({ behavior: "smooth", block: "start" });
+                    viewer.focus({ preventScroll: true });
+                });
             };
 
             row.addEventListener("click", showMap);
